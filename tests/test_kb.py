@@ -120,3 +120,17 @@ class KnowledgeBaseTests(unittest.TestCase):
             for sid in fact['source_ids']:
                 self.assertGreater(provenance['sources'][sid]['pdf_page'], 0)
         self.assertGreater(len(provenance['facts']), 200)
+
+    def test_session_counts_are_derived_from_executed_analyses(self):
+        inputs = {'kind': 'assess_session', 'cases': [scenario(5), scenario(0, receptors=['Birds'])],
+                  'answers': {'impact_isolation': 'yes', 'explicit_indicators': 'yes', 'significance': 'yes'},
+                  'alternatives': 2, 'declared_assumptions': 2, 'objective_measurements': 2,
+                  'staged_activities': 1, 'rare_severe_impacts': 0}
+        result = self.oracle.evaluate(inputs)
+        target = result['target']
+        self.assertEqual(target['decision'], 'session_assessed')
+        self.assertEqual(target['observed_session_counts']['impacts'], 1)
+        self.assertEqual(target['observed_session_counts']['components'], 2)
+        self.assertEqual(target['observed_session_counts']['activities'], 1)
+        self.assertEqual(target['method_assessment']['criterion_grades']['comprehensiveness'], 'S')
+        self.assertTrue({'R_SESSION', 'R_WP', 'R_DIRECT'} <= set(result['rule_ids']))

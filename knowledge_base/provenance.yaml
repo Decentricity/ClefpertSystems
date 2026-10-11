@@ -6368,6 +6368,13 @@
         "A_WP_RECONSTRUCTION",
         "A_WP_AGGREGATION"
       ]
+    },
+    {
+      "id": "R_SESSION",
+      "classification": "reconstructed_inference",
+      "assumption_ids": [
+        "A_SESSION_COUNTS"
+      ]
     }
   ],
   "assumptions": [
@@ -6422,6 +6429,10 @@
     {
       "id": "A_SOCIAL_GAPS",
       "description": "Keep process/social effects even if no documented consequence text exists; return an empty consequences list, explicitly recorded as unresolved social factors."
+    },
+    {
+      "id": "A_SESSION_COUNTS",
+      "description": "Derive session statistics from repeated Prolog case reports: count positive direct effects per analysis, distinct listed receptors/processes, and maximum-score direct effects as highlighted issues. These aggregation conventions are inferred; user supplies observation objectivity, staged activity, alternatives, declared assumptions and rare-severe-impact counts."
     }
   ],
   "glue": [

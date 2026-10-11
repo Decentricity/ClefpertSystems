@@ -1,11 +1,12 @@
 # Phase 2: expanded executable reconstruction
 
-The frozen prototype establishes the reasoning chain. `knowledge_base/esc1.pl` expands it to 223 documented facts, 13 cement processes, seven pollutants and twenty environmental components. It supports five executable query workflows:
+The frozen prototype establishes the reasoning chain. `knowledge_base/esc1.pl` expands it to 223 documented facts, 13 cement processes, seven pollutants and twenty environmental components. It supports six executable query workflows:
 
 - `assess`: source process → pollutant → direct and indirect impacts → numerical priority and process mitigation, plus contextual social effects.
 - `assess_concentration`: documented concentration ranges resolve magnitude before executing the same forward chain. H2S's four bands come from IV-7 Figure 4.3; SO2's example band comes from IV-8. Physical units remain unspecified.
 - `trace_back`: environmental component → candidate pollutants → possible source processes and directed indirect pathways. Candidates do not prove causation.
 - `instrumentation`: compare an observation to the documented method's detection limit, retaining units and variability.
+- `assess_session`: repeatedly run forward analyses, derive observed impact/component/activity counts, and produce the methodology assessment.
 - `method_assessment`: twenty Warner–Preston criteria and four aspect grades using fixed documented answers, explicit user answers and observed-session counts.
 
 Additional emissions use Table 5.1 V-6–V-7; additional direct importance values use V-2–V-3; directed environmental links use Table 5.2 V-8–V-10; aligned social-effect rows use Table 5.1 V-4–V-6; Migration consequences use Table 5.3 V-10–V-11; mitigation recommendations use Table 5.4 V-16–V-17. Selected pages were visually checked. Misaligned or ambiguous rows are excluded. Printed spelling is preserved, including `MicroFlora` versus `Microflora`.

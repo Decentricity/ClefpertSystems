@@ -1,0 +1,13 @@
+{
+  "kind": "assess_session",
+  "cases": [
+    {"kind": "assess", "processes": ["Mineral Processing"], "pollutant": "SO2", "magnitude": 5, "receptors": ["Shrubs", "Birds"]},
+    {"kind": "assess", "processes": ["Mineral Processing"], "pollutant": "Suspended Solid", "magnitude": 5, "receptors": ["Surface Water", "Aquatic Plants", "Birds"]}
+  ],
+  "answers": {"impact_isolation": "yes", "explicit_indicators": "yes", "significance": "yes"},
+  "alternatives": 2,
+  "declared_assumptions": 2,
+  "objective_measurements": 2,
+  "staged_activities": 1,
+  "rare_severe_impacts": 0
+}

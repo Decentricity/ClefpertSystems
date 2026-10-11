@@ -10,13 +10,13 @@
 rule_id(Id) :- fact(_, _, _, Id).
 rule_id(Id) :- member(Id, ["R_FORWARD", "R_DIRECT", "R_INDIRECT", "R_SOCIAL",
                            "R_MITIGATION", "R_PRIORITY", "R_GAPS", "R_ASSESS",
-                           "R_STANDARD", "R_INSTRUMENT", "R_BACKWARD", "R_WP"]).
+                           "R_STANDARD", "R_INSTRUMENT", "R_BACKWARD", "R_WP", "R_SESSION"]).
 
 % Domain introspection lets a generator enumerate inputs without reading the paper.
 domain(_{processes:Processes, pollutants:Pollutants, receptors:Receptors,
          process_pollutant_pairs:Pairs, direct_pairs:Direct, indirect_pairs:Indirect,
          magnitude_range:[0,10], standards:Standards, instruments:Instruments,
-         wp_fields:WPFields, query_kinds:["assess","assess_concentration","trace_back","instrumentation","method_assessment"],
+         wp_fields:WPFields, query_kinds:["assess","assess_concentration","trace_back","instrumentation","method_assessment","assess_session"],
          profile:"cement_poc_v2"}) :-
     findall(P, fact("emission", _{process:P,pollutant:_}, _, _), Ps), sort(Ps, Processes),
     findall(P, fact("emission", _{process:_,pollutant:P}, _, _), Pols), sort(Pols, Pollutants),
@@ -31,6 +31,8 @@ domain(_{processes:Processes, pollutants:Pollutants, receptors:Receptors,
     findall(Field, wp_field(Field), WPFields).
 
 % Executable workflows. No output is generated from document prose.
+evaluate(Input, Target, RuleIds) :-
+    Input.kind == "assess_session", !, require_valid(Input), session_assessment(Input,Target,RuleIds).
 evaluate(Input, Target, RuleIds) :-
     Input.kind == "assess_concentration", !,
     require_valid(Input),
@@ -130,11 +132,20 @@ valid_input(Input) :-
     is_dict(Input), get_dict(kind,Input,Kind),
     request_keys(Kind, Expected), dict_pairs(Input,_,Fields), pairs_keys(Fields,Expected),
     valid_request(Kind,Input).
+request_keys("assess_session", [alternatives,answers,cases,declared_assumptions,kind,objective_measurements,rare_severe_impacts,staged_activities]).
 request_keys("assess", [kind,magnitude,pollutant,processes,receptors]).
 request_keys("assess_concentration", [concentration,kind,pollutant,processes,receptors]).
 request_keys("trace_back", [kind,receptor]).
 request_keys("instrumentation", [kind,observed_value,pollutant,technique]).
 request_keys("method_assessment", [answers,counts,kind]).
+valid_request("assess_session",Input) :-
+    is_list(Input.cases),Input.cases\=[],
+    forall(member(C,Input.cases),(memberchk(C.kind,["assess","assess_concentration"]),valid_input(C))),
+    forall(member(Key,[alternatives,declared_assumptions,objective_measurements,rare_severe_impacts,staged_activities]),
+           (get_dict(Key,Input,N),integer(N),N>=0,N=<1000000)),
+    is_dict(Input.answers),dict_pairs(Input.answers,_,Answers),
+    pairs_keys(Answers,[explicit_indicators,impact_isolation,significance]),
+    forall(member(_-Answer,Answers),memberchk(Answer,["yes","no"])).
 valid_request("assess",Input) :-
     number(Input.magnitude), Input.magnitude>=0, Input.magnitude=<10, valid_scope(Input).
 valid_request("assess_concentration",Input) :-
@@ -253,3 +264,25 @@ warner_preston(Input, _{decision:"method_assessed",criterion_grades:Grades,aspec
     maplist(criterion_atom_pair,AspectPairs,Atoms),dict_create(Aspects,_,Atoms),
     findall(SourceIds,wp_grade(Input,_,_,SourceIds),Lists),append(Lists,SourceIds),sort(["R_WP"|SourceIds],Ids).
 criterion_atom_pair(S-V,A-V) :- atom_string(A,S).
+
+% A_SESSION_COUNTS: repeated executable analyses drive the methodology module.
+session_case(Input, Target-Ids) :- evaluate(Input,Target,Ids).
+session_assessment(Input, Target, Ids) :-
+    maplist(session_case,Input.cases,Pairs),
+    findall(T,member(T-_,Pairs),Reports),
+    findall(Ids0,member(_-Ids0,Pairs),Lists),append(Lists,CaseIds),
+    findall(D,(member(Report,Reports),get_dict(direct_impacts,Report,Ds),member(D,Ds),D.score>0),Impacts),
+    length(Impacts,ImpactCount),
+    findall(R,(member(C,Input.cases),member(R,C.receptors)),Rs),sort(Rs,Receptors),length(Receptors,ComponentCount),
+    findall(P,(member(C,Input.cases),member(P,C.processes)),Ps),sort(Ps,Processes),length(Processes,ActivityCount),
+    length(Input.cases,MeasurementCount),
+    findall(Score,(member(D,Impacts),Score=D.score),Scores),max_list([0.0|Scores],Max),
+    findall(D,(member(D,Impacts),D.score=:=Max),Highlighted),length(Highlighted,HighlightedCount),
+    Counts=_{activities:ActivityCount,alternatives:Input.alternatives,components:ComponentCount,
+             declared_assumptions:Input.declared_assumptions,highlighted_impacts:HighlightedCount,
+             impacts:ImpactCount,measurements:MeasurementCount,objective_measurements:Input.objective_measurements,
+             rare_severe_impacts:Input.rare_severe_impacts,staged_activities:Input.staged_activities},
+    WP=_{kind:"method_assessment",counts:Counts,answers:Input.answers},require_valid(WP),
+    warner_preston(WP,Assessment,WPIds),
+    Target=_{decision:"session_assessed",analyses:Reports,observed_session_counts:Counts,method_assessment:Assessment},
+    append([CaseIds,WPIds,["R_SESSION"]],RawIds),sort(RawIds,Ids).

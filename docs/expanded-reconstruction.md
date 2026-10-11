@@ -16,3 +16,7 @@ The expanded model follows the documented workflow families. It does **not** rec
 The user authorized a coherent inferred reconstruction. Its domain assumptions are consequently enabled in the named POC profile and explicitly recorded under `A_*` in provenance.yaml. Product scores, action thresholds, maximum-score aggregation, interpretation of zero, bounded indirect propagation, concentration boundary conventions, detection-limit decisions, count-to-grade mappings and Warner–Preston aspect aggregation are inferred. The Warner–Preston implementation uses a complete synthetic assessment recipe; it is not the thesis's recovered code. No unsupported claim of historical exactness or permit/safe/unsafe classification is made.
 
 The 223 facts are executable clauses in `documented_facts.pl`. The provenance registry attaches page/section evidence to each fact and assumption IDs to each inference rule. Neither registry prose nor chapter structure is a model input. Runtime introspection, not evidence-file parsing, supplies the state generator with valid processes, pollutants, components and query kinds.
+
+## Current-reference extension
+
+The historical workflows are now joined by `screen_ambient`, a separate current US EPA ambient reference workflow with twelve documented reference rows and explicit statistic, unit, completeness and context checks. It does not recalibrate historical magnitude/importance rules. See [current standards](current-standards.md) for the source table, update scope and executable contract.

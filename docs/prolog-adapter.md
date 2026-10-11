@@ -22,3 +22,5 @@ The bridge loads the selected module and executes its predicates. It does not in
 For an actual Clef version using a flat input/target pair, provide a JSON mapping with `schema_name`, `schema_version`, `layout` (must be `pair`), `input_field` and `target_field`. The last two must be distinct. These values must come from that Clef implementation's documented contract; no example is presented as an official Clef schema. Pass the file using `--format clef --contract PATH`. If Clef requires a richer layout, add an exporter against that schema with a contract test.
 
 Exports discard case IDs, audit prose and rule traces. Optional `--index` creates a separate row-to-case-ID file for evaluation joins. The generic JSONL and `audit.jsonl` remain the reviewable source artifacts.
+
+The default cement oracle fingerprints `documented_facts.pl` and `current_standards.pl` as dependencies. Its domain exposes `ambient_standards` with versioned reference levels and statistical tags; the generator reads those executable declarations without parsing source prose. The added `screen_ambient` query uses the same evaluate/3 interface as all historical workflows.

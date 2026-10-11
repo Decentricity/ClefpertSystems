@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "generator_sha256": "b7d3133e9027a620ec33fe35d44a16c5fd30dddfd53d9dbd26a1531441136160",
-  "oracle_fingerprint": "3e22bf2a523db42040f46d8e41ca5ebe0043badcf04c1b97475dbbc86ed0ed41",
+  "oracle_fingerprint": "1d5f78af90a8d5c52d984365860ebcb551c0f4205473596bd7df87bff0910ff4",
   "case_count": 70,
-  "cases_sha256": "25e331bbf5e7482b36a90ff5e321a21458bfa558d478350038e93014d5d3bb08",
+  "cases_sha256": "2ffb6f489bf9a4b019ed53f0eacfb77561a8f45820e9adaa3b9f895f7733a98f",
   "generation": "finite enumeration; no RNG",
   "split_policy": "whole query families; Hamming-distance-one neighbors contained",
   "family_splits": {

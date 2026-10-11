@@ -2,6 +2,8 @@
 % See provenance.yaml for translation status and exact chapter/page references.
 :- module(esc1, [evaluate/3, domain_case/1, rule_id/1]).
 :- use_module(library(http/json)).
+:- use_module(library(apply)).
+:- use_module(library(lists)).
 
 % DOCUMENTED FACTS AND FAITHFUL TRANSLATIONS
 % datum(Kind, Inputs, Value, RuleId). Strings remain case-sensitive.
@@ -143,8 +145,35 @@ domain_case(Input) :- datum(Kind, Fields, _, _), put_dict(kind, Fields, Kind, In
 domain_case(_{kind:"criterion", criterion:C}) :- criterion(C).
 
 evaluate(Input, Target, RuleIds) :-
+    ( valid_input(Input) -> true
+    ; throw(error(domain_error(oracle_input, Input), _)) ),
     get_dict(kind, Input, Kind), del_dict(kind, Input, _, Fields),
     ( datum(Kind, Fields, Value, Id) ->
         Target = _{status:"documented", value:Value}, RuleIds = [Id]
     ; Target = _{status:"undocumented"}, RuleIds = []
     ).
+
+% GLUE_API: reject unsupported or malformed requests even when called directly.
+query_shape("impact", [environment, pollutant]).
+query_shape("standard", [pollutant]).
+query_shape("impact_se", [activity, factor]).
+query_shape("indirect_impact", [from, to]).
+query_shape("soc_ec", [activity]).
+query_shape("mitigation", [activity]).
+query_shape("method", [pollutant, technique]).
+query_shape("unit", [pollutant]).
+query_shape("criterion", [criterion]).
+query_shape("score_pair", [answer_1, answer_2]).
+valid_input(Input) :-
+    is_dict(Input), get_dict(kind, Input, Kind), string(Kind),
+    query_shape(Kind, Fields),
+    dict_pairs(Input, _, Pairs), pairs_keys_local(Pairs, Keys),
+    sort([kind|Fields], Keys), maplist(nonempty_field(Input), Fields),
+    valid_values(Kind, Input).
+pairs_keys_local([], []).
+pairs_keys_local([Key-_|Tail], [Key|Keys]) :- pairs_keys_local(Tail, Keys).
+nonempty_field(Input, Field) :- get_dict(Field, Input, Value), string(Value), Value \== "".
+valid_values("criterion", Input) :- !, criterion(Input.criterion).
+valid_values("score_pair", Input) :- !,
+    memberchk(Input.answer_1, ["yes", "no"]), memberchk(Input.answer_2, ["yes", "no"]).
+valid_values(_, _).

@@ -1,6 +1,6 @@
 # Thesis extraction notes
 
-Inspected 2026-10-11: public cover, Chapters I–VIII, and bibliography, via the ITB record linked in README. Source identity: **Pandu Wisaksono Sastrowardoyo**, NIM 15303001; title “Penggunaan Penilaian Metoda Dampak Warner-Preston dalam Program Komputer Sistem Pakar Analisa Dampak Industri Semen.” Chapter filenames say 2008; the record's publication-year field is blank. Do not treat the 2017 catalog input date as publication date. Chapter PDFs/hashes are inventoried in `dataset/raw/source-manifest.json`. Selected transcriptions and stable evidence IDs are in `dataset/raw/excerpts.json` and `knowledge_base/provenance.yaml`.
+Inspected 2026-10-11: public cover, Chapters I–VIII, and bibliography, via the ITB record linked in README. Source identity: **Pandu Wisaksono Sastrowardoyo**, NIM 15303001; title “Penggunaan Penilaian Metoda Dampak Warner-Preston dalam Program Komputer Sistem Pakar Analisa Dampak Industri Semen.” The cover (PDF page 1) explicitly dates the thesis 2008 and its approval sheet (PDF page 2) is dated 25 June 2008; the record's publication-year field is blank. Do not treat the 2017 catalog input date as publication date. Chapter PDFs/hashes are inventoried in `dataset/raw/source-manifest.json`. Selected transcriptions and stable evidence IDs are in `dataset/raw/excerpts.json` and `knowledge_base/provenance.yaml`.
 
 References below give printed chapter page and section; PDF page is the numeric suffix within that chapter file (e.g. VI.4 = BAB6 PDF page 4). The first pages have no printed number; their label is supplied by this convention. Figure captions/table alignment in BAB5 pages 2–3 and BAB6 pages 11–14 were visually checked.
 
@@ -10,7 +10,7 @@ References below give printed chapter page and section; PDF page is the numeric 
 - IV.1–IV.3, pp. IV-1–IV-5: ESC-1 combines Leopold and Sorensen, uses a shared fact database, semantic networks and topical knowledge trees. DOS text menus allow forward inspection from production processes or backward inspection from impacts. Facts include environment/public health, cement processes, pollutants/standards, mitigation, and assessment methodology; relations connect processes/pollutants, pollutant/environment impacts with importance, process/mitigation, and indirect impacts.
 - IV.3, p. IV-5 (`ARCH`): methodology questions are added after analysis branches. IV.7, p. IV-20: mitigation is displayed at the end of a session, even though the process is known earlier.
 - VII.1, p. VII.1: ESC-2 consolidates the KB with new search/UI in VisualProlog. Lists and display procedures bridge dialect/UI behavior; these descriptions do not recover complete executable source.
-- VII.3, p. VII.5: user chooses observation technique and enters concentration, temperature or pH; program determines magnitude, instrument detection/accuracy, affected components/importance, processes and mitigation. A running message report ends with Warner–Preston values.
+- VII.2, p. VII.5: user chooses observation technique and enters concentration, temperature or pH; program determines magnitude, instrument detection/accuracy, affected components/importance, processes and mitigation. A running message report ends with Warner–Preston values.
 - VIII, pp. VIII-1–VIII-3 (`ESC2`): the resulting program is ESC-2. Strategies are explicit questions, observed interaction, added knowledge bases, and fixed answers. The historical ESC-1 source is not supplied by these passages.
 
 ## Warner–Preston inventory
@@ -63,6 +63,8 @@ IV.7, IV-20: `mitigation("Product Storage","Mimimise rainfall allowed to percola
 VI.2, VI.15–VI.17: `method/4` fields are pollutant, technique, minimum detection, and repeat-experiment variability; `unit/2` connects pollutant to measurement unit. Examples: `method("Suspended solid","Non-filterable residue by drying oven",4.0,5.8).` and `unit("Suspended solid"," mg per liter").` The lower-case `solid` and leading unit space are preserved. Do not infer a standard-deviation interpretation or an instrument score from variability.
 
 Initial executable domain subset: **44 clauses** (24 table relations, 8 code-example facts, 8 fixed criterion answers, 4 scoring combinations), plus a twenty-criterion metadata inventory. It is deliberately incomplete.
+
+III.1–III.3, pp. III-1–III-3 describes KB review, search algorithm review, UI design, consolidation and verification; Warner–Preston is schematized as tables/diagrams and adapted to the existing architecture. Historical dates are inconsistent: III.2 (III-2) refers to environmental data from 1994, while V.1 (V-1) refers to data current in 1992. Preserve this discrepancy rather than assign a single recovered KB version.
 
 ## Unresolved work
 

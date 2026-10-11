@@ -1,9 +1,23 @@
-# Evaluation fixture
+# Running examples
 
-`test_predictions.jsonl` copies the 25 test oracle targets with confidence 1.0 to verify the evaluator's wiring. It is not a trained-model artifact or evidence of model performance. Replace it with future model predictions, each containing:
+`session.json` supplies repeated cement-industry analyses. Run it through the executable Prolog system:
 
-```json
-{"id":"<case ID>","output":{"status":"documented","value":"L"},"confidence":0.8}
+```sh
+python scripts/run_oracle.py --input examples/session.json
 ```
 
-`output` must be a JSON object; parse generated model text first. Confidence is optional and means probability that the entire decision is correct. Missing predictions count as disagreements; duplicate/extra IDs are rejected. Case IDs join against the frozen test JSONL. Do not provide targets, provenance, or rule IDs to the model at evaluation time.
+The output combines actual impact reports with derived session counts and Warner–Preston methodology grades.
+
+`tiny_kb.pl` is an unrelated thermostat expert system. It demonstrates the reusable translator with the input states in `tiny_states.jsonl`:
+
+```sh
+python scripts/translate_prolog.py --kb examples/tiny_kb.pl --states examples/tiny_states.jsonl --output /tmp/tiny-dataset --format prompt_completion
+```
+
+`test_predictions.jsonl` copies the 626 current test oracle targets with confidence 1.0 solely to verify evaluation wiring. It is not a model artifact or performance result. Replace it with real model outputs, joined by case ID:
+
+```json
+{"id":"<case ID>","output":{"decision":"<predicted decision>"},"confidence":0.8}
+```
+
+`output` must be a parsed JSON object containing the complete predicted structured result. Confidence is optional and means probability that the entire result is correct. Missing predictions count as disagreements; duplicate/extra IDs are rejected. Do not provide target values or audit traces to the model at evaluation time.

@@ -1,3 +1,3 @@
-# Source evidence
+# Raw scenario inputs
 
-`source-manifest.json` records public chapter URLs/IDs and SHA-256 hashes. `excerpts.json` contains selected passages and visually checked table transcriptions. These are evidence, not generated labels. `fetch_thesis.py` follows the library's public viewer with session cookies; ephemeral viewer tokens must not be committed. Full PDFs and text live in ignored `.source-cache/`.
+This directory is reserved for externally supplied case/state files. Thesis documents and chapter metadata are audit evidence under `docs/evidence/`, not input/target training data. The default state generator obtains its domain from the running Prolog program.

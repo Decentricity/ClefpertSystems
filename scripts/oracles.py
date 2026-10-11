@@ -28,6 +28,10 @@ def normalize_inputs(inputs):
     if not isinstance(inputs, dict) or not isinstance(inputs.get('kind'), str):
         raise ValueError('Inputs require an object with string kind')
     inputs = copy.deepcopy(inputs)
+    if inputs["kind"] == "assess_session":
+        if not isinstance(inputs.get("cases"), list) or not inputs["cases"]:
+            raise ValueError("Session cases must be a nonempty list")
+        inputs["cases"] = [normalize_inputs(case) for case in inputs["cases"]]
     for key in ('processes', 'receptors'):
         if key in inputs:
             if not isinstance(inputs[key], list) or not inputs[key] or any(
@@ -121,5 +125,5 @@ def write_jsonl(path, records):
 
 
 def query_text(inputs):
-    return ('Evaluate this expert-system case. Return only the JSON decision, '
-            'inferred impacts and recommendations. Inputs: ' + canonical(inputs))
+    return ('Evaluate this expert-system case. Return only its JSON result. Inputs: '
+            + canonical(inputs))

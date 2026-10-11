@@ -1,0 +1,4 @@
+{"inputs":{"kind":"thermostat","temperature":10},"group_id":"cold","split":"train"}
+{"inputs":{"kind":"thermostat","temperature":12},"group_id":"cold","split":"train"}
+{"inputs":{"kind":"thermostat","temperature":20},"group_id":"comfortable","split":"validation"}
+{"inputs":{"kind":"thermostat","temperature":30},"group_id":"hot","split":"test"}

@@ -1,0 +1,76 @@
+{
+  "source_url": "https://digilib.itb.ac.id/gdl/view_data/penggunaan-penilaian-metoda-dampak-warner-preston-dalam-program-komputer-sistem-pakar-analisa-dampak-industri-semen",
+  "retrieved_on": "2026-10-11",
+  "chapters": [
+    {
+      "name": "cover",
+      "file_id": 27437,
+      "viewer_endpoint": "https://digilib.itb.ac.id/gdl/generate_token/27437",
+      "sha256": "110703a28bef3ad9e539dd1897eef28c8ebf3bb90726e18b9c4e7fa197b322d4",
+      "bytes": 574889
+    },
+    {
+      "name": "bab1",
+      "file_id": 27438,
+      "viewer_endpoint": "https://digilib.itb.ac.id/gdl/generate_token/27438",
+      "sha256": "aa19d5265094545f79bd1ccc3a627e0ededa690791f663936bcd48f850b662f7",
+      "bytes": 164724
+    },
+    {
+      "name": "bab2",
+      "file_id": 27439,
+      "viewer_endpoint": "https://digilib.itb.ac.id/gdl/generate_token/27439",
+      "sha256": "b257e20821b708f5aa5fc9a0565d4098eb5b4069e4aae20ba50a628bb44ddb64",
+      "bytes": 1247974
+    },
+    {
+      "name": "bab3",
+      "file_id": 27440,
+      "viewer_endpoint": "https://digilib.itb.ac.id/gdl/generate_token/27440",
+      "sha256": "c65389e843b3581a6f2a2b5fc503623406d0f2876d09a324e0aac08ea7eae1ea",
+      "bytes": 642113
+    },
+    {
+      "name": "bab4",
+      "file_id": 27441,
+      "viewer_endpoint": "https://digilib.itb.ac.id/gdl/generate_token/27441",
+      "sha256": "356fc52bc1f5df7316e85ebe5ef9922998a4adcb450435f3269a5dd7f8cbd187",
+      "bytes": 1431695
+    },
+    {
+      "name": "bab5",
+      "file_id": 27442,
+      "viewer_endpoint": "https://digilib.itb.ac.id/gdl/generate_token/27442",
+      "sha256": "ecf8c6b97b33bcfdc745e924156b71408a38e4aa36105eecf88cd136b4e42382",
+      "bytes": 740755
+    },
+    {
+      "name": "bab6",
+      "file_id": 27443,
+      "viewer_endpoint": "https://digilib.itb.ac.id/gdl/generate_token/27443",
+      "sha256": "a0b4b3fe752816023ef96a9e9a5a4053f177e8ea5e83f14c388ba1a43f63b49c",
+      "bytes": 1702236
+    },
+    {
+      "name": "bab7",
+      "file_id": 27444,
+      "viewer_endpoint": "https://digilib.itb.ac.id/gdl/generate_token/27444",
+      "sha256": "85aa7bdbf565b17fd878fa28f59dfafcb4527195a31de56a924356c36f5c22cf",
+      "bytes": 276799
+    },
+    {
+      "name": "bab8",
+      "file_id": 27445,
+      "viewer_endpoint": "https://digilib.itb.ac.id/gdl/generate_token/27445",
+      "sha256": "548dc76b78bb1e49f9ff395737c1be570b24febb1a829fead8b7d0260f243310",
+      "bytes": 135096
+    },
+    {
+      "name": "pustaka",
+      "file_id": 27446,
+      "viewer_endpoint": "https://digilib.itb.ac.id/gdl/generate_token/27446",
+      "sha256": "5555d142ddfa5b6ce5336463f0104992fb02d64b51ac54b5c8ea6f9616231458",
+      "bytes": 1928279
+    }
+  ]
+}

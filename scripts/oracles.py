@@ -32,6 +32,15 @@ def normalize_inputs(inputs):
         if not isinstance(inputs.get("cases"), list) or not inputs["cases"]:
             raise ValueError("Session cases must be a nonempty list")
         inputs["cases"] = [normalize_inputs(case) for case in inputs["cases"]]
+    if inputs['kind'] == 'screen_ambient':
+        summary = inputs.get('summary')
+        if not isinstance(summary, dict):
+            raise ValueError('Ambient screening requires a summary object')
+        for key in ('value', 'reference_level'):
+            if key in summary:
+                if type(summary[key]) not in (int, float):
+                    raise ValueError(f'Summary {key} must be numeric')
+                summary[key] = float(summary[key])
     for key in ('processes', 'receptors'):
         if key in inputs:
             if not isinstance(inputs[key], list) or not inputs[key] or any(
@@ -73,7 +82,8 @@ class PrologOracle:
         default = self.kb == ROOT / 'knowledge_base/esc1.pl'
         self.dependencies = [Path(p).resolve() for p in (dependencies or [])]
         if default:
-            self.dependencies += [ROOT / 'knowledge_base/documented_facts.pl']
+            self.dependencies += [ROOT / 'knowledge_base/documented_facts.pl',
+                                  ROOT / 'knowledge_base/current_standards.pl']
         if any(not p.is_file() for p in self.dependencies):
             raise ValueError('An oracle dependency is missing')
 

@@ -35,6 +35,16 @@ class DatasetTests(unittest.TestCase):
             if kind == 'method_assessment':
                 key = canonical(case['inputs']['counts'])
                 self.assertEqual(wp_sessions.setdefault(key, case['split']), case['split'])
+        ambient_families = {'PM2.5': 'Particulate', 'PM10': 'Particulate',
+                            'CO': 'CO', 'SO2': 'SO2', 'NO2': 'NO2', 'O3': 'O3', 'Pb': 'Pb'}
+        ambient_domain = self.oracle.domain()['ambient_standards']
+        for case in self.cases:
+            if case['inputs']['kind'] == 'screen_ambient':
+                pollutant = next(s['pollutant'] for s in ambient_domain
+                                 if s['standard'] == case['inputs']['standard'])
+                family = ambient_families[pollutant]
+                self.assertEqual(case['group_id'], 'pollutant:' + family)
+                self.assertEqual(pollutants.setdefault(family, case['split']), case['split'])
         profiles = {canonical(c['inputs']['counts']): c for c in self.cases
                     if c['inputs']['kind'] == 'method_assessment'}
         for a, b in itertools.combinations(profiles.values(), 2):

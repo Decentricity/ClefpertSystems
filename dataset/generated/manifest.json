@@ -1,14 +1,14 @@
 {
-  "schema_version": 2,
-  "generator_sha256": "49b2d8a663db177fbfb979e1e2296fd90f431455f538764ab54712e4fc089597",
-  "oracle_fingerprint": "722c3e10fdfb035c950b3b9459e0611422c7fa19fe985c16b4051d0fa4ce30ee",
-  "case_count": 2882,
-  "cases_sha256": "1c64c907173c94f48e281d20b4db97f7a5899c902b31cf7c1deeab52b6be74bd",
-  "audit_sha256": "14033611b9cc55eb67536274b93c81cad6384964b49ca708be35a45d0810ad75",
+  "schema_version": 3,
+  "generator_sha256": "18a78f027743f7a97af0d3aa501f5a9cc6b0fbb2a3b2e32962ba57943f091fa5",
+  "oracle_fingerprint": "347b2e37f18e62780c8afff7eb6326a28308222e041f6d240178fe87f4d86cc7",
+  "case_count": 3136,
+  "cases_sha256": "037f3ea006bfd5f22f5ad403a1742cfa3d3db53b1d640a94e33ed9b10814aea6",
+  "audit_sha256": "49486270c06d36f84fec875acc1446e2ded696330197434017bae3cb3131255f",
   "split_counts": {
-    "train": 1941,
-    "validation": 315,
-    "test": 626
+    "train": 2063,
+    "validation": 359,
+    "test": 714
   },
   "query_kind_counts": {
     "assess_session": 56,
@@ -16,47 +16,57 @@
     "assess_concentration": 13,
     "assess": 2628,
     "instrumentation": 5,
+    "screen_ambient": 254,
     "trace_back": 20
   },
   "class_counts_by_split": {
     "train": {
       "session_assessed": 24,
       "method_assessed": 136,
-      "insufficient_data": 492,
+      "insufficient_data": 542,
       "no_detected_impact": 214,
       "monitor": 312,
       "mitigate": 536,
       "urgent_review": 222,
       "below_detection_limit": 2,
-      "measurable": 3
+      "measurable": 3,
+      "within_reference": 39,
+      "exceeds_reference": 33
     },
     "validation": {
       "session_assessed": 16,
       "method_assessed": 8,
       "monitor": 95,
       "mitigate": 60,
-      "insufficient_data": 103,
+      "insufficient_data": 119,
       "no_detected_impact": 30,
-      "urgent_review": 3
+      "urgent_review": 3,
+      "within_reference": 16,
+      "exceeds_reference": 12
     },
     "test": {
       "session_assessed": 16,
       "method_assessed": 16,
       "monitor": 105,
-      "insufficient_data": 103,
+      "insufficient_data": 135,
       "no_detected_impact": 78,
       "urgent_review": 149,
       "mitigate": 139,
+      "within_reference": 32,
+      "exceeds_reference": 24,
       "candidate_sources": 20
     }
   },
-  "split_policy": "pollutant-family holdouts; entire backward/instrument families; grouped WP session profiles",
+  "split_policy": "pollutant-family holdouts including current/historical and unit/statistic variants; entire backward/instrument families; grouped WP session profiles",
   "groups": {
     "pollutant:CO": "train",
-    "pollutant:H2S": "validation",
-    "pollutant:Hydrocarbon": "validation",
+    "pollutant:Pb": "test",
+    "pollutant:NO2": "validation",
+    "pollutant:O3": "test",
     "pollutant:Particulate": "train",
     "pollutant:SO2": "test",
+    "pollutant:H2S": "validation",
+    "pollutant:Hydrocarbon": "validation",
     "pollutant:Suspended Solid": "train",
     "pollutant:Water Temperature": "test",
     "backward_candidates": "test",
@@ -83,6 +93,18 @@
     "wp_session:be52847abe8582b93b2e9bf832f5ed59c742bd445e0164ace794657eb258a23b": "train"
   },
   "covered_rule_ids": [
+    "CURRENT_NAAQS_01",
+    "CURRENT_NAAQS_02",
+    "CURRENT_NAAQS_03",
+    "CURRENT_NAAQS_04",
+    "CURRENT_NAAQS_05",
+    "CURRENT_NAAQS_06",
+    "CURRENT_NAAQS_07",
+    "CURRENT_NAAQS_08",
+    "CURRENT_NAAQS_09",
+    "CURRENT_NAAQS_10",
+    "CURRENT_NAAQS_11",
+    "CURRENT_NAAQS_12",
     "EXP_EMISSION_019",
     "EXP_EMISSION_020",
     "EXP_EMISSION_021",
@@ -295,6 +317,9 @@
     "IMPACT_24",
     "METHOD_SOLID",
     "MITIGATION_STORAGE",
+    "R_AMBIENT_GAPS",
+    "R_AMBIENT_SCREEN",
+    "R_AMBIENT_UNITS",
     "R_ASSESS",
     "R_BACKWARD",
     "R_DIRECT",
@@ -322,10 +347,12 @@
     "EXP_INDIRECT_086",
     "EXP_INDIRECT_095"
   ],
-  "oracle_rule_count": 236,
-  "coverage_fraction": 0.9703389830508474,
+  "oracle_rule_count": 251,
+  "coverage_fraction": 0.9721115537848606,
   "limitations": [
     "Approximate POC semantics, not lost-source equivalence",
+    "Current US ambient table screening requires supplied complete summaries; not raw observations or legal attainment",
+    "Historical impact weights and Warner-Preston assumptions are retained, not current standards",
     "Pollutant generalization holdout, not IID random rows",
     "One documented instrument example; instrumentation is train-only",
     "Backward tracing is test-only; prospective forward-to-backward generalization",

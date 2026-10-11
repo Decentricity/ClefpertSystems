@@ -1,6 +1,7 @@
 """Generate scenario decisions by executing Prolog, with a separate audit sidecar."""
 import argparse
 from collections import Counter
+import copy
 import itertools
 import json
 from pathlib import Path
@@ -17,10 +18,66 @@ def split_for_group(group):
     return 'train' if bucket < 70 else 'validation' if bucket < 85 else 'test'
 
 
+def ambient_states(domain):
+    """Read current reference levels/forms from executable Prolog domain metadata.
+
+    Equivalent units, protection classes and averaging/statistic variants stay
+    with their whole causal pollutant family, including historical counterparts.
+    """
+    families = {'CO': ('CO', 'train'), 'SO2': ('SO2', 'test'),
+                'PM2.5': ('Particulate', 'train'), 'PM10': ('Particulate', 'train'),
+                'NO2': ('NO2', 'validation'), 'O3': ('O3', 'test'), 'Pb': ('Pb', 'test')}
+    alternate = {'ppm': ('ppb', 1000), 'ppb': ('ppm', 0.001),
+                 'ug/m3': ('mg/m3', 0.001), 'mg/m3': ('ug/m3', 1000)}
+    states = []
+    for standard in domain.get('ambient_standards', []):
+        family, split = families[standard['pollutant']]
+        def add(inputs):
+            states.append({'inputs': copy.deepcopy(inputs), 'group_id': 'pollutant:' + family, 'split': split})
+        limit = standard['comparison_limit']
+        values = ([0, 1, 2, 3] if standard['statistic'] == 'annual_exceedances'
+                  else [0, limit * 0.5, limit * 0.999, limit, limit * 1.001, limit * 1.5, limit * 2])
+        base = {'kind': 'screen_ambient', 'profile': standard['profile'],
+                'standard': standard['standard'], 'sampling_context': 'ambient_air',
+                'summary': {'statistic': standard['statistic'], 'unit': standard['comparison_unit'],
+                            'value': 0, 'reference_level': standard['level'],
+                            'reference_unit': standard['level_unit'], 'data_status': 'complete'}}
+        for value in values:
+            case = copy.deepcopy(base)
+            case['summary']['value'] = value
+            add(case)
+            variant = copy.deepcopy(case)
+            unit, factor = alternate[standard['level_unit']]
+            variant['summary']['reference_unit'] = unit
+            variant['summary']['reference_level'] *= factor
+            if standard['comparison_unit'] in alternate:
+                unit, factor = alternate[standard['comparison_unit']]
+                variant['summary']['unit'] = unit
+                variant['summary']['value'] *= factor
+            add(variant)
+        for key, value in [('data_status', 'incomplete'), ('data_status', 'unverified'),
+                           ('statistic', 'single_observation'), ('unit', 'unknown'),
+                           ('reference_unit', 'unknown'), ('reference_level', standard['level'] * 2)]:
+            case = copy.deepcopy(base)
+            case['summary'][key] = value
+            add(case)
+        case = copy.deepcopy(base)
+        case['sampling_context'] = 'stack_emission'
+        add(case)
+        case = copy.deepcopy(base)
+        case['profile'] = 'unconfigured_jurisdiction'
+        add(case)
+        if standard['statistic'] == 'annual_exceedances':
+            case = copy.deepcopy(base)
+            case['summary']['value'] = 0.5
+            add(case)
+    return states
+
+
 def candidate_states(oracle):
     """Cement-specific input generator using executable domain introspection only."""
     domain = oracle.domain()
-    states = []
+    states = ambient_states(domain)
     magnitudes = [0, 1, 2.5, 5, 8, 10]
     for pollutant in domain['pollutants']:
         processes = sorted({p['process'] for p in domain['process_pollutant_pairs'] if p['pollutant'] == pollutant})
@@ -137,18 +194,20 @@ def generate(output, oracle=None, states=None):
     covered = sorted({rid for audit in audits for rid in audit['rule_ids']})
     inventory = set(oracle.rule_ids())
     manifest = {
-        'schema_version': 2, 'generator_sha256': digest(Path(__file__).read_text()),
+        'schema_version': 3, 'generator_sha256': digest(Path(__file__).read_text()),
         'oracle_fingerprint': oracle.fingerprint(), 'case_count': len(records),
         'cases_sha256': digest(records), 'audit_sha256': digest(audits),
         'split_counts': dict(Counter(r['split'] for r in records)),
         'query_kind_counts': dict(Counter(r['inputs']['kind'] for r in records)),
         'class_counts_by_split': {s: dict(Counter(class_label(r['target']) for r in records if r['split'] == s))
                                   for s in ('train', 'validation', 'test')},
-        'split_policy': 'pollutant-family holdouts; entire backward/instrument families; grouped WP session profiles',
+        'split_policy': 'pollutant-family holdouts including current/historical and unit/statistic variants; entire backward/instrument families; grouped WP session profiles',
         'groups': group_splits, 'covered_rule_ids': covered,
         'uncovered_rule_ids': sorted(inventory - set(covered)), 'oracle_rule_count': len(inventory),
         'coverage_fraction': len(covered) / len(inventory),
         'limitations': ['Approximate POC semantics, not lost-source equivalence',
+                       'Current US ambient table screening requires supplied complete summaries; not raw observations or legal attainment',
+                       'Historical impact weights and Warner-Preston assumptions are retained, not current standards',
                        'Pollutant generalization holdout, not IID random rows',
                        'One documented instrument example; instrumentation is train-only',
                        'Backward tracing is test-only; prospective forward-to-backward generalization',

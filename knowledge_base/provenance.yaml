@@ -1,6 +1,6 @@
 {
-  "schema_version": 2,
-  "scope": "Runnable, deliberately approximate cement-impact POC; evidence and assumptions separated from training",
+  "schema_version": 3,
+  "scope": "Approximate reconstructed cement-impact POC plus a current US ambient reference profile; source evidence and inference assumptions separated from training.",
   "sources": {
     "ARCH": {
       "chapter": "bab4",
@@ -3380,6 +3380,17 @@
         },
         "value": 10.0
       }
+    },
+    "EPA_NAAQS_2025": {
+      "type": "web",
+      "url": "https://www.epa.gov/criteria-air-pollutants/naaqs-table",
+      "publisher": "US Environmental Protection Agency",
+      "title": "NAAQS Table",
+      "page_last_updated": "2025-11-04",
+      "retrieved_on": "2026-10-11",
+      "section": "Current NAAQS table and footnotes",
+      "evidence": "docs/evidence/current-standards-source.json",
+      "claim": "Twelve current table rows with pollutant, protection, averaging time, level and statistical form; previous standards may still apply in some areas."
     }
   },
   "facts": [
@@ -6279,6 +6290,282 @@
         "SRC_EXP_STANDARD_166"
       ],
       "classification": "faithful_translation"
+    },
+    {
+      "id": "CURRENT_NAAQS_01",
+      "kind": "ambient_reference",
+      "inputs": {
+        "profile": "us_epa_naaqs_2025",
+        "standard": "co_8h_primary"
+      },
+      "value": {
+        "pollutant": "CO",
+        "protection": "primary",
+        "averaging_time": "8h",
+        "level": 9.0,
+        "level_unit": "ppm",
+        "statistic": "annual_exceedances",
+        "comparison_limit": 1.0,
+        "comparison_unit": "count_per_year",
+        "source_form": "Not to be exceeded more than once per year"
+      },
+      "source_ids": [
+        "EPA_NAAQS_2025"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "CURRENT_NAAQS_02",
+      "kind": "ambient_reference",
+      "inputs": {
+        "profile": "us_epa_naaqs_2025",
+        "standard": "co_1h_primary"
+      },
+      "value": {
+        "pollutant": "CO",
+        "protection": "primary",
+        "averaging_time": "1h",
+        "level": 35.0,
+        "level_unit": "ppm",
+        "statistic": "annual_exceedances",
+        "comparison_limit": 1.0,
+        "comparison_unit": "count_per_year",
+        "source_form": "Not to be exceeded more than once per year"
+      },
+      "source_ids": [
+        "EPA_NAAQS_2025"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "CURRENT_NAAQS_03",
+      "kind": "ambient_reference",
+      "inputs": {
+        "profile": "us_epa_naaqs_2025",
+        "standard": "pb_3month"
+      },
+      "value": {
+        "pollutant": "Pb",
+        "protection": "primary_secondary",
+        "averaging_time": "rolling_3month",
+        "level": 0.15,
+        "level_unit": "ug/m3",
+        "statistic": "max_rolling_3month_mean_3y",
+        "comparison_limit": 0.15,
+        "comparison_unit": "ug/m3",
+        "source_form": "maximum arithmetic mean of 3 consecutive monthly means in a 3-year period"
+      },
+      "source_ids": [
+        "EPA_NAAQS_2025"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "CURRENT_NAAQS_04",
+      "kind": "ambient_reference",
+      "inputs": {
+        "profile": "us_epa_naaqs_2025",
+        "standard": "no2_1h_primary"
+      },
+      "value": {
+        "pollutant": "NO2",
+        "protection": "primary",
+        "averaging_time": "1h",
+        "level": 100.0,
+        "level_unit": "ppb",
+        "statistic": "daily_max_1h_p98_3y",
+        "comparison_limit": 100.0,
+        "comparison_unit": "ppb",
+        "source_form": "Annual 98th percentile of 1-hour daily maximum concentrations, averaged over 3 years"
+      },
+      "source_ids": [
+        "EPA_NAAQS_2025"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "CURRENT_NAAQS_05",
+      "kind": "ambient_reference",
+      "inputs": {
+        "profile": "us_epa_naaqs_2025",
+        "standard": "no2_annual"
+      },
+      "value": {
+        "pollutant": "NO2",
+        "protection": "primary_secondary",
+        "averaging_time": "1y",
+        "level": 53.0,
+        "level_unit": "ppb",
+        "statistic": "annual_mean",
+        "comparison_limit": 53.0,
+        "comparison_unit": "ppb",
+        "source_form": "Annual Mean"
+      },
+      "source_ids": [
+        "EPA_NAAQS_2025"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "CURRENT_NAAQS_06",
+      "kind": "ambient_reference",
+      "inputs": {
+        "profile": "us_epa_naaqs_2025",
+        "standard": "o3_8h"
+      },
+      "value": {
+        "pollutant": "O3",
+        "protection": "primary_secondary",
+        "averaging_time": "8h",
+        "level": 0.07,
+        "level_unit": "ppm",
+        "statistic": "daily_max_8h_fourth_highest_3y",
+        "comparison_limit": 0.07,
+        "comparison_unit": "ppm",
+        "source_form": "Annual fourth-highest daily maximum 8-hour concentration, averaged over 3 years"
+      },
+      "source_ids": [
+        "EPA_NAAQS_2025"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "CURRENT_NAAQS_07",
+      "kind": "ambient_reference",
+      "inputs": {
+        "profile": "us_epa_naaqs_2025",
+        "standard": "pm25_annual_primary"
+      },
+      "value": {
+        "pollutant": "PM2.5",
+        "protection": "primary",
+        "averaging_time": "1y",
+        "level": 9.0,
+        "level_unit": "ug/m3",
+        "statistic": "annual_mean_3y",
+        "comparison_limit": 9.0,
+        "comparison_unit": "ug/m3",
+        "source_form": "annual mean, averaged over 3 years"
+      },
+      "source_ids": [
+        "EPA_NAAQS_2025"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "CURRENT_NAAQS_08",
+      "kind": "ambient_reference",
+      "inputs": {
+        "profile": "us_epa_naaqs_2025",
+        "standard": "pm25_annual_secondary"
+      },
+      "value": {
+        "pollutant": "PM2.5",
+        "protection": "secondary",
+        "averaging_time": "1y",
+        "level": 15.0,
+        "level_unit": "ug/m3",
+        "statistic": "annual_mean_3y",
+        "comparison_limit": 15.0,
+        "comparison_unit": "ug/m3",
+        "source_form": "annual mean, averaged over 3 years"
+      },
+      "source_ids": [
+        "EPA_NAAQS_2025"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "CURRENT_NAAQS_09",
+      "kind": "ambient_reference",
+      "inputs": {
+        "profile": "us_epa_naaqs_2025",
+        "standard": "pm25_24h"
+      },
+      "value": {
+        "pollutant": "PM2.5",
+        "protection": "primary_secondary",
+        "averaging_time": "24h",
+        "level": 35.0,
+        "level_unit": "ug/m3",
+        "statistic": "daily_mean_24h_p98_3y",
+        "comparison_limit": 35.0,
+        "comparison_unit": "ug/m3",
+        "source_form": "98th percentile, averaged over 3 years"
+      },
+      "source_ids": [
+        "EPA_NAAQS_2025"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "CURRENT_NAAQS_10",
+      "kind": "ambient_reference",
+      "inputs": {
+        "profile": "us_epa_naaqs_2025",
+        "standard": "pm10_24h"
+      },
+      "value": {
+        "pollutant": "PM10",
+        "protection": "primary_secondary",
+        "averaging_time": "24h",
+        "level": 150.0,
+        "level_unit": "ug/m3",
+        "statistic": "mean_annual_exceedances_3y",
+        "comparison_limit": 1.0,
+        "comparison_unit": "count_per_year",
+        "source_form": "Not to be exceeded more than once per year on average over 3 years"
+      },
+      "source_ids": [
+        "EPA_NAAQS_2025"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "CURRENT_NAAQS_11",
+      "kind": "ambient_reference",
+      "inputs": {
+        "profile": "us_epa_naaqs_2025",
+        "standard": "so2_1h_primary"
+      },
+      "value": {
+        "pollutant": "SO2",
+        "protection": "primary",
+        "averaging_time": "1h",
+        "level": 75.0,
+        "level_unit": "ppb",
+        "statistic": "daily_max_1h_p99_3y",
+        "comparison_limit": 75.0,
+        "comparison_unit": "ppb",
+        "source_form": "Annual 99th percentile of 1-hour daily maximum concentrations, averaged over 3 years"
+      },
+      "source_ids": [
+        "EPA_NAAQS_2025"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "CURRENT_NAAQS_12",
+      "kind": "ambient_reference",
+      "inputs": {
+        "profile": "us_epa_naaqs_2025",
+        "standard": "so2_annual_secondary"
+      },
+      "value": {
+        "pollutant": "SO2",
+        "protection": "secondary",
+        "averaging_time": "1y",
+        "level": 10.0,
+        "level_unit": "ppb",
+        "statistic": "annual_mean_3y",
+        "comparison_limit": 10.0,
+        "comparison_unit": "ppb",
+        "source_form": "annual mean, averaged over 3 years"
+      },
+      "source_ids": [
+        "EPA_NAAQS_2025"
+      ],
+      "classification": "faithful_translation"
     }
   ],
   "inference_rules": [
@@ -6375,6 +6662,28 @@
       "assumption_ids": [
         "A_SESSION_COUNTS"
       ]
+    },
+    {
+      "id": "R_AMBIENT_SCREEN",
+      "classification": "current_reference_screen",
+      "assumption_ids": [
+        "A_AMBIENT_SCREEN",
+        "A_AMBIENT_COUNTS"
+      ]
+    },
+    {
+      "id": "R_AMBIENT_GAPS",
+      "classification": "engineering_validation",
+      "assumption_ids": [
+        "A_AMBIENT_SCREEN"
+      ]
+    },
+    {
+      "id": "R_AMBIENT_UNITS",
+      "classification": "engineering_translation",
+      "assumption_ids": [
+        "A_AMBIENT_UNITS"
+      ]
     }
   ],
   "assumptions": [
@@ -6433,6 +6742,18 @@
     {
       "id": "A_SESSION_COUNTS",
       "description": "Derive session statistics from repeated Prolog case reports: count positive direct effects per analysis, distinct listed receptors/processes, and maximum-score direct effects as highlighted issues. These aggregation conventions are inferred; user supplies observation objectivity, staged activity, alternatives, declared assumptions and rare-severe-impact counts."
+    },
+    {
+      "id": "A_AMBIENT_SCREEN",
+      "description": "Screen a supplied complete summary against the explicitly selected current US EPA table row. Do not derive regulatory design values from raw measurements, verify completeness claims, apply mandated rounding, determine legal attainment, or apply US limits to another jurisdiction. Equality is within reference; strictly above exceeds reference. Context, statistic, completeness and reference threshold must match; otherwise abstain. Historical importance/magnitude values are not modernized or recalibrated."
+    },
+    {
+      "id": "A_AMBIENT_COUNTS",
+      "description": "For CO compare the supplied annual count of concentrations strictly above the row level with one; for PM10 compare the supplied three-year mean of annual exceedance counts with one. A concentration value alone cannot establish these frequency-based outcomes. These summaries must be computed for the exact reference threshold."
+    },
+    {
+      "id": "A_AMBIENT_UNITS",
+      "description": "Accept ppb/ppm by volume (factor 1000) and ug/m3/mg/m3 (factor 1000); no gas-volume to mass conversion without physical conditions. Count summaries use count_per_year. Reference-level equality allows only conversion roundoff (max absolute 1e-9, relative 1e-12), not regulatory rounding; decision comparisons remain strict."
     }
   ],
   "glue": [

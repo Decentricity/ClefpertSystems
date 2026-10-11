@@ -118,7 +118,12 @@ class KnowledgeBaseTests(unittest.TestCase):
         self.assertEqual(inventory, set(self.oracle.rule_ids()))
         for fact in provenance['facts']:
             for sid in fact['source_ids']:
-                self.assertGreater(provenance['sources'][sid]['pdf_page'], 0)
+                source = provenance['sources'][sid]
+                if source.get('type') == 'web':
+                    self.assertTrue(source['url'].startswith('https://www.epa.gov/'))
+                    self.assertTrue(source['retrieved_on'])
+                else:
+                    self.assertGreater(source['pdf_page'], 0)
         self.assertGreater(len(provenance['facts']), 200)
 
     def test_session_counts_are_derived_from_executed_analyses(self):

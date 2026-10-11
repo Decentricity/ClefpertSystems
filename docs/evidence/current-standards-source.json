@@ -1,0 +1,231 @@
+{
+  "url": "https://www.epa.gov/criteria-air-pollutants/naaqs-table",
+  "publisher": "US Environmental Protection Agency",
+  "title": "NAAQS Table",
+  "retrieved_on": "2026-10-11",
+  "page_last_updated": "2025-11-04",
+  "response_sha256": "5d9ae4563f08ae9f9196939ddd414db516edddec1a8a62cefb47e706d4deb1d8",
+  "table_rows": [
+    [
+      {
+        "text": "Pollutant[links to historical tables of NAAQS reviews]",
+        "colspan": "2"
+      },
+      {
+        "text": "Primary/Secondary"
+      },
+      {
+        "text": "Averaging Time"
+      },
+      {
+        "text": "Level"
+      },
+      {
+        "text": "Form"
+      }
+    ],
+    [
+      {
+        "text": "Carbon Monoxide (CO)",
+        "colspan": "2",
+        "rowspan": "2"
+      },
+      {
+        "text": "primary",
+        "rowspan": "2"
+      },
+      {
+        "text": "8 hours"
+      },
+      {
+        "text": "9 ppm"
+      },
+      {
+        "text": "Not to be exceeded more than once per year",
+        "rowspan": "2"
+      }
+    ],
+    [
+      {
+        "text": "1 hour"
+      },
+      {
+        "text": "35 ppm"
+      }
+    ],
+    [
+      {
+        "text": "Lead (Pb)",
+        "colspan": "2"
+      },
+      {
+        "text": "primary andsecondary (1)"
+      },
+      {
+        "text": "Rolling 3 month average"
+      },
+      {
+        "text": "0.15 μg/m3"
+      },
+      {
+        "text": "maximum arithmetic mean of 3 consecutive monthly means in a 3-year period"
+      }
+    ],
+    [
+      {
+        "text": "Nitrogen Dioxide (NO2)",
+        "colspan": "2",
+        "rowspan": "2"
+      },
+      {
+        "text": "primary"
+      },
+      {
+        "text": "1 hour"
+      },
+      {
+        "text": "100 ppb"
+      },
+      {
+        "text": "Annual 98th percentile of 1-hour daily maximum concentrations, averaged over 3 years"
+      }
+    ],
+    [
+      {
+        "text": "primary andsecondary"
+      },
+      {
+        "text": "1 year"
+      },
+      {
+        "text": "53 ppb (2)"
+      },
+      {
+        "text": "Annual Mean"
+      }
+    ],
+    [
+      {
+        "text": "Ozone (O3)",
+        "colspan": "2"
+      },
+      {
+        "text": "primary andsecondary (3)"
+      },
+      {
+        "text": "8 hours"
+      },
+      {
+        "text": "0.070 ppm"
+      },
+      {
+        "text": "Annual fourth-highest daily maximum 8-hour concentration, averaged over 3 years"
+      }
+    ],
+    [
+      {
+        "text": "Particle Pollution (PM)",
+        "rowspan": "4"
+      },
+      {
+        "text": "PM2.5",
+        "rowspan": "3"
+      },
+      {
+        "text": "primary"
+      },
+      {
+        "text": "1 year"
+      },
+      {
+        "text": "9.0 μg/m3"
+      },
+      {
+        "text": "annual mean, averaged over 3 years"
+      }
+    ],
+    [
+      {
+        "text": "secondary"
+      },
+      {
+        "text": "1 year"
+      },
+      {
+        "text": "15.0 μg/m3"
+      },
+      {
+        "text": "annual mean, averaged over 3 years"
+      }
+    ],
+    [
+      {
+        "text": "primary andsecondary"
+      },
+      {
+        "text": "24 hours"
+      },
+      {
+        "text": "35 μg/m3"
+      },
+      {
+        "text": "98th percentile, averaged over 3 years"
+      }
+    ],
+    [
+      {
+        "text": "PM10"
+      },
+      {
+        "text": "primary andsecondary"
+      },
+      {
+        "text": "24 hours"
+      },
+      {
+        "text": "150 μg/m3"
+      },
+      {
+        "text": "Not to be exceeded more than once per year on average over 3 years"
+      }
+    ],
+    [
+      {
+        "text": "Sulfur Dioxide (SO2)",
+        "colspan": "2",
+        "rowspan": "2"
+      },
+      {
+        "text": "primary (4)"
+      },
+      {
+        "text": "1 hour"
+      },
+      {
+        "text": "75 ppb"
+      },
+      {
+        "text": "Annual 99th percentile of 1-hour daily maximum concentrations, averaged over 3 years"
+      }
+    ],
+    [
+      {
+        "text": "secondary (5)"
+      },
+      {
+        "text": "1 year"
+      },
+      {
+        "text": "10 ppb"
+      },
+      {
+        "text": "annual mean, averaged over 3 years"
+      }
+    ]
+  ],
+  "footnotes": [
+    "The previous SO2 standards can remain in effect in certain areas.",
+    "The 2024 rulemaking added a new annual secondary NAAQS without altering the 1971 secondary 3-hour SO2 NAAQS. Some areas have continuing implementation obligations."
+  ],
+  "scope": "Selected current table rows only; previous standards, implementation obligations and full regulatory data handling are outside this reference screen."
+}

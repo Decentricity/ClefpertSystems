@@ -2,12 +2,15 @@
 % Documented facts: documented_facts.pl. POC assumptions: provenance.yaml A_*.
 :- module(esc1, [evaluate/3, domain/1, rule_id/1, demo/0]).
 :- use_module(documented_facts).
+:- use_module(current_standards).
 :- use_module(library(apply)).
 :- use_module(library(lists)).
 :- use_module(library(pairs)).
 :- use_module(library(http/json)).
 
 rule_id(Id) :- fact(_, _, _, Id).
+rule_id(Id) :- standard(_, Id).
+rule_id(Id) :- member(Id,["R_AMBIENT_SCREEN","R_AMBIENT_GAPS","R_AMBIENT_UNITS"]).
 rule_id(Id) :- member(Id, ["R_FORWARD", "R_DIRECT", "R_INDIRECT", "R_SOCIAL",
                            "R_MITIGATION", "R_PRIORITY", "R_GAPS", "R_ASSESS",
                            "R_STANDARD", "R_INSTRUMENT", "R_BACKWARD", "R_WP", "R_SESSION"]).
@@ -16,8 +19,8 @@ rule_id(Id) :- member(Id, ["R_FORWARD", "R_DIRECT", "R_INDIRECT", "R_SOCIAL",
 domain(_{processes:Processes, pollutants:Pollutants, receptors:Receptors,
          process_pollutant_pairs:Pairs, direct_pairs:Direct, indirect_pairs:Indirect,
          magnitude_range:[0,10], standards:Standards, instruments:Instruments,
-         wp_fields:WPFields, query_kinds:["assess","assess_concentration","trace_back","instrumentation","method_assessment","assess_session"],
-         profile:"cement_poc_v2"}) :-
+         wp_fields:WPFields, ambient_standards:AmbientStandards, query_kinds:["assess","assess_concentration","trace_back","instrumentation","method_assessment","assess_session","screen_ambient"],
+         profile:"cement_poc_v3_with_us_ambient_snapshot"}) :-
     findall(P, fact("emission", _{process:P,pollutant:_}, _, _), Ps), sort(Ps, Processes),
     findall(P, fact("emission", _{process:_,pollutant:P}, _, _), Pols), sort(Pols, Pollutants),
     findall(E, (fact("impact", _{pollutant:_,environment:E}, _, _);
@@ -28,9 +31,12 @@ domain(_{processes:Processes, pollutants:Pollutants, receptors:Receptors,
     findall(_{pollutant:P,lower:Lo,upper:Hi,magnitude:M}, standard_range(P,Lo,Hi,M,_), Standards),
     findall(_{pollutant:P,technique:T},
             (fact("method",F,_,_),P=F.pollutant,T=F.technique), Instruments),
-    findall(Field, wp_field(Field), WPFields).
+    findall(Field, wp_field(Field), WPFields),
+    findall(S,standard(S,_),AmbientStandards).
 
 % Executable workflows. No output is generated from document prose.
+evaluate(Input, Target, RuleIds) :-
+    Input.kind == "screen_ambient", !, require_valid(Input), screen(Input,Target,RuleIds).
 evaluate(Input, Target, RuleIds) :-
     Input.kind == "assess_session", !, require_valid(Input), session_assessment(Input,Target,RuleIds).
 evaluate(Input, Target, RuleIds) :-
@@ -132,12 +138,14 @@ valid_input(Input) :-
     is_dict(Input), get_dict(kind,Input,Kind),
     request_keys(Kind, Expected), dict_pairs(Input,_,Fields), pairs_keys(Fields,Expected),
     valid_request(Kind,Input).
+request_keys("screen_ambient", [kind,profile,sampling_context,standard,summary]).
 request_keys("assess_session", [alternatives,answers,cases,declared_assumptions,kind,objective_measurements,rare_severe_impacts,staged_activities]).
 request_keys("assess", [kind,magnitude,pollutant,processes,receptors]).
 request_keys("assess_concentration", [concentration,kind,pollutant,processes,receptors]).
 request_keys("trace_back", [kind,receptor]).
 request_keys("instrumentation", [kind,observed_value,pollutant,technique]).
 request_keys("method_assessment", [answers,counts,kind]).
+valid_request("screen_ambient",Input) :- valid_screen(Input).
 valid_request("assess_session",Input) :-
     is_list(Input.cases),Input.cases\=[],
     forall(member(C,Input.cases),(memberchk(C.kind,["assess","assess_concentration"]),valid_input(C))),

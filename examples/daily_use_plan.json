@@ -1,0 +1,1522 @@
+{
+  "schema_version": 1,
+  "site": "Synthetic Cement Works",
+  "description": "Scripted five-day role/workflow simulation, not observed human use or real monitoring data.",
+  "scope": "Assessment-support reports, not statutory EIAs or legal attainment decisions. Ambient summaries retain their multi-year/statistical scope despite daily review.",
+  "days": [
+    {
+      "id": "day-01",
+      "scenario_date": "2026-10-05",
+      "title": "Baseline desk review",
+      "events": [
+        {
+          "id": "day-01-instrument",
+          "time": "08:00",
+          "role": "Instrument operator",
+          "task": "Review the synthetic observation against the documented instrument detection limit.",
+          "inputs": {
+            "kind": "instrumentation",
+            "pollutant": "Suspended solid",
+            "technique": "Non-filterable residue by drying oven",
+            "observed_value": 3.999
+          },
+          "expected_decision": "below_detection_limit"
+        },
+        {
+          "id": "day-01-dust",
+          "time": "08:30",
+          "role": "Environmental officer",
+          "task": "Assess particulate pathways from processing and product storage.",
+          "inputs": {
+            "kind": "assess",
+            "pollutant": "Particulate",
+            "magnitude": 2,
+            "processes": [
+              "Mineral Processing",
+              "Product Storage"
+            ],
+            "receptors": [
+              "Shrubs",
+              "Birds",
+              "Gasses and Particulate"
+            ]
+          },
+          "expected_decision": "mitigate"
+        },
+        {
+          "id": "day-01-so2",
+          "time": "09:00",
+          "role": "Environmental officer",
+          "task": "Assess documented SO2 effects on shrubs and birds.",
+          "inputs": {
+            "kind": "assess",
+            "pollutant": "SO2",
+            "magnitude": 3,
+            "processes": [
+              "Mineral Processing"
+            ],
+            "receptors": [
+              "Shrubs",
+              "Birds"
+            ]
+          },
+          "expected_decision": "mitigate"
+        },
+        {
+          "id": "day-01-water",
+          "time": "10:00",
+          "role": "Environmental officer",
+          "task": "Trace direct surface-water and two-hop ecological pathways.",
+          "inputs": {
+            "kind": "assess",
+            "pollutant": "Suspended Solid",
+            "magnitude": 1,
+            "processes": [
+              "Mineral Processing"
+            ],
+            "receptors": [
+              "Surface Water",
+              "Aquatic Plants",
+              "Birds"
+            ]
+          },
+          "expected_decision": "monitor"
+        },
+        {
+          "id": "day-01-gap",
+          "time": "10:30",
+          "role": "Environmental officer",
+          "task": "Keep an unsupported CO-to-aquatic-plants relation unresolved.",
+          "inputs": {
+            "kind": "assess",
+            "pollutant": "CO",
+            "magnitude": 1,
+            "processes": [
+              "Mineral Processing"
+            ],
+            "receptors": [
+              "Aquatic Plants"
+            ]
+          },
+          "expected_decision": "insufficient_data"
+        },
+        {
+          "id": "day-01-historical",
+          "time": "11:00",
+          "role": "Environmental officer",
+          "task": "Exercise the historical H2S source-scale bands without claiming physical units.",
+          "inputs": {
+            "kind": "assess_concentration",
+            "pollutant": "H2S",
+            "concentration": 10.499,
+            "processes": [
+              "Mineral Processing"
+            ],
+            "receptors": [
+              "Shrubs"
+            ]
+          },
+          "expected_decision": "monitor"
+        },
+        {
+          "id": "day-01-backward",
+          "time": "11:30",
+          "role": "Environmental officer",
+          "task": "Inspect candidate sources for birds; candidates do not prove causation.",
+          "inputs": {
+            "kind": "trace_back",
+            "receptor": "Birds"
+          },
+          "expected_decision": "candidate_sources"
+        },
+        {
+          "id": "day-01-ambient",
+          "time": "13:00",
+          "role": "Monitoring analyst",
+          "task": "Review a synthetic stored statistical summary, not a new single daily measurement.",
+          "inputs": {
+            "kind": "screen_ambient",
+            "profile": "us_epa_naaqs_2025",
+            "standard": "pm25_annual_primary",
+            "sampling_context": "ambient_air",
+            "summary": {
+              "value": 10,
+              "unit": "ug/m3",
+              "statistic": "annual_mean_3y",
+              "reference_level": 9,
+              "reference_unit": "ug/m3",
+              "data_status": "complete"
+            }
+          },
+          "expected_decision": "exceeds_reference"
+        },
+        {
+          "id": "day-01-method",
+          "time": "14:00",
+          "role": "Report reviewer",
+          "task": "Review the inferred twenty-criterion methodology profile.",
+          "inputs": {
+            "kind": "method_assessment",
+            "counts": {
+              "activities": 2,
+              "alternatives": 2,
+              "components": 2,
+              "declared_assumptions": 2,
+              "highlighted_impacts": 1,
+              "impacts": 2,
+              "measurements": 2,
+              "objective_measurements": 2,
+              "rare_severe_impacts": 0,
+              "staged_activities": 1
+            },
+            "answers": {
+              "impact_isolation": "yes",
+              "explicit_indicators": "yes",
+              "significance": "yes"
+            }
+          },
+          "expected_decision": "method_assessed"
+        },
+        {
+          "id": "day-01-alternative",
+          "time": "14:30",
+          "role": "Environmental officer",
+          "task": "Compare a lower supplied-magnitude alternative; no mitigation efficacy is claimed.",
+          "inputs": {
+            "kind": "assess",
+            "pollutant": "Suspended Solid",
+            "magnitude": 0.5,
+            "processes": [
+              "Mineral Processing"
+            ],
+            "receptors": [
+              "Surface Water",
+              "Aquatic Plants",
+              "Birds"
+            ]
+          },
+          "expected_decision": "monitor"
+        },
+        {
+          "id": "day-01-session",
+          "time": "15:00",
+          "role": "Report reviewer",
+          "task": "Derive session counts from six executed historical analyses and prepare the daily report.",
+          "inputs": {
+            "kind": "assess_session",
+            "cases": [
+              {
+                "kind": "assess",
+                "pollutant": "Particulate",
+                "magnitude": 2,
+                "processes": [
+                  "Mineral Processing",
+                  "Product Storage"
+                ],
+                "receptors": [
+                  "Shrubs",
+                  "Birds",
+                  "Gasses and Particulate"
+                ]
+              },
+              {
+                "kind": "assess",
+                "pollutant": "SO2",
+                "magnitude": 3,
+                "processes": [
+                  "Mineral Processing"
+                ],
+                "receptors": [
+                  "Shrubs",
+                  "Birds"
+                ]
+              },
+              {
+                "kind": "assess",
+                "pollutant": "Suspended Solid",
+                "magnitude": 1,
+                "processes": [
+                  "Mineral Processing"
+                ],
+                "receptors": [
+                  "Surface Water",
+                  "Aquatic Plants",
+                  "Birds"
+                ]
+              },
+              {
+                "kind": "assess",
+                "pollutant": "CO",
+                "magnitude": 1,
+                "processes": [
+                  "Mineral Processing"
+                ],
+                "receptors": [
+                  "Aquatic Plants"
+                ]
+              },
+              {
+                "kind": "assess_concentration",
+                "pollutant": "H2S",
+                "concentration": 10.499,
+                "processes": [
+                  "Mineral Processing"
+                ],
+                "receptors": [
+                  "Shrubs"
+                ]
+              },
+              {
+                "kind": "assess",
+                "pollutant": "Suspended Solid",
+                "magnitude": 0.5,
+                "processes": [
+                  "Mineral Processing"
+                ],
+                "receptors": [
+                  "Surface Water",
+                  "Aquatic Plants",
+                  "Birds"
+                ]
+              }
+            ],
+            "answers": {
+              "impact_isolation": "yes",
+              "explicit_indicators": "yes",
+              "significance": "yes"
+            },
+            "alternatives": 2,
+            "declared_assumptions": 2,
+            "objective_measurements": 5,
+            "staged_activities": 1,
+            "rare_severe_impacts": 0
+          },
+          "expected_decision": "session_assessed"
+        }
+      ]
+    },
+    {
+      "id": "day-02",
+      "scenario_date": "2026-10-06",
+      "title": "Runoff concern and incomplete monitoring summary",
+      "events": [
+        {
+          "id": "day-02-instrument",
+          "time": "08:00",
+          "role": "Instrument operator",
+          "task": "Review the synthetic observation against the documented instrument detection limit.",
+          "inputs": {
+            "kind": "instrumentation",
+            "pollutant": "Suspended solid",
+            "technique": "Non-filterable residue by drying oven",
+            "observed_value": 4
+          },
+          "expected_decision": "measurable"
+        },
+        {
+          "id": "day-02-dust",
+          "time": "08:30",
+          "role": "Environmental officer",
+          "task": "Assess particulate pathways from processing and product storage.",
+          "inputs": {
+            "kind": "assess",
+            "pollutant": "Particulate",
+            "magnitude": 5,
+            "processes": [
+              "Mineral Processing",
+              "Product Storage"
+            ],
+            "receptors": [
+              "Shrubs",
+              "Birds",
+              "Gasses and Particulate"
+            ]
+          },
+          "expected_decision": "mitigate"
+        },
+        {
+          "id": "day-02-so2",
+          "time": "09:00",
+          "role": "Environmental officer",
+          "task": "Assess documented SO2 effects on shrubs and birds.",
+          "inputs": {
+            "kind": "assess",
+            "pollutant": "SO2",
+            "magnitude": 5,
+            "processes": [
+              "Mineral Processing"
+            ],
+            "receptors": [
+              "Shrubs",
+              "Birds"
+            ]
+          },
+          "expected_decision": "mitigate"
+        },
+        {
+          "id": "day-02-water",
+          "time": "10:00",
+          "role": "Environmental officer",
+          "task": "Trace direct surface-water and two-hop ecological pathways.",
+          "inputs": {
+            "kind": "assess",
+            "pollutant": "Suspended Solid",
+            "magnitude": 5,
+            "processes": [
+              "Mineral Processing"
+            ],
+            "receptors": [
+              "Surface Water",
+              "Aquatic Plants",
+              "Birds"
+            ]
+          },
+          "expected_decision": "urgent_review"
+        },
+        {
+          "id": "day-02-gap",
+          "time": "10:30",
+          "role": "Environmental officer",
+          "task": "Keep an unsupported CO-to-aquatic-plants relation unresolved.",
+          "inputs": {
+            "kind": "assess",
+            "pollutant": "CO",
+            "magnitude": 2,
+            "processes": [
+              "Mineral Processing"
+            ],
+            "receptors": [
+              "Aquatic Plants"
+            ]
+          },
+          "expected_decision": "insufficient_data"
+        },
+        {
+          "id": "day-02-historical",
+          "time": "11:00",
+          "role": "Environmental officer",
+          "task": "Exercise the historical H2S source-scale bands without claiming physical units.",
+          "inputs": {
+            "kind": "assess_concentration",
+            "pollutant": "H2S",
+            "concentration": 10.5,
+            "processes": [
+              "Mineral Processing"
+            ],
+            "receptors": [
+              "Shrubs"
+            ]
+          },
+          "expected_decision": "monitor"
+        },
+        {
+          "id": "day-02-backward",
+          "time": "11:30",
+          "role": "Environmental officer",
+          "task": "Inspect candidate sources for birds; candidates do not prove causation.",
+          "inputs": {
+            "kind": "trace_back",
+            "receptor": "Birds"
+          },
+          "expected_decision": "candidate_sources"
+        },
+        {
+          "id": "day-02-ambient",
+          "time": "13:00",
+          "role": "Monitoring analyst",
+          "task": "Review a synthetic stored statistical summary, not a new single daily measurement.",
+          "inputs": {
+            "kind": "screen_ambient",
+            "profile": "us_epa_naaqs_2025",
+            "standard": "pm25_24h",
+            "sampling_context": "ambient_air",
+            "summary": {
+              "value": 35,
+              "unit": "ug/m3",
+              "statistic": "daily_mean_24h_p98_3y",
+              "reference_level": 35,
+              "reference_unit": "ug/m3",
+              "data_status": "incomplete"
+            }
+          },
+          "expected_decision": "insufficient_data"
+        },
+        {
+          "id": "day-02-method",
+          "time": "14:00",
+          "role": "Report reviewer",
+          "task": "Review the inferred twenty-criterion methodology profile.",
+          "inputs": {
+            "kind": "method_assessment",
+            "counts": {
+              "activities": 2,
+              "alternatives": 2,
+              "components": 2,
+              "declared_assumptions": 2,
+              "highlighted_impacts": 1,
+              "impacts": 2,
+              "measurements": 2,
+              "objective_measurements": 2,
+              "rare_severe_impacts": 0,
+              "staged_activities": 1
+            },
+            "answers": {
+              "impact_isolation": "yes",
+              "explicit_indicators": "yes",
+              "significance": "no"
+            }
+          },
+          "expected_decision": "method_assessed"
+        },
+        {
+          "id": "day-02-alternative",
+          "time": "14:30",
+          "role": "Environmental officer",
+          "task": "Compare a lower supplied-magnitude alternative; no mitigation efficacy is claimed.",
+          "inputs": {
+            "kind": "assess",
+            "pollutant": "Suspended Solid",
+            "magnitude": 2.5,
+            "processes": [
+              "Mineral Processing"
+            ],
+            "receptors": [
+              "Surface Water",
+              "Aquatic Plants",
+              "Birds"
+            ]
+          },
+          "expected_decision": "mitigate"
+        },
+        {
+          "id": "day-02-session",
+          "time": "15:00",
+          "role": "Report reviewer",
+          "task": "Derive session counts from six executed historical analyses and prepare the daily report.",
+          "inputs": {
+            "kind": "assess_session",
+            "cases": [
+              {
+                "kind": "assess",
+                "pollutant": "Particulate",
+                "magnitude": 5,
+                "processes": [
+                  "Mineral Processing",
+                  "Product Storage"
+                ],
+                "receptors": [
+                  "Shrubs",
+                  "Birds",
+                  "Gasses and Particulate"
+                ]
+              },
+              {
+                "kind": "assess",
+                "pollutant": "SO2",
+                "magnitude": 5,
+                "processes": [
+                  "Mineral Processing"
+                ],
+                "receptors": [
+                  "Shrubs",
+                  "Birds"
+                ]
+              },
+              {
+                "kind": "assess",
+                "pollutant": "Suspended Solid",
+                "magnitude": 5,
+                "processes": [
+                  "Mineral Processing"
+                ],
+                "receptors": [
+                  "Surface Water",
+                  "Aquatic Plants",
+                  "Birds"
+                ]
+              },
+              {
+                "kind": "assess",
+                "pollutant": "CO",
+                "magnitude": 2,
+                "processes": [
+                  "Mineral Processing"
+                ],
+                "receptors": [
+                  "Aquatic Plants"
+                ]
+              },
+              {
+                "kind": "assess_concentration",
+                "pollutant": "H2S",
+                "concentration": 10.5,
+                "processes": [
+                  "Mineral Processing"
+                ],
+                "receptors": [
+                  "Shrubs"
+                ]
+              },
+              {
+                "kind": "assess",
+                "pollutant": "Suspended Solid",
+                "magnitude": 2.5,
+                "processes": [
+                  "Mineral Processing"
+                ],
+                "receptors": [
+                  "Surface Water",
+                  "Aquatic Plants",
+                  "Birds"
+                ]
+              }
+            ],
+            "answers": {
+              "impact_isolation": "yes",
+              "explicit_indicators": "yes",
+              "significance": "no"
+            },
+            "alternatives": 2,
+            "declared_assumptions": 2,
+            "objective_measurements": 5,
+            "staged_activities": 1,
+            "rare_severe_impacts": 0
+          },
+          "expected_decision": "session_assessed"
+        }
+      ]
+    },
+    {
+      "id": "day-03",
+      "scenario_date": "2026-10-07",
+      "title": "Elevated simulated impacts and unit conversion",
+      "events": [
+        {
+          "id": "day-03-instrument",
+          "time": "08:00",
+          "role": "Instrument operator",
+          "task": "Review the synthetic observation against the documented instrument detection limit.",
+          "inputs": {
+            "kind": "instrumentation",
+            "pollutant": "Suspended solid",
+            "technique": "Non-filterable residue by drying oven",
+            "observed_value": 4.001
+          },
+          "expected_decision": "measurable"
+        },
+        {
+          "id": "day-03-dust",
+          "time": "08:30",
+          "role": "Environmental officer",
+          "task": "Assess particulate pathways from processing and product storage.",
+          "inputs": {
+            "kind": "assess",
+            "pollutant": "Particulate",
+            "magnitude": 8,
+            "processes": [
+              "Mineral Processing",
+              "Product Storage"
+            ],
+            "receptors": [
+              "Shrubs",
+              "Birds",
+              "Gasses and Particulate"
+            ]
+          },
+          "expected_decision": "urgent_review"
+        },
+        {
+          "id": "day-03-so2",
+          "time": "09:00",
+          "role": "Environmental officer",
+          "task": "Assess documented SO2 effects on shrubs and birds.",
+          "inputs": {
+            "kind": "assess",
+            "pollutant": "SO2",
+            "magnitude": 8,
+            "processes": [
+              "Mineral Processing"
+            ],
+            "receptors": [
+              "Shrubs",
+              "Birds"
+            ]
+          },
+          "expected_decision": "mitigate"
+        },
+        {
+          "id": "day-03-water",
+          "time": "10:00",
+          "role": "Environmental officer",
+          "task": "Trace direct surface-water and two-hop ecological pathways.",
+          "inputs": {
+            "kind": "assess",
+            "pollutant": "Suspended Solid",
+            "magnitude": 10,
+            "processes": [
+              "Mineral Processing"
+            ],
+            "receptors": [
+              "Surface Water",
+              "Aquatic Plants",
+              "Birds"
+            ]
+          },
+          "expected_decision": "urgent_review"
+        },
+        {
+          "id": "day-03-gap",
+          "time": "10:30",
+          "role": "Environmental officer",
+          "task": "Keep an unsupported CO-to-aquatic-plants relation unresolved.",
+          "inputs": {
+            "kind": "assess",
+            "pollutant": "CO",
+            "magnitude": 3,
+            "processes": [
+              "Mineral Processing"
+            ],
+            "receptors": [
+              "Aquatic Plants"
+            ]
+          },
+          "expected_decision": "insufficient_data"
+        },
+        {
+          "id": "day-03-historical",
+          "time": "11:00",
+          "role": "Environmental officer",
+          "task": "Exercise the historical H2S source-scale bands without claiming physical units.",
+          "inputs": {
+            "kind": "assess_concentration",
+            "pollutant": "H2S",
+            "concentration": 21,
+            "processes": [
+              "Mineral Processing"
+            ],
+            "receptors": [
+              "Shrubs"
+            ]
+          },
+          "expected_decision": "monitor"
+        },
+        {
+          "id": "day-03-backward",
+          "time": "11:30",
+          "role": "Environmental officer",
+          "task": "Inspect candidate sources for birds; candidates do not prove causation.",
+          "inputs": {
+            "kind": "trace_back",
+            "receptor": "Birds"
+          },
+          "expected_decision": "candidate_sources"
+        },
+        {
+          "id": "day-03-ambient",
+          "time": "13:00",
+          "role": "Monitoring analyst",
+          "task": "Review a synthetic stored statistical summary, not a new single daily measurement.",
+          "inputs": {
+            "kind": "screen_ambient",
+            "profile": "us_epa_naaqs_2025",
+            "standard": "so2_1h_primary",
+            "sampling_context": "ambient_air",
+            "summary": {
+              "value": 0.075,
+              "unit": "ppm",
+              "statistic": "daily_max_1h_p99_3y",
+              "reference_level": 75,
+              "reference_unit": "ppb",
+              "data_status": "complete"
+            }
+          },
+          "expected_decision": "within_reference"
+        },
+        {
+          "id": "day-03-method",
+          "time": "14:00",
+          "role": "Report reviewer",
+          "task": "Review the inferred twenty-criterion methodology profile.",
+          "inputs": {
+            "kind": "method_assessment",
+            "counts": {
+              "activities": 2,
+              "alternatives": 2,
+              "components": 2,
+              "declared_assumptions": 2,
+              "highlighted_impacts": 1,
+              "impacts": 2,
+              "measurements": 2,
+              "objective_measurements": 2,
+              "rare_severe_impacts": 0,
+              "staged_activities": 1
+            },
+            "answers": {
+              "impact_isolation": "no",
+              "explicit_indicators": "yes",
+              "significance": "yes"
+            }
+          },
+          "expected_decision": "method_assessed"
+        },
+        {
+          "id": "day-03-alternative",
+          "time": "14:30",
+          "role": "Environmental officer",
+          "task": "Compare a lower supplied-magnitude alternative; no mitigation efficacy is claimed.",
+          "inputs": {
+            "kind": "assess",
+            "pollutant": "Suspended Solid",
+            "magnitude": 5,
+            "processes": [
+              "Mineral Processing"
+            ],
+            "receptors": [
+              "Surface Water",
+              "Aquatic Plants",
+              "Birds"
+            ]
+          },
+          "expected_decision": "urgent_review"
+        },
+        {
+          "id": "day-03-session",
+          "time": "15:00",
+          "role": "Report reviewer",
+          "task": "Derive session counts from six executed historical analyses and prepare the daily report.",
+          "inputs": {
+            "kind": "assess_session",
+            "cases": [
+              {
+                "kind": "assess",
+                "pollutant": "Particulate",
+                "magnitude": 8,
+                "processes": [
+                  "Mineral Processing",
+                  "Product Storage"
+                ],
+                "receptors": [
+                  "Shrubs",
+                  "Birds",
+                  "Gasses and Particulate"
+                ]
+              },
+              {
+                "kind": "assess",
+                "pollutant": "SO2",
+                "magnitude": 8,
+                "processes": [
+                  "Mineral Processing"
+                ],
+                "receptors": [
+                  "Shrubs",
+                  "Birds"
+                ]
+              },
+              {
+                "kind": "assess",
+                "pollutant": "Suspended Solid",
+                "magnitude": 10,
+                "processes": [
+                  "Mineral Processing"
+                ],
+                "receptors": [
+                  "Surface Water",
+                  "Aquatic Plants",
+                  "Birds"
+                ]
+              },
+              {
+                "kind": "assess",
+                "pollutant": "CO",
+                "magnitude": 3,
+                "processes": [
+                  "Mineral Processing"
+                ],
+                "receptors": [
+                  "Aquatic Plants"
+                ]
+              },
+              {
+                "kind": "assess_concentration",
+                "pollutant": "H2S",
+                "concentration": 21,
+                "processes": [
+                  "Mineral Processing"
+                ],
+                "receptors": [
+                  "Shrubs"
+                ]
+              },
+              {
+                "kind": "assess",
+                "pollutant": "Suspended Solid",
+                "magnitude": 5,
+                "processes": [
+                  "Mineral Processing"
+                ],
+                "receptors": [
+                  "Surface Water",
+                  "Aquatic Plants",
+                  "Birds"
+                ]
+              }
+            ],
+            "answers": {
+              "impact_isolation": "no",
+              "explicit_indicators": "yes",
+              "significance": "yes"
+            },
+            "alternatives": 2,
+            "declared_assumptions": 2,
+            "objective_measurements": 5,
+            "staged_activities": 1,
+            "rare_severe_impacts": 0
+          },
+          "expected_decision": "session_assessed"
+        }
+      ]
+    },
+    {
+      "id": "day-04",
+      "scenario_date": "2026-10-08",
+      "title": "Alternative scenario and CO frequency screen",
+      "events": [
+        {
+          "id": "day-04-instrument",
+          "time": "08:00",
+          "role": "Instrument operator",
+          "task": "Review the synthetic observation against the documented instrument detection limit.",
+          "inputs": {
+            "kind": "instrumentation",
+            "pollutant": "Suspended solid",
+            "technique": "Non-filterable residue by drying oven",
+            "observed_value": 2
+          },
+          "expected_decision": "below_detection_limit"
+        },
+        {
+          "id": "day-04-dust",
+          "time": "08:30",
+          "role": "Environmental officer",
+          "task": "Assess particulate pathways from processing and product storage.",
+          "inputs": {
+            "kind": "assess",
+            "pollutant": "Particulate",
+            "magnitude": 1,
+            "processes": [
+              "Mineral Processing",
+              "Product Storage"
+            ],
+            "receptors": [
+              "Shrubs",
+              "Birds",
+              "Gasses and Particulate"
+            ]
+          },
+          "expected_decision": "monitor"
+        },
+        {
+          "id": "day-04-so2",
+          "time": "09:00",
+          "role": "Environmental officer",
+          "task": "Assess documented SO2 effects on shrubs and birds.",
+          "inputs": {
+            "kind": "assess",
+            "pollutant": "SO2",
+            "magnitude": 1,
+            "processes": [
+              "Mineral Processing"
+            ],
+            "receptors": [
+              "Shrubs",
+              "Birds"
+            ]
+          },
+          "expected_decision": "monitor"
+        },
+        {
+          "id": "day-04-water",
+          "time": "10:00",
+          "role": "Environmental officer",
+          "task": "Trace direct surface-water and two-hop ecological pathways.",
+          "inputs": {
+            "kind": "assess",
+            "pollutant": "Suspended Solid",
+            "magnitude": 2.5,
+            "processes": [
+              "Mineral Processing"
+            ],
+            "receptors": [
+              "Surface Water",
+              "Aquatic Plants",
+              "Birds"
+            ]
+          },
+          "expected_decision": "mitigate"
+        },
+        {
+          "id": "day-04-gap",
+          "time": "10:30",
+          "role": "Environmental officer",
+          "task": "Keep an unsupported CO-to-aquatic-plants relation unresolved.",
+          "inputs": {
+            "kind": "assess",
+            "pollutant": "CO",
+            "magnitude": 1,
+            "processes": [
+              "Mineral Processing"
+            ],
+            "receptors": [
+              "Aquatic Plants"
+            ]
+          },
+          "expected_decision": "insufficient_data"
+        },
+        {
+          "id": "day-04-historical",
+          "time": "11:00",
+          "role": "Environmental officer",
+          "task": "Exercise the historical H2S source-scale bands without claiming physical units.",
+          "inputs": {
+            "kind": "assess_concentration",
+            "pollutant": "H2S",
+            "concentration": 42,
+            "processes": [
+              "Mineral Processing"
+            ],
+            "receptors": [
+              "Shrubs"
+            ]
+          },
+          "expected_decision": "mitigate"
+        },
+        {
+          "id": "day-04-backward",
+          "time": "11:30",
+          "role": "Environmental officer",
+          "task": "Inspect candidate sources for birds; candidates do not prove causation.",
+          "inputs": {
+            "kind": "trace_back",
+            "receptor": "Birds"
+          },
+          "expected_decision": "candidate_sources"
+        },
+        {
+          "id": "day-04-ambient",
+          "time": "13:00",
+          "role": "Monitoring analyst",
+          "task": "Review a synthetic stored statistical summary, not a new single daily measurement.",
+          "inputs": {
+            "kind": "screen_ambient",
+            "profile": "us_epa_naaqs_2025",
+            "standard": "co_8h_primary",
+            "sampling_context": "ambient_air",
+            "summary": {
+              "value": 2,
+              "unit": "count_per_year",
+              "statistic": "annual_exceedances",
+              "reference_level": 9,
+              "reference_unit": "ppm",
+              "data_status": "complete"
+            }
+          },
+          "expected_decision": "exceeds_reference"
+        },
+        {
+          "id": "day-04-method",
+          "time": "14:00",
+          "role": "Report reviewer",
+          "task": "Review the inferred twenty-criterion methodology profile.",
+          "inputs": {
+            "kind": "method_assessment",
+            "counts": {
+              "activities": 2,
+              "alternatives": 2,
+              "components": 2,
+              "declared_assumptions": 2,
+              "highlighted_impacts": 1,
+              "impacts": 2,
+              "measurements": 2,
+              "objective_measurements": 2,
+              "rare_severe_impacts": 0,
+              "staged_activities": 1
+            },
+            "answers": {
+              "impact_isolation": "yes",
+              "explicit_indicators": "yes",
+              "significance": "yes"
+            }
+          },
+          "expected_decision": "method_assessed"
+        },
+        {
+          "id": "day-04-alternative",
+          "time": "14:30",
+          "role": "Environmental officer",
+          "task": "Compare a lower supplied-magnitude alternative; no mitigation efficacy is claimed.",
+          "inputs": {
+            "kind": "assess",
+            "pollutant": "Suspended Solid",
+            "magnitude": 1,
+            "processes": [
+              "Mineral Processing"
+            ],
+            "receptors": [
+              "Surface Water",
+              "Aquatic Plants",
+              "Birds"
+            ]
+          },
+          "expected_decision": "monitor"
+        },
+        {
+          "id": "day-04-session",
+          "time": "15:00",
+          "role": "Report reviewer",
+          "task": "Derive session counts from six executed historical analyses and prepare the daily report.",
+          "inputs": {
+            "kind": "assess_session",
+            "cases": [
+              {
+                "kind": "assess",
+                "pollutant": "Particulate",
+                "magnitude": 1,
+                "processes": [
+                  "Mineral Processing",
+                  "Product Storage"
+                ],
+                "receptors": [
+                  "Shrubs",
+                  "Birds",
+                  "Gasses and Particulate"
+                ]
+              },
+              {
+                "kind": "assess",
+                "pollutant": "SO2",
+                "magnitude": 1,
+                "processes": [
+                  "Mineral Processing"
+                ],
+                "receptors": [
+                  "Shrubs",
+                  "Birds"
+                ]
+              },
+              {
+                "kind": "assess",
+                "pollutant": "Suspended Solid",
+                "magnitude": 2.5,
+                "processes": [
+                  "Mineral Processing"
+                ],
+                "receptors": [
+                  "Surface Water",
+                  "Aquatic Plants",
+                  "Birds"
+                ]
+              },
+              {
+                "kind": "assess",
+                "pollutant": "CO",
+                "magnitude": 1,
+                "processes": [
+                  "Mineral Processing"
+                ],
+                "receptors": [
+                  "Aquatic Plants"
+                ]
+              },
+              {
+                "kind": "assess_concentration",
+                "pollutant": "H2S",
+                "concentration": 42,
+                "processes": [
+                  "Mineral Processing"
+                ],
+                "receptors": [
+                  "Shrubs"
+                ]
+              },
+              {
+                "kind": "assess",
+                "pollutant": "Suspended Solid",
+                "magnitude": 1,
+                "processes": [
+                  "Mineral Processing"
+                ],
+                "receptors": [
+                  "Surface Water",
+                  "Aquatic Plants",
+                  "Birds"
+                ]
+              }
+            ],
+            "answers": {
+              "impact_isolation": "yes",
+              "explicit_indicators": "yes",
+              "significance": "yes"
+            },
+            "alternatives": 2,
+            "declared_assumptions": 2,
+            "objective_measurements": 5,
+            "staged_activities": 1,
+            "rare_severe_impacts": 0
+          },
+          "expected_decision": "session_assessed"
+        }
+      ]
+    },
+    {
+      "id": "day-05",
+      "scenario_date": "2026-10-09",
+      "title": "Zero-exposure scenario and unresolved historical range",
+      "events": [
+        {
+          "id": "day-05-instrument",
+          "time": "08:00",
+          "role": "Instrument operator",
+          "task": "Review the synthetic observation against the documented instrument detection limit.",
+          "inputs": {
+            "kind": "instrumentation",
+            "pollutant": "Suspended solid",
+            "technique": "Non-filterable residue by drying oven",
+            "observed_value": 10
+          },
+          "expected_decision": "measurable"
+        },
+        {
+          "id": "day-05-dust",
+          "time": "08:30",
+          "role": "Environmental officer",
+          "task": "Assess particulate pathways from processing and product storage.",
+          "inputs": {
+            "kind": "assess",
+            "pollutant": "Particulate",
+            "magnitude": 0,
+            "processes": [
+              "Mineral Processing",
+              "Product Storage"
+            ],
+            "receptors": [
+              "Shrubs",
+              "Birds",
+              "Gasses and Particulate"
+            ]
+          },
+          "expected_decision": "no_detected_impact"
+        },
+        {
+          "id": "day-05-so2",
+          "time": "09:00",
+          "role": "Environmental officer",
+          "task": "Assess documented SO2 effects on shrubs and birds.",
+          "inputs": {
+            "kind": "assess",
+            "pollutant": "SO2",
+            "magnitude": 0,
+            "processes": [
+              "Mineral Processing"
+            ],
+            "receptors": [
+              "Shrubs",
+              "Birds"
+            ]
+          },
+          "expected_decision": "no_detected_impact"
+        },
+        {
+          "id": "day-05-water",
+          "time": "10:00",
+          "role": "Environmental officer",
+          "task": "Trace direct surface-water and two-hop ecological pathways.",
+          "inputs": {
+            "kind": "assess",
+            "pollutant": "Suspended Solid",
+            "magnitude": 0,
+            "processes": [
+              "Mineral Processing"
+            ],
+            "receptors": [
+              "Surface Water",
+              "Aquatic Plants",
+              "Birds"
+            ]
+          },
+          "expected_decision": "no_detected_impact"
+        },
+        {
+          "id": "day-05-gap",
+          "time": "10:30",
+          "role": "Environmental officer",
+          "task": "Keep an unsupported CO-to-aquatic-plants relation unresolved.",
+          "inputs": {
+            "kind": "assess",
+            "pollutant": "CO",
+            "magnitude": 0,
+            "processes": [
+              "Mineral Processing"
+            ],
+            "receptors": [
+              "Aquatic Plants"
+            ]
+          },
+          "expected_decision": "insufficient_data"
+        },
+        {
+          "id": "day-05-historical",
+          "time": "11:00",
+          "role": "Environmental officer",
+          "task": "Exercise the historical H2S source-scale bands without claiming physical units.",
+          "inputs": {
+            "kind": "assess_concentration",
+            "pollutant": "H2S",
+            "concentration": 1001,
+            "processes": [
+              "Mineral Processing"
+            ],
+            "receptors": [
+              "Shrubs"
+            ]
+          },
+          "expected_decision": "insufficient_data"
+        },
+        {
+          "id": "day-05-backward",
+          "time": "11:30",
+          "role": "Environmental officer",
+          "task": "Inspect candidate sources for birds; candidates do not prove causation.",
+          "inputs": {
+            "kind": "trace_back",
+            "receptor": "Birds"
+          },
+          "expected_decision": "candidate_sources"
+        },
+        {
+          "id": "day-05-ambient",
+          "time": "13:00",
+          "role": "Monitoring analyst",
+          "task": "Review a synthetic stored statistical summary, not a new single daily measurement.",
+          "inputs": {
+            "kind": "screen_ambient",
+            "profile": "us_epa_naaqs_2025",
+            "standard": "pm10_24h",
+            "sampling_context": "ambient_air",
+            "summary": {
+              "value": 1,
+              "unit": "count_per_year",
+              "statistic": "mean_annual_exceedances_3y",
+              "reference_level": 150,
+              "reference_unit": "ug/m3",
+              "data_status": "complete"
+            }
+          },
+          "expected_decision": "within_reference"
+        },
+        {
+          "id": "day-05-method",
+          "time": "14:00",
+          "role": "Report reviewer",
+          "task": "Review the inferred twenty-criterion methodology profile.",
+          "inputs": {
+            "kind": "method_assessment",
+            "counts": {
+              "activities": 2,
+              "alternatives": 2,
+              "components": 2,
+              "declared_assumptions": 2,
+              "highlighted_impacts": 1,
+              "impacts": 2,
+              "measurements": 2,
+              "objective_measurements": 2,
+              "rare_severe_impacts": 0,
+              "staged_activities": 1
+            },
+            "answers": {
+              "impact_isolation": "yes",
+              "explicit_indicators": "yes",
+              "significance": "yes"
+            }
+          },
+          "expected_decision": "method_assessed"
+        },
+        {
+          "id": "day-05-alternative",
+          "time": "14:30",
+          "role": "Environmental officer",
+          "task": "Compare a lower supplied-magnitude alternative; no mitigation efficacy is claimed.",
+          "inputs": {
+            "kind": "assess",
+            "pollutant": "Suspended Solid",
+            "magnitude": 0,
+            "processes": [
+              "Mineral Processing"
+            ],
+            "receptors": [
+              "Surface Water",
+              "Aquatic Plants",
+              "Birds"
+            ]
+          },
+          "expected_decision": "no_detected_impact"
+        },
+        {
+          "id": "day-05-session",
+          "time": "15:00",
+          "role": "Report reviewer",
+          "task": "Derive session counts from six executed historical analyses and prepare the daily report.",
+          "inputs": {
+            "kind": "assess_session",
+            "cases": [
+              {
+                "kind": "assess",
+                "pollutant": "Particulate",
+                "magnitude": 0,
+                "processes": [
+                  "Mineral Processing",
+                  "Product Storage"
+                ],
+                "receptors": [
+                  "Shrubs",
+                  "Birds",
+                  "Gasses and Particulate"
+                ]
+              },
+              {
+                "kind": "assess",
+                "pollutant": "SO2",
+                "magnitude": 0,
+                "processes": [
+                  "Mineral Processing"
+                ],
+                "receptors": [
+                  "Shrubs",
+                  "Birds"
+                ]
+              },
+              {
+                "kind": "assess",
+                "pollutant": "Suspended Solid",
+                "magnitude": 0,
+                "processes": [
+                  "Mineral Processing"
+                ],
+                "receptors": [
+                  "Surface Water",
+                  "Aquatic Plants",
+                  "Birds"
+                ]
+              },
+              {
+                "kind": "assess",
+                "pollutant": "CO",
+                "magnitude": 0,
+                "processes": [
+                  "Mineral Processing"
+                ],
+                "receptors": [
+                  "Aquatic Plants"
+                ]
+              },
+              {
+                "kind": "assess_concentration",
+                "pollutant": "H2S",
+                "concentration": 1001,
+                "processes": [
+                  "Mineral Processing"
+                ],
+                "receptors": [
+                  "Shrubs"
+                ]
+              },
+              {
+                "kind": "assess",
+                "pollutant": "Suspended Solid",
+                "magnitude": 0,
+                "processes": [
+                  "Mineral Processing"
+                ],
+                "receptors": [
+                  "Surface Water",
+                  "Aquatic Plants",
+                  "Birds"
+                ]
+              }
+            ],
+            "answers": {
+              "impact_isolation": "yes",
+              "explicit_indicators": "yes",
+              "significance": "yes"
+            },
+            "alternatives": 2,
+            "declared_assumptions": 2,
+            "objective_measurements": 5,
+            "staged_activities": 1,
+            "rare_severe_impacts": 0
+          },
+          "expected_decision": "session_assessed"
+        }
+      ]
+    }
+  ],
+  "invalid_requests": [
+    {
+      "id": "negative-magnitude",
+      "inputs": {
+        "kind": "assess",
+        "pollutant": "SO2",
+        "magnitude": -1,
+        "processes": [
+          "Mineral Processing"
+        ],
+        "receptors": [
+          "Shrubs"
+        ]
+      }
+    },
+    {
+      "id": "boolean-magnitude",
+      "inputs": {
+        "kind": "assess",
+        "pollutant": "SO2",
+        "magnitude": true,
+        "processes": [
+          "Mineral Processing"
+        ],
+        "receptors": [
+          "Shrubs"
+        ]
+      }
+    },
+    {
+      "id": "unknown-process",
+      "inputs": {
+        "kind": "assess",
+        "pollutant": "SO2",
+        "magnitude": 5,
+        "processes": [
+          "Unknown process"
+        ],
+        "receptors": [
+          "Shrubs"
+        ]
+      }
+    },
+    {
+      "id": "unexpected-field",
+      "inputs": {
+        "kind": "assess",
+        "pollutant": "SO2",
+        "magnitude": 5,
+        "processes": [
+          "Mineral Processing"
+        ],
+        "receptors": [
+          "Shrubs"
+        ],
+        "chapter": 5
+      }
+    }
+  ]
+}

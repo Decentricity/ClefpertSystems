@@ -1,0 +1,21 @@
+{
+  "id": "prolog-tests",
+  "executed_at": "2026-10-11T06:26:00.863057+00:00",
+  "argv": [
+    "/workspace/.local/bin/swipl",
+    "-q",
+    "-f",
+    "none",
+    "-s",
+    "tests/test_prototype.pl",
+    "-g",
+    "run_tests",
+    "-t",
+    "halt"
+  ],
+  "cwd": "/workspace/ClefpertSystems",
+  "stdin": null,
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "% [1/3] prototype:two_hop_inference ..\nWarning: /workspace/ClefpertSystems/tests/test_prototype.pl:7:\nWarning:     test prototype:two_hop_inference: Test succeeded with choicepoint\n% [2/3] prototype:zero_ex..eserves_known_paths ...... passed (0.000 sec)\n% [3/3] prototype:absent_..n_is_not_a_negative ...... passed (0.000 sec)\n"
+}

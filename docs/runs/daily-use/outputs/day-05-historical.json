@@ -1,0 +1,9 @@
+{
+  "rule_ids": [
+    "R_STANDARD"
+  ],
+  "target": {
+    "decision": "insufficient_data",
+    "reason": "concentration_outside_documented_ranges"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "rule_ids": [
+    "CURRENT_NAAQS_11",
+    "R_AMBIENT_SCREEN",
+    "R_AMBIENT_UNITS"
+  ],
+  "target": {
+    "averaging_time": "1h",
+    "comparison_limit": 75.0,
+    "comparison_unit": "ppb",
+    "decision": "within_reference",
+    "expected_statistic": "daily_max_1h_p99_3y",
+    "normalized_value": 75.0,
+    "pollutant": "SO2",
+    "profile": "us_epa_naaqs_2025",
+    "protection": "primary",
+    "reference_level": 75.0,
+    "reference_unit": "ppb",
+    "scope": "supplied_summary_screen",
+    "standard": "so2_1h_primary"
+  }
+}

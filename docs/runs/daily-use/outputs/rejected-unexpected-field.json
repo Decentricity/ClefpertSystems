@@ -1,0 +1,17 @@
+{
+  "id": "unexpected-field",
+  "inputs": {
+    "kind": "assess",
+    "pollutant": "SO2",
+    "magnitude": 5,
+    "processes": [
+      "Mineral Processing"
+    ],
+    "receptors": [
+      "Shrubs"
+    ],
+    "chapter": 5
+  },
+  "rejected": true,
+  "error": "Prolog rejected request: ERROR: Domain error: `oracle_input' expected, found `_13786{chapter:5,kind:\"assess\",magnitude:5.0,pollutant:\"SO2\",processes:[\"Mineral Processing\"],receptors:[\"Shrubs\"]}'"
+}

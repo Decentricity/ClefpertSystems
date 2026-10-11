@@ -1,0 +1,14 @@
+{
+  "kind": "assess",
+  "pollutant": "Particulate",
+  "magnitude": 5.0,
+  "processes": [
+    "Mineral Processing",
+    "Product Storage"
+  ],
+  "receptors": [
+    "Birds",
+    "Gasses and Particulate",
+    "Shrubs"
+  ]
+}

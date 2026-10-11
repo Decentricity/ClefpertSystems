@@ -1,0 +1,13 @@
+{
+  "id": "runtime-version",
+  "executed_at": "2026-10-11T06:26:00.597532+00:00",
+  "argv": [
+    "/workspace/.local/bin/swipl",
+    "--version"
+  ],
+  "cwd": "/workspace/ClefpertSystems",
+  "stdin": null,
+  "exit_code": 0,
+  "stdout": "SWI-Prolog version 9.2.9 for x86_64-linux\n",
+  "stderr": ""
+}

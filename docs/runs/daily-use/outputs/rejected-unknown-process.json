@@ -1,0 +1,16 @@
+{
+  "id": "unknown-process",
+  "inputs": {
+    "kind": "assess",
+    "pollutant": "SO2",
+    "magnitude": 5,
+    "processes": [
+      "Unknown process"
+    ],
+    "receptors": [
+      "Shrubs"
+    ]
+  },
+  "rejected": true,
+  "error": "Prolog rejected request: ERROR: Domain error: `oracle_input' expected, found `_13658{kind:\"assess\",magnitude:5.0,pollutant:\"SO2\",processes:[\"Unknown process\"],receptors:[\"Shrubs\"]}'"
+}

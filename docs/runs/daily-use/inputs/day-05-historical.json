@@ -1,0 +1,11 @@
+{
+  "kind": "assess_concentration",
+  "pollutant": "H2S",
+  "concentration": 1001.0,
+  "processes": [
+    "Mineral Processing"
+  ],
+  "receptors": [
+    "Shrubs"
+  ]
+}

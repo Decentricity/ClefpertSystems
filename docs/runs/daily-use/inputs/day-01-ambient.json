@@ -1,0 +1,14 @@
+{
+  "kind": "screen_ambient",
+  "profile": "us_epa_naaqs_2025",
+  "standard": "pm25_annual_primary",
+  "sampling_context": "ambient_air",
+  "summary": {
+    "value": 10.0,
+    "unit": "ug/m3",
+    "statistic": "annual_mean_3y",
+    "reference_level": 9.0,
+    "reference_unit": "ug/m3",
+    "data_status": "complete"
+  }
+}

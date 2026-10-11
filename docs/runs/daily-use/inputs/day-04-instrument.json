@@ -1,0 +1,6 @@
+{
+  "kind": "instrumentation",
+  "pollutant": "Suspended solid",
+  "technique": "Non-filterable residue by drying oven",
+  "observed_value": 2.0
+}

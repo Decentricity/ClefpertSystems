@@ -1,0 +1,106 @@
+{
+  "rule_ids": [
+    "EXP_IMPACT_SE_122",
+    "EXP_IMPACT_SE_127",
+    "EXP_IMPACT_SE_134",
+    "EXP_IMPACT_SE_139",
+    "EXP_IMPACT_SE_142",
+    "EXP_SOC_EC_147",
+    "EXP_SOC_EC_148",
+    "EXP_SOC_EC_149",
+    "EXP_SOC_EC_150",
+    "EXP_SOC_EC_151",
+    "EXP_SOC_EC_152",
+    "EXP_SOC_EC_153",
+    "EXP_SOC_EC_154",
+    "EXP_SOC_EC_155",
+    "FACT_EMISSION_01",
+    "IMPACT_03",
+    "IMPACT_17",
+    "R_ASSESS",
+    "R_DIRECT",
+    "R_FORWARD",
+    "R_PRIORITY",
+    "R_SOCIAL",
+    "SOC_MIGRATION"
+  ],
+  "target": {
+    "decision": "no_detected_impact",
+    "direct_impacts": [
+      {
+        "importance": 4.0,
+        "magnitude": 0.0,
+        "pollutant": "SO2",
+        "receptor": "Shrubs",
+        "score": 0.0
+      },
+      {
+        "importance": 4.0,
+        "magnitude": 0.0,
+        "pollutant": "SO2",
+        "receptor": "Birds",
+        "score": 0.0
+      }
+    ],
+    "indirect_impacts": [],
+    "maximum_score": 0.0,
+    "mitigations": [],
+    "priority": "no_detected_impact",
+    "social_impacts": [
+      {
+        "consequences": [],
+        "factor": "Income Level",
+        "importance": 6.0,
+        "process": "Mineral Processing"
+      },
+      {
+        "consequences": [],
+        "factor": "Distinct Settlements",
+        "importance": 4.0,
+        "process": "Mineral Processing"
+      },
+      {
+        "consequences": [],
+        "factor": "Health and Social Services",
+        "importance": 6.0,
+        "process": "Mineral Processing"
+      },
+      {
+        "consequences": [
+          "changes in demand on educational resources",
+          "changes in demand on health and social services",
+          "changes in demand on transportation systems",
+          "disruption of cohesion in community groups",
+          "disruption of religious petterns and characteristics",
+          "increase or decrease employment patterns",
+          "increase or decrease income level",
+          "increase or decrease population growth",
+          "increase or decrease workforce",
+          "varies in population characteristics"
+        ],
+        "factor": "Migration",
+        "importance": 6.0,
+        "process": "Mineral Processing"
+      },
+      {
+        "consequences": [],
+        "factor": "Transportation Systems",
+        "importance": 6.0,
+        "process": "Mineral Processing"
+      }
+    ],
+    "sources": [
+      {
+        "pollutant": "SO2",
+        "process": "Mineral Processing"
+      }
+    ],
+    "unresolved_receptors": [],
+    "unresolved_social_factors": [
+      "Distinct Settlements",
+      "Health and Social Services",
+      "Income Level",
+      "Transportation Systems"
+    ]
+  }
+}

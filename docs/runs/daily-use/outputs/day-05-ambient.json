@@ -1,0 +1,22 @@
+{
+  "rule_ids": [
+    "CURRENT_NAAQS_10",
+    "R_AMBIENT_SCREEN",
+    "R_AMBIENT_UNITS"
+  ],
+  "target": {
+    "averaging_time": "24h",
+    "comparison_limit": 1.0,
+    "comparison_unit": "count_per_year",
+    "decision": "within_reference",
+    "expected_statistic": "mean_annual_exceedances_3y",
+    "normalized_value": 1.0,
+    "pollutant": "PM10",
+    "profile": "us_epa_naaqs_2025",
+    "protection": "primary_secondary",
+    "reference_level": 150.0,
+    "reference_unit": "ug/m3",
+    "scope": "supplied_summary_screen",
+    "standard": "pm10_24h"
+  }
+}

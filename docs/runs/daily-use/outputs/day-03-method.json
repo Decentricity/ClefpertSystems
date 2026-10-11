@@ -1,0 +1,44 @@
+{
+  "rule_ids": [
+    "FIXED_AFFECTED_GROUPS",
+    "FIXED_AGGREGATION",
+    "FIXED_DATA_SOURCES",
+    "FIXED_MAGNITUDE",
+    "FIXED_NEPA_CONFORMITY",
+    "FIXED_PUBLIC_INVOLVEMENT",
+    "FIXED_SUMMARY_FORMAT",
+    "FIXED_UNCERTAINTY",
+    "R_WP"
+  ],
+  "target": {
+    "aspect_grades": {
+      "communication": "S",
+      "identification": "S",
+      "interpretation": "S",
+      "measurement": "L"
+    },
+    "criterion_grades": {
+      "affected_groups": "N",
+      "aggregation": "L",
+      "alternatives": "L",
+      "comprehensiveness": "L",
+      "data_sources": "L",
+      "environmental_setting": "L",
+      "explicit_criteria": "L",
+      "explicit_indicators": "L",
+      "impact_isolation": "N",
+      "key_issues": "S",
+      "magnitude": "L",
+      "nepa_conformity": "L",
+      "objectivity": "L",
+      "public_involvement": "N",
+      "risk": "N",
+      "significance": "L",
+      "specificity": "L",
+      "summary_format": "L",
+      "time_consideration": "S",
+      "uncertainty": "L"
+    },
+    "decision": "method_assessed"
+  }
+}

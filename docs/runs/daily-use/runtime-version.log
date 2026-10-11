@@ -1,0 +1,7 @@
+$ /workspace/.local/bin/swipl --version
+STDOUT:
+SWI-Prolog version 9.2.9 for x86_64-linux
+
+STDERR:
+
+EXIT CODE: 0

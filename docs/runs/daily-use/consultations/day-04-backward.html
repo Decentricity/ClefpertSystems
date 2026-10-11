@@ -1,0 +1,787 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>day-04-backward</title><style>
+:root{color-scheme:light}*{box-sizing:border-box}body{margin:0;background:#eef2f6;color:#182535;font:16px/1.55 Arial,sans-serif}
+main{max-width:1180px;margin:28px auto;padding:32px;background:white;border:1px solid #d7e0e8;border-radius:10px}
+h1{font-size:30px;line-height:1.25;margin:12px 0}h2{font-size:22px;border-top:1px solid #dde5ed;padding-top:24px;margin-top:32px}
+h3{font-size:18px}.eyebrow{font-size:13px;color:#275f86;text-transform:uppercase;letter-spacing:1px}.note{padding:16px;background:#f5f8fb;border-left:4px solid #6386a2}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{padding:18px;border:1px solid #dce5ec;border-radius:6px}.big{font-size:27px;font-weight:bold}.muted{color:#526779}
+pre{font:13px/1.5 monospace;white-space:pre-wrap;overflow-wrap:anywhere;padding:18px;background:#f4f7fa;border:1px solid #dce5ec;border-radius:6px}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:14px}th,td{text-align:left;vertical-align:top;border-bottom:1px solid #dde5ed;padding:10px}th{background:#f1f5f8}
+.badge{display:inline-block;padding:4px 9px;border-radius:4px;background:#e7eef5;font-size:13px;font-weight:bold}.urgent_review,.exceeds_reference{background:#ffe8dc;color:#8f330a}.insufficient_data,.below_detection_limit{background:#fff0c2;color:#795800}.within_reference,.no_detected_impact,.measurable{background:#deefe5;color:#185639}
+a{color:#245e92}li{margin:7px 0}code{font-family:monospace;overflow-wrap:anywhere}.footer{margin-top:28px;font-size:12px;color:#607486}.break{overflow-wrap:anywhere}
+</style></head><body><main><div class="eyebrow">Actual SWI-Prolog consultation · synthetic task</div><h1>day-04-backward</h1><p>2026-10-08 · 11:30 · Environmental officer</p><p>Inspect candidate sources for birds; candidates do not prove causation.</p><p><span class="badge candidate_sources">candidate_sources</span> · expected-decision check passed</p><div class="note">Inputs are scripted. Output and rule trace below were returned by the running Prolog oracle. Scenario time is distinct from actual execution time.</div><h2>Reproduce this consultation</h2><pre>python scripts/run_oracle.py --input docs/runs/daily-use/inputs/day-04-backward.json</pre><h2>Input JSON</h2><pre id="input">{
+  &quot;kind&quot;: &quot;trace_back&quot;,
+  &quot;receptor&quot;: &quot;Birds&quot;
+}</pre><h2>Full Prolog output and rule trace</h2><pre id="output">{
+  &quot;rule_ids&quot;: [
+    &quot;EXP_EMISSION_019&quot;,
+    &quot;EXP_EMISSION_020&quot;,
+    &quot;EXP_EMISSION_021&quot;,
+    &quot;EXP_EMISSION_022&quot;,
+    &quot;EXP_EMISSION_023&quot;,
+    &quot;EXP_EMISSION_024&quot;,
+    &quot;EXP_EMISSION_025&quot;,
+    &quot;EXP_EMISSION_026&quot;,
+    &quot;EXP_EMISSION_027&quot;,
+    &quot;EXP_EMISSION_028&quot;,
+    &quot;EXP_EMISSION_029&quot;,
+    &quot;EXP_EMISSION_030&quot;,
+    &quot;EXP_EMISSION_031&quot;,
+    &quot;EXP_EMISSION_032&quot;,
+    &quot;EXP_EMISSION_033&quot;,
+    &quot;EXP_EMISSION_034&quot;,
+    &quot;EXP_EMISSION_035&quot;,
+    &quot;EXP_EMISSION_036&quot;,
+    &quot;EXP_EMISSION_037&quot;,
+    &quot;EXP_EMISSION_038&quot;,
+    &quot;EXP_EMISSION_039&quot;,
+    &quot;EXP_EMISSION_040&quot;,
+    &quot;EXP_EMISSION_041&quot;,
+    &quot;EXP_EMISSION_042&quot;,
+    &quot;EXP_EMISSION_043&quot;,
+    &quot;EXP_EMISSION_044&quot;,
+    &quot;EXP_EMISSION_045&quot;,
+    &quot;EXP_IMPACT_001&quot;,
+    &quot;EXP_IMPACT_002&quot;,
+    &quot;EXP_IMPACT_003&quot;,
+    &quot;EXP_IMPACT_004&quot;,
+    &quot;EXP_IMPACT_005&quot;,
+    &quot;EXP_IMPACT_006&quot;,
+    &quot;EXP_IMPACT_007&quot;,
+    &quot;EXP_IMPACT_008&quot;,
+    &quot;EXP_IMPACT_009&quot;,
+    &quot;EXP_IMPACT_010&quot;,
+    &quot;EXP_IMPACT_011&quot;,
+    &quot;EXP_IMPACT_012&quot;,
+    &quot;EXP_INDIRECT_048&quot;,
+    &quot;EXP_INDIRECT_049&quot;,
+    &quot;EXP_INDIRECT_050&quot;,
+    &quot;EXP_INDIRECT_051&quot;,
+    &quot;EXP_INDIRECT_077&quot;,
+    &quot;EXP_INDIRECT_080&quot;,
+    &quot;EXP_INDIRECT_081&quot;,
+    &quot;EXP_INDIRECT_082&quot;,
+    &quot;EXP_INDIRECT_106&quot;,
+    &quot;EXP_INDIRECT_107&quot;,
+    &quot;EXP_INDIRECT_108&quot;,
+    &quot;EXP_INDIRECT_109&quot;,
+    &quot;FACT_EMISSION_01&quot;,
+    &quot;FACT_EMISSION_02&quot;,
+    &quot;FACT_EMISSION_03&quot;,
+    &quot;FACT_EMISSION_04&quot;,
+    &quot;FACT_EMISSION_05&quot;,
+    &quot;FACT_EMISSION_06&quot;,
+    &quot;FACT_EMISSION_07&quot;,
+    &quot;FACT_EMISSION_08&quot;,
+    &quot;FACT_EMISSION_09&quot;,
+    &quot;FACT_EMISSION_10&quot;,
+    &quot;FACT_EMISSION_11&quot;,
+    &quot;FACT_EMISSION_12&quot;,
+    &quot;FACT_EMISSION_13&quot;,
+    &quot;FACT_INDIRECT_14&quot;,
+    &quot;FACT_INDIRECT_15&quot;,
+    &quot;IMPACT_01&quot;,
+    &quot;IMPACT_02&quot;,
+    &quot;IMPACT_03&quot;,
+    &quot;IMPACT_04&quot;,
+    &quot;IMPACT_05&quot;,
+    &quot;IMPACT_17&quot;,
+    &quot;IMPACT_18&quot;,
+    &quot;IMPACT_19&quot;,
+    &quot;IMPACT_20&quot;,
+    &quot;R_BACKWARD&quot;
+  ],
+  &quot;target&quot;: {
+    &quot;decision&quot;: &quot;candidate_sources&quot;,
+    &quot;direct_sources&quot;: [
+      {
+        &quot;importance&quot;: 1.0,
+        &quot;pollutant&quot;: &quot;H2S&quot;,
+        &quot;processes&quot;: [
+          &quot;Mineral Processing&quot;
+        ]
+      },
+      {
+        &quot;importance&quot;: 2.0,
+        &quot;pollutant&quot;: &quot;Particulate&quot;,
+        &quot;processes&quot;: [
+          &quot;Alteration of Ground Cover&quot;,
+          &quot;Blasting and Drilling&quot;,
+          &quot;Energy Generation&quot;,
+          &quot;Erosion and Terrasing&quot;,
+          &quot;Explosion&quot;,
+          &quot;Junk Disposal&quot;,
+          &quot;Mineral Processing&quot;,
+          &quot;Operation Failure&quot;,
+          &quot;Product Storage&quot;,
+          &quot;Trucking&quot;
+        ]
+      },
+      {
+        &quot;importance&quot;: 2.0,
+        &quot;pollutant&quot;: &quot;CO&quot;,
+        &quot;processes&quot;: [
+          &quot;Alteration of Ground Cover&quot;,
+          &quot;Energy Generation&quot;,
+          &quot;Explosion&quot;,
+          &quot;Junk Disposal&quot;,
+          &quot;Mineral Processing&quot;,
+          &quot;Operation Failure&quot;,
+          &quot;Trucking&quot;
+        ]
+      },
+      {
+        &quot;importance&quot;: 4.0,
+        &quot;pollutant&quot;: &quot;SO2&quot;,
+        &quot;processes&quot;: [
+          &quot;Energy Generation&quot;,
+          &quot;Explosion&quot;,
+          &quot;Junk Disposal&quot;,
+          &quot;Mineral Processing&quot;,
+          &quot;Operation Failure&quot;,
+          &quot;Trucking&quot;
+        ]
+      }
+    ],
+    &quot;indirect_sources&quot;: [
+      {
+        &quot;path&quot;: [
+          &quot;Aquatic Plants&quot;,
+          &quot;Water Quality&quot;,
+          &quot;Birds&quot;
+        ],
+        &quot;pollutant&quot;: &quot;Water Temperature&quot;,
+        &quot;processes&quot;: [
+          &quot;Mineral Processing&quot;
+        ],
+        &quot;source_receptor&quot;: &quot;Aquatic Plants&quot;
+      },
+      {
+        &quot;path&quot;: [
+          &quot;Aquatic Plants&quot;,
+          &quot;Microfauna&quot;,
+          &quot;Birds&quot;
+        ],
+        &quot;pollutant&quot;: &quot;Water Temperature&quot;,
+        &quot;processes&quot;: [
+          &quot;Mineral Processing&quot;
+        ],
+        &quot;source_receptor&quot;: &quot;Aquatic Plants&quot;
+      },
+      {
+        &quot;path&quot;: [
+          &quot;Aquatic Plants&quot;,
+          &quot;Birds&quot;
+        ],
+        &quot;pollutant&quot;: &quot;Water Temperature&quot;,
+        &quot;processes&quot;: [
+          &quot;Mineral Processing&quot;
+        ],
+        &quot;source_receptor&quot;: &quot;Aquatic Plants&quot;
+      },
+      {
+        &quot;path&quot;: [
+          &quot;Microfauna&quot;,
+          &quot;Birds&quot;
+        ],
+        &quot;pollutant&quot;: &quot;Suspended Solid&quot;,
+        &quot;processes&quot;: [
+          &quot;Alteration of Ground Cover&quot;,
+          &quot;Blasting and Drilling&quot;,
+          &quot;Cooling Water Discharge&quot;,
+          &quot;Energy Generation&quot;,
+          &quot;Erosion and Terrasing&quot;,
+          &quot;Junk Disposal&quot;,
+          &quot;Liquid Effluent Discharge&quot;,
+          &quot;Mineral Processing&quot;,
+          &quot;Operation Failure&quot;,
+          &quot;Product Storage&quot;,
+          &quot;Waste Recycling&quot;
+        ],
+        &quot;source_receptor&quot;: &quot;Microfauna&quot;
+      },
+      {
+        &quot;path&quot;: [
+          &quot;Microfauna&quot;,
+          &quot;Birds&quot;
+        ],
+        &quot;pollutant&quot;: &quot;Water Temperature&quot;,
+        &quot;processes&quot;: [
+          &quot;Mineral Processing&quot;
+        ],
+        &quot;source_receptor&quot;: &quot;Microfauna&quot;
+      },
+      {
+        &quot;path&quot;: [
+          &quot;Microfauna&quot;,
+          &quot;Birds&quot;
+        ],
+        &quot;pollutant&quot;: &quot;Hydrocarbon&quot;,
+        &quot;processes&quot;: [
+          &quot;Explosion&quot;,
+          &quot;Mineral Processing&quot;,
+          &quot;Operation Failure&quot;,
+          &quot;Product Storage&quot;
+        ],
+        &quot;source_receptor&quot;: &quot;Microfauna&quot;
+      },
+      {
+        &quot;path&quot;: [
+          &quot;Microfauna&quot;,
+          &quot;Birds&quot;
+        ],
+        &quot;pollutant&quot;: &quot;H2S&quot;,
+        &quot;processes&quot;: [
+          &quot;Mineral Processing&quot;
+        ],
+        &quot;source_receptor&quot;: &quot;Microfauna&quot;
+      },
+      {
+        &quot;path&quot;: [
+          &quot;Microfauna&quot;,
+          &quot;Birds&quot;
+        ],
+        &quot;pollutant&quot;: &quot;Particulate&quot;,
+        &quot;processes&quot;: [
+          &quot;Alteration of Ground Cover&quot;,
+          &quot;Blasting and Drilling&quot;,
+          &quot;Energy Generation&quot;,
+          &quot;Erosion and Terrasing&quot;,
+          &quot;Explosion&quot;,
+          &quot;Junk Disposal&quot;,
+          &quot;Mineral Processing&quot;,
+          &quot;Operation Failure&quot;,
+          &quot;Product Storage&quot;,
+          &quot;Trucking&quot;
+        ],
+        &quot;source_receptor&quot;: &quot;Microfauna&quot;
+      },
+      {
+        &quot;path&quot;: [
+          &quot;Microfauna&quot;,
+          &quot;Birds&quot;
+        ],
+        &quot;pollutant&quot;: &quot;SO2&quot;,
+        &quot;processes&quot;: [
+          &quot;Energy Generation&quot;,
+          &quot;Explosion&quot;,
+          &quot;Junk Disposal&quot;,
+          &quot;Mineral Processing&quot;,
+          &quot;Operation Failure&quot;,
+          &quot;Trucking&quot;
+        ],
+        &quot;source_receptor&quot;: &quot;Microfauna&quot;
+      },
+      {
+        &quot;path&quot;: [
+          &quot;Gasses and Particulate&quot;,
+          &quot;Water Quality&quot;,
+          &quot;Birds&quot;
+        ],
+        &quot;pollutant&quot;: &quot;Hydrocarbon&quot;,
+        &quot;processes&quot;: [
+          &quot;Explosion&quot;,
+          &quot;Mineral Processing&quot;,
+          &quot;Operation Failure&quot;,
+          &quot;Product Storage&quot;
+        ],
+        &quot;source_receptor&quot;: &quot;Gasses and Particulate&quot;
+      },
+      {
+        &quot;path&quot;: [
+          &quot;Gasses and Particulate&quot;,
+          &quot;Surface Water&quot;,
+          &quot;Birds&quot;
+        ],
+        &quot;pollutant&quot;: &quot;Hydrocarbon&quot;,
+        &quot;processes&quot;: [
+          &quot;Explosion&quot;,
+          &quot;Mineral Processing&quot;,
+          &quot;Operation Failure&quot;,
+          &quot;Product Storage&quot;
+        ],
+        &quot;source_receptor&quot;: &quot;Gasses and Particulate&quot;
+      },
+      {
+        &quot;path&quot;: [
+          &quot;Gasses and Particulate&quot;,
+          &quot;Microfauna&quot;,
+          &quot;Birds&quot;
+        ],
+        &quot;pollutant&quot;: &quot;Hydrocarbon&quot;,
+        &quot;processes&quot;: [
+          &quot;Explosion&quot;,
+          &quot;Mineral Processing&quot;,
+          &quot;Operation Failure&quot;,
+          &quot;Product Storage&quot;
+        ],
+        &quot;source_receptor&quot;: &quot;Gasses and Particulate&quot;
+      },
+      {
+        &quot;path&quot;: [
+          &quot;Gasses and Particulate&quot;,
+          &quot;Birds&quot;
+        ],
+        &quot;pollutant&quot;: &quot;Hydrocarbon&quot;,
+        &quot;processes&quot;: [
+          &quot;Explosion&quot;,
+          &quot;Mineral Processing&quot;,
+          &quot;Operation Failure&quot;,
+          &quot;Product Storage&quot;
+        ],
+        &quot;source_receptor&quot;: &quot;Gasses and Particulate&quot;
+      },
+      {
+        &quot;path&quot;: [
+          &quot;Gasses and Particulate&quot;,
+          &quot;Water Quality&quot;,
+          &quot;Birds&quot;
+        ],
+        &quot;pollutant&quot;: &quot;H2S&quot;,
+        &quot;processes&quot;: [
+          &quot;Mineral Processing&quot;
+        ],
+        &quot;source_receptor&quot;: &quot;Gasses and Particulate&quot;
+      },
+      {
+        &quot;path&quot;: [
+          &quot;Gasses and Particulate&quot;,
+          &quot;Surface Water&quot;,
+          &quot;Birds&quot;
+        ],
+        &quot;pollutant&quot;: &quot;H2S&quot;,
+        &quot;processes&quot;: [
+          &quot;Mineral Processing&quot;
+        ],
+        &quot;source_receptor&quot;: &quot;Gasses and Particulate&quot;
+      },
+      {
+        &quot;path&quot;: [
+          &quot;Gasses and Particulate&quot;,
+          &quot;Microfauna&quot;,
+          &quot;Birds&quot;
+        ],
+        &quot;pollutant&quot;: &quot;H2S&quot;,
+        &quot;processes&quot;: [
+          &quot;Mineral Processing&quot;
+        ],
+        &quot;source_receptor&quot;: &quot;Gasses and Particulate&quot;
+      },
+      {
+        &quot;path&quot;: [
+          &quot;Gasses and Particulate&quot;,
+          &quot;Birds&quot;
+        ],
+        &quot;pollutant&quot;: &quot;H2S&quot;,
+        &quot;processes&quot;: [
+          &quot;Mineral Processing&quot;
+        ],
+        &quot;source_receptor&quot;: &quot;Gasses and Particulate&quot;
+      },
+      {
+        &quot;path&quot;: [
+          &quot;Gasses and Particulate&quot;,
+          &quot;Water Quality&quot;,
+          &quot;Birds&quot;
+        ],
+        &quot;pollutant&quot;: &quot;Particulate&quot;,
+        &quot;processes&quot;: [
+          &quot;Alteration of Ground Cover&quot;,
+          &quot;Blasting and Drilling&quot;,
+          &quot;Energy Generation&quot;,
+          &quot;Erosion and Terrasing&quot;,
+          &quot;Explosion&quot;,
+          &quot;Junk Disposal&quot;,
+          &quot;Mineral Processing&quot;,
+          &quot;Operation Failure&quot;,
+          &quot;Product Storage&quot;,
+          &quot;Trucking&quot;
+        ],
+        &quot;source_receptor&quot;: &quot;Gasses and Particulate&quot;
+      },
+      {
+        &quot;path&quot;: [
+          &quot;Gasses and Particulate&quot;,
+          &quot;Surface Water&quot;,
+          &quot;Birds&quot;
+        ],
+        &quot;pollutant&quot;: &quot;Particulate&quot;,
+        &quot;processes&quot;: [
+          &quot;Alteration of Ground Cover&quot;,
+          &quot;Blasting and Drilling&quot;,
+          &quot;Energy Generation&quot;,
+          &quot;Erosion and Terrasing&quot;,
+          &quot;Explosion&quot;,
+          &quot;Junk Disposal&quot;,
+          &quot;Mineral Processing&quot;,
+          &quot;Operation Failure&quot;,
+          &quot;Product Storage&quot;,
+          &quot;Trucking&quot;
+        ],
+        &quot;source_receptor&quot;: &quot;Gasses and Particulate&quot;
+      },
+      {
+        &quot;path&quot;: [
+          &quot;Gasses and Particulate&quot;,
+          &quot;Microfauna&quot;,
+          &quot;Birds&quot;
+        ],
+        &quot;pollutant&quot;: &quot;Particulate&quot;,
+        &quot;processes&quot;: [
+          &quot;Alteration of Ground Cover&quot;,
+          &quot;Blasting and Drilling&quot;,
+          &quot;Energy Generation&quot;,
+          &quot;Erosion and Terrasing&quot;,
+          &quot;Explosion&quot;,
+          &quot;Junk Disposal&quot;,
+          &quot;Mineral Processing&quot;,
+          &quot;Operation Failure&quot;,
+          &quot;Product Storage&quot;,
+          &quot;Trucking&quot;
+        ],
+        &quot;source_receptor&quot;: &quot;Gasses and Particulate&quot;
+      },
+      {
+        &quot;path&quot;: [
+          &quot;Gasses and Particulate&quot;,
+          &quot;Birds&quot;
+        ],
+        &quot;pollutant&quot;: &quot;Particulate&quot;,
+        &quot;processes&quot;: [
+          &quot;Alteration of Ground Cover&quot;,
+          &quot;Blasting and Drilling&quot;,
+          &quot;Energy Generation&quot;,
+          &quot;Erosion and Terrasing&quot;,
+          &quot;Explosion&quot;,
+          &quot;Junk Disposal&quot;,
+          &quot;Mineral Processing&quot;,
+          &quot;Operation Failure&quot;,
+          &quot;Product Storage&quot;,
+          &quot;Trucking&quot;
+        ],
+        &quot;source_receptor&quot;: &quot;Gasses and Particulate&quot;
+      },
+      {
+        &quot;path&quot;: [
+          &quot;Gasses and Particulate&quot;,
+          &quot;Water Quality&quot;,
+          &quot;Birds&quot;
+        ],
+        &quot;pollutant&quot;: &quot;CO&quot;,
+        &quot;processes&quot;: [
+          &quot;Alteration of Ground Cover&quot;,
+          &quot;Energy Generation&quot;,
+          &quot;Explosion&quot;,
+          &quot;Junk Disposal&quot;,
+          &quot;Mineral Processing&quot;,
+          &quot;Operation Failure&quot;,
+          &quot;Trucking&quot;
+        ],
+        &quot;source_receptor&quot;: &quot;Gasses and Particulate&quot;
+      },
+      {
+        &quot;path&quot;: [
+          &quot;Gasses and Particulate&quot;,
+          &quot;Surface Water&quot;,
+          &quot;Birds&quot;
+        ],
+        &quot;pollutant&quot;: &quot;CO&quot;,
+        &quot;processes&quot;: [
+          &quot;Alteration of Ground Cover&quot;,
+          &quot;Energy Generation&quot;,
+          &quot;Explosion&quot;,
+          &quot;Junk Disposal&quot;,
+          &quot;Mineral Processing&quot;,
+          &quot;Operation Failure&quot;,
+          &quot;Trucking&quot;
+        ],
+        &quot;source_receptor&quot;: &quot;Gasses and Particulate&quot;
+      },
+      {
+        &quot;path&quot;: [
+          &quot;Gasses and Particulate&quot;,
+          &quot;Microfauna&quot;,
+          &quot;Birds&quot;
+        ],
+        &quot;pollutant&quot;: &quot;CO&quot;,
+        &quot;processes&quot;: [
+          &quot;Alteration of Ground Cover&quot;,
+          &quot;Energy Generation&quot;,
+          &quot;Explosion&quot;,
+          &quot;Junk Disposal&quot;,
+          &quot;Mineral Processing&quot;,
+          &quot;Operation Failure&quot;,
+          &quot;Trucking&quot;
+        ],
+        &quot;source_receptor&quot;: &quot;Gasses and Particulate&quot;
+      },
+      {
+        &quot;path&quot;: [
+          &quot;Gasses and Particulate&quot;,
+          &quot;Birds&quot;
+        ],
+        &quot;pollutant&quot;: &quot;CO&quot;,
+        &quot;processes&quot;: [
+          &quot;Alteration of Ground Cover&quot;,
+          &quot;Energy Generation&quot;,
+          &quot;Explosion&quot;,
+          &quot;Junk Disposal&quot;,
+          &quot;Mineral Processing&quot;,
+          &quot;Operation Failure&quot;,
+          &quot;Trucking&quot;
+        ],
+        &quot;source_receptor&quot;: &quot;Gasses and Particulate&quot;
+      },
+      {
+        &quot;path&quot;: [
+          &quot;Gasses and Particulate&quot;,
+          &quot;Water Quality&quot;,
+          &quot;Birds&quot;
+        ],
+        &quot;pollutant&quot;: &quot;SO2&quot;,
+        &quot;processes&quot;: [
+          &quot;Energy Generation&quot;,
+          &quot;Explosion&quot;,
+          &quot;Junk Disposal&quot;,
+          &quot;Mineral Processing&quot;,
+          &quot;Operation Failure&quot;,
+          &quot;Trucking&quot;
+        ],
+        &quot;source_receptor&quot;: &quot;Gasses and Particulate&quot;
+      },
+      {
+        &quot;path&quot;: [
+          &quot;Gasses and Particulate&quot;,
+          &quot;Surface Water&quot;,
+          &quot;Birds&quot;
+        ],
+        &quot;pollutant&quot;: &quot;SO2&quot;,
+        &quot;processes&quot;: [
+          &quot;Energy Generation&quot;,
+          &quot;Explosion&quot;,
+          &quot;Junk Disposal&quot;,
+          &quot;Mineral Processing&quot;,
+          &quot;Operation Failure&quot;,
+          &quot;Trucking&quot;
+        ],
+        &quot;source_receptor&quot;: &quot;Gasses and Particulate&quot;
+      },
+      {
+        &quot;path&quot;: [
+          &quot;Gasses and Particulate&quot;,
+          &quot;Microfauna&quot;,
+          &quot;Birds&quot;
+        ],
+        &quot;pollutant&quot;: &quot;SO2&quot;,
+        &quot;processes&quot;: [
+          &quot;Energy Generation&quot;,
+          &quot;Explosion&quot;,
+          &quot;Junk Disposal&quot;,
+          &quot;Mineral Processing&quot;,
+          &quot;Operation Failure&quot;,
+          &quot;Trucking&quot;
+        ],
+        &quot;source_receptor&quot;: &quot;Gasses and Particulate&quot;
+      },
+      {
+        &quot;path&quot;: [
+          &quot;Gasses and Particulate&quot;,
+          &quot;Birds&quot;
+        ],
+        &quot;pollutant&quot;: &quot;SO2&quot;,
+        &quot;processes&quot;: [
+          &quot;Energy Generation&quot;,
+          &quot;Explosion&quot;,
+          &quot;Junk Disposal&quot;,
+          &quot;Mineral Processing&quot;,
+          &quot;Operation Failure&quot;,
+          &quot;Trucking&quot;
+        ],
+        &quot;source_receptor&quot;: &quot;Gasses and Particulate&quot;
+      },
+      {
+        &quot;path&quot;: [
+          &quot;Shrubs&quot;,
+          &quot;Microfauna&quot;,
+          &quot;Birds&quot;
+        ],
+        &quot;pollutant&quot;: &quot;H2S&quot;,
+        &quot;processes&quot;: [
+          &quot;Mineral Processing&quot;
+        ],
+        &quot;source_receptor&quot;: &quot;Shrubs&quot;
+      },
+      {
+        &quot;path&quot;: [
+          &quot;Shrubs&quot;,
+          &quot;Microfauna&quot;,
+          &quot;Birds&quot;
+        ],
+        &quot;pollutant&quot;: &quot;Particulate&quot;,
+        &quot;processes&quot;: [
+          &quot;Alteration of Ground Cover&quot;,
+          &quot;Blasting and Drilling&quot;,
+          &quot;Energy Generation&quot;,
+          &quot;Erosion and Terrasing&quot;,
+          &quot;Explosion&quot;,
+          &quot;Junk Disposal&quot;,
+          &quot;Mineral Processing&quot;,
+          &quot;Operation Failure&quot;,
+          &quot;Product Storage&quot;,
+          &quot;Trucking&quot;
+        ],
+        &quot;source_receptor&quot;: &quot;Shrubs&quot;
+      },
+      {
+        &quot;path&quot;: [
+          &quot;Shrubs&quot;,
+          &quot;Microfauna&quot;,
+          &quot;Birds&quot;
+        ],
+        &quot;pollutant&quot;: &quot;SO2&quot;,
+        &quot;processes&quot;: [
+          &quot;Energy Generation&quot;,
+          &quot;Explosion&quot;,
+          &quot;Junk Disposal&quot;,
+          &quot;Mineral Processing&quot;,
+          &quot;Operation Failure&quot;,
+          &quot;Trucking&quot;
+        ],
+        &quot;source_receptor&quot;: &quot;Shrubs&quot;
+      },
+      {
+        &quot;path&quot;: [
+          &quot;Surface Water&quot;,
+          &quot;Water Quality&quot;,
+          &quot;Birds&quot;
+        ],
+        &quot;pollutant&quot;: &quot;Suspended Solid&quot;,
+        &quot;processes&quot;: [
+          &quot;Alteration of Ground Cover&quot;,
+          &quot;Blasting and Drilling&quot;,
+          &quot;Cooling Water Discharge&quot;,
+          &quot;Energy Generation&quot;,
+          &quot;Erosion and Terrasing&quot;,
+          &quot;Junk Disposal&quot;,
+          &quot;Liquid Effluent Discharge&quot;,
+          &quot;Mineral Processing&quot;,
+          &quot;Operation Failure&quot;,
+          &quot;Product Storage&quot;,
+          &quot;Waste Recycling&quot;
+        ],
+        &quot;source_receptor&quot;: &quot;Surface Water&quot;
+      },
+      {
+        &quot;path&quot;: [
+          &quot;Surface Water&quot;,
+          &quot;Microfauna&quot;,
+          &quot;Birds&quot;
+        ],
+        &quot;pollutant&quot;: &quot;Suspended Solid&quot;,
+        &quot;processes&quot;: [
+          &quot;Alteration of Ground Cover&quot;,
+          &quot;Blasting and Drilling&quot;,
+          &quot;Cooling Water Discharge&quot;,
+          &quot;Energy Generation&quot;,
+          &quot;Erosion and Terrasing&quot;,
+          &quot;Junk Disposal&quot;,
+          &quot;Liquid Effluent Discharge&quot;,
+          &quot;Mineral Processing&quot;,
+          &quot;Operation Failure&quot;,
+          &quot;Product Storage&quot;,
+          &quot;Waste Recycling&quot;
+        ],
+        &quot;source_receptor&quot;: &quot;Surface Water&quot;
+      },
+      {
+        &quot;path&quot;: [
+          &quot;Surface Water&quot;,
+          &quot;Aquatic Plants&quot;,
+          &quot;Birds&quot;
+        ],
+        &quot;pollutant&quot;: &quot;Suspended Solid&quot;,
+        &quot;processes&quot;: [
+          &quot;Alteration of Ground Cover&quot;,
+          &quot;Blasting and Drilling&quot;,
+          &quot;Cooling Water Discharge&quot;,
+          &quot;Energy Generation&quot;,
+          &quot;Erosion and Terrasing&quot;,
+          &quot;Junk Disposal&quot;,
+          &quot;Liquid Effluent Discharge&quot;,
+          &quot;Mineral Processing&quot;,
+          &quot;Operation Failure&quot;,
+          &quot;Product Storage&quot;,
+          &quot;Waste Recycling&quot;
+        ],
+        &quot;source_receptor&quot;: &quot;Surface Water&quot;
+      },
+      {
+        &quot;path&quot;: [
+          &quot;Surface Water&quot;,
+          &quot;Birds&quot;
+        ],
+        &quot;pollutant&quot;: &quot;Suspended Solid&quot;,
+        &quot;processes&quot;: [
+          &quot;Alteration of Ground Cover&quot;,
+          &quot;Blasting and Drilling&quot;,
+          &quot;Cooling Water Discharge&quot;,
+          &quot;Energy Generation&quot;,
+          &quot;Erosion and Terrasing&quot;,
+          &quot;Junk Disposal&quot;,
+          &quot;Liquid Effluent Discharge&quot;,
+          &quot;Mineral Processing&quot;,
+          &quot;Operation Failure&quot;,
+          &quot;Product Storage&quot;,
+          &quot;Waste Recycling&quot;
+        ],
+        &quot;source_receptor&quot;: &quot;Surface Water&quot;
+      },
+      {
+        &quot;path&quot;: [
+          &quot;Surface Water&quot;,
+          &quot;Water Quality&quot;,
+          &quot;Birds&quot;
+        ],
+        &quot;pollutant&quot;: &quot;Water Temperature&quot;,
+        &quot;processes&quot;: [
+          &quot;Mineral Processing&quot;
+        ],
+        &quot;source_receptor&quot;: &quot;Surface Water&quot;
+      },
+      {
+        &quot;path&quot;: [
+          &quot;Surface Water&quot;,
+          &quot;Microfauna&quot;,
+          &quot;Birds&quot;
+        ],
+        &quot;pollutant&quot;: &quot;Water Temperature&quot;,
+        &quot;processes&quot;: [
+          &quot;Mineral Processing&quot;
+        ],
+        &quot;source_receptor&quot;: &quot;Surface Water&quot;
+      },
+      {
+        &quot;path&quot;: [
+          &quot;Surface Water&quot;,
+          &quot;Aquatic Plants&quot;,
+          &quot;Birds&quot;
+        ],
+        &quot;pollutant&quot;: &quot;Water Temperature&quot;,
+        &quot;processes&quot;: [
+          &quot;Mineral Processing&quot;
+        ],
+        &quot;source_receptor&quot;: &quot;Surface Water&quot;
+      },
+      {
+        &quot;path&quot;: [
+          &quot;Surface Water&quot;,
+          &quot;Birds&quot;
+        ],
+        &quot;pollutant&quot;: &quot;Water Temperature&quot;,
+        &quot;processes&quot;: [
+          &quot;Mineral Processing&quot;
+        ],
+        &quot;source_receptor&quot;: &quot;Surface Water&quot;
+      }
+    ]
+  }
+}</pre><p class="footer">Executed UTC: 2026-10-11T06:24:45.195292+00:00 · input SHA-256: 85caa8b53cf82f0bdea9e12435039aaecd9c25aaf1d0208e1a70b31641ed4b72</p></main></body></html>

@@ -1,0 +1,22 @@
+{
+  "rule_ids": [
+    "CURRENT_NAAQS_07",
+    "R_AMBIENT_SCREEN",
+    "R_AMBIENT_UNITS"
+  ],
+  "target": {
+    "averaging_time": "1y",
+    "comparison_limit": 9.0,
+    "comparison_unit": "ug/m3",
+    "decision": "exceeds_reference",
+    "expected_statistic": "annual_mean_3y",
+    "normalized_value": 10.0,
+    "pollutant": "PM2.5",
+    "profile": "us_epa_naaqs_2025",
+    "protection": "primary",
+    "reference_level": 9.0,
+    "reference_unit": "ug/m3",
+    "scope": "supplied_summary_screen",
+    "standard": "pm25_annual_primary"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "kind": "screen_ambient",
+  "profile": "us_epa_naaqs_2025",
+  "standard": "co_8h_primary",
+  "sampling_context": "ambient_air",
+  "summary": {
+    "value": 2.0,
+    "unit": "count_per_year",
+    "statistic": "annual_exceedances",
+    "reference_level": 9.0,
+    "reference_unit": "ppm",
+    "data_status": "complete"
+  }
+}

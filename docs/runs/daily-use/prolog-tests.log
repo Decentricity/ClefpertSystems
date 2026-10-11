@@ -1,0 +1,11 @@
+$ /workspace/.local/bin/swipl -q -f none -s tests/test_prototype.pl -g run_tests -t halt
+STDOUT:
+
+STDERR:
+% [1/3] prototype:two_hop_inference ..
+Warning: /workspace/ClefpertSystems/tests/test_prototype.pl:7:
+Warning:     test prototype:two_hop_inference: Test succeeded with choicepoint
+% [2/3] prototype:zero_ex..eserves_known_paths ...... passed (0.000 sec)
+% [3/3] prototype:absent_..n_is_not_a_negative ...... passed (0.000 sec)
+
+EXIT CODE: 0

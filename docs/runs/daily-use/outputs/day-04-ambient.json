@@ -1,0 +1,22 @@
+{
+  "rule_ids": [
+    "CURRENT_NAAQS_01",
+    "R_AMBIENT_SCREEN",
+    "R_AMBIENT_UNITS"
+  ],
+  "target": {
+    "averaging_time": "8h",
+    "comparison_limit": 1.0,
+    "comparison_unit": "count_per_year",
+    "decision": "exceeds_reference",
+    "expected_statistic": "annual_exceedances",
+    "normalized_value": 2.0,
+    "pollutant": "CO",
+    "profile": "us_epa_naaqs_2025",
+    "protection": "primary",
+    "reference_level": 9.0,
+    "reference_unit": "ppm",
+    "scope": "supplied_summary_screen",
+    "standard": "co_8h_primary"
+  }
+}

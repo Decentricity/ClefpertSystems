@@ -1,0 +1,19 @@
+{
+  "rule_ids": [
+    "CURRENT_NAAQS_09",
+    "R_AMBIENT_GAPS",
+    "R_AMBIENT_SCREEN"
+  ],
+  "target": {
+    "averaging_time": "24h",
+    "decision": "insufficient_data",
+    "expected_statistic": "daily_mean_24h_p98_3y",
+    "pollutant": "PM2.5",
+    "profile": "us_epa_naaqs_2025",
+    "protection": "primary_secondary",
+    "reason": "incomplete_or_unverified_summary",
+    "reference_level": 35.0,
+    "reference_unit": "ug/m3",
+    "standard": "pm25_24h"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "kind": "screen_ambient",
+  "profile": "us_epa_naaqs_2025",
+  "standard": "pm25_24h",
+  "sampling_context": "ambient_air",
+  "summary": {
+    "value": 35.0,
+    "unit": "ug/m3",
+    "statistic": "daily_mean_24h_p98_3y",
+    "reference_level": 35.0,
+    "reference_unit": "ug/m3",
+    "data_status": "incomplete"
+  }
+}

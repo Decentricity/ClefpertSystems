@@ -1,0 +1,13 @@
+{
+  "rule_ids": [
+    "METHOD_SOLID",
+    "R_INSTRUMENT",
+    "UNIT_SOLID"
+  ],
+  "target": {
+    "decision": "measurable",
+    "minimum_detectable": 4.0,
+    "unit": " mg per liter",
+    "variability": 5.8
+  }
+}

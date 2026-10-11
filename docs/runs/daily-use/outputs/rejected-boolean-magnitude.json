@@ -1,0 +1,16 @@
+{
+  "id": "boolean-magnitude",
+  "inputs": {
+    "kind": "assess",
+    "pollutant": "SO2",
+    "magnitude": true,
+    "processes": [
+      "Mineral Processing"
+    ],
+    "receptors": [
+      "Shrubs"
+    ]
+  },
+  "rejected": true,
+  "error": "magnitude must be numeric"
+}

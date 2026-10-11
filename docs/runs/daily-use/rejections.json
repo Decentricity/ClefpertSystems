@@ -1,0 +1,67 @@
+[
+  {
+    "id": "negative-magnitude",
+    "inputs": {
+      "kind": "assess",
+      "pollutant": "SO2",
+      "magnitude": -1,
+      "processes": [
+        "Mineral Processing"
+      ],
+      "receptors": [
+        "Shrubs"
+      ]
+    },
+    "rejected": true,
+    "error": "Prolog rejected request: ERROR: Domain error: `oracle_input' expected, found `_13682{kind:\"assess\",magnitude: -1.0,pollutant:\"SO2\",processes:[\"Mineral Processing\"],receptors:[\"Shrubs\"]}'"
+  },
+  {
+    "id": "boolean-magnitude",
+    "inputs": {
+      "kind": "assess",
+      "pollutant": "SO2",
+      "magnitude": true,
+      "processes": [
+        "Mineral Processing"
+      ],
+      "receptors": [
+        "Shrubs"
+      ]
+    },
+    "rejected": true,
+    "error": "magnitude must be numeric"
+  },
+  {
+    "id": "unknown-process",
+    "inputs": {
+      "kind": "assess",
+      "pollutant": "SO2",
+      "magnitude": 5,
+      "processes": [
+        "Unknown process"
+      ],
+      "receptors": [
+        "Shrubs"
+      ]
+    },
+    "rejected": true,
+    "error": "Prolog rejected request: ERROR: Domain error: `oracle_input' expected, found `_13658{kind:\"assess\",magnitude:5.0,pollutant:\"SO2\",processes:[\"Unknown process\"],receptors:[\"Shrubs\"]}'"
+  },
+  {
+    "id": "unexpected-field",
+    "inputs": {
+      "kind": "assess",
+      "pollutant": "SO2",
+      "magnitude": 5,
+      "processes": [
+        "Mineral Processing"
+      ],
+      "receptors": [
+        "Shrubs"
+      ],
+      "chapter": 5
+    },
+    "rejected": true,
+    "error": "Prolog rejected request: ERROR: Domain error: `oracle_input' expected, found `_13786{chapter:5,kind:\"assess\",magnitude:5.0,pollutant:\"SO2\",processes:[\"Mineral Processing\"],receptors:[\"Shrubs\"]}'"
+  }
+]

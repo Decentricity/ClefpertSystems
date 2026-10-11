@@ -1,0 +1,11 @@
+{
+  "kind": "assess",
+  "pollutant": "CO",
+  "magnitude": 3.0,
+  "processes": [
+    "Mineral Processing"
+  ],
+  "receptors": [
+    "Aquatic Plants"
+  ]
+}

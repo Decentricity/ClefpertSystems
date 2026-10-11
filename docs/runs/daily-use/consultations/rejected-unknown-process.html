@@ -1,0 +1,26 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Rejected input: unknown-process</title><style>
+:root{color-scheme:light}*{box-sizing:border-box}body{margin:0;background:#eef2f6;color:#182535;font:16px/1.55 Arial,sans-serif}
+main{max-width:1180px;margin:28px auto;padding:32px;background:white;border:1px solid #d7e0e8;border-radius:10px}
+h1{font-size:30px;line-height:1.25;margin:12px 0}h2{font-size:22px;border-top:1px solid #dde5ed;padding-top:24px;margin-top:32px}
+h3{font-size:18px}.eyebrow{font-size:13px;color:#275f86;text-transform:uppercase;letter-spacing:1px}.note{padding:16px;background:#f5f8fb;border-left:4px solid #6386a2}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{padding:18px;border:1px solid #dce5ec;border-radius:6px}.big{font-size:27px;font-weight:bold}.muted{color:#526779}
+pre{font:13px/1.5 monospace;white-space:pre-wrap;overflow-wrap:anywhere;padding:18px;background:#f4f7fa;border:1px solid #dce5ec;border-radius:6px}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:14px}th,td{text-align:left;vertical-align:top;border-bottom:1px solid #dde5ed;padding:10px}th{background:#f1f5f8}
+.badge{display:inline-block;padding:4px 9px;border-radius:4px;background:#e7eef5;font-size:13px;font-weight:bold}.urgent_review,.exceeds_reference{background:#ffe8dc;color:#8f330a}.insufficient_data,.below_detection_limit{background:#fff0c2;color:#795800}.within_reference,.no_detected_impact,.measurable{background:#deefe5;color:#185639}
+a{color:#245e92}li{margin:7px 0}code{font-family:monospace;overflow-wrap:anywhere}.footer{margin-top:28px;font-size:12px;color:#607486}.break{overflow-wrap:anywhere}
+</style></head><body><main><div class="eyebrow">Actual validation failure</div><h1>unknown-process</h1><p>Expected rejection confirmed; no assessment report finding is produced for this request.</p><pre id="rejection">{
+  &quot;id&quot;: &quot;unknown-process&quot;,
+  &quot;inputs&quot;: {
+    &quot;kind&quot;: &quot;assess&quot;,
+    &quot;pollutant&quot;: &quot;SO2&quot;,
+    &quot;magnitude&quot;: 5,
+    &quot;processes&quot;: [
+      &quot;Unknown process&quot;
+    ],
+    &quot;receptors&quot;: [
+      &quot;Shrubs&quot;
+    ]
+  },
+  &quot;rejected&quot;: true,
+  &quot;error&quot;: &quot;Prolog rejected request: ERROR: Domain error: `oracle_input&#x27; expected, found `_13658{kind:\&quot;assess\&quot;,magnitude:5.0,pollutant:\&quot;SO2\&quot;,processes:[\&quot;Unknown process\&quot;],receptors:[\&quot;Shrubs\&quot;]}&#x27;&quot;
+}</pre></main></body></html>

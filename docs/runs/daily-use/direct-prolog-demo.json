@@ -1,0 +1,21 @@
+{
+  "id": "direct-prolog-demo",
+  "executed_at": "2026-10-11T06:26:00.667166+00:00",
+  "argv": [
+    "/workspace/.local/bin/swipl",
+    "-q",
+    "-f",
+    "none",
+    "-s",
+    "knowledge_base/esc1.pl",
+    "-g",
+    "esc1:demo",
+    "-t",
+    "halt"
+  ],
+  "cwd": "/workspace/ClefpertSystems",
+  "stdin": null,
+  "exit_code": 0,
+  "stdout": "{\n  \"inputs\": {\n    \"kind\":\"assess\",\n    \"magnitude\":5.0,\n    \"pollutant\":\"Suspended Solid\",\n    \"processes\": [\"Mineral Processing\" ],\n    \"receptors\": [\"Surface Water\", \"Aquatic Plants\", \"Birds\" ]\n  },\n  \"rule_ids\": [\n    \"EXP_IMPACT_SE_122\",\n    \"EXP_IMPACT_SE_127\",\n    \"EXP_IMPACT_SE_134\",\n    \"EXP_IMPACT_SE_139\",\n    \"EXP_IMPACT_SE_142\",\n    \"EXP_INDIRECT_048\",\n    \"EXP_INDIRECT_049\",\n    \"EXP_INDIRECT_051\",\n    \"EXP_INDIRECT_077\",\n    \"EXP_INDIRECT_107\",\n    \"EXP_SOC_EC_147\",\n    \"EXP_SOC_EC_148\",\n    \"EXP_SOC_EC_149\",\n    \"EXP_SOC_EC_150\",\n    \"EXP_SOC_EC_151\",\n    \"EXP_SOC_EC_152\",\n    \"EXP_SOC_EC_153\",\n    \"EXP_SOC_EC_154\",\n    \"EXP_SOC_EC_155\",\n    \"FACT_EMISSION_07\",\n    \"FACT_INDIRECT_14\",\n    \"FACT_INDIRECT_15\",\n    \"FACT_MITIGATION_17\",\n    \"IMPACT_02\",\n    \"R_ASSESS\",\n    \"R_DIRECT\",\n    \"R_FORWARD\",\n    \"R_INDIRECT\",\n    \"R_MITIGATION\",\n    \"R_PRIORITY\",\n    \"R_SOCIAL\",\n    \"SOC_MIGRATION\"\n  ],\n  \"target\": {\n    \"decision\":\"urgent_review\",\n    \"direct_impacts\": [\n      {\n\t\"importance\":8.0,\n\t\"magnitude\":5.0,\n\t\"pollutant\":\"Suspended Solid\",\n\t\"receptor\":\"Surface Water\",\n\t\"score\":40.0\n      }\n    ],\n    \"indirect_impacts\": [\n      {\"path\": [\"Surface Water\", \"Water Quality\", \"Birds\" ],\"receptor\":\"Birds\"},\n      {\"path\": [\"Surface Water\", \"Microfauna\", \"Birds\" ],\"receptor\":\"Birds\"},\n      {\"path\": [\"Surface Water\", \"Aquatic Plants\", \"Birds\" ],\"receptor\":\"Birds\"},\n      {\"path\": [\"Surface Water\", \"Birds\" ],\"receptor\":\"Birds\"},\n      {\"path\": [\"Surface Water\", \"Aquatic Plants\" ],\"receptor\":\"Aquatic Plants\"}\n    ],\n    \"maximum_score\":40.0,\n    \"mitigations\": [\n      {\n\t\"action\":\"Control particulate by fabric filter collectors, control kiln particulate emissions by electric precipitator dust collectors.\",\n\t\"process\":\"Mineral Processing\"\n      }\n    ],\n    \"priority\":\"urgent_review\",\n    \"social_impacts\": [\n      {\n\t\"consequences\": [],\n\t\"factor\":\"Income Level\",\n\t\"importance\":6.0,\n\t\"process\":\"Mineral Processing\"\n      },\n      {\n\t\"consequences\": [],\n\t\"factor\":\"Distinct Settlements\",\n\t\"importance\":4.0,\n\t\"process\":\"Mineral Processing\"\n      },\n      {\n\t\"consequences\": [],\n\t\"factor\":\"Health and Social Services\",\n\t\"importance\":6.0,\n\t\"process\":\"Mineral Processing\"\n      },\n      {\n\t\"consequences\": [\n\t  \"changes in demand on educational resources\",\n\t  \"changes in demand on health and social services\",\n\t  \"changes in demand on transportation systems\",\n\t  \"disruption of cohesion in community groups\",\n\t  \"disruption of religious petterns and characteristics\",\n\t  \"increase or decrease employment patterns\",\n\t  \"increase or decrease income level\",\n\t  \"increase or decrease population growth\",\n\t  \"increase or decrease workforce\",\n\t  \"varies in population characteristics\"\n\t],\n\t\"factor\":\"Migration\",\n\t\"importance\":6.0,\n\t\"process\":\"Mineral Processing\"\n      },\n      {\n\t\"consequences\": [],\n\t\"factor\":\"Transportation Systems\",\n\t\"importance\":6.0,\n\t\"process\":\"Mineral Processing\"\n      }\n    ],\n    \"sources\": [ {\"pollutant\":\"Suspended Solid\",\"process\":\"Mineral Processing\"} ],\n    \"unresolved_receptors\": [],\n    \"unresolved_social_factors\": [\"Distinct Settlements\", \"Health and Social Services\", \"Income Level\", \"Transportation Systems\" ]\n  }\n}\n",
+  "stderr": ""
+}

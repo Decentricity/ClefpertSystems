@@ -1,0 +1,882 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>day-01-session</title><style>
+:root{color-scheme:light}*{box-sizing:border-box}body{margin:0;background:#eef2f6;color:#182535;font:16px/1.55 Arial,sans-serif}
+main{max-width:1180px;margin:28px auto;padding:32px;background:white;border:1px solid #d7e0e8;border-radius:10px}
+h1{font-size:30px;line-height:1.25;margin:12px 0}h2{font-size:22px;border-top:1px solid #dde5ed;padding-top:24px;margin-top:32px}
+h3{font-size:18px}.eyebrow{font-size:13px;color:#275f86;text-transform:uppercase;letter-spacing:1px}.note{padding:16px;background:#f5f8fb;border-left:4px solid #6386a2}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{padding:18px;border:1px solid #dce5ec;border-radius:6px}.big{font-size:27px;font-weight:bold}.muted{color:#526779}
+pre{font:13px/1.5 monospace;white-space:pre-wrap;overflow-wrap:anywhere;padding:18px;background:#f4f7fa;border:1px solid #dce5ec;border-radius:6px}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:14px}th,td{text-align:left;vertical-align:top;border-bottom:1px solid #dde5ed;padding:10px}th{background:#f1f5f8}
+.badge{display:inline-block;padding:4px 9px;border-radius:4px;background:#e7eef5;font-size:13px;font-weight:bold}.urgent_review,.exceeds_reference{background:#ffe8dc;color:#8f330a}.insufficient_data,.below_detection_limit{background:#fff0c2;color:#795800}.within_reference,.no_detected_impact,.measurable{background:#deefe5;color:#185639}
+a{color:#245e92}li{margin:7px 0}code{font-family:monospace;overflow-wrap:anywhere}.footer{margin-top:28px;font-size:12px;color:#607486}.break{overflow-wrap:anywhere}
+</style></head><body><main><div class="eyebrow">Actual SWI-Prolog consultation · synthetic task</div><h1>day-01-session</h1><p>2026-10-05 · 15:00 · Report reviewer</p><p>Derive session counts from six executed historical analyses and prepare the daily report.</p><p><span class="badge session_assessed">session_assessed</span> · expected-decision check passed</p><div class="note">Inputs are scripted. Output and rule trace below were returned by the running Prolog oracle. Scenario time is distinct from actual execution time.</div><h2>Reproduce this consultation</h2><pre>python scripts/run_oracle.py --input docs/runs/daily-use/inputs/day-01-session.json</pre><h2>Input JSON</h2><pre id="input">{
+  &quot;kind&quot;: &quot;assess_session&quot;,
+  &quot;cases&quot;: [
+    {
+      &quot;kind&quot;: &quot;assess&quot;,
+      &quot;pollutant&quot;: &quot;Particulate&quot;,
+      &quot;magnitude&quot;: 2.0,
+      &quot;processes&quot;: [
+        &quot;Mineral Processing&quot;,
+        &quot;Product Storage&quot;
+      ],
+      &quot;receptors&quot;: [
+        &quot;Birds&quot;,
+        &quot;Gasses and Particulate&quot;,
+        &quot;Shrubs&quot;
+      ]
+    },
+    {
+      &quot;kind&quot;: &quot;assess&quot;,
+      &quot;pollutant&quot;: &quot;SO2&quot;,
+      &quot;magnitude&quot;: 3.0,
+      &quot;processes&quot;: [
+        &quot;Mineral Processing&quot;
+      ],
+      &quot;receptors&quot;: [
+        &quot;Birds&quot;,
+        &quot;Shrubs&quot;
+      ]
+    },
+    {
+      &quot;kind&quot;: &quot;assess&quot;,
+      &quot;pollutant&quot;: &quot;Suspended Solid&quot;,
+      &quot;magnitude&quot;: 1.0,
+      &quot;processes&quot;: [
+        &quot;Mineral Processing&quot;
+      ],
+      &quot;receptors&quot;: [
+        &quot;Aquatic Plants&quot;,
+        &quot;Birds&quot;,
+        &quot;Surface Water&quot;
+      ]
+    },
+    {
+      &quot;kind&quot;: &quot;assess&quot;,
+      &quot;pollutant&quot;: &quot;CO&quot;,
+      &quot;magnitude&quot;: 1.0,
+      &quot;processes&quot;: [
+        &quot;Mineral Processing&quot;
+      ],
+      &quot;receptors&quot;: [
+        &quot;Aquatic Plants&quot;
+      ]
+    },
+    {
+      &quot;kind&quot;: &quot;assess_concentration&quot;,
+      &quot;pollutant&quot;: &quot;H2S&quot;,
+      &quot;concentration&quot;: 10.499,
+      &quot;processes&quot;: [
+        &quot;Mineral Processing&quot;
+      ],
+      &quot;receptors&quot;: [
+        &quot;Shrubs&quot;
+      ]
+    },
+    {
+      &quot;kind&quot;: &quot;assess&quot;,
+      &quot;pollutant&quot;: &quot;Suspended Solid&quot;,
+      &quot;magnitude&quot;: 0.5,
+      &quot;processes&quot;: [
+        &quot;Mineral Processing&quot;
+      ],
+      &quot;receptors&quot;: [
+        &quot;Aquatic Plants&quot;,
+        &quot;Birds&quot;,
+        &quot;Surface Water&quot;
+      ]
+    }
+  ],
+  &quot;answers&quot;: {
+    &quot;impact_isolation&quot;: &quot;yes&quot;,
+    &quot;explicit_indicators&quot;: &quot;yes&quot;,
+    &quot;significance&quot;: &quot;yes&quot;
+  },
+  &quot;alternatives&quot;: 2,
+  &quot;declared_assumptions&quot;: 2,
+  &quot;objective_measurements&quot;: 5,
+  &quot;staged_activities&quot;: 1,
+  &quot;rare_severe_impacts&quot;: 0
+}</pre><h2>Full Prolog output and rule trace</h2><pre id="output">{
+  &quot;rule_ids&quot;: [
+    &quot;EXP_IMPACT_003&quot;,
+    &quot;EXP_IMPACT_SE_112&quot;,
+    &quot;EXP_IMPACT_SE_122&quot;,
+    &quot;EXP_IMPACT_SE_123&quot;,
+    &quot;EXP_IMPACT_SE_127&quot;,
+    &quot;EXP_IMPACT_SE_134&quot;,
+    &quot;EXP_IMPACT_SE_135&quot;,
+    &quot;EXP_IMPACT_SE_139&quot;,
+    &quot;EXP_IMPACT_SE_142&quot;,
+    &quot;EXP_IMPACT_SE_143&quot;,
+    &quot;EXP_INDIRECT_048&quot;,
+    &quot;EXP_INDIRECT_049&quot;,
+    &quot;EXP_INDIRECT_050&quot;,
+    &quot;EXP_INDIRECT_051&quot;,
+    &quot;EXP_INDIRECT_077&quot;,
+    &quot;EXP_INDIRECT_080&quot;,
+    &quot;EXP_INDIRECT_081&quot;,
+    &quot;EXP_INDIRECT_102&quot;,
+    &quot;EXP_INDIRECT_103&quot;,
+    &quot;EXP_INDIRECT_104&quot;,
+    &quot;EXP_INDIRECT_106&quot;,
+    &quot;EXP_INDIRECT_107&quot;,
+    &quot;EXP_INDIRECT_108&quot;,
+    &quot;EXP_SOC_EC_147&quot;,
+    &quot;EXP_SOC_EC_148&quot;,
+    &quot;EXP_SOC_EC_149&quot;,
+    &quot;EXP_SOC_EC_150&quot;,
+    &quot;EXP_SOC_EC_151&quot;,
+    &quot;EXP_SOC_EC_152&quot;,
+    &quot;EXP_SOC_EC_153&quot;,
+    &quot;EXP_SOC_EC_154&quot;,
+    &quot;EXP_SOC_EC_155&quot;,
+    &quot;EXP_STANDARD_163&quot;,
+    &quot;FACT_EMISSION_01&quot;,
+    &quot;FACT_EMISSION_02&quot;,
+    &quot;FACT_EMISSION_03&quot;,
+    &quot;FACT_EMISSION_04&quot;,
+    &quot;FACT_EMISSION_07&quot;,
+    &quot;FACT_EMISSION_08&quot;,
+    &quot;FACT_INDIRECT_14&quot;,
+    &quot;FACT_INDIRECT_15&quot;,
+    &quot;FACT_MITIGATION_17&quot;,
+    &quot;FIXED_AFFECTED_GROUPS&quot;,
+    &quot;FIXED_AGGREGATION&quot;,
+    &quot;FIXED_DATA_SOURCES&quot;,
+    &quot;FIXED_MAGNITUDE&quot;,
+    &quot;FIXED_NEPA_CONFORMITY&quot;,
+    &quot;FIXED_PUBLIC_INVOLVEMENT&quot;,
+    &quot;FIXED_SUMMARY_FORMAT&quot;,
+    &quot;FIXED_UNCERTAINTY&quot;,
+    &quot;IMPACT_02&quot;,
+    &quot;IMPACT_03&quot;,
+    &quot;IMPACT_04&quot;,
+    &quot;IMPACT_05&quot;,
+    &quot;IMPACT_17&quot;,
+    &quot;IMPACT_19&quot;,
+    &quot;MITIGATION_STORAGE&quot;,
+    &quot;R_ASSESS&quot;,
+    &quot;R_DIRECT&quot;,
+    &quot;R_FORWARD&quot;,
+    &quot;R_GAPS&quot;,
+    &quot;R_INDIRECT&quot;,
+    &quot;R_MITIGATION&quot;,
+    &quot;R_PRIORITY&quot;,
+    &quot;R_SESSION&quot;,
+    &quot;R_SOCIAL&quot;,
+    &quot;R_STANDARD&quot;,
+    &quot;R_WP&quot;,
+    &quot;SOC_MIGRATION&quot;
+  ],
+  &quot;target&quot;: {
+    &quot;analyses&quot;: [
+      {
+        &quot;decision&quot;: &quot;mitigate&quot;,
+        &quot;direct_impacts&quot;: [
+          {
+            &quot;importance&quot;: 2.0,
+            &quot;magnitude&quot;: 2.0,
+            &quot;pollutant&quot;: &quot;Particulate&quot;,
+            &quot;receptor&quot;: &quot;Shrubs&quot;,
+            &quot;score&quot;: 4.0
+          },
+          {
+            &quot;importance&quot;: 6.0,
+            &quot;magnitude&quot;: 2.0,
+            &quot;pollutant&quot;: &quot;Particulate&quot;,
+            &quot;receptor&quot;: &quot;Gasses and Particulate&quot;,
+            &quot;score&quot;: 12.0
+          },
+          {
+            &quot;importance&quot;: 2.0,
+            &quot;magnitude&quot;: 2.0,
+            &quot;pollutant&quot;: &quot;Particulate&quot;,
+            &quot;receptor&quot;: &quot;Birds&quot;,
+            &quot;score&quot;: 4.0
+          }
+        ],
+        &quot;indirect_impacts&quot;: [
+          {
+            &quot;path&quot;: [
+              &quot;Gasses and Particulate&quot;,
+              &quot;Water Quality&quot;,
+              &quot;Shrubs&quot;
+            ],
+            &quot;receptor&quot;: &quot;Shrubs&quot;
+          },
+          {
+            &quot;path&quot;: [
+              &quot;Gasses and Particulate&quot;,
+              &quot;Water Quality&quot;,
+              &quot;Birds&quot;
+            ],
+            &quot;receptor&quot;: &quot;Birds&quot;
+          },
+          {
+            &quot;path&quot;: [
+              &quot;Gasses and Particulate&quot;,
+              &quot;Surface Water&quot;,
+              &quot;Shrubs&quot;
+            ],
+            &quot;receptor&quot;: &quot;Shrubs&quot;
+          },
+          {
+            &quot;path&quot;: [
+              &quot;Gasses and Particulate&quot;,
+              &quot;Surface Water&quot;,
+              &quot;Birds&quot;
+            ],
+            &quot;receptor&quot;: &quot;Birds&quot;
+          },
+          {
+            &quot;path&quot;: [
+              &quot;Gasses and Particulate&quot;,
+              &quot;Microfauna&quot;,
+              &quot;Birds&quot;
+            ],
+            &quot;receptor&quot;: &quot;Birds&quot;
+          },
+          {
+            &quot;path&quot;: [
+              &quot;Gasses and Particulate&quot;,
+              &quot;Shrubs&quot;
+            ],
+            &quot;receptor&quot;: &quot;Shrubs&quot;
+          },
+          {
+            &quot;path&quot;: [
+              &quot;Gasses and Particulate&quot;,
+              &quot;Birds&quot;
+            ],
+            &quot;receptor&quot;: &quot;Birds&quot;
+          },
+          {
+            &quot;path&quot;: [
+              &quot;Shrubs&quot;,
+              &quot;Microfauna&quot;,
+              &quot;Birds&quot;
+            ],
+            &quot;receptor&quot;: &quot;Birds&quot;
+          }
+        ],
+        &quot;maximum_score&quot;: 12.0,
+        &quot;mitigations&quot;: [
+          {
+            &quot;action&quot;: &quot;Mimimise rainfall allowed to percolate through piles of lime stone area and runoff in uncontrolled fashion&quot;,
+            &quot;process&quot;: &quot;Product Storage&quot;
+          },
+          {
+            &quot;action&quot;: &quot;Control particulate by fabric filter collectors, control kiln particulate emissions by electric precipitator dust collectors.&quot;,
+            &quot;process&quot;: &quot;Mineral Processing&quot;
+          }
+        ],
+        &quot;priority&quot;: &quot;mitigate&quot;,
+        &quot;social_impacts&quot;: [
+          {
+            &quot;consequences&quot;: [],
+            &quot;factor&quot;: &quot;Income Level&quot;,
+            &quot;importance&quot;: 1.0,
+            &quot;process&quot;: &quot;Product Storage&quot;
+          },
+          {
+            &quot;consequences&quot;: [],
+            &quot;factor&quot;: &quot;Health and Social Services&quot;,
+            &quot;importance&quot;: 0.5,
+            &quot;process&quot;: &quot;Product Storage&quot;
+          },
+          {
+            &quot;consequences&quot;: [],
+            &quot;factor&quot;: &quot;Transportation Systems&quot;,
+            &quot;importance&quot;: 5.0,
+            &quot;process&quot;: &quot;Product Storage&quot;
+          },
+          {
+            &quot;consequences&quot;: [],
+            &quot;factor&quot;: &quot;Land Values&quot;,
+            &quot;importance&quot;: 4.0,
+            &quot;process&quot;: &quot;Product Storage&quot;
+          },
+          {
+            &quot;consequences&quot;: [],
+            &quot;factor&quot;: &quot;Income Level&quot;,
+            &quot;importance&quot;: 6.0,
+            &quot;process&quot;: &quot;Mineral Processing&quot;
+          },
+          {
+            &quot;consequences&quot;: [],
+            &quot;factor&quot;: &quot;Distinct Settlements&quot;,
+            &quot;importance&quot;: 4.0,
+            &quot;process&quot;: &quot;Mineral Processing&quot;
+          },
+          {
+            &quot;consequences&quot;: [],
+            &quot;factor&quot;: &quot;Health and Social Services&quot;,
+            &quot;importance&quot;: 6.0,
+            &quot;process&quot;: &quot;Mineral Processing&quot;
+          },
+          {
+            &quot;consequences&quot;: [
+              &quot;changes in demand on educational resources&quot;,
+              &quot;changes in demand on health and social services&quot;,
+              &quot;changes in demand on transportation systems&quot;,
+              &quot;disruption of cohesion in community groups&quot;,
+              &quot;disruption of religious petterns and characteristics&quot;,
+              &quot;increase or decrease employment patterns&quot;,
+              &quot;increase or decrease income level&quot;,
+              &quot;increase or decrease population growth&quot;,
+              &quot;increase or decrease workforce&quot;,
+              &quot;varies in population characteristics&quot;
+            ],
+            &quot;factor&quot;: &quot;Migration&quot;,
+            &quot;importance&quot;: 6.0,
+            &quot;process&quot;: &quot;Mineral Processing&quot;
+          },
+          {
+            &quot;consequences&quot;: [],
+            &quot;factor&quot;: &quot;Transportation Systems&quot;,
+            &quot;importance&quot;: 6.0,
+            &quot;process&quot;: &quot;Mineral Processing&quot;
+          }
+        ],
+        &quot;sources&quot;: [
+          {
+            &quot;pollutant&quot;: &quot;Particulate&quot;,
+            &quot;process&quot;: &quot;Product Storage&quot;
+          },
+          {
+            &quot;pollutant&quot;: &quot;Particulate&quot;,
+            &quot;process&quot;: &quot;Mineral Processing&quot;
+          }
+        ],
+        &quot;unresolved_receptors&quot;: [],
+        &quot;unresolved_social_factors&quot;: [
+          &quot;Distinct Settlements&quot;,
+          &quot;Health and Social Services&quot;,
+          &quot;Income Level&quot;,
+          &quot;Land Values&quot;,
+          &quot;Transportation Systems&quot;
+        ]
+      },
+      {
+        &quot;decision&quot;: &quot;mitigate&quot;,
+        &quot;direct_impacts&quot;: [
+          {
+            &quot;importance&quot;: 4.0,
+            &quot;magnitude&quot;: 3.0,
+            &quot;pollutant&quot;: &quot;SO2&quot;,
+            &quot;receptor&quot;: &quot;Shrubs&quot;,
+            &quot;score&quot;: 12.0
+          },
+          {
+            &quot;importance&quot;: 4.0,
+            &quot;magnitude&quot;: 3.0,
+            &quot;pollutant&quot;: &quot;SO2&quot;,
+            &quot;receptor&quot;: &quot;Birds&quot;,
+            &quot;score&quot;: 12.0
+          }
+        ],
+        &quot;indirect_impacts&quot;: [
+          {
+            &quot;path&quot;: [
+              &quot;Shrubs&quot;,
+              &quot;Microfauna&quot;,
+              &quot;Birds&quot;
+            ],
+            &quot;receptor&quot;: &quot;Birds&quot;
+          }
+        ],
+        &quot;maximum_score&quot;: 12.0,
+        &quot;mitigations&quot;: [
+          {
+            &quot;action&quot;: &quot;Control particulate by fabric filter collectors, control kiln particulate emissions by electric precipitator dust collectors.&quot;,
+            &quot;process&quot;: &quot;Mineral Processing&quot;
+          }
+        ],
+        &quot;priority&quot;: &quot;mitigate&quot;,
+        &quot;social_impacts&quot;: [
+          {
+            &quot;consequences&quot;: [],
+            &quot;factor&quot;: &quot;Income Level&quot;,
+            &quot;importance&quot;: 6.0,
+            &quot;process&quot;: &quot;Mineral Processing&quot;
+          },
+          {
+            &quot;consequences&quot;: [],
+            &quot;factor&quot;: &quot;Distinct Settlements&quot;,
+            &quot;importance&quot;: 4.0,
+            &quot;process&quot;: &quot;Mineral Processing&quot;
+          },
+          {
+            &quot;consequences&quot;: [],
+            &quot;factor&quot;: &quot;Health and Social Services&quot;,
+            &quot;importance&quot;: 6.0,
+            &quot;process&quot;: &quot;Mineral Processing&quot;
+          },
+          {
+            &quot;consequences&quot;: [
+              &quot;changes in demand on educational resources&quot;,
+              &quot;changes in demand on health and social services&quot;,
+              &quot;changes in demand on transportation systems&quot;,
+              &quot;disruption of cohesion in community groups&quot;,
+              &quot;disruption of religious petterns and characteristics&quot;,
+              &quot;increase or decrease employment patterns&quot;,
+              &quot;increase or decrease income level&quot;,
+              &quot;increase or decrease population growth&quot;,
+              &quot;increase or decrease workforce&quot;,
+              &quot;varies in population characteristics&quot;
+            ],
+            &quot;factor&quot;: &quot;Migration&quot;,
+            &quot;importance&quot;: 6.0,
+            &quot;process&quot;: &quot;Mineral Processing&quot;
+          },
+          {
+            &quot;consequences&quot;: [],
+            &quot;factor&quot;: &quot;Transportation Systems&quot;,
+            &quot;importance&quot;: 6.0,
+            &quot;process&quot;: &quot;Mineral Processing&quot;
+          }
+        ],
+        &quot;sources&quot;: [
+          {
+            &quot;pollutant&quot;: &quot;SO2&quot;,
+            &quot;process&quot;: &quot;Mineral Processing&quot;
+          }
+        ],
+        &quot;unresolved_receptors&quot;: [],
+        &quot;unresolved_social_factors&quot;: [
+          &quot;Distinct Settlements&quot;,
+          &quot;Health and Social Services&quot;,
+          &quot;Income Level&quot;,
+          &quot;Transportation Systems&quot;
+        ]
+      },
+      {
+        &quot;decision&quot;: &quot;monitor&quot;,
+        &quot;direct_impacts&quot;: [
+          {
+            &quot;importance&quot;: 8.0,
+            &quot;magnitude&quot;: 1.0,
+            &quot;pollutant&quot;: &quot;Suspended Solid&quot;,
+            &quot;receptor&quot;: &quot;Surface Water&quot;,
+            &quot;score&quot;: 8.0
+          }
+        ],
+        &quot;indirect_impacts&quot;: [
+          {
+            &quot;path&quot;: [
+              &quot;Surface Water&quot;,
+              &quot;Water Quality&quot;,
+              &quot;Birds&quot;
+            ],
+            &quot;receptor&quot;: &quot;Birds&quot;
+          },
+          {
+            &quot;path&quot;: [
+              &quot;Surface Water&quot;,
+              &quot;Microfauna&quot;,
+              &quot;Birds&quot;
+            ],
+            &quot;receptor&quot;: &quot;Birds&quot;
+          },
+          {
+            &quot;path&quot;: [
+              &quot;Surface Water&quot;,
+              &quot;Aquatic Plants&quot;,
+              &quot;Birds&quot;
+            ],
+            &quot;receptor&quot;: &quot;Birds&quot;
+          },
+          {
+            &quot;path&quot;: [
+              &quot;Surface Water&quot;,
+              &quot;Birds&quot;
+            ],
+            &quot;receptor&quot;: &quot;Birds&quot;
+          },
+          {
+            &quot;path&quot;: [
+              &quot;Surface Water&quot;,
+              &quot;Aquatic Plants&quot;
+            ],
+            &quot;receptor&quot;: &quot;Aquatic Plants&quot;
+          }
+        ],
+        &quot;maximum_score&quot;: 8.0,
+        &quot;mitigations&quot;: [
+          {
+            &quot;action&quot;: &quot;Control particulate by fabric filter collectors, control kiln particulate emissions by electric precipitator dust collectors.&quot;,
+            &quot;process&quot;: &quot;Mineral Processing&quot;
+          }
+        ],
+        &quot;priority&quot;: &quot;monitor&quot;,
+        &quot;social_impacts&quot;: [
+          {
+            &quot;consequences&quot;: [],
+            &quot;factor&quot;: &quot;Income Level&quot;,
+            &quot;importance&quot;: 6.0,
+            &quot;process&quot;: &quot;Mineral Processing&quot;
+          },
+          {
+            &quot;consequences&quot;: [],
+            &quot;factor&quot;: &quot;Distinct Settlements&quot;,
+            &quot;importance&quot;: 4.0,
+            &quot;process&quot;: &quot;Mineral Processing&quot;
+          },
+          {
+            &quot;consequences&quot;: [],
+            &quot;factor&quot;: &quot;Health and Social Services&quot;,
+            &quot;importance&quot;: 6.0,
+            &quot;process&quot;: &quot;Mineral Processing&quot;
+          },
+          {
+            &quot;consequences&quot;: [
+              &quot;changes in demand on educational resources&quot;,
+              &quot;changes in demand on health and social services&quot;,
+              &quot;changes in demand on transportation systems&quot;,
+              &quot;disruption of cohesion in community groups&quot;,
+              &quot;disruption of religious petterns and characteristics&quot;,
+              &quot;increase or decrease employment patterns&quot;,
+              &quot;increase or decrease income level&quot;,
+              &quot;increase or decrease population growth&quot;,
+              &quot;increase or decrease workforce&quot;,
+              &quot;varies in population characteristics&quot;
+            ],
+            &quot;factor&quot;: &quot;Migration&quot;,
+            &quot;importance&quot;: 6.0,
+            &quot;process&quot;: &quot;Mineral Processing&quot;
+          },
+          {
+            &quot;consequences&quot;: [],
+            &quot;factor&quot;: &quot;Transportation Systems&quot;,
+            &quot;importance&quot;: 6.0,
+            &quot;process&quot;: &quot;Mineral Processing&quot;
+          }
+        ],
+        &quot;sources&quot;: [
+          {
+            &quot;pollutant&quot;: &quot;Suspended Solid&quot;,
+            &quot;process&quot;: &quot;Mineral Processing&quot;
+          }
+        ],
+        &quot;unresolved_receptors&quot;: [],
+        &quot;unresolved_social_factors&quot;: [
+          &quot;Distinct Settlements&quot;,
+          &quot;Health and Social Services&quot;,
+          &quot;Income Level&quot;,
+          &quot;Transportation Systems&quot;
+        ]
+      },
+      {
+        &quot;decision&quot;: &quot;insufficient_data&quot;,
+        &quot;direct_impacts&quot;: [],
+        &quot;indirect_impacts&quot;: [],
+        &quot;maximum_score&quot;: 0.0,
+        &quot;mitigations&quot;: [
+          {
+            &quot;action&quot;: &quot;Control particulate by fabric filter collectors, control kiln particulate emissions by electric precipitator dust collectors.&quot;,
+            &quot;process&quot;: &quot;Mineral Processing&quot;
+          }
+        ],
+        &quot;priority&quot;: &quot;no_detected_impact&quot;,
+        &quot;social_impacts&quot;: [
+          {
+            &quot;consequences&quot;: [],
+            &quot;factor&quot;: &quot;Income Level&quot;,
+            &quot;importance&quot;: 6.0,
+            &quot;process&quot;: &quot;Mineral Processing&quot;
+          },
+          {
+            &quot;consequences&quot;: [],
+            &quot;factor&quot;: &quot;Distinct Settlements&quot;,
+            &quot;importance&quot;: 4.0,
+            &quot;process&quot;: &quot;Mineral Processing&quot;
+          },
+          {
+            &quot;consequences&quot;: [],
+            &quot;factor&quot;: &quot;Health and Social Services&quot;,
+            &quot;importance&quot;: 6.0,
+            &quot;process&quot;: &quot;Mineral Processing&quot;
+          },
+          {
+            &quot;consequences&quot;: [
+              &quot;changes in demand on educational resources&quot;,
+              &quot;changes in demand on health and social services&quot;,
+              &quot;changes in demand on transportation systems&quot;,
+              &quot;disruption of cohesion in community groups&quot;,
+              &quot;disruption of religious petterns and characteristics&quot;,
+              &quot;increase or decrease employment patterns&quot;,
+              &quot;increase or decrease income level&quot;,
+              &quot;increase or decrease population growth&quot;,
+              &quot;increase or decrease workforce&quot;,
+              &quot;varies in population characteristics&quot;
+            ],
+            &quot;factor&quot;: &quot;Migration&quot;,
+            &quot;importance&quot;: 6.0,
+            &quot;process&quot;: &quot;Mineral Processing&quot;
+          },
+          {
+            &quot;consequences&quot;: [],
+            &quot;factor&quot;: &quot;Transportation Systems&quot;,
+            &quot;importance&quot;: 6.0,
+            &quot;process&quot;: &quot;Mineral Processing&quot;
+          }
+        ],
+        &quot;sources&quot;: [
+          {
+            &quot;pollutant&quot;: &quot;CO&quot;,
+            &quot;process&quot;: &quot;Mineral Processing&quot;
+          }
+        ],
+        &quot;unresolved_receptors&quot;: [
+          &quot;Aquatic Plants&quot;
+        ],
+        &quot;unresolved_social_factors&quot;: [
+          &quot;Distinct Settlements&quot;,
+          &quot;Health and Social Services&quot;,
+          &quot;Income Level&quot;,
+          &quot;Transportation Systems&quot;
+        ]
+      },
+      {
+        &quot;concentration&quot;: 10.499,
+        &quot;decision&quot;: &quot;monitor&quot;,
+        &quot;direct_impacts&quot;: [
+          {
+            &quot;importance&quot;: 1.0,
+            &quot;magnitude&quot;: 2.0,
+            &quot;pollutant&quot;: &quot;H2S&quot;,
+            &quot;receptor&quot;: &quot;Shrubs&quot;,
+            &quot;score&quot;: 2.0
+          }
+        ],
+        &quot;indirect_impacts&quot;: [],
+        &quot;maximum_score&quot;: 2.0,
+        &quot;mitigations&quot;: [
+          {
+            &quot;action&quot;: &quot;Control particulate by fabric filter collectors, control kiln particulate emissions by electric precipitator dust collectors.&quot;,
+            &quot;process&quot;: &quot;Mineral Processing&quot;
+          }
+        ],
+        &quot;priority&quot;: &quot;monitor&quot;,
+        &quot;resolved_magnitude&quot;: 2.0,
+        &quot;social_impacts&quot;: [
+          {
+            &quot;consequences&quot;: [],
+            &quot;factor&quot;: &quot;Income Level&quot;,
+            &quot;importance&quot;: 6.0,
+            &quot;process&quot;: &quot;Mineral Processing&quot;
+          },
+          {
+            &quot;consequences&quot;: [],
+            &quot;factor&quot;: &quot;Distinct Settlements&quot;,
+            &quot;importance&quot;: 4.0,
+            &quot;process&quot;: &quot;Mineral Processing&quot;
+          },
+          {
+            &quot;consequences&quot;: [],
+            &quot;factor&quot;: &quot;Health and Social Services&quot;,
+            &quot;importance&quot;: 6.0,
+            &quot;process&quot;: &quot;Mineral Processing&quot;
+          },
+          {
+            &quot;consequences&quot;: [
+              &quot;changes in demand on educational resources&quot;,
+              &quot;changes in demand on health and social services&quot;,
+              &quot;changes in demand on transportation systems&quot;,
+              &quot;disruption of cohesion in community groups&quot;,
+              &quot;disruption of religious petterns and characteristics&quot;,
+              &quot;increase or decrease employment patterns&quot;,
+              &quot;increase or decrease income level&quot;,
+              &quot;increase or decrease population growth&quot;,
+              &quot;increase or decrease workforce&quot;,
+              &quot;varies in population characteristics&quot;
+            ],
+            &quot;factor&quot;: &quot;Migration&quot;,
+            &quot;importance&quot;: 6.0,
+            &quot;process&quot;: &quot;Mineral Processing&quot;
+          },
+          {
+            &quot;consequences&quot;: [],
+            &quot;factor&quot;: &quot;Transportation Systems&quot;,
+            &quot;importance&quot;: 6.0,
+            &quot;process&quot;: &quot;Mineral Processing&quot;
+          }
+        ],
+        &quot;source_units&quot;: &quot;unspecified&quot;,
+        &quot;sources&quot;: [
+          {
+            &quot;pollutant&quot;: &quot;H2S&quot;,
+            &quot;process&quot;: &quot;Mineral Processing&quot;
+          }
+        ],
+        &quot;unresolved_receptors&quot;: [],
+        &quot;unresolved_social_factors&quot;: [
+          &quot;Distinct Settlements&quot;,
+          &quot;Health and Social Services&quot;,
+          &quot;Income Level&quot;,
+          &quot;Transportation Systems&quot;
+        ]
+      },
+      {
+        &quot;decision&quot;: &quot;monitor&quot;,
+        &quot;direct_impacts&quot;: [
+          {
+            &quot;importance&quot;: 8.0,
+            &quot;magnitude&quot;: 0.5,
+            &quot;pollutant&quot;: &quot;Suspended Solid&quot;,
+            &quot;receptor&quot;: &quot;Surface Water&quot;,
+            &quot;score&quot;: 4.0
+          }
+        ],
+        &quot;indirect_impacts&quot;: [
+          {
+            &quot;path&quot;: [
+              &quot;Surface Water&quot;,
+              &quot;Water Quality&quot;,
+              &quot;Birds&quot;
+            ],
+            &quot;receptor&quot;: &quot;Birds&quot;
+          },
+          {
+            &quot;path&quot;: [
+              &quot;Surface Water&quot;,
+              &quot;Microfauna&quot;,
+              &quot;Birds&quot;
+            ],
+            &quot;receptor&quot;: &quot;Birds&quot;
+          },
+          {
+            &quot;path&quot;: [
+              &quot;Surface Water&quot;,
+              &quot;Aquatic Plants&quot;,
+              &quot;Birds&quot;
+            ],
+            &quot;receptor&quot;: &quot;Birds&quot;
+          },
+          {
+            &quot;path&quot;: [
+              &quot;Surface Water&quot;,
+              &quot;Birds&quot;
+            ],
+            &quot;receptor&quot;: &quot;Birds&quot;
+          },
+          {
+            &quot;path&quot;: [
+              &quot;Surface Water&quot;,
+              &quot;Aquatic Plants&quot;
+            ],
+            &quot;receptor&quot;: &quot;Aquatic Plants&quot;
+          }
+        ],
+        &quot;maximum_score&quot;: 4.0,
+        &quot;mitigations&quot;: [
+          {
+            &quot;action&quot;: &quot;Control particulate by fabric filter collectors, control kiln particulate emissions by electric precipitator dust collectors.&quot;,
+            &quot;process&quot;: &quot;Mineral Processing&quot;
+          }
+        ],
+        &quot;priority&quot;: &quot;monitor&quot;,
+        &quot;social_impacts&quot;: [
+          {
+            &quot;consequences&quot;: [],
+            &quot;factor&quot;: &quot;Income Level&quot;,
+            &quot;importance&quot;: 6.0,
+            &quot;process&quot;: &quot;Mineral Processing&quot;
+          },
+          {
+            &quot;consequences&quot;: [],
+            &quot;factor&quot;: &quot;Distinct Settlements&quot;,
+            &quot;importance&quot;: 4.0,
+            &quot;process&quot;: &quot;Mineral Processing&quot;
+          },
+          {
+            &quot;consequences&quot;: [],
+            &quot;factor&quot;: &quot;Health and Social Services&quot;,
+            &quot;importance&quot;: 6.0,
+            &quot;process&quot;: &quot;Mineral Processing&quot;
+          },
+          {
+            &quot;consequences&quot;: [
+              &quot;changes in demand on educational resources&quot;,
+              &quot;changes in demand on health and social services&quot;,
+              &quot;changes in demand on transportation systems&quot;,
+              &quot;disruption of cohesion in community groups&quot;,
+              &quot;disruption of religious petterns and characteristics&quot;,
+              &quot;increase or decrease employment patterns&quot;,
+              &quot;increase or decrease income level&quot;,
+              &quot;increase or decrease population growth&quot;,
+              &quot;increase or decrease workforce&quot;,
+              &quot;varies in population characteristics&quot;
+            ],
+            &quot;factor&quot;: &quot;Migration&quot;,
+            &quot;importance&quot;: 6.0,
+            &quot;process&quot;: &quot;Mineral Processing&quot;
+          },
+          {
+            &quot;consequences&quot;: [],
+            &quot;factor&quot;: &quot;Transportation Systems&quot;,
+            &quot;importance&quot;: 6.0,
+            &quot;process&quot;: &quot;Mineral Processing&quot;
+          }
+        ],
+        &quot;sources&quot;: [
+          {
+            &quot;pollutant&quot;: &quot;Suspended Solid&quot;,
+            &quot;process&quot;: &quot;Mineral Processing&quot;
+          }
+        ],
+        &quot;unresolved_receptors&quot;: [],
+        &quot;unresolved_social_factors&quot;: [
+          &quot;Distinct Settlements&quot;,
+          &quot;Health and Social Services&quot;,
+          &quot;Income Level&quot;,
+          &quot;Transportation Systems&quot;
+        ]
+      }
+    ],
+    &quot;decision&quot;: &quot;session_assessed&quot;,
+    &quot;method_assessment&quot;: {
+      &quot;aspect_grades&quot;: {
+        &quot;communication&quot;: &quot;L&quot;,
+        &quot;identification&quot;: &quot;L&quot;,
+        &quot;interpretation&quot;: &quot;S&quot;,
+        &quot;measurement&quot;: &quot;L&quot;
+      },
+      &quot;criterion_grades&quot;: {
+        &quot;affected_groups&quot;: &quot;N&quot;,
+        &quot;aggregation&quot;: &quot;L&quot;,
+        &quot;alternatives&quot;: &quot;L&quot;,
+        &quot;comprehensiveness&quot;: &quot;L&quot;,
+        &quot;data_sources&quot;: &quot;L&quot;,
+        &quot;environmental_setting&quot;: &quot;L&quot;,
+        &quot;explicit_criteria&quot;: &quot;L&quot;,
+        &quot;explicit_indicators&quot;: &quot;L&quot;,
+        &quot;impact_isolation&quot;: &quot;L&quot;,
+        &quot;key_issues&quot;: &quot;L&quot;,
+        &quot;magnitude&quot;: &quot;L&quot;,
+        &quot;nepa_conformity&quot;: &quot;L&quot;,
+        &quot;objectivity&quot;: &quot;S&quot;,
+        &quot;public_involvement&quot;: &quot;N&quot;,
+        &quot;risk&quot;: &quot;N&quot;,
+        &quot;significance&quot;: &quot;L&quot;,
+        &quot;specificity&quot;: &quot;S&quot;,
+        &quot;summary_format&quot;: &quot;L&quot;,
+        &quot;time_consideration&quot;: &quot;S&quot;,
+        &quot;uncertainty&quot;: &quot;L&quot;
+      },
+      &quot;decision&quot;: &quot;method_assessed&quot;
+    },
+    &quot;observed_session_counts&quot;: {
+      &quot;activities&quot;: 2,
+      &quot;alternatives&quot;: 2,
+      &quot;components&quot;: 5,
+      &quot;declared_assumptions&quot;: 2,
+      &quot;highlighted_impacts&quot;: 3,
+      &quot;impacts&quot;: 8,
+      &quot;measurements&quot;: 6,
+      &quot;objective_measurements&quot;: 5,
+      &quot;rare_severe_impacts&quot;: 0,
+      &quot;staged_activities&quot;: 1
+    }
+  }
+}</pre><p class="footer">Executed UTC: 2026-10-11T06:24:43.058675+00:00 · input SHA-256: c37577d57597cc443b23a7253d7d0c0af51cbc006df34a4b89e66f86e6b76e7b</p></main></body></html>

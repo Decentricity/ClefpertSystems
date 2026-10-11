@@ -1,0 +1,14 @@
+{
+  "kind": "screen_ambient",
+  "profile": "us_epa_naaqs_2025",
+  "standard": "so2_1h_primary",
+  "sampling_context": "ambient_air",
+  "summary": {
+    "value": 0.075,
+    "unit": "ppm",
+    "statistic": "daily_max_1h_p99_3y",
+    "reference_level": 75.0,
+    "reference_unit": "ppb",
+    "data_status": "complete"
+  }
+}

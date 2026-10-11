@@ -1,0 +1,12 @@
+{
+  "kind": "assess",
+  "pollutant": "SO2",
+  "magnitude": 0.0,
+  "processes": [
+    "Mineral Processing"
+  ],
+  "receptors": [
+    "Birds",
+    "Shrubs"
+  ]
+}

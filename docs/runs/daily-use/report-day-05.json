@@ -1,0 +1,2959 @@
+{
+  "report_type": "synthetic_environmental_impact_assessment_support",
+  "day_id": "day-05",
+  "scenario_date": "2026-10-09",
+  "title": "Zero-exposure scenario and unresolved historical range",
+  "site": "Synthetic Cement Works",
+  "review_status": "human_review_required",
+  "highest_reconstructed_baseline_priority": "no_detected_impact",
+  "data_quality_and_evidence_gaps": [
+    {
+      "event_id": "day-05-gap",
+      "decision": "insufficient_data",
+      "reason": null,
+      "unresolved_receptors": [
+        "Aquatic Plants"
+      ]
+    },
+    {
+      "event_id": "day-05-historical",
+      "decision": "insufficient_data",
+      "reason": "concentration_outside_documented_ranges",
+      "unresolved_receptors": []
+    }
+  ],
+  "documented_mitigation_recommendations": [],
+  "documented_social_context": [
+    {
+      "consequences": [
+        "changes in demand on educational resources",
+        "changes in demand on health and social services",
+        "changes in demand on transportation systems",
+        "disruption of cohesion in community groups",
+        "disruption of religious petterns and characteristics",
+        "increase or decrease employment patterns",
+        "increase or decrease income level",
+        "increase or decrease population growth",
+        "increase or decrease workforce",
+        "varies in population characteristics"
+      ],
+      "factor": "Migration",
+      "importance": 6.0,
+      "process": "Mineral Processing"
+    },
+    {
+      "consequences": [],
+      "factor": "Distinct Settlements",
+      "importance": 4.0,
+      "process": "Mineral Processing"
+    },
+    {
+      "consequences": [],
+      "factor": "Health and Social Services",
+      "importance": 0.5,
+      "process": "Product Storage"
+    },
+    {
+      "consequences": [],
+      "factor": "Health and Social Services",
+      "importance": 6.0,
+      "process": "Mineral Processing"
+    },
+    {
+      "consequences": [],
+      "factor": "Income Level",
+      "importance": 1.0,
+      "process": "Product Storage"
+    },
+    {
+      "consequences": [],
+      "factor": "Income Level",
+      "importance": 6.0,
+      "process": "Mineral Processing"
+    },
+    {
+      "consequences": [],
+      "factor": "Land Values",
+      "importance": 4.0,
+      "process": "Product Storage"
+    },
+    {
+      "consequences": [],
+      "factor": "Transportation Systems",
+      "importance": 5.0,
+      "process": "Product Storage"
+    },
+    {
+      "consequences": [],
+      "factor": "Transportation Systems",
+      "importance": 6.0,
+      "process": "Mineral Processing"
+    }
+  ],
+  "water_scenario": {
+    "decision": "no_detected_impact",
+    "direct_impacts": [
+      {
+        "importance": 8.0,
+        "magnitude": 0.0,
+        "pollutant": "Suspended Solid",
+        "receptor": "Surface Water",
+        "score": 0.0
+      }
+    ],
+    "indirect_impacts": [],
+    "maximum_score": 0.0,
+    "mitigations": [],
+    "priority": "no_detected_impact",
+    "social_impacts": [
+      {
+        "consequences": [],
+        "factor": "Income Level",
+        "importance": 6.0,
+        "process": "Mineral Processing"
+      },
+      {
+        "consequences": [],
+        "factor": "Distinct Settlements",
+        "importance": 4.0,
+        "process": "Mineral Processing"
+      },
+      {
+        "consequences": [],
+        "factor": "Health and Social Services",
+        "importance": 6.0,
+        "process": "Mineral Processing"
+      },
+      {
+        "consequences": [
+          "changes in demand on educational resources",
+          "changes in demand on health and social services",
+          "changes in demand on transportation systems",
+          "disruption of cohesion in community groups",
+          "disruption of religious petterns and characteristics",
+          "increase or decrease employment patterns",
+          "increase or decrease income level",
+          "increase or decrease population growth",
+          "increase or decrease workforce",
+          "varies in population characteristics"
+        ],
+        "factor": "Migration",
+        "importance": 6.0,
+        "process": "Mineral Processing"
+      },
+      {
+        "consequences": [],
+        "factor": "Transportation Systems",
+        "importance": 6.0,
+        "process": "Mineral Processing"
+      }
+    ],
+    "sources": [
+      {
+        "pollutant": "Suspended Solid",
+        "process": "Mineral Processing"
+      }
+    ],
+    "unresolved_receptors": [],
+    "unresolved_social_factors": [
+      "Distinct Settlements",
+      "Health and Social Services",
+      "Income Level",
+      "Transportation Systems"
+    ]
+  },
+  "alternative_scenario": {
+    "decision": "no_detected_impact",
+    "direct_impacts": [
+      {
+        "importance": 8.0,
+        "magnitude": 0.0,
+        "pollutant": "Suspended Solid",
+        "receptor": "Surface Water",
+        "score": 0.0
+      }
+    ],
+    "indirect_impacts": [],
+    "maximum_score": 0.0,
+    "mitigations": [],
+    "priority": "no_detected_impact",
+    "social_impacts": [
+      {
+        "consequences": [],
+        "factor": "Income Level",
+        "importance": 6.0,
+        "process": "Mineral Processing"
+      },
+      {
+        "consequences": [],
+        "factor": "Distinct Settlements",
+        "importance": 4.0,
+        "process": "Mineral Processing"
+      },
+      {
+        "consequences": [],
+        "factor": "Health and Social Services",
+        "importance": 6.0,
+        "process": "Mineral Processing"
+      },
+      {
+        "consequences": [
+          "changes in demand on educational resources",
+          "changes in demand on health and social services",
+          "changes in demand on transportation systems",
+          "disruption of cohesion in community groups",
+          "disruption of religious petterns and characteristics",
+          "increase or decrease employment patterns",
+          "increase or decrease income level",
+          "increase or decrease population growth",
+          "increase or decrease workforce",
+          "varies in population characteristics"
+        ],
+        "factor": "Migration",
+        "importance": 6.0,
+        "process": "Mineral Processing"
+      },
+      {
+        "consequences": [],
+        "factor": "Transportation Systems",
+        "importance": 6.0,
+        "process": "Mineral Processing"
+      }
+    ],
+    "sources": [
+      {
+        "pollutant": "Suspended Solid",
+        "process": "Mineral Processing"
+      }
+    ],
+    "unresolved_receptors": [],
+    "unresolved_social_factors": [
+      "Distinct Settlements",
+      "Health and Social Services",
+      "Income Level",
+      "Transportation Systems"
+    ]
+  },
+  "ambient_screen": {
+    "averaging_time": "24h",
+    "comparison_limit": 1.0,
+    "comparison_unit": "count_per_year",
+    "decision": "within_reference",
+    "expected_statistic": "mean_annual_exceedances_3y",
+    "normalized_value": 1.0,
+    "pollutant": "PM10",
+    "profile": "us_epa_naaqs_2025",
+    "protection": "primary_secondary",
+    "reference_level": 150.0,
+    "reference_unit": "ug/m3",
+    "scope": "supplied_summary_screen",
+    "standard": "pm10_24h"
+  },
+  "session": {
+    "analyses": [
+      {
+        "decision": "no_detected_impact",
+        "direct_impacts": [
+          {
+            "importance": 2.0,
+            "magnitude": 0.0,
+            "pollutant": "Particulate",
+            "receptor": "Shrubs",
+            "score": 0.0
+          },
+          {
+            "importance": 6.0,
+            "magnitude": 0.0,
+            "pollutant": "Particulate",
+            "receptor": "Gasses and Particulate",
+            "score": 0.0
+          },
+          {
+            "importance": 2.0,
+            "magnitude": 0.0,
+            "pollutant": "Particulate",
+            "receptor": "Birds",
+            "score": 0.0
+          }
+        ],
+        "indirect_impacts": [],
+        "maximum_score": 0.0,
+        "mitigations": [],
+        "priority": "no_detected_impact",
+        "social_impacts": [
+          {
+            "consequences": [],
+            "factor": "Income Level",
+            "importance": 1.0,
+            "process": "Product Storage"
+          },
+          {
+            "consequences": [],
+            "factor": "Health and Social Services",
+            "importance": 0.5,
+            "process": "Product Storage"
+          },
+          {
+            "consequences": [],
+            "factor": "Transportation Systems",
+            "importance": 5.0,
+            "process": "Product Storage"
+          },
+          {
+            "consequences": [],
+            "factor": "Land Values",
+            "importance": 4.0,
+            "process": "Product Storage"
+          },
+          {
+            "consequences": [],
+            "factor": "Income Level",
+            "importance": 6.0,
+            "process": "Mineral Processing"
+          },
+          {
+            "consequences": [],
+            "factor": "Distinct Settlements",
+            "importance": 4.0,
+            "process": "Mineral Processing"
+          },
+          {
+            "consequences": [],
+            "factor": "Health and Social Services",
+            "importance": 6.0,
+            "process": "Mineral Processing"
+          },
+          {
+            "consequences": [
+              "changes in demand on educational resources",
+              "changes in demand on health and social services",
+              "changes in demand on transportation systems",
+              "disruption of cohesion in community groups",
+              "disruption of religious petterns and characteristics",
+              "increase or decrease employment patterns",
+              "increase or decrease income level",
+              "increase or decrease population growth",
+              "increase or decrease workforce",
+              "varies in population characteristics"
+            ],
+            "factor": "Migration",
+            "importance": 6.0,
+            "process": "Mineral Processing"
+          },
+          {
+            "consequences": [],
+            "factor": "Transportation Systems",
+            "importance": 6.0,
+            "process": "Mineral Processing"
+          }
+        ],
+        "sources": [
+          {
+            "pollutant": "Particulate",
+            "process": "Product Storage"
+          },
+          {
+            "pollutant": "Particulate",
+            "process": "Mineral Processing"
+          }
+        ],
+        "unresolved_receptors": [],
+        "unresolved_social_factors": [
+          "Distinct Settlements",
+          "Health and Social Services",
+          "Income Level",
+          "Land Values",
+          "Transportation Systems"
+        ]
+      },
+      {
+        "decision": "no_detected_impact",
+        "direct_impacts": [
+          {
+            "importance": 4.0,
+            "magnitude": 0.0,
+            "pollutant": "SO2",
+            "receptor": "Shrubs",
+            "score": 0.0
+          },
+          {
+            "importance": 4.0,
+            "magnitude": 0.0,
+            "pollutant": "SO2",
+            "receptor": "Birds",
+            "score": 0.0
+          }
+        ],
+        "indirect_impacts": [],
+        "maximum_score": 0.0,
+        "mitigations": [],
+        "priority": "no_detected_impact",
+        "social_impacts": [
+          {
+            "consequences": [],
+            "factor": "Income Level",
+            "importance": 6.0,
+            "process": "Mineral Processing"
+          },
+          {
+            "consequences": [],
+            "factor": "Distinct Settlements",
+            "importance": 4.0,
+            "process": "Mineral Processing"
+          },
+          {
+            "consequences": [],
+            "factor": "Health and Social Services",
+            "importance": 6.0,
+            "process": "Mineral Processing"
+          },
+          {
+            "consequences": [
+              "changes in demand on educational resources",
+              "changes in demand on health and social services",
+              "changes in demand on transportation systems",
+              "disruption of cohesion in community groups",
+              "disruption of religious petterns and characteristics",
+              "increase or decrease employment patterns",
+              "increase or decrease income level",
+              "increase or decrease population growth",
+              "increase or decrease workforce",
+              "varies in population characteristics"
+            ],
+            "factor": "Migration",
+            "importance": 6.0,
+            "process": "Mineral Processing"
+          },
+          {
+            "consequences": [],
+            "factor": "Transportation Systems",
+            "importance": 6.0,
+            "process": "Mineral Processing"
+          }
+        ],
+        "sources": [
+          {
+            "pollutant": "SO2",
+            "process": "Mineral Processing"
+          }
+        ],
+        "unresolved_receptors": [],
+        "unresolved_social_factors": [
+          "Distinct Settlements",
+          "Health and Social Services",
+          "Income Level",
+          "Transportation Systems"
+        ]
+      },
+      {
+        "decision": "no_detected_impact",
+        "direct_impacts": [
+          {
+            "importance": 8.0,
+            "magnitude": 0.0,
+            "pollutant": "Suspended Solid",
+            "receptor": "Surface Water",
+            "score": 0.0
+          }
+        ],
+        "indirect_impacts": [],
+        "maximum_score": 0.0,
+        "mitigations": [],
+        "priority": "no_detected_impact",
+        "social_impacts": [
+          {
+            "consequences": [],
+            "factor": "Income Level",
+            "importance": 6.0,
+            "process": "Mineral Processing"
+          },
+          {
+            "consequences": [],
+            "factor": "Distinct Settlements",
+            "importance": 4.0,
+            "process": "Mineral Processing"
+          },
+          {
+            "consequences": [],
+            "factor": "Health and Social Services",
+            "importance": 6.0,
+            "process": "Mineral Processing"
+          },
+          {
+            "consequences": [
+              "changes in demand on educational resources",
+              "changes in demand on health and social services",
+              "changes in demand on transportation systems",
+              "disruption of cohesion in community groups",
+              "disruption of religious petterns and characteristics",
+              "increase or decrease employment patterns",
+              "increase or decrease income level",
+              "increase or decrease population growth",
+              "increase or decrease workforce",
+              "varies in population characteristics"
+            ],
+            "factor": "Migration",
+            "importance": 6.0,
+            "process": "Mineral Processing"
+          },
+          {
+            "consequences": [],
+            "factor": "Transportation Systems",
+            "importance": 6.0,
+            "process": "Mineral Processing"
+          }
+        ],
+        "sources": [
+          {
+            "pollutant": "Suspended Solid",
+            "process": "Mineral Processing"
+          }
+        ],
+        "unresolved_receptors": [],
+        "unresolved_social_factors": [
+          "Distinct Settlements",
+          "Health and Social Services",
+          "Income Level",
+          "Transportation Systems"
+        ]
+      },
+      {
+        "decision": "insufficient_data",
+        "direct_impacts": [],
+        "indirect_impacts": [],
+        "maximum_score": 0.0,
+        "mitigations": [],
+        "priority": "no_detected_impact",
+        "social_impacts": [
+          {
+            "consequences": [],
+            "factor": "Income Level",
+            "importance": 6.0,
+            "process": "Mineral Processing"
+          },
+          {
+            "consequences": [],
+            "factor": "Distinct Settlements",
+            "importance": 4.0,
+            "process": "Mineral Processing"
+          },
+          {
+            "consequences": [],
+            "factor": "Health and Social Services",
+            "importance": 6.0,
+            "process": "Mineral Processing"
+          },
+          {
+            "consequences": [
+              "changes in demand on educational resources",
+              "changes in demand on health and social services",
+              "changes in demand on transportation systems",
+              "disruption of cohesion in community groups",
+              "disruption of religious petterns and characteristics",
+              "increase or decrease employment patterns",
+              "increase or decrease income level",
+              "increase or decrease population growth",
+              "increase or decrease workforce",
+              "varies in population characteristics"
+            ],
+            "factor": "Migration",
+            "importance": 6.0,
+            "process": "Mineral Processing"
+          },
+          {
+            "consequences": [],
+            "factor": "Transportation Systems",
+            "importance": 6.0,
+            "process": "Mineral Processing"
+          }
+        ],
+        "sources": [
+          {
+            "pollutant": "CO",
+            "process": "Mineral Processing"
+          }
+        ],
+        "unresolved_receptors": [
+          "Aquatic Plants"
+        ],
+        "unresolved_social_factors": [
+          "Distinct Settlements",
+          "Health and Social Services",
+          "Income Level",
+          "Transportation Systems"
+        ]
+      },
+      {
+        "decision": "insufficient_data",
+        "reason": "concentration_outside_documented_ranges"
+      },
+      {
+        "decision": "no_detected_impact",
+        "direct_impacts": [
+          {
+            "importance": 8.0,
+            "magnitude": 0.0,
+            "pollutant": "Suspended Solid",
+            "receptor": "Surface Water",
+            "score": 0.0
+          }
+        ],
+        "indirect_impacts": [],
+        "maximum_score": 0.0,
+        "mitigations": [],
+        "priority": "no_detected_impact",
+        "social_impacts": [
+          {
+            "consequences": [],
+            "factor": "Income Level",
+            "importance": 6.0,
+            "process": "Mineral Processing"
+          },
+          {
+            "consequences": [],
+            "factor": "Distinct Settlements",
+            "importance": 4.0,
+            "process": "Mineral Processing"
+          },
+          {
+            "consequences": [],
+            "factor": "Health and Social Services",
+            "importance": 6.0,
+            "process": "Mineral Processing"
+          },
+          {
+            "consequences": [
+              "changes in demand on educational resources",
+              "changes in demand on health and social services",
+              "changes in demand on transportation systems",
+              "disruption of cohesion in community groups",
+              "disruption of religious petterns and characteristics",
+              "increase or decrease employment patterns",
+              "increase or decrease income level",
+              "increase or decrease population growth",
+              "increase or decrease workforce",
+              "varies in population characteristics"
+            ],
+            "factor": "Migration",
+            "importance": 6.0,
+            "process": "Mineral Processing"
+          },
+          {
+            "consequences": [],
+            "factor": "Transportation Systems",
+            "importance": 6.0,
+            "process": "Mineral Processing"
+          }
+        ],
+        "sources": [
+          {
+            "pollutant": "Suspended Solid",
+            "process": "Mineral Processing"
+          }
+        ],
+        "unresolved_receptors": [],
+        "unresolved_social_factors": [
+          "Distinct Settlements",
+          "Health and Social Services",
+          "Income Level",
+          "Transportation Systems"
+        ]
+      }
+    ],
+    "decision": "session_assessed",
+    "method_assessment": {
+      "aspect_grades": {
+        "communication": "S",
+        "identification": "S",
+        "interpretation": "S",
+        "measurement": "L"
+      },
+      "criterion_grades": {
+        "affected_groups": "N",
+        "aggregation": "L",
+        "alternatives": "L",
+        "comprehensiveness": "N",
+        "data_sources": "L",
+        "environmental_setting": "L",
+        "explicit_criteria": "L",
+        "explicit_indicators": "L",
+        "impact_isolation": "L",
+        "key_issues": "N",
+        "magnitude": "L",
+        "nepa_conformity": "L",
+        "objectivity": "S",
+        "public_involvement": "N",
+        "risk": "N",
+        "significance": "L",
+        "specificity": "N",
+        "summary_format": "L",
+        "time_consideration": "S",
+        "uncertainty": "L"
+      },
+      "decision": "method_assessed"
+    },
+    "observed_session_counts": {
+      "activities": 2,
+      "alternatives": 2,
+      "components": 5,
+      "declared_assumptions": 2,
+      "highlighted_impacts": 0,
+      "impacts": 0,
+      "measurements": 6,
+      "objective_measurements": 5,
+      "rare_severe_impacts": 0,
+      "staged_activities": 1
+    }
+  },
+  "source_event_ids": [
+    "day-05-instrument",
+    "day-05-dust",
+    "day-05-so2",
+    "day-05-water",
+    "day-05-gap",
+    "day-05-historical",
+    "day-05-backward",
+    "day-05-ambient",
+    "day-05-method",
+    "day-05-alternative",
+    "day-05-session"
+  ],
+  "consultations": [
+    {
+      "id": "day-05-instrument",
+      "time": "08:00",
+      "role": "Instrument operator",
+      "task": "Review the synthetic observation against the documented instrument detection limit.",
+      "inputs": {
+        "kind": "instrumentation",
+        "pollutant": "Suspended solid",
+        "technique": "Non-filterable residue by drying oven",
+        "observed_value": 10.0
+      },
+      "expected_decision": "measurable",
+      "scenario_date": "2026-10-09",
+      "answer": {
+        "rule_ids": [
+          "METHOD_SOLID",
+          "R_INSTRUMENT",
+          "UNIT_SOLID"
+        ],
+        "target": {
+          "decision": "measurable",
+          "minimum_detectable": 4.0,
+          "unit": " mg per liter",
+          "variability": 5.8
+        }
+      },
+      "executed_at": "2026-10-11T06:24:45.554146+00:00",
+      "input_sha256": "589b1bfc89e14e06a6fe39d282589bd819a0c7c9cc658afd5d2aa80dae6ba2ff"
+    },
+    {
+      "id": "day-05-dust",
+      "time": "08:30",
+      "role": "Environmental officer",
+      "task": "Assess particulate pathways from processing and product storage.",
+      "inputs": {
+        "kind": "assess",
+        "pollutant": "Particulate",
+        "magnitude": 0.0,
+        "processes": [
+          "Mineral Processing",
+          "Product Storage"
+        ],
+        "receptors": [
+          "Birds",
+          "Gasses and Particulate",
+          "Shrubs"
+        ]
+      },
+      "expected_decision": "no_detected_impact",
+      "scenario_date": "2026-10-09",
+      "answer": {
+        "rule_ids": [
+          "EXP_IMPACT_003",
+          "EXP_IMPACT_SE_112",
+          "EXP_IMPACT_SE_122",
+          "EXP_IMPACT_SE_123",
+          "EXP_IMPACT_SE_127",
+          "EXP_IMPACT_SE_134",
+          "EXP_IMPACT_SE_135",
+          "EXP_IMPACT_SE_139",
+          "EXP_IMPACT_SE_142",
+          "EXP_IMPACT_SE_143",
+          "EXP_SOC_EC_147",
+          "EXP_SOC_EC_148",
+          "EXP_SOC_EC_149",
+          "EXP_SOC_EC_150",
+          "EXP_SOC_EC_151",
+          "EXP_SOC_EC_152",
+          "EXP_SOC_EC_153",
+          "EXP_SOC_EC_154",
+          "EXP_SOC_EC_155",
+          "FACT_EMISSION_03",
+          "FACT_EMISSION_08",
+          "IMPACT_04",
+          "IMPACT_19",
+          "R_ASSESS",
+          "R_DIRECT",
+          "R_FORWARD",
+          "R_PRIORITY",
+          "R_SOCIAL",
+          "SOC_MIGRATION"
+        ],
+        "target": {
+          "decision": "no_detected_impact",
+          "direct_impacts": [
+            {
+              "importance": 2.0,
+              "magnitude": 0.0,
+              "pollutant": "Particulate",
+              "receptor": "Shrubs",
+              "score": 0.0
+            },
+            {
+              "importance": 6.0,
+              "magnitude": 0.0,
+              "pollutant": "Particulate",
+              "receptor": "Gasses and Particulate",
+              "score": 0.0
+            },
+            {
+              "importance": 2.0,
+              "magnitude": 0.0,
+              "pollutant": "Particulate",
+              "receptor": "Birds",
+              "score": 0.0
+            }
+          ],
+          "indirect_impacts": [],
+          "maximum_score": 0.0,
+          "mitigations": [],
+          "priority": "no_detected_impact",
+          "social_impacts": [
+            {
+              "consequences": [],
+              "factor": "Income Level",
+              "importance": 1.0,
+              "process": "Product Storage"
+            },
+            {
+              "consequences": [],
+              "factor": "Health and Social Services",
+              "importance": 0.5,
+              "process": "Product Storage"
+            },
+            {
+              "consequences": [],
+              "factor": "Transportation Systems",
+              "importance": 5.0,
+              "process": "Product Storage"
+            },
+            {
+              "consequences": [],
+              "factor": "Land Values",
+              "importance": 4.0,
+              "process": "Product Storage"
+            },
+            {
+              "consequences": [],
+              "factor": "Income Level",
+              "importance": 6.0,
+              "process": "Mineral Processing"
+            },
+            {
+              "consequences": [],
+              "factor": "Distinct Settlements",
+              "importance": 4.0,
+              "process": "Mineral Processing"
+            },
+            {
+              "consequences": [],
+              "factor": "Health and Social Services",
+              "importance": 6.0,
+              "process": "Mineral Processing"
+            },
+            {
+              "consequences": [
+                "changes in demand on educational resources",
+                "changes in demand on health and social services",
+                "changes in demand on transportation systems",
+                "disruption of cohesion in community groups",
+                "disruption of religious petterns and characteristics",
+                "increase or decrease employment patterns",
+                "increase or decrease income level",
+                "increase or decrease population growth",
+                "increase or decrease workforce",
+                "varies in population characteristics"
+              ],
+              "factor": "Migration",
+              "importance": 6.0,
+              "process": "Mineral Processing"
+            },
+            {
+              "consequences": [],
+              "factor": "Transportation Systems",
+              "importance": 6.0,
+              "process": "Mineral Processing"
+            }
+          ],
+          "sources": [
+            {
+              "pollutant": "Particulate",
+              "process": "Product Storage"
+            },
+            {
+              "pollutant": "Particulate",
+              "process": "Mineral Processing"
+            }
+          ],
+          "unresolved_receptors": [],
+          "unresolved_social_factors": [
+            "Distinct Settlements",
+            "Health and Social Services",
+            "Income Level",
+            "Land Values",
+            "Transportation Systems"
+          ]
+        }
+      },
+      "executed_at": "2026-10-11T06:24:45.622644+00:00",
+      "input_sha256": "4f45d17ae8b56a662c61028d4ec9d10ed14aeb2cb53587aa9da845a0dd65a5fc"
+    },
+    {
+      "id": "day-05-so2",
+      "time": "09:00",
+      "role": "Environmental officer",
+      "task": "Assess documented SO2 effects on shrubs and birds.",
+      "inputs": {
+        "kind": "assess",
+        "pollutant": "SO2",
+        "magnitude": 0.0,
+        "processes": [
+          "Mineral Processing"
+        ],
+        "receptors": [
+          "Birds",
+          "Shrubs"
+        ]
+      },
+      "expected_decision": "no_detected_impact",
+      "scenario_date": "2026-10-09",
+      "answer": {
+        "rule_ids": [
+          "EXP_IMPACT_SE_122",
+          "EXP_IMPACT_SE_127",
+          "EXP_IMPACT_SE_134",
+          "EXP_IMPACT_SE_139",
+          "EXP_IMPACT_SE_142",
+          "EXP_SOC_EC_147",
+          "EXP_SOC_EC_148",
+          "EXP_SOC_EC_149",
+          "EXP_SOC_EC_150",
+          "EXP_SOC_EC_151",
+          "EXP_SOC_EC_152",
+          "EXP_SOC_EC_153",
+          "EXP_SOC_EC_154",
+          "EXP_SOC_EC_155",
+          "FACT_EMISSION_01",
+          "IMPACT_03",
+          "IMPACT_17",
+          "R_ASSESS",
+          "R_DIRECT",
+          "R_FORWARD",
+          "R_PRIORITY",
+          "R_SOCIAL",
+          "SOC_MIGRATION"
+        ],
+        "target": {
+          "decision": "no_detected_impact",
+          "direct_impacts": [
+            {
+              "importance": 4.0,
+              "magnitude": 0.0,
+              "pollutant": "SO2",
+              "receptor": "Shrubs",
+              "score": 0.0
+            },
+            {
+              "importance": 4.0,
+              "magnitude": 0.0,
+              "pollutant": "SO2",
+              "receptor": "Birds",
+              "score": 0.0
+            }
+          ],
+          "indirect_impacts": [],
+          "maximum_score": 0.0,
+          "mitigations": [],
+          "priority": "no_detected_impact",
+          "social_impacts": [
+            {
+              "consequences": [],
+              "factor": "Income Level",
+              "importance": 6.0,
+              "process": "Mineral Processing"
+            },
+            {
+              "consequences": [],
+              "factor": "Distinct Settlements",
+              "importance": 4.0,
+              "process": "Mineral Processing"
+            },
+            {
+              "consequences": [],
+              "factor": "Health and Social Services",
+              "importance": 6.0,
+              "process": "Mineral Processing"
+            },
+            {
+              "consequences": [
+                "changes in demand on educational resources",
+                "changes in demand on health and social services",
+                "changes in demand on transportation systems",
+                "disruption of cohesion in community groups",
+                "disruption of religious petterns and characteristics",
+                "increase or decrease employment patterns",
+                "increase or decrease income level",
+                "increase or decrease population growth",
+                "increase or decrease workforce",
+                "varies in population characteristics"
+              ],
+              "factor": "Migration",
+              "importance": 6.0,
+              "process": "Mineral Processing"
+            },
+            {
+              "consequences": [],
+              "factor": "Transportation Systems",
+              "importance": 6.0,
+              "process": "Mineral Processing"
+            }
+          ],
+          "sources": [
+            {
+              "pollutant": "SO2",
+              "process": "Mineral Processing"
+            }
+          ],
+          "unresolved_receptors": [],
+          "unresolved_social_factors": [
+            "Distinct Settlements",
+            "Health and Social Services",
+            "Income Level",
+            "Transportation Systems"
+          ]
+        }
+      },
+      "executed_at": "2026-10-11T06:24:45.690958+00:00",
+      "input_sha256": "97e2ea503596f87da41dd7ac41424ab4326edb52025b824307c3e848527e198c"
+    },
+    {
+      "id": "day-05-water",
+      "time": "10:00",
+      "role": "Environmental officer",
+      "task": "Trace direct surface-water and two-hop ecological pathways.",
+      "inputs": {
+        "kind": "assess",
+        "pollutant": "Suspended Solid",
+        "magnitude": 0.0,
+        "processes": [
+          "Mineral Processing"
+        ],
+        "receptors": [
+          "Aquatic Plants",
+          "Birds",
+          "Surface Water"
+        ]
+      },
+      "expected_decision": "no_detected_impact",
+      "scenario_date": "2026-10-09",
+      "answer": {
+        "rule_ids": [
+          "EXP_IMPACT_SE_122",
+          "EXP_IMPACT_SE_127",
+          "EXP_IMPACT_SE_134",
+          "EXP_IMPACT_SE_139",
+          "EXP_IMPACT_SE_142",
+          "EXP_SOC_EC_147",
+          "EXP_SOC_EC_148",
+          "EXP_SOC_EC_149",
+          "EXP_SOC_EC_150",
+          "EXP_SOC_EC_151",
+          "EXP_SOC_EC_152",
+          "EXP_SOC_EC_153",
+          "EXP_SOC_EC_154",
+          "EXP_SOC_EC_155",
+          "FACT_EMISSION_07",
+          "IMPACT_02",
+          "R_ASSESS",
+          "R_DIRECT",
+          "R_FORWARD",
+          "R_PRIORITY",
+          "R_SOCIAL",
+          "SOC_MIGRATION"
+        ],
+        "target": {
+          "decision": "no_detected_impact",
+          "direct_impacts": [
+            {
+              "importance": 8.0,
+              "magnitude": 0.0,
+              "pollutant": "Suspended Solid",
+              "receptor": "Surface Water",
+              "score": 0.0
+            }
+          ],
+          "indirect_impacts": [],
+          "maximum_score": 0.0,
+          "mitigations": [],
+          "priority": "no_detected_impact",
+          "social_impacts": [
+            {
+              "consequences": [],
+              "factor": "Income Level",
+              "importance": 6.0,
+              "process": "Mineral Processing"
+            },
+            {
+              "consequences": [],
+              "factor": "Distinct Settlements",
+              "importance": 4.0,
+              "process": "Mineral Processing"
+            },
+            {
+              "consequences": [],
+              "factor": "Health and Social Services",
+              "importance": 6.0,
+              "process": "Mineral Processing"
+            },
+            {
+              "consequences": [
+                "changes in demand on educational resources",
+                "changes in demand on health and social services",
+                "changes in demand on transportation systems",
+                "disruption of cohesion in community groups",
+                "disruption of religious petterns and characteristics",
+                "increase or decrease employment patterns",
+                "increase or decrease income level",
+                "increase or decrease population growth",
+                "increase or decrease workforce",
+                "varies in population characteristics"
+              ],
+              "factor": "Migration",
+              "importance": 6.0,
+              "process": "Mineral Processing"
+            },
+            {
+              "consequences": [],
+              "factor": "Transportation Systems",
+              "importance": 6.0,
+              "process": "Mineral Processing"
+            }
+          ],
+          "sources": [
+            {
+              "pollutant": "Suspended Solid",
+              "process": "Mineral Processing"
+            }
+          ],
+          "unresolved_receptors": [],
+          "unresolved_social_factors": [
+            "Distinct Settlements",
+            "Health and Social Services",
+            "Income Level",
+            "Transportation Systems"
+          ]
+        }
+      },
+      "executed_at": "2026-10-11T06:24:45.757267+00:00",
+      "input_sha256": "8de47bd3ee8b3c15a2dffb7aee6061b042c27032e991904a0ee4909e4702e536"
+    },
+    {
+      "id": "day-05-gap",
+      "time": "10:30",
+      "role": "Environmental officer",
+      "task": "Keep an unsupported CO-to-aquatic-plants relation unresolved.",
+      "inputs": {
+        "kind": "assess",
+        "pollutant": "CO",
+        "magnitude": 0.0,
+        "processes": [
+          "Mineral Processing"
+        ],
+        "receptors": [
+          "Aquatic Plants"
+        ]
+      },
+      "expected_decision": "insufficient_data",
+      "scenario_date": "2026-10-09",
+      "answer": {
+        "rule_ids": [
+          "EXP_IMPACT_SE_122",
+          "EXP_IMPACT_SE_127",
+          "EXP_IMPACT_SE_134",
+          "EXP_IMPACT_SE_139",
+          "EXP_IMPACT_SE_142",
+          "EXP_SOC_EC_147",
+          "EXP_SOC_EC_148",
+          "EXP_SOC_EC_149",
+          "EXP_SOC_EC_150",
+          "EXP_SOC_EC_151",
+          "EXP_SOC_EC_152",
+          "EXP_SOC_EC_153",
+          "EXP_SOC_EC_154",
+          "EXP_SOC_EC_155",
+          "FACT_EMISSION_02",
+          "R_ASSESS",
+          "R_FORWARD",
+          "R_GAPS",
+          "R_PRIORITY",
+          "R_SOCIAL",
+          "SOC_MIGRATION"
+        ],
+        "target": {
+          "decision": "insufficient_data",
+          "direct_impacts": [],
+          "indirect_impacts": [],
+          "maximum_score": 0.0,
+          "mitigations": [],
+          "priority": "no_detected_impact",
+          "social_impacts": [
+            {
+              "consequences": [],
+              "factor": "Income Level",
+              "importance": 6.0,
+              "process": "Mineral Processing"
+            },
+            {
+              "consequences": [],
+              "factor": "Distinct Settlements",
+              "importance": 4.0,
+              "process": "Mineral Processing"
+            },
+            {
+              "consequences": [],
+              "factor": "Health and Social Services",
+              "importance": 6.0,
+              "process": "Mineral Processing"
+            },
+            {
+              "consequences": [
+                "changes in demand on educational resources",
+                "changes in demand on health and social services",
+                "changes in demand on transportation systems",
+                "disruption of cohesion in community groups",
+                "disruption of religious petterns and characteristics",
+                "increase or decrease employment patterns",
+                "increase or decrease income level",
+                "increase or decrease population growth",
+                "increase or decrease workforce",
+                "varies in population characteristics"
+              ],
+              "factor": "Migration",
+              "importance": 6.0,
+              "process": "Mineral Processing"
+            },
+            {
+              "consequences": [],
+              "factor": "Transportation Systems",
+              "importance": 6.0,
+              "process": "Mineral Processing"
+            }
+          ],
+          "sources": [
+            {
+              "pollutant": "CO",
+              "process": "Mineral Processing"
+            }
+          ],
+          "unresolved_receptors": [
+            "Aquatic Plants"
+          ],
+          "unresolved_social_factors": [
+            "Distinct Settlements",
+            "Health and Social Services",
+            "Income Level",
+            "Transportation Systems"
+          ]
+        }
+      },
+      "executed_at": "2026-10-11T06:24:45.825841+00:00",
+      "input_sha256": "ef21985a3b96d52508f3a2523eb2cf910654e0c532cc725a5bc4965c977d66cb"
+    },
+    {
+      "id": "day-05-historical",
+      "time": "11:00",
+      "role": "Environmental officer",
+      "task": "Exercise the historical H2S source-scale bands without claiming physical units.",
+      "inputs": {
+        "kind": "assess_concentration",
+        "pollutant": "H2S",
+        "concentration": 1001.0,
+        "processes": [
+          "Mineral Processing"
+        ],
+        "receptors": [
+          "Shrubs"
+        ]
+      },
+      "expected_decision": "insufficient_data",
+      "scenario_date": "2026-10-09",
+      "answer": {
+        "rule_ids": [
+          "R_STANDARD"
+        ],
+        "target": {
+          "decision": "insufficient_data",
+          "reason": "concentration_outside_documented_ranges"
+        }
+      },
+      "executed_at": "2026-10-11T06:24:45.892947+00:00",
+      "input_sha256": "455e000f25ebd4bd91a715263e521c5ec5de59f7331dd7cef490261120aa168a"
+    },
+    {
+      "id": "day-05-backward",
+      "time": "11:30",
+      "role": "Environmental officer",
+      "task": "Inspect candidate sources for birds; candidates do not prove causation.",
+      "inputs": {
+        "kind": "trace_back",
+        "receptor": "Birds"
+      },
+      "expected_decision": "candidate_sources",
+      "scenario_date": "2026-10-09",
+      "answer": {
+        "rule_ids": [
+          "EXP_EMISSION_019",
+          "EXP_EMISSION_020",
+          "EXP_EMISSION_021",
+          "EXP_EMISSION_022",
+          "EXP_EMISSION_023",
+          "EXP_EMISSION_024",
+          "EXP_EMISSION_025",
+          "EXP_EMISSION_026",
+          "EXP_EMISSION_027",
+          "EXP_EMISSION_028",
+          "EXP_EMISSION_029",
+          "EXP_EMISSION_030",
+          "EXP_EMISSION_031",
+          "EXP_EMISSION_032",
+          "EXP_EMISSION_033",
+          "EXP_EMISSION_034",
+          "EXP_EMISSION_035",
+          "EXP_EMISSION_036",
+          "EXP_EMISSION_037",
+          "EXP_EMISSION_038",
+          "EXP_EMISSION_039",
+          "EXP_EMISSION_040",
+          "EXP_EMISSION_041",
+          "EXP_EMISSION_042",
+          "EXP_EMISSION_043",
+          "EXP_EMISSION_044",
+          "EXP_EMISSION_045",
+          "EXP_IMPACT_001",
+          "EXP_IMPACT_002",
+          "EXP_IMPACT_003",
+          "EXP_IMPACT_004",
+          "EXP_IMPACT_005",
+          "EXP_IMPACT_006",
+          "EXP_IMPACT_007",
+          "EXP_IMPACT_008",
+          "EXP_IMPACT_009",
+          "EXP_IMPACT_010",
+          "EXP_IMPACT_011",
+          "EXP_IMPACT_012",
+          "EXP_INDIRECT_048",
+          "EXP_INDIRECT_049",
+          "EXP_INDIRECT_050",
+          "EXP_INDIRECT_051",
+          "EXP_INDIRECT_077",
+          "EXP_INDIRECT_080",
+          "EXP_INDIRECT_081",
+          "EXP_INDIRECT_082",
+          "EXP_INDIRECT_106",
+          "EXP_INDIRECT_107",
+          "EXP_INDIRECT_108",
+          "EXP_INDIRECT_109",
+          "FACT_EMISSION_01",
+          "FACT_EMISSION_02",
+          "FACT_EMISSION_03",
+          "FACT_EMISSION_04",
+          "FACT_EMISSION_05",
+          "FACT_EMISSION_06",
+          "FACT_EMISSION_07",
+          "FACT_EMISSION_08",
+          "FACT_EMISSION_09",
+          "FACT_EMISSION_10",
+          "FACT_EMISSION_11",
+          "FACT_EMISSION_12",
+          "FACT_EMISSION_13",
+          "FACT_INDIRECT_14",
+          "FACT_INDIRECT_15",
+          "IMPACT_01",
+          "IMPACT_02",
+          "IMPACT_03",
+          "IMPACT_04",
+          "IMPACT_05",
+          "IMPACT_17",
+          "IMPACT_18",
+          "IMPACT_19",
+          "IMPACT_20",
+          "R_BACKWARD"
+        ],
+        "target": {
+          "decision": "candidate_sources",
+          "direct_sources": [
+            {
+              "importance": 1.0,
+              "pollutant": "H2S",
+              "processes": [
+                "Mineral Processing"
+              ]
+            },
+            {
+              "importance": 2.0,
+              "pollutant": "Particulate",
+              "processes": [
+                "Alteration of Ground Cover",
+                "Blasting and Drilling",
+                "Energy Generation",
+                "Erosion and Terrasing",
+                "Explosion",
+                "Junk Disposal",
+                "Mineral Processing",
+                "Operation Failure",
+                "Product Storage",
+                "Trucking"
+              ]
+            },
+            {
+              "importance": 2.0,
+              "pollutant": "CO",
+              "processes": [
+                "Alteration of Ground Cover",
+                "Energy Generation",
+                "Explosion",
+                "Junk Disposal",
+                "Mineral Processing",
+                "Operation Failure",
+                "Trucking"
+              ]
+            },
+            {
+              "importance": 4.0,
+              "pollutant": "SO2",
+              "processes": [
+                "Energy Generation",
+                "Explosion",
+                "Junk Disposal",
+                "Mineral Processing",
+                "Operation Failure",
+                "Trucking"
+              ]
+            }
+          ],
+          "indirect_sources": [
+            {
+              "path": [
+                "Aquatic Plants",
+                "Water Quality",
+                "Birds"
+              ],
+              "pollutant": "Water Temperature",
+              "processes": [
+                "Mineral Processing"
+              ],
+              "source_receptor": "Aquatic Plants"
+            },
+            {
+              "path": [
+                "Aquatic Plants",
+                "Microfauna",
+                "Birds"
+              ],
+              "pollutant": "Water Temperature",
+              "processes": [
+                "Mineral Processing"
+              ],
+              "source_receptor": "Aquatic Plants"
+            },
+            {
+              "path": [
+                "Aquatic Plants",
+                "Birds"
+              ],
+              "pollutant": "Water Temperature",
+              "processes": [
+                "Mineral Processing"
+              ],
+              "source_receptor": "Aquatic Plants"
+            },
+            {
+              "path": [
+                "Microfauna",
+                "Birds"
+              ],
+              "pollutant": "Suspended Solid",
+              "processes": [
+                "Alteration of Ground Cover",
+                "Blasting and Drilling",
+                "Cooling Water Discharge",
+                "Energy Generation",
+                "Erosion and Terrasing",
+                "Junk Disposal",
+                "Liquid Effluent Discharge",
+                "Mineral Processing",
+                "Operation Failure",
+                "Product Storage",
+                "Waste Recycling"
+              ],
+              "source_receptor": "Microfauna"
+            },
+            {
+              "path": [
+                "Microfauna",
+                "Birds"
+              ],
+              "pollutant": "Water Temperature",
+              "processes": [
+                "Mineral Processing"
+              ],
+              "source_receptor": "Microfauna"
+            },
+            {
+              "path": [
+                "Microfauna",
+                "Birds"
+              ],
+              "pollutant": "Hydrocarbon",
+              "processes": [
+                "Explosion",
+                "Mineral Processing",
+                "Operation Failure",
+                "Product Storage"
+              ],
+              "source_receptor": "Microfauna"
+            },
+            {
+              "path": [
+                "Microfauna",
+                "Birds"
+              ],
+              "pollutant": "H2S",
+              "processes": [
+                "Mineral Processing"
+              ],
+              "source_receptor": "Microfauna"
+            },
+            {
+              "path": [
+                "Microfauna",
+                "Birds"
+              ],
+              "pollutant": "Particulate",
+              "processes": [
+                "Alteration of Ground Cover",
+                "Blasting and Drilling",
+                "Energy Generation",
+                "Erosion and Terrasing",
+                "Explosion",
+                "Junk Disposal",
+                "Mineral Processing",
+                "Operation Failure",
+                "Product Storage",
+                "Trucking"
+              ],
+              "source_receptor": "Microfauna"
+            },
+            {
+              "path": [
+                "Microfauna",
+                "Birds"
+              ],
+              "pollutant": "SO2",
+              "processes": [
+                "Energy Generation",
+                "Explosion",
+                "Junk Disposal",
+                "Mineral Processing",
+                "Operation Failure",
+                "Trucking"
+              ],
+              "source_receptor": "Microfauna"
+            },
+            {
+              "path": [
+                "Gasses and Particulate",
+                "Water Quality",
+                "Birds"
+              ],
+              "pollutant": "Hydrocarbon",
+              "processes": [
+                "Explosion",
+                "Mineral Processing",
+                "Operation Failure",
+                "Product Storage"
+              ],
+              "source_receptor": "Gasses and Particulate"
+            },
+            {
+              "path": [
+                "Gasses and Particulate",
+                "Surface Water",
+                "Birds"
+              ],
+              "pollutant": "Hydrocarbon",
+              "processes": [
+                "Explosion",
+                "Mineral Processing",
+                "Operation Failure",
+                "Product Storage"
+              ],
+              "source_receptor": "Gasses and Particulate"
+            },
+            {
+              "path": [
+                "Gasses and Particulate",
+                "Microfauna",
+                "Birds"
+              ],
+              "pollutant": "Hydrocarbon",
+              "processes": [
+                "Explosion",
+                "Mineral Processing",
+                "Operation Failure",
+                "Product Storage"
+              ],
+              "source_receptor": "Gasses and Particulate"
+            },
+            {
+              "path": [
+                "Gasses and Particulate",
+                "Birds"
+              ],
+              "pollutant": "Hydrocarbon",
+              "processes": [
+                "Explosion",
+                "Mineral Processing",
+                "Operation Failure",
+                "Product Storage"
+              ],
+              "source_receptor": "Gasses and Particulate"
+            },
+            {
+              "path": [
+                "Gasses and Particulate",
+                "Water Quality",
+                "Birds"
+              ],
+              "pollutant": "H2S",
+              "processes": [
+                "Mineral Processing"
+              ],
+              "source_receptor": "Gasses and Particulate"
+            },
+            {
+              "path": [
+                "Gasses and Particulate",
+                "Surface Water",
+                "Birds"
+              ],
+              "pollutant": "H2S",
+              "processes": [
+                "Mineral Processing"
+              ],
+              "source_receptor": "Gasses and Particulate"
+            },
+            {
+              "path": [
+                "Gasses and Particulate",
+                "Microfauna",
+                "Birds"
+              ],
+              "pollutant": "H2S",
+              "processes": [
+                "Mineral Processing"
+              ],
+              "source_receptor": "Gasses and Particulate"
+            },
+            {
+              "path": [
+                "Gasses and Particulate",
+                "Birds"
+              ],
+              "pollutant": "H2S",
+              "processes": [
+                "Mineral Processing"
+              ],
+              "source_receptor": "Gasses and Particulate"
+            },
+            {
+              "path": [
+                "Gasses and Particulate",
+                "Water Quality",
+                "Birds"
+              ],
+              "pollutant": "Particulate",
+              "processes": [
+                "Alteration of Ground Cover",
+                "Blasting and Drilling",
+                "Energy Generation",
+                "Erosion and Terrasing",
+                "Explosion",
+                "Junk Disposal",
+                "Mineral Processing",
+                "Operation Failure",
+                "Product Storage",
+                "Trucking"
+              ],
+              "source_receptor": "Gasses and Particulate"
+            },
+            {
+              "path": [
+                "Gasses and Particulate",
+                "Surface Water",
+                "Birds"
+              ],
+              "pollutant": "Particulate",
+              "processes": [
+                "Alteration of Ground Cover",
+                "Blasting and Drilling",
+                "Energy Generation",
+                "Erosion and Terrasing",
+                "Explosion",
+                "Junk Disposal",
+                "Mineral Processing",
+                "Operation Failure",
+                "Product Storage",
+                "Trucking"
+              ],
+              "source_receptor": "Gasses and Particulate"
+            },
+            {
+              "path": [
+                "Gasses and Particulate",
+                "Microfauna",
+                "Birds"
+              ],
+              "pollutant": "Particulate",
+              "processes": [
+                "Alteration of Ground Cover",
+                "Blasting and Drilling",
+                "Energy Generation",
+                "Erosion and Terrasing",
+                "Explosion",
+                "Junk Disposal",
+                "Mineral Processing",
+                "Operation Failure",
+                "Product Storage",
+                "Trucking"
+              ],
+              "source_receptor": "Gasses and Particulate"
+            },
+            {
+              "path": [
+                "Gasses and Particulate",
+                "Birds"
+              ],
+              "pollutant": "Particulate",
+              "processes": [
+                "Alteration of Ground Cover",
+                "Blasting and Drilling",
+                "Energy Generation",
+                "Erosion and Terrasing",
+                "Explosion",
+                "Junk Disposal",
+                "Mineral Processing",
+                "Operation Failure",
+                "Product Storage",
+                "Trucking"
+              ],
+              "source_receptor": "Gasses and Particulate"
+            },
+            {
+              "path": [
+                "Gasses and Particulate",
+                "Water Quality",
+                "Birds"
+              ],
+              "pollutant": "CO",
+              "processes": [
+                "Alteration of Ground Cover",
+                "Energy Generation",
+                "Explosion",
+                "Junk Disposal",
+                "Mineral Processing",
+                "Operation Failure",
+                "Trucking"
+              ],
+              "source_receptor": "Gasses and Particulate"
+            },
+            {
+              "path": [
+                "Gasses and Particulate",
+                "Surface Water",
+                "Birds"
+              ],
+              "pollutant": "CO",
+              "processes": [
+                "Alteration of Ground Cover",
+                "Energy Generation",
+                "Explosion",
+                "Junk Disposal",
+                "Mineral Processing",
+                "Operation Failure",
+                "Trucking"
+              ],
+              "source_receptor": "Gasses and Particulate"
+            },
+            {
+              "path": [
+                "Gasses and Particulate",
+                "Microfauna",
+                "Birds"
+              ],
+              "pollutant": "CO",
+              "processes": [
+                "Alteration of Ground Cover",
+                "Energy Generation",
+                "Explosion",
+                "Junk Disposal",
+                "Mineral Processing",
+                "Operation Failure",
+                "Trucking"
+              ],
+              "source_receptor": "Gasses and Particulate"
+            },
+            {
+              "path": [
+                "Gasses and Particulate",
+                "Birds"
+              ],
+              "pollutant": "CO",
+              "processes": [
+                "Alteration of Ground Cover",
+                "Energy Generation",
+                "Explosion",
+                "Junk Disposal",
+                "Mineral Processing",
+                "Operation Failure",
+                "Trucking"
+              ],
+              "source_receptor": "Gasses and Particulate"
+            },
+            {
+              "path": [
+                "Gasses and Particulate",
+                "Water Quality",
+                "Birds"
+              ],
+              "pollutant": "SO2",
+              "processes": [
+                "Energy Generation",
+                "Explosion",
+                "Junk Disposal",
+                "Mineral Processing",
+                "Operation Failure",
+                "Trucking"
+              ],
+              "source_receptor": "Gasses and Particulate"
+            },
+            {
+              "path": [
+                "Gasses and Particulate",
+                "Surface Water",
+                "Birds"
+              ],
+              "pollutant": "SO2",
+              "processes": [
+                "Energy Generation",
+                "Explosion",
+                "Junk Disposal",
+                "Mineral Processing",
+                "Operation Failure",
+                "Trucking"
+              ],
+              "source_receptor": "Gasses and Particulate"
+            },
+            {
+              "path": [
+                "Gasses and Particulate",
+                "Microfauna",
+                "Birds"
+              ],
+              "pollutant": "SO2",
+              "processes": [
+                "Energy Generation",
+                "Explosion",
+                "Junk Disposal",
+                "Mineral Processing",
+                "Operation Failure",
+                "Trucking"
+              ],
+              "source_receptor": "Gasses and Particulate"
+            },
+            {
+              "path": [
+                "Gasses and Particulate",
+                "Birds"
+              ],
+              "pollutant": "SO2",
+              "processes": [
+                "Energy Generation",
+                "Explosion",
+                "Junk Disposal",
+                "Mineral Processing",
+                "Operation Failure",
+                "Trucking"
+              ],
+              "source_receptor": "Gasses and Particulate"
+            },
+            {
+              "path": [
+                "Shrubs",
+                "Microfauna",
+                "Birds"
+              ],
+              "pollutant": "H2S",
+              "processes": [
+                "Mineral Processing"
+              ],
+              "source_receptor": "Shrubs"
+            },
+            {
+              "path": [
+                "Shrubs",
+                "Microfauna",
+                "Birds"
+              ],
+              "pollutant": "Particulate",
+              "processes": [
+                "Alteration of Ground Cover",
+                "Blasting and Drilling",
+                "Energy Generation",
+                "Erosion and Terrasing",
+                "Explosion",
+                "Junk Disposal",
+                "Mineral Processing",
+                "Operation Failure",
+                "Product Storage",
+                "Trucking"
+              ],
+              "source_receptor": "Shrubs"
+            },
+            {
+              "path": [
+                "Shrubs",
+                "Microfauna",
+                "Birds"
+              ],
+              "pollutant": "SO2",
+              "processes": [
+                "Energy Generation",
+                "Explosion",
+                "Junk Disposal",
+                "Mineral Processing",
+                "Operation Failure",
+                "Trucking"
+              ],
+              "source_receptor": "Shrubs"
+            },
+            {
+              "path": [
+                "Surface Water",
+                "Water Quality",
+                "Birds"
+              ],
+              "pollutant": "Suspended Solid",
+              "processes": [
+                "Alteration of Ground Cover",
+                "Blasting and Drilling",
+                "Cooling Water Discharge",
+                "Energy Generation",
+                "Erosion and Terrasing",
+                "Junk Disposal",
+                "Liquid Effluent Discharge",
+                "Mineral Processing",
+                "Operation Failure",
+                "Product Storage",
+                "Waste Recycling"
+              ],
+              "source_receptor": "Surface Water"
+            },
+            {
+              "path": [
+                "Surface Water",
+                "Microfauna",
+                "Birds"
+              ],
+              "pollutant": "Suspended Solid",
+              "processes": [
+                "Alteration of Ground Cover",
+                "Blasting and Drilling",
+                "Cooling Water Discharge",
+                "Energy Generation",
+                "Erosion and Terrasing",
+                "Junk Disposal",
+                "Liquid Effluent Discharge",
+                "Mineral Processing",
+                "Operation Failure",
+                "Product Storage",
+                "Waste Recycling"
+              ],
+              "source_receptor": "Surface Water"
+            },
+            {
+              "path": [
+                "Surface Water",
+                "Aquatic Plants",
+                "Birds"
+              ],
+              "pollutant": "Suspended Solid",
+              "processes": [
+                "Alteration of Ground Cover",
+                "Blasting and Drilling",
+                "Cooling Water Discharge",
+                "Energy Generation",
+                "Erosion and Terrasing",
+                "Junk Disposal",
+                "Liquid Effluent Discharge",
+                "Mineral Processing",
+                "Operation Failure",
+                "Product Storage",
+                "Waste Recycling"
+              ],
+              "source_receptor": "Surface Water"
+            },
+            {
+              "path": [
+                "Surface Water",
+                "Birds"
+              ],
+              "pollutant": "Suspended Solid",
+              "processes": [
+                "Alteration of Ground Cover",
+                "Blasting and Drilling",
+                "Cooling Water Discharge",
+                "Energy Generation",
+                "Erosion and Terrasing",
+                "Junk Disposal",
+                "Liquid Effluent Discharge",
+                "Mineral Processing",
+                "Operation Failure",
+                "Product Storage",
+                "Waste Recycling"
+              ],
+              "source_receptor": "Surface Water"
+            },
+            {
+              "path": [
+                "Surface Water",
+                "Water Quality",
+                "Birds"
+              ],
+              "pollutant": "Water Temperature",
+              "processes": [
+                "Mineral Processing"
+              ],
+              "source_receptor": "Surface Water"
+            },
+            {
+              "path": [
+                "Surface Water",
+                "Microfauna",
+                "Birds"
+              ],
+              "pollutant": "Water Temperature",
+              "processes": [
+                "Mineral Processing"
+              ],
+              "source_receptor": "Surface Water"
+            },
+            {
+              "path": [
+                "Surface Water",
+                "Aquatic Plants",
+                "Birds"
+              ],
+              "pollutant": "Water Temperature",
+              "processes": [
+                "Mineral Processing"
+              ],
+              "source_receptor": "Surface Water"
+            },
+            {
+              "path": [
+                "Surface Water",
+                "Birds"
+              ],
+              "pollutant": "Water Temperature",
+              "processes": [
+                "Mineral Processing"
+              ],
+              "source_receptor": "Surface Water"
+            }
+          ]
+        }
+      },
+      "executed_at": "2026-10-11T06:24:45.975461+00:00",
+      "input_sha256": "85caa8b53cf82f0bdea9e12435039aaecd9c25aaf1d0208e1a70b31641ed4b72"
+    },
+    {
+      "id": "day-05-ambient",
+      "time": "13:00",
+      "role": "Monitoring analyst",
+      "task": "Review a synthetic stored statistical summary, not a new single daily measurement.",
+      "inputs": {
+        "kind": "screen_ambient",
+        "profile": "us_epa_naaqs_2025",
+        "standard": "pm10_24h",
+        "sampling_context": "ambient_air",
+        "summary": {
+          "value": 1.0,
+          "unit": "count_per_year",
+          "statistic": "mean_annual_exceedances_3y",
+          "reference_level": 150.0,
+          "reference_unit": "ug/m3",
+          "data_status": "complete"
+        }
+      },
+      "expected_decision": "within_reference",
+      "scenario_date": "2026-10-09",
+      "answer": {
+        "rule_ids": [
+          "CURRENT_NAAQS_10",
+          "R_AMBIENT_SCREEN",
+          "R_AMBIENT_UNITS"
+        ],
+        "target": {
+          "averaging_time": "24h",
+          "comparison_limit": 1.0,
+          "comparison_unit": "count_per_year",
+          "decision": "within_reference",
+          "expected_statistic": "mean_annual_exceedances_3y",
+          "normalized_value": 1.0,
+          "pollutant": "PM10",
+          "profile": "us_epa_naaqs_2025",
+          "protection": "primary_secondary",
+          "reference_level": 150.0,
+          "reference_unit": "ug/m3",
+          "scope": "supplied_summary_screen",
+          "standard": "pm10_24h"
+        }
+      },
+      "executed_at": "2026-10-11T06:24:46.059012+00:00",
+      "input_sha256": "4314b0fcb2640bc18bf50d18f6691cf3e6e86e7c86b81be9f47ef22b608416e1"
+    },
+    {
+      "id": "day-05-method",
+      "time": "14:00",
+      "role": "Report reviewer",
+      "task": "Review the inferred twenty-criterion methodology profile.",
+      "inputs": {
+        "kind": "method_assessment",
+        "counts": {
+          "activities": 2,
+          "alternatives": 2,
+          "components": 2,
+          "declared_assumptions": 2,
+          "highlighted_impacts": 1,
+          "impacts": 2,
+          "measurements": 2,
+          "objective_measurements": 2,
+          "rare_severe_impacts": 0,
+          "staged_activities": 1
+        },
+        "answers": {
+          "impact_isolation": "yes",
+          "explicit_indicators": "yes",
+          "significance": "yes"
+        }
+      },
+      "expected_decision": "method_assessed",
+      "scenario_date": "2026-10-09",
+      "answer": {
+        "rule_ids": [
+          "FIXED_AFFECTED_GROUPS",
+          "FIXED_AGGREGATION",
+          "FIXED_DATA_SOURCES",
+          "FIXED_MAGNITUDE",
+          "FIXED_NEPA_CONFORMITY",
+          "FIXED_PUBLIC_INVOLVEMENT",
+          "FIXED_SUMMARY_FORMAT",
+          "FIXED_UNCERTAINTY",
+          "R_WP"
+        ],
+        "target": {
+          "aspect_grades": {
+            "communication": "S",
+            "identification": "L",
+            "interpretation": "S",
+            "measurement": "L"
+          },
+          "criterion_grades": {
+            "affected_groups": "N",
+            "aggregation": "L",
+            "alternatives": "L",
+            "comprehensiveness": "L",
+            "data_sources": "L",
+            "environmental_setting": "L",
+            "explicit_criteria": "L",
+            "explicit_indicators": "L",
+            "impact_isolation": "L",
+            "key_issues": "S",
+            "magnitude": "L",
+            "nepa_conformity": "L",
+            "objectivity": "L",
+            "public_involvement": "N",
+            "risk": "N",
+            "significance": "L",
+            "specificity": "L",
+            "summary_format": "L",
+            "time_consideration": "S",
+            "uncertainty": "L"
+          },
+          "decision": "method_assessed"
+        }
+      },
+      "executed_at": "2026-10-11T06:24:46.206413+00:00",
+      "input_sha256": "5368ab943082f21420b0a9181f2727cbbc8c31a27ad8d90dd80f377f0bdd5303"
+    },
+    {
+      "id": "day-05-alternative",
+      "time": "14:30",
+      "role": "Environmental officer",
+      "task": "Compare a lower supplied-magnitude alternative; no mitigation efficacy is claimed.",
+      "inputs": {
+        "kind": "assess",
+        "pollutant": "Suspended Solid",
+        "magnitude": 0.0,
+        "processes": [
+          "Mineral Processing"
+        ],
+        "receptors": [
+          "Aquatic Plants",
+          "Birds",
+          "Surface Water"
+        ]
+      },
+      "expected_decision": "no_detected_impact",
+      "scenario_date": "2026-10-09",
+      "answer": {
+        "rule_ids": [
+          "EXP_IMPACT_SE_122",
+          "EXP_IMPACT_SE_127",
+          "EXP_IMPACT_SE_134",
+          "EXP_IMPACT_SE_139",
+          "EXP_IMPACT_SE_142",
+          "EXP_SOC_EC_147",
+          "EXP_SOC_EC_148",
+          "EXP_SOC_EC_149",
+          "EXP_SOC_EC_150",
+          "EXP_SOC_EC_151",
+          "EXP_SOC_EC_152",
+          "EXP_SOC_EC_153",
+          "EXP_SOC_EC_154",
+          "EXP_SOC_EC_155",
+          "FACT_EMISSION_07",
+          "IMPACT_02",
+          "R_ASSESS",
+          "R_DIRECT",
+          "R_FORWARD",
+          "R_PRIORITY",
+          "R_SOCIAL",
+          "SOC_MIGRATION"
+        ],
+        "target": {
+          "decision": "no_detected_impact",
+          "direct_impacts": [
+            {
+              "importance": 8.0,
+              "magnitude": 0.0,
+              "pollutant": "Suspended Solid",
+              "receptor": "Surface Water",
+              "score": 0.0
+            }
+          ],
+          "indirect_impacts": [],
+          "maximum_score": 0.0,
+          "mitigations": [],
+          "priority": "no_detected_impact",
+          "social_impacts": [
+            {
+              "consequences": [],
+              "factor": "Income Level",
+              "importance": 6.0,
+              "process": "Mineral Processing"
+            },
+            {
+              "consequences": [],
+              "factor": "Distinct Settlements",
+              "importance": 4.0,
+              "process": "Mineral Processing"
+            },
+            {
+              "consequences": [],
+              "factor": "Health and Social Services",
+              "importance": 6.0,
+              "process": "Mineral Processing"
+            },
+            {
+              "consequences": [
+                "changes in demand on educational resources",
+                "changes in demand on health and social services",
+                "changes in demand on transportation systems",
+                "disruption of cohesion in community groups",
+                "disruption of religious petterns and characteristics",
+                "increase or decrease employment patterns",
+                "increase or decrease income level",
+                "increase or decrease population growth",
+                "increase or decrease workforce",
+                "varies in population characteristics"
+              ],
+              "factor": "Migration",
+              "importance": 6.0,
+              "process": "Mineral Processing"
+            },
+            {
+              "consequences": [],
+              "factor": "Transportation Systems",
+              "importance": 6.0,
+              "process": "Mineral Processing"
+            }
+          ],
+          "sources": [
+            {
+              "pollutant": "Suspended Solid",
+              "process": "Mineral Processing"
+            }
+          ],
+          "unresolved_receptors": [],
+          "unresolved_social_factors": [
+            "Distinct Settlements",
+            "Health and Social Services",
+            "Income Level",
+            "Transportation Systems"
+          ]
+        }
+      },
+      "executed_at": "2026-10-11T06:24:46.320646+00:00",
+      "input_sha256": "8de47bd3ee8b3c15a2dffb7aee6061b042c27032e991904a0ee4909e4702e536"
+    },
+    {
+      "id": "day-05-session",
+      "time": "15:00",
+      "role": "Report reviewer",
+      "task": "Derive session counts from six executed historical analyses and prepare the daily report.",
+      "inputs": {
+        "kind": "assess_session",
+        "cases": [
+          {
+            "kind": "assess",
+            "pollutant": "Particulate",
+            "magnitude": 0.0,
+            "processes": [
+              "Mineral Processing",
+              "Product Storage"
+            ],
+            "receptors": [
+              "Birds",
+              "Gasses and Particulate",
+              "Shrubs"
+            ]
+          },
+          {
+            "kind": "assess",
+            "pollutant": "SO2",
+            "magnitude": 0.0,
+            "processes": [
+              "Mineral Processing"
+            ],
+            "receptors": [
+              "Birds",
+              "Shrubs"
+            ]
+          },
+          {
+            "kind": "assess",
+            "pollutant": "Suspended Solid",
+            "magnitude": 0.0,
+            "processes": [
+              "Mineral Processing"
+            ],
+            "receptors": [
+              "Aquatic Plants",
+              "Birds",
+              "Surface Water"
+            ]
+          },
+          {
+            "kind": "assess",
+            "pollutant": "CO",
+            "magnitude": 0.0,
+            "processes": [
+              "Mineral Processing"
+            ],
+            "receptors": [
+              "Aquatic Plants"
+            ]
+          },
+          {
+            "kind": "assess_concentration",
+            "pollutant": "H2S",
+            "concentration": 1001.0,
+            "processes": [
+              "Mineral Processing"
+            ],
+            "receptors": [
+              "Shrubs"
+            ]
+          },
+          {
+            "kind": "assess",
+            "pollutant": "Suspended Solid",
+            "magnitude": 0.0,
+            "processes": [
+              "Mineral Processing"
+            ],
+            "receptors": [
+              "Aquatic Plants",
+              "Birds",
+              "Surface Water"
+            ]
+          }
+        ],
+        "answers": {
+          "impact_isolation": "yes",
+          "explicit_indicators": "yes",
+          "significance": "yes"
+        },
+        "alternatives": 2,
+        "declared_assumptions": 2,
+        "objective_measurements": 5,
+        "staged_activities": 1,
+        "rare_severe_impacts": 0
+      },
+      "expected_decision": "session_assessed",
+      "scenario_date": "2026-10-09",
+      "answer": {
+        "rule_ids": [
+          "EXP_IMPACT_003",
+          "EXP_IMPACT_SE_112",
+          "EXP_IMPACT_SE_122",
+          "EXP_IMPACT_SE_123",
+          "EXP_IMPACT_SE_127",
+          "EXP_IMPACT_SE_134",
+          "EXP_IMPACT_SE_135",
+          "EXP_IMPACT_SE_139",
+          "EXP_IMPACT_SE_142",
+          "EXP_IMPACT_SE_143",
+          "EXP_SOC_EC_147",
+          "EXP_SOC_EC_148",
+          "EXP_SOC_EC_149",
+          "EXP_SOC_EC_150",
+          "EXP_SOC_EC_151",
+          "EXP_SOC_EC_152",
+          "EXP_SOC_EC_153",
+          "EXP_SOC_EC_154",
+          "EXP_SOC_EC_155",
+          "FACT_EMISSION_01",
+          "FACT_EMISSION_02",
+          "FACT_EMISSION_03",
+          "FACT_EMISSION_07",
+          "FACT_EMISSION_08",
+          "FIXED_AFFECTED_GROUPS",
+          "FIXED_AGGREGATION",
+          "FIXED_DATA_SOURCES",
+          "FIXED_MAGNITUDE",
+          "FIXED_NEPA_CONFORMITY",
+          "FIXED_PUBLIC_INVOLVEMENT",
+          "FIXED_SUMMARY_FORMAT",
+          "FIXED_UNCERTAINTY",
+          "IMPACT_02",
+          "IMPACT_03",
+          "IMPACT_04",
+          "IMPACT_17",
+          "IMPACT_19",
+          "R_ASSESS",
+          "R_DIRECT",
+          "R_FORWARD",
+          "R_GAPS",
+          "R_PRIORITY",
+          "R_SESSION",
+          "R_SOCIAL",
+          "R_STANDARD",
+          "R_WP",
+          "SOC_MIGRATION"
+        ],
+        "target": {
+          "analyses": [
+            {
+              "decision": "no_detected_impact",
+              "direct_impacts": [
+                {
+                  "importance": 2.0,
+                  "magnitude": 0.0,
+                  "pollutant": "Particulate",
+                  "receptor": "Shrubs",
+                  "score": 0.0
+                },
+                {
+                  "importance": 6.0,
+                  "magnitude": 0.0,
+                  "pollutant": "Particulate",
+                  "receptor": "Gasses and Particulate",
+                  "score": 0.0
+                },
+                {
+                  "importance": 2.0,
+                  "magnitude": 0.0,
+                  "pollutant": "Particulate",
+                  "receptor": "Birds",
+                  "score": 0.0
+                }
+              ],
+              "indirect_impacts": [],
+              "maximum_score": 0.0,
+              "mitigations": [],
+              "priority": "no_detected_impact",
+              "social_impacts": [
+                {
+                  "consequences": [],
+                  "factor": "Income Level",
+                  "importance": 1.0,
+                  "process": "Product Storage"
+                },
+                {
+                  "consequences": [],
+                  "factor": "Health and Social Services",
+                  "importance": 0.5,
+                  "process": "Product Storage"
+                },
+                {
+                  "consequences": [],
+                  "factor": "Transportation Systems",
+                  "importance": 5.0,
+                  "process": "Product Storage"
+                },
+                {
+                  "consequences": [],
+                  "factor": "Land Values",
+                  "importance": 4.0,
+                  "process": "Product Storage"
+                },
+                {
+                  "consequences": [],
+                  "factor": "Income Level",
+                  "importance": 6.0,
+                  "process": "Mineral Processing"
+                },
+                {
+                  "consequences": [],
+                  "factor": "Distinct Settlements",
+                  "importance": 4.0,
+                  "process": "Mineral Processing"
+                },
+                {
+                  "consequences": [],
+                  "factor": "Health and Social Services",
+                  "importance": 6.0,
+                  "process": "Mineral Processing"
+                },
+                {
+                  "consequences": [
+                    "changes in demand on educational resources",
+                    "changes in demand on health and social services",
+                    "changes in demand on transportation systems",
+                    "disruption of cohesion in community groups",
+                    "disruption of religious petterns and characteristics",
+                    "increase or decrease employment patterns",
+                    "increase or decrease income level",
+                    "increase or decrease population growth",
+                    "increase or decrease workforce",
+                    "varies in population characteristics"
+                  ],
+                  "factor": "Migration",
+                  "importance": 6.0,
+                  "process": "Mineral Processing"
+                },
+                {
+                  "consequences": [],
+                  "factor": "Transportation Systems",
+                  "importance": 6.0,
+                  "process": "Mineral Processing"
+                }
+              ],
+              "sources": [
+                {
+                  "pollutant": "Particulate",
+                  "process": "Product Storage"
+                },
+                {
+                  "pollutant": "Particulate",
+                  "process": "Mineral Processing"
+                }
+              ],
+              "unresolved_receptors": [],
+              "unresolved_social_factors": [
+                "Distinct Settlements",
+                "Health and Social Services",
+                "Income Level",
+                "Land Values",
+                "Transportation Systems"
+              ]
+            },
+            {
+              "decision": "no_detected_impact",
+              "direct_impacts": [
+                {
+                  "importance": 4.0,
+                  "magnitude": 0.0,
+                  "pollutant": "SO2",
+                  "receptor": "Shrubs",
+                  "score": 0.0
+                },
+                {
+                  "importance": 4.0,
+                  "magnitude": 0.0,
+                  "pollutant": "SO2",
+                  "receptor": "Birds",
+                  "score": 0.0
+                }
+              ],
+              "indirect_impacts": [],
+              "maximum_score": 0.0,
+              "mitigations": [],
+              "priority": "no_detected_impact",
+              "social_impacts": [
+                {
+                  "consequences": [],
+                  "factor": "Income Level",
+                  "importance": 6.0,
+                  "process": "Mineral Processing"
+                },
+                {
+                  "consequences": [],
+                  "factor": "Distinct Settlements",
+                  "importance": 4.0,
+                  "process": "Mineral Processing"
+                },
+                {
+                  "consequences": [],
+                  "factor": "Health and Social Services",
+                  "importance": 6.0,
+                  "process": "Mineral Processing"
+                },
+                {
+                  "consequences": [
+                    "changes in demand on educational resources",
+                    "changes in demand on health and social services",
+                    "changes in demand on transportation systems",
+                    "disruption of cohesion in community groups",
+                    "disruption of religious petterns and characteristics",
+                    "increase or decrease employment patterns",
+                    "increase or decrease income level",
+                    "increase or decrease population growth",
+                    "increase or decrease workforce",
+                    "varies in population characteristics"
+                  ],
+                  "factor": "Migration",
+                  "importance": 6.0,
+                  "process": "Mineral Processing"
+                },
+                {
+                  "consequences": [],
+                  "factor": "Transportation Systems",
+                  "importance": 6.0,
+                  "process": "Mineral Processing"
+                }
+              ],
+              "sources": [
+                {
+                  "pollutant": "SO2",
+                  "process": "Mineral Processing"
+                }
+              ],
+              "unresolved_receptors": [],
+              "unresolved_social_factors": [
+                "Distinct Settlements",
+                "Health and Social Services",
+                "Income Level",
+                "Transportation Systems"
+              ]
+            },
+            {
+              "decision": "no_detected_impact",
+              "direct_impacts": [
+                {
+                  "importance": 8.0,
+                  "magnitude": 0.0,
+                  "pollutant": "Suspended Solid",
+                  "receptor": "Surface Water",
+                  "score": 0.0
+                }
+              ],
+              "indirect_impacts": [],
+              "maximum_score": 0.0,
+              "mitigations": [],
+              "priority": "no_detected_impact",
+              "social_impacts": [
+                {
+                  "consequences": [],
+                  "factor": "Income Level",
+                  "importance": 6.0,
+                  "process": "Mineral Processing"
+                },
+                {
+                  "consequences": [],
+                  "factor": "Distinct Settlements",
+                  "importance": 4.0,
+                  "process": "Mineral Processing"
+                },
+                {
+                  "consequences": [],
+                  "factor": "Health and Social Services",
+                  "importance": 6.0,
+                  "process": "Mineral Processing"
+                },
+                {
+                  "consequences": [
+                    "changes in demand on educational resources",
+                    "changes in demand on health and social services",
+                    "changes in demand on transportation systems",
+                    "disruption of cohesion in community groups",
+                    "disruption of religious petterns and characteristics",
+                    "increase or decrease employment patterns",
+                    "increase or decrease income level",
+                    "increase or decrease population growth",
+                    "increase or decrease workforce",
+                    "varies in population characteristics"
+                  ],
+                  "factor": "Migration",
+                  "importance": 6.0,
+                  "process": "Mineral Processing"
+                },
+                {
+                  "consequences": [],
+                  "factor": "Transportation Systems",
+                  "importance": 6.0,
+                  "process": "Mineral Processing"
+                }
+              ],
+              "sources": [
+                {
+                  "pollutant": "Suspended Solid",
+                  "process": "Mineral Processing"
+                }
+              ],
+              "unresolved_receptors": [],
+              "unresolved_social_factors": [
+                "Distinct Settlements",
+                "Health and Social Services",
+                "Income Level",
+                "Transportation Systems"
+              ]
+            },
+            {
+              "decision": "insufficient_data",
+              "direct_impacts": [],
+              "indirect_impacts": [],
+              "maximum_score": 0.0,
+              "mitigations": [],
+              "priority": "no_detected_impact",
+              "social_impacts": [
+                {
+                  "consequences": [],
+                  "factor": "Income Level",
+                  "importance": 6.0,
+                  "process": "Mineral Processing"
+                },
+                {
+                  "consequences": [],
+                  "factor": "Distinct Settlements",
+                  "importance": 4.0,
+                  "process": "Mineral Processing"
+                },
+                {
+                  "consequences": [],
+                  "factor": "Health and Social Services",
+                  "importance": 6.0,
+                  "process": "Mineral Processing"
+                },
+                {
+                  "consequences": [
+                    "changes in demand on educational resources",
+                    "changes in demand on health and social services",
+                    "changes in demand on transportation systems",
+                    "disruption of cohesion in community groups",
+                    "disruption of religious petterns and characteristics",
+                    "increase or decrease employment patterns",
+                    "increase or decrease income level",
+                    "increase or decrease population growth",
+                    "increase or decrease workforce",
+                    "varies in population characteristics"
+                  ],
+                  "factor": "Migration",
+                  "importance": 6.0,
+                  "process": "Mineral Processing"
+                },
+                {
+                  "consequences": [],
+                  "factor": "Transportation Systems",
+                  "importance": 6.0,
+                  "process": "Mineral Processing"
+                }
+              ],
+              "sources": [
+                {
+                  "pollutant": "CO",
+                  "process": "Mineral Processing"
+                }
+              ],
+              "unresolved_receptors": [
+                "Aquatic Plants"
+              ],
+              "unresolved_social_factors": [
+                "Distinct Settlements",
+                "Health and Social Services",
+                "Income Level",
+                "Transportation Systems"
+              ]
+            },
+            {
+              "decision": "insufficient_data",
+              "reason": "concentration_outside_documented_ranges"
+            },
+            {
+              "decision": "no_detected_impact",
+              "direct_impacts": [
+                {
+                  "importance": 8.0,
+                  "magnitude": 0.0,
+                  "pollutant": "Suspended Solid",
+                  "receptor": "Surface Water",
+                  "score": 0.0
+                }
+              ],
+              "indirect_impacts": [],
+              "maximum_score": 0.0,
+              "mitigations": [],
+              "priority": "no_detected_impact",
+              "social_impacts": [
+                {
+                  "consequences": [],
+                  "factor": "Income Level",
+                  "importance": 6.0,
+                  "process": "Mineral Processing"
+                },
+                {
+                  "consequences": [],
+                  "factor": "Distinct Settlements",
+                  "importance": 4.0,
+                  "process": "Mineral Processing"
+                },
+                {
+                  "consequences": [],
+                  "factor": "Health and Social Services",
+                  "importance": 6.0,
+                  "process": "Mineral Processing"
+                },
+                {
+                  "consequences": [
+                    "changes in demand on educational resources",
+                    "changes in demand on health and social services",
+                    "changes in demand on transportation systems",
+                    "disruption of cohesion in community groups",
+                    "disruption of religious petterns and characteristics",
+                    "increase or decrease employment patterns",
+                    "increase or decrease income level",
+                    "increase or decrease population growth",
+                    "increase or decrease workforce",
+                    "varies in population characteristics"
+                  ],
+                  "factor": "Migration",
+                  "importance": 6.0,
+                  "process": "Mineral Processing"
+                },
+                {
+                  "consequences": [],
+                  "factor": "Transportation Systems",
+                  "importance": 6.0,
+                  "process": "Mineral Processing"
+                }
+              ],
+              "sources": [
+                {
+                  "pollutant": "Suspended Solid",
+                  "process": "Mineral Processing"
+                }
+              ],
+              "unresolved_receptors": [],
+              "unresolved_social_factors": [
+                "Distinct Settlements",
+                "Health and Social Services",
+                "Income Level",
+                "Transportation Systems"
+              ]
+            }
+          ],
+          "decision": "session_assessed",
+          "method_assessment": {
+            "aspect_grades": {
+              "communication": "S",
+              "identification": "S",
+              "interpretation": "S",
+              "measurement": "L"
+            },
+            "criterion_grades": {
+              "affected_groups": "N",
+              "aggregation": "L",
+              "alternatives": "L",
+              "comprehensiveness": "N",
+              "data_sources": "L",
+              "environmental_setting": "L",
+              "explicit_criteria": "L",
+              "explicit_indicators": "L",
+              "impact_isolation": "L",
+              "key_issues": "N",
+              "magnitude": "L",
+              "nepa_conformity": "L",
+              "objectivity": "S",
+              "public_involvement": "N",
+              "risk": "N",
+              "significance": "L",
+              "specificity": "N",
+              "summary_format": "L",
+              "time_consideration": "S",
+              "uncertainty": "L"
+            },
+            "decision": "method_assessed"
+          },
+          "observed_session_counts": {
+            "activities": 2,
+            "alternatives": 2,
+            "components": 5,
+            "declared_assumptions": 2,
+            "highlighted_impacts": 0,
+            "impacts": 0,
+            "measurements": 6,
+            "objective_measurements": 5,
+            "rare_severe_impacts": 0,
+            "staged_activities": 1
+          }
+        }
+      },
+      "executed_at": "2026-10-11T06:24:46.430009+00:00",
+      "input_sha256": "332b1744ab5012413daaf5324a636ae343fb798848447d063d33a85b076aa75f"
+    }
+  ],
+  "oracle_fingerprint": "347b2e37f18e62780c8afff7eb6326a28308222e041f6d240178fe87f4d86cc7",
+  "limitations": [
+    "Synthetic inputs and scripted roles, not real measurements or observed human use",
+    "Historical importance scores and Warner-Preston aggregation are approximate/inferred",
+    "Instrument fixtures do not calibrate synthetic magnitude inputs",
+    "Alternative inputs do not establish measured mitigation effectiveness",
+    "US ambient screening reviews supplied statistical summaries, not daily readings or legal attainment",
+    "Fixed thesis methodology grades, including NEPA conformity, do not certify compliance"
+  ]
+}

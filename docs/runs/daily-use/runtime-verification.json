@@ -1,0 +1,101 @@
+{
+  "passed": true,
+  "commands": [
+    {
+      "id": "runtime-version",
+      "executed_at": "2026-10-11T06:26:00.597532+00:00",
+      "argv": [
+        "/workspace/.local/bin/swipl",
+        "--version"
+      ],
+      "cwd": "/workspace/ClefpertSystems",
+      "stdin": null,
+      "exit_code": 0,
+      "stdout": "SWI-Prolog version 9.2.9 for x86_64-linux\n",
+      "stderr": ""
+    },
+    {
+      "id": "direct-prolog-demo",
+      "executed_at": "2026-10-11T06:26:00.667166+00:00",
+      "argv": [
+        "/workspace/.local/bin/swipl",
+        "-q",
+        "-f",
+        "none",
+        "-s",
+        "knowledge_base/esc1.pl",
+        "-g",
+        "esc1:demo",
+        "-t",
+        "halt"
+      ],
+      "cwd": "/workspace/ClefpertSystems",
+      "stdin": null,
+      "exit_code": 0,
+      "stdout": "{\n  \"inputs\": {\n    \"kind\":\"assess\",\n    \"magnitude\":5.0,\n    \"pollutant\":\"Suspended Solid\",\n    \"processes\": [\"Mineral Processing\" ],\n    \"receptors\": [\"Surface Water\", \"Aquatic Plants\", \"Birds\" ]\n  },\n  \"rule_ids\": [\n    \"EXP_IMPACT_SE_122\",\n    \"EXP_IMPACT_SE_127\",\n    \"EXP_IMPACT_SE_134\",\n    \"EXP_IMPACT_SE_139\",\n    \"EXP_IMPACT_SE_142\",\n    \"EXP_INDIRECT_048\",\n    \"EXP_INDIRECT_049\",\n    \"EXP_INDIRECT_051\",\n    \"EXP_INDIRECT_077\",\n    \"EXP_INDIRECT_107\",\n    \"EXP_SOC_EC_147\",\n    \"EXP_SOC_EC_148\",\n    \"EXP_SOC_EC_149\",\n    \"EXP_SOC_EC_150\",\n    \"EXP_SOC_EC_151\",\n    \"EXP_SOC_EC_152\",\n    \"EXP_SOC_EC_153\",\n    \"EXP_SOC_EC_154\",\n    \"EXP_SOC_EC_155\",\n    \"FACT_EMISSION_07\",\n    \"FACT_INDIRECT_14\",\n    \"FACT_INDIRECT_15\",\n    \"FACT_MITIGATION_17\",\n    \"IMPACT_02\",\n    \"R_ASSESS\",\n    \"R_DIRECT\",\n    \"R_FORWARD\",\n    \"R_INDIRECT\",\n    \"R_MITIGATION\",\n    \"R_PRIORITY\",\n    \"R_SOCIAL\",\n    \"SOC_MIGRATION\"\n  ],\n  \"target\": {\n    \"decision\":\"urgent_review\",\n    \"direct_impacts\": [\n      {\n\t\"importance\":8.0,\n\t\"magnitude\":5.0,\n\t\"pollutant\":\"Suspended Solid\",\n\t\"receptor\":\"Surface Water\",\n\t\"score\":40.0\n      }\n    ],\n    \"indirect_impacts\": [\n      {\"path\": [\"Surface Water\", \"Water Quality\", \"Birds\" ],\"receptor\":\"Birds\"},\n      {\"path\": [\"Surface Water\", \"Microfauna\", \"Birds\" ],\"receptor\":\"Birds\"},\n      {\"path\": [\"Surface Water\", \"Aquatic Plants\", \"Birds\" ],\"receptor\":\"Birds\"},\n      {\"path\": [\"Surface Water\", \"Birds\" ],\"receptor\":\"Birds\"},\n      {\"path\": [\"Surface Water\", \"Aquatic Plants\" ],\"receptor\":\"Aquatic Plants\"}\n    ],\n    \"maximum_score\":40.0,\n    \"mitigations\": [\n      {\n\t\"action\":\"Control particulate by fabric filter collectors, control kiln particulate emissions by electric precipitator dust collectors.\",\n\t\"process\":\"Mineral Processing\"\n      }\n    ],\n    \"priority\":\"urgent_review\",\n    \"social_impacts\": [\n      {\n\t\"consequences\": [],\n\t\"factor\":\"Income Level\",\n\t\"importance\":6.0,\n\t\"process\":\"Mineral Processing\"\n      },\n      {\n\t\"consequences\": [],\n\t\"factor\":\"Distinct Settlements\",\n\t\"importance\":4.0,\n\t\"process\":\"Mineral Processing\"\n      },\n      {\n\t\"consequences\": [],\n\t\"factor\":\"Health and Social Services\",\n\t\"importance\":6.0,\n\t\"process\":\"Mineral Processing\"\n      },\n      {\n\t\"consequences\": [\n\t  \"changes in demand on educational resources\",\n\t  \"changes in demand on health and social services\",\n\t  \"changes in demand on transportation systems\",\n\t  \"disruption of cohesion in community groups\",\n\t  \"disruption of religious petterns and characteristics\",\n\t  \"increase or decrease employment patterns\",\n\t  \"increase or decrease income level\",\n\t  \"increase or decrease population growth\",\n\t  \"increase or decrease workforce\",\n\t  \"varies in population characteristics\"\n\t],\n\t\"factor\":\"Migration\",\n\t\"importance\":6.0,\n\t\"process\":\"Mineral Processing\"\n      },\n      {\n\t\"consequences\": [],\n\t\"factor\":\"Transportation Systems\",\n\t\"importance\":6.0,\n\t\"process\":\"Mineral Processing\"\n      }\n    ],\n    \"sources\": [ {\"pollutant\":\"Suspended Solid\",\"process\":\"Mineral Processing\"} ],\n    \"unresolved_receptors\": [],\n    \"unresolved_social_factors\": [\"Distinct Settlements\", \"Health and Social Services\", \"Income Level\", \"Transportation Systems\" ]\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "id": "direct-bridge",
+      "executed_at": "2026-10-11T06:26:00.738726+00:00",
+      "argv": [
+        "/workspace/.local/bin/swipl",
+        "-q",
+        "-f",
+        "none",
+        "-s",
+        "knowledge_base/oracle_bridge.pl",
+        "-g",
+        "oracle_bridge:main",
+        "--",
+        "knowledge_base/esc1.pl"
+      ],
+      "cwd": "/workspace/ClefpertSystems",
+      "stdin": "{\"action\":\"evaluate\",\"inputs\":[{\"kind\":\"screen_ambient\",\"profile\":\"us_epa_naaqs_2025\",\"sampling_context\":\"ambient_air\",\"standard\":\"so2_1h_primary\",\"summary\":{\"data_status\":\"complete\",\"reference_level\":75.0,\"reference_unit\":\"ppb\",\"statistic\":\"daily_max_1h_p99_3y\",\"unit\":\"ppm\",\"value\":0.075}}]}",
+      "exit_code": 0,
+      "stdout": " [ {\"rule_ids\": [\"CURRENT_NAAQS_11\", \"R_AMBIENT_SCREEN\", \"R_AMBIENT_UNITS\" ],\"target\": {\"averaging_time\":\"1h\",\"comparison_limit\":75.0,\"comparison_unit\":\"ppb\",\"decision\":\"within_reference\",\"expected_statistic\":\"daily_max_1h_p99_3y\",\"normalized_value\":75.0,\"pollutant\":\"SO2\",\"profile\":\"us_epa_naaqs_2025\",\"protection\":\"primary\",\"reference_level\":75.0,\"reference_unit\":\"ppb\",\"scope\":\"supplied_summary_screen\",\"standard\":\"so2_1h_primary\"}} ]\n",
+      "stderr": ""
+    },
+    {
+      "id": "prolog-tests",
+      "executed_at": "2026-10-11T06:26:00.863057+00:00",
+      "argv": [
+        "/workspace/.local/bin/swipl",
+        "-q",
+        "-f",
+        "none",
+        "-s",
+        "tests/test_prototype.pl",
+        "-g",
+        "run_tests",
+        "-t",
+        "halt"
+      ],
+      "cwd": "/workspace/ClefpertSystems",
+      "stdin": null,
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "% [1/3] prototype:two_hop_inference ..\nWarning: /workspace/ClefpertSystems/tests/test_prototype.pl:7:\nWarning:     test prototype:two_hop_inference: Test succeeded with choicepoint\n% [2/3] prototype:zero_ex..eserves_known_paths ...... passed (0.000 sec)\n% [3/3] prototype:absent_..n_is_not_a_negative ...... passed (0.000 sec)\n"
+    },
+    {
+      "id": "python-tests",
+      "executed_at": "2026-10-11T06:26:16.805124+00:00",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "cwd": "/workspace/ClefpertSystems",
+      "stdin": null,
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_all_source_rows_match_frozen_transcription (test_current_standards.CurrentStandardsTests.test_all_source_rows_match_frozen_transcription) ... ok\ntest_current_dependency_is_fingerprinted_and_historical_profile_is_preserved (test_current_standards.CurrentStandardsTests.test_current_dependency_is_fingerprinted_and_historical_profile_is_preserved) ... ok\ntest_frequency_limits_need_counts_not_concentration (test_current_standards.CurrentStandardsTests.test_frequency_limits_need_counts_not_concentration) ... ok\ntest_invalid_numeric_or_shape_requests_rejected (test_current_standards.CurrentStandardsTests.test_invalid_numeric_or_shape_requests_rejected) ... ok\ntest_percentile_and_rolling_forms_cannot_be_replaced_by_means (test_current_standards.CurrentStandardsTests.test_percentile_and_rolling_forms_cannot_be_replaced_by_means) ... ok\ntest_scope_completeness_and_reference_mismatch_abstain (test_current_standards.CurrentStandardsTests.test_scope_completeness_and_reference_mismatch_abstain) ... ok\ntest_unit_equivalence_at_boundary_and_above (test_current_standards.CurrentStandardsTests.test_unit_equivalence_at_boundary_and_above) ... ok\ntest_updated_pm25_and_so2_levels_not_obsolete_values (test_current_standards.CurrentStandardsTests.test_updated_pm25_and_so2_levels_not_obsolete_values) ... ok\ntest_conflicting_group_assignment_rejected (test_dataset.DatasetTests.test_conflicting_group_assignment_rejected) ... ok\ntest_export_contains_only_scenario_and_oracle_target (test_dataset.DatasetTests.test_export_contains_only_scenario_and_oracle_target) ... ok\ntest_fresh_oracle_and_reported_rule_coverage (test_dataset.DatasetTests.test_fresh_oracle_and_reported_rule_coverage) ... ok\ntest_generic_adapter_executes_an_unrelated_prolog_system (test_dataset.DatasetTests.test_generic_adapter_executes_an_unrelated_prolog_system) ... ok\ntest_invalid_predictions_rejected (test_dataset.DatasetTests.test_invalid_predictions_rejected) ... ok\ntest_no_duplicate_or_causal_family_leakage (test_dataset.DatasetTests.test_no_duplicate_or_causal_family_leakage) ... ok\ntest_reproducible_generation (test_dataset.DatasetTests.test_reproducible_generation) ... ok\ntest_stale_cases_and_audit_rejected (test_dataset.DatasetTests.test_stale_cases_and_audit_rejected) ... ok\ntest_training_data_contains_no_paper_or_audit_metadata (test_dataset.DatasetTests.test_training_data_contains_no_paper_or_audit_metadata) ... ok\ntest_wrong_missing_and_confidence_metrics (test_dataset.DatasetTests.test_wrong_missing_and_confidence_metrics) ... ok\ntest_absent_relation_abstains (test_kb.KnowledgeBaseTests.test_absent_relation_abstains) ... ok\ntest_backward_candidates_join_emissions_and_impacts (test_kb.KnowledgeBaseTests.test_backward_candidates_join_emissions_and_impacts) ... ok\ntest_fact_and_rule_inventory_matches_executable (test_kb.KnowledgeBaseTests.test_fact_and_rule_inventory_matches_executable) ... ok\ntest_full_twenty_criterion_wp_profile (test_kb.KnowledgeBaseTests.test_full_twenty_criterion_wp_profile) ... ok\ntest_input_order_does_not_change_answers (test_kb.KnowledgeBaseTests.test_input_order_does_not_change_answers) ... ok\ntest_instrument_detection_boundary_preserves_variability (test_kb.KnowledgeBaseTests.test_instrument_detection_boundary_preserves_variability) ... ok\ntest_invalid_states_rejected (test_kb.KnowledgeBaseTests.test_invalid_states_rejected) ... ok\ntest_priority_boundaries (test_kb.KnowledgeBaseTests.test_priority_boundaries) ... ok\ntest_runnable_forward_inference (test_kb.KnowledgeBaseTests.test_runnable_forward_inference) ... ok\ntest_session_counts_are_derived_from_executed_analyses (test_kb.KnowledgeBaseTests.test_session_counts_are_derived_from_executed_analyses) ... ok\ntest_social_effects_are_inferred_even_when_consequence_is_unresolved (test_kb.KnowledgeBaseTests.test_social_effects_are_inferred_even_when_consequence_is_unresolved) ... ok\ntest_standard_boundaries_and_no_extrapolation (test_kb.KnowledgeBaseTests.test_standard_boundaries_and_no_extrapolation) ... ok\ntest_two_hop_indirect_reasoning_and_cycle_avoidance (test_kb.KnowledgeBaseTests.test_two_hop_indirect_reasoning_and_cycle_avoidance) ... ok\ntest_zero_exposure_does_not_trigger_indirect_or_mitigation (test_kb.KnowledgeBaseTests.test_zero_exposure_does_not_trigger_indirect_or_mitigation) ... ok\n\n----------------------------------------------------------------------\nRan 32 tests in 15.754s\n\nOK\n"
+    }
+  ],
+  "direct_demo_decision": "urgent_review",
+  "direct_bridge_matches_consultation": true
+}

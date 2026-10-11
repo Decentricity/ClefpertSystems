@@ -1,0 +1,13 @@
+{
+  "kind": "assess",
+  "pollutant": "Suspended Solid",
+  "magnitude": 10.0,
+  "processes": [
+    "Mineral Processing"
+  ],
+  "receptors": [
+    "Aquatic Plants",
+    "Birds",
+    "Surface Water"
+  ]
+}

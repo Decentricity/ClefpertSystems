@@ -1,0 +1,89 @@
+{
+  "kind": "assess_session",
+  "cases": [
+    {
+      "kind": "assess",
+      "pollutant": "Particulate",
+      "magnitude": 0.0,
+      "processes": [
+        "Mineral Processing",
+        "Product Storage"
+      ],
+      "receptors": [
+        "Birds",
+        "Gasses and Particulate",
+        "Shrubs"
+      ]
+    },
+    {
+      "kind": "assess",
+      "pollutant": "SO2",
+      "magnitude": 0.0,
+      "processes": [
+        "Mineral Processing"
+      ],
+      "receptors": [
+        "Birds",
+        "Shrubs"
+      ]
+    },
+    {
+      "kind": "assess",
+      "pollutant": "Suspended Solid",
+      "magnitude": 0.0,
+      "processes": [
+        "Mineral Processing"
+      ],
+      "receptors": [
+        "Aquatic Plants",
+        "Birds",
+        "Surface Water"
+      ]
+    },
+    {
+      "kind": "assess",
+      "pollutant": "CO",
+      "magnitude": 0.0,
+      "processes": [
+        "Mineral Processing"
+      ],
+      "receptors": [
+        "Aquatic Plants"
+      ]
+    },
+    {
+      "kind": "assess_concentration",
+      "pollutant": "H2S",
+      "concentration": 1001.0,
+      "processes": [
+        "Mineral Processing"
+      ],
+      "receptors": [
+        "Shrubs"
+      ]
+    },
+    {
+      "kind": "assess",
+      "pollutant": "Suspended Solid",
+      "magnitude": 0.0,
+      "processes": [
+        "Mineral Processing"
+      ],
+      "receptors": [
+        "Aquatic Plants",
+        "Birds",
+        "Surface Water"
+      ]
+    }
+  ],
+  "answers": {
+    "impact_isolation": "yes",
+    "explicit_indicators": "yes",
+    "significance": "yes"
+  },
+  "alternatives": 2,
+  "declared_assumptions": 2,
+  "objective_measurements": 5,
+  "staged_activities": 1,
+  "rare_severe_impacts": 0
+}

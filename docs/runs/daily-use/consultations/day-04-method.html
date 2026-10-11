@@ -1,0 +1,73 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>day-04-method</title><style>
+:root{color-scheme:light}*{box-sizing:border-box}body{margin:0;background:#eef2f6;color:#182535;font:16px/1.55 Arial,sans-serif}
+main{max-width:1180px;margin:28px auto;padding:32px;background:white;border:1px solid #d7e0e8;border-radius:10px}
+h1{font-size:30px;line-height:1.25;margin:12px 0}h2{font-size:22px;border-top:1px solid #dde5ed;padding-top:24px;margin-top:32px}
+h3{font-size:18px}.eyebrow{font-size:13px;color:#275f86;text-transform:uppercase;letter-spacing:1px}.note{padding:16px;background:#f5f8fb;border-left:4px solid #6386a2}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{padding:18px;border:1px solid #dce5ec;border-radius:6px}.big{font-size:27px;font-weight:bold}.muted{color:#526779}
+pre{font:13px/1.5 monospace;white-space:pre-wrap;overflow-wrap:anywhere;padding:18px;background:#f4f7fa;border:1px solid #dce5ec;border-radius:6px}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:14px}th,td{text-align:left;vertical-align:top;border-bottom:1px solid #dde5ed;padding:10px}th{background:#f1f5f8}
+.badge{display:inline-block;padding:4px 9px;border-radius:4px;background:#e7eef5;font-size:13px;font-weight:bold}.urgent_review,.exceeds_reference{background:#ffe8dc;color:#8f330a}.insufficient_data,.below_detection_limit{background:#fff0c2;color:#795800}.within_reference,.no_detected_impact,.measurable{background:#deefe5;color:#185639}
+a{color:#245e92}li{margin:7px 0}code{font-family:monospace;overflow-wrap:anywhere}.footer{margin-top:28px;font-size:12px;color:#607486}.break{overflow-wrap:anywhere}
+</style></head><body><main><div class="eyebrow">Actual SWI-Prolog consultation · synthetic task</div><h1>day-04-method</h1><p>2026-10-08 · 14:00 · Report reviewer</p><p>Review the inferred twenty-criterion methodology profile.</p><p><span class="badge method_assessed">method_assessed</span> · expected-decision check passed</p><div class="note">Inputs are scripted. Output and rule trace below were returned by the running Prolog oracle. Scenario time is distinct from actual execution time.</div><h2>Reproduce this consultation</h2><pre>python scripts/run_oracle.py --input docs/runs/daily-use/inputs/day-04-method.json</pre><h2>Input JSON</h2><pre id="input">{
+  &quot;kind&quot;: &quot;method_assessment&quot;,
+  &quot;counts&quot;: {
+    &quot;activities&quot;: 2,
+    &quot;alternatives&quot;: 2,
+    &quot;components&quot;: 2,
+    &quot;declared_assumptions&quot;: 2,
+    &quot;highlighted_impacts&quot;: 1,
+    &quot;impacts&quot;: 2,
+    &quot;measurements&quot;: 2,
+    &quot;objective_measurements&quot;: 2,
+    &quot;rare_severe_impacts&quot;: 0,
+    &quot;staged_activities&quot;: 1
+  },
+  &quot;answers&quot;: {
+    &quot;impact_isolation&quot;: &quot;yes&quot;,
+    &quot;explicit_indicators&quot;: &quot;yes&quot;,
+    &quot;significance&quot;: &quot;yes&quot;
+  }
+}</pre><h2>Full Prolog output and rule trace</h2><pre id="output">{
+  &quot;rule_ids&quot;: [
+    &quot;FIXED_AFFECTED_GROUPS&quot;,
+    &quot;FIXED_AGGREGATION&quot;,
+    &quot;FIXED_DATA_SOURCES&quot;,
+    &quot;FIXED_MAGNITUDE&quot;,
+    &quot;FIXED_NEPA_CONFORMITY&quot;,
+    &quot;FIXED_PUBLIC_INVOLVEMENT&quot;,
+    &quot;FIXED_SUMMARY_FORMAT&quot;,
+    &quot;FIXED_UNCERTAINTY&quot;,
+    &quot;R_WP&quot;
+  ],
+  &quot;target&quot;: {
+    &quot;aspect_grades&quot;: {
+      &quot;communication&quot;: &quot;S&quot;,
+      &quot;identification&quot;: &quot;L&quot;,
+      &quot;interpretation&quot;: &quot;S&quot;,
+      &quot;measurement&quot;: &quot;L&quot;
+    },
+    &quot;criterion_grades&quot;: {
+      &quot;affected_groups&quot;: &quot;N&quot;,
+      &quot;aggregation&quot;: &quot;L&quot;,
+      &quot;alternatives&quot;: &quot;L&quot;,
+      &quot;comprehensiveness&quot;: &quot;L&quot;,
+      &quot;data_sources&quot;: &quot;L&quot;,
+      &quot;environmental_setting&quot;: &quot;L&quot;,
+      &quot;explicit_criteria&quot;: &quot;L&quot;,
+      &quot;explicit_indicators&quot;: &quot;L&quot;,
+      &quot;impact_isolation&quot;: &quot;L&quot;,
+      &quot;key_issues&quot;: &quot;S&quot;,
+      &quot;magnitude&quot;: &quot;L&quot;,
+      &quot;nepa_conformity&quot;: &quot;L&quot;,
+      &quot;objectivity&quot;: &quot;L&quot;,
+      &quot;public_involvement&quot;: &quot;N&quot;,
+      &quot;risk&quot;: &quot;N&quot;,
+      &quot;significance&quot;: &quot;L&quot;,
+      &quot;specificity&quot;: &quot;L&quot;,
+      &quot;summary_format&quot;: &quot;L&quot;,
+      &quot;time_consideration&quot;: &quot;S&quot;,
+      &quot;uncertainty&quot;: &quot;L&quot;
+    },
+    &quot;decision&quot;: &quot;method_assessed&quot;
+  }
+}</pre><p class="footer">Executed UTC: 2026-10-11T06:24:45.331327+00:00 · input SHA-256: 5368ab943082f21420b0a9181f2727cbbc8c31a27ad8d90dd80f377f0bdd5303</p></main></body></html>

@@ -1,0 +1,68 @@
+SWI-Prolog daily-use simulation | SWI-Prolog version 9.2.9 for x86_64-linux
+Synthetic scenario dates/roles; actual execution timestamps saved separately.
+Oracle fingerprint: 347b2e37f18e62780c8afff7eb6326a28308222e041f6d240178fe87f4d86cc7
+PASS day-01 08:00 instrumentation        below_detection_limit
+PASS day-01 08:30 assess                 mitigate
+PASS day-01 09:00 assess                 mitigate
+PASS day-01 10:00 assess                 monitor
+PASS day-01 10:30 assess                 insufficient_data
+PASS day-01 11:00 assess_concentration   monitor
+PASS day-01 11:30 trace_back             candidate_sources
+PASS day-01 13:00 screen_ambient         exceeds_reference
+PASS day-01 14:00 method_assessment      method_assessed
+PASS day-01 14:30 assess                 monitor
+PASS day-01 15:00 assess_session         session_assessed
+REPORT day-01 | human_review_required | highest baseline priority=mitigate
+PASS day-02 08:00 instrumentation        measurable
+PASS day-02 08:30 assess                 mitigate
+PASS day-02 09:00 assess                 mitigate
+PASS day-02 10:00 assess                 urgent_review
+PASS day-02 10:30 assess                 insufficient_data
+PASS day-02 11:00 assess_concentration   monitor
+PASS day-02 11:30 trace_back             candidate_sources
+PASS day-02 13:00 screen_ambient         insufficient_data
+PASS day-02 14:00 method_assessment      method_assessed
+PASS day-02 14:30 assess                 mitigate
+PASS day-02 15:00 assess_session         session_assessed
+REPORT day-02 | human_review_required | highest baseline priority=urgent_review
+PASS day-03 08:00 instrumentation        measurable
+PASS day-03 08:30 assess                 urgent_review
+PASS day-03 09:00 assess                 mitigate
+PASS day-03 10:00 assess                 urgent_review
+PASS day-03 10:30 assess                 insufficient_data
+PASS day-03 11:00 assess_concentration   monitor
+PASS day-03 11:30 trace_back             candidate_sources
+PASS day-03 13:00 screen_ambient         within_reference
+PASS day-03 14:00 method_assessment      method_assessed
+PASS day-03 14:30 assess                 urgent_review
+PASS day-03 15:00 assess_session         session_assessed
+REPORT day-03 | human_review_required | highest baseline priority=urgent_review
+PASS day-04 08:00 instrumentation        below_detection_limit
+PASS day-04 08:30 assess                 monitor
+PASS day-04 09:00 assess                 monitor
+PASS day-04 10:00 assess                 mitigate
+PASS day-04 10:30 assess                 insufficient_data
+PASS day-04 11:00 assess_concentration   mitigate
+PASS day-04 11:30 trace_back             candidate_sources
+PASS day-04 13:00 screen_ambient         exceeds_reference
+PASS day-04 14:00 method_assessment      method_assessed
+PASS day-04 14:30 assess                 monitor
+PASS day-04 15:00 assess_session         session_assessed
+REPORT day-04 | human_review_required | highest baseline priority=mitigate
+PASS day-05 08:00 instrumentation        measurable
+PASS day-05 08:30 assess                 no_detected_impact
+PASS day-05 09:00 assess                 no_detected_impact
+PASS day-05 10:00 assess                 no_detected_impact
+PASS day-05 10:30 assess                 insufficient_data
+PASS day-05 11:00 assess_concentration   insufficient_data
+PASS day-05 11:30 trace_back             candidate_sources
+PASS day-05 13:00 screen_ambient         within_reference
+PASS day-05 14:00 method_assessment      method_assessed
+PASS day-05 14:30 assess                 no_detected_impact
+PASS day-05 15:00 assess_session         session_assessed
+REPORT day-05 | human_review_required | highest baseline priority=no_detected_impact
+PASS rejection negative-magnitude
+PASS rejection boolean-magnitude
+PASS rejection unknown-process
+PASS rejection unexpected-field
+VERIFIED 55 fresh replay matches | 5 reports | 4 rejections | 149 checks

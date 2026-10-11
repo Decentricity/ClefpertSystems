@@ -1,0 +1,258 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>day-02-dust</title><style>
+:root{color-scheme:light}*{box-sizing:border-box}body{margin:0;background:#eef2f6;color:#182535;font:16px/1.55 Arial,sans-serif}
+main{max-width:1180px;margin:28px auto;padding:32px;background:white;border:1px solid #d7e0e8;border-radius:10px}
+h1{font-size:30px;line-height:1.25;margin:12px 0}h2{font-size:22px;border-top:1px solid #dde5ed;padding-top:24px;margin-top:32px}
+h3{font-size:18px}.eyebrow{font-size:13px;color:#275f86;text-transform:uppercase;letter-spacing:1px}.note{padding:16px;background:#f5f8fb;border-left:4px solid #6386a2}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{padding:18px;border:1px solid #dce5ec;border-radius:6px}.big{font-size:27px;font-weight:bold}.muted{color:#526779}
+pre{font:13px/1.5 monospace;white-space:pre-wrap;overflow-wrap:anywhere;padding:18px;background:#f4f7fa;border:1px solid #dce5ec;border-radius:6px}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:14px}th,td{text-align:left;vertical-align:top;border-bottom:1px solid #dde5ed;padding:10px}th{background:#f1f5f8}
+.badge{display:inline-block;padding:4px 9px;border-radius:4px;background:#e7eef5;font-size:13px;font-weight:bold}.urgent_review,.exceeds_reference{background:#ffe8dc;color:#8f330a}.insufficient_data,.below_detection_limit{background:#fff0c2;color:#795800}.within_reference,.no_detected_impact,.measurable{background:#deefe5;color:#185639}
+a{color:#245e92}li{margin:7px 0}code{font-family:monospace;overflow-wrap:anywhere}.footer{margin-top:28px;font-size:12px;color:#607486}.break{overflow-wrap:anywhere}
+</style></head><body><main><div class="eyebrow">Actual SWI-Prolog consultation · synthetic task</div><h1>day-02-dust</h1><p>2026-10-06 · 08:30 · Environmental officer</p><p>Assess particulate pathways from processing and product storage.</p><p><span class="badge mitigate">mitigate</span> · expected-decision check passed</p><div class="note">Inputs are scripted. Output and rule trace below were returned by the running Prolog oracle. Scenario time is distinct from actual execution time.</div><h2>Reproduce this consultation</h2><pre>python scripts/run_oracle.py --input docs/runs/daily-use/inputs/day-02-dust.json</pre><h2>Input JSON</h2><pre id="input">{
+  &quot;kind&quot;: &quot;assess&quot;,
+  &quot;pollutant&quot;: &quot;Particulate&quot;,
+  &quot;magnitude&quot;: 5.0,
+  &quot;processes&quot;: [
+    &quot;Mineral Processing&quot;,
+    &quot;Product Storage&quot;
+  ],
+  &quot;receptors&quot;: [
+    &quot;Birds&quot;,
+    &quot;Gasses and Particulate&quot;,
+    &quot;Shrubs&quot;
+  ]
+}</pre><h2>Full Prolog output and rule trace</h2><pre id="output">{
+  &quot;rule_ids&quot;: [
+    &quot;EXP_IMPACT_003&quot;,
+    &quot;EXP_IMPACT_SE_112&quot;,
+    &quot;EXP_IMPACT_SE_122&quot;,
+    &quot;EXP_IMPACT_SE_123&quot;,
+    &quot;EXP_IMPACT_SE_127&quot;,
+    &quot;EXP_IMPACT_SE_134&quot;,
+    &quot;EXP_IMPACT_SE_135&quot;,
+    &quot;EXP_IMPACT_SE_139&quot;,
+    &quot;EXP_IMPACT_SE_142&quot;,
+    &quot;EXP_IMPACT_SE_143&quot;,
+    &quot;EXP_INDIRECT_048&quot;,
+    &quot;EXP_INDIRECT_049&quot;,
+    &quot;EXP_INDIRECT_050&quot;,
+    &quot;EXP_INDIRECT_051&quot;,
+    &quot;EXP_INDIRECT_080&quot;,
+    &quot;EXP_INDIRECT_081&quot;,
+    &quot;EXP_INDIRECT_102&quot;,
+    &quot;EXP_INDIRECT_103&quot;,
+    &quot;EXP_INDIRECT_104&quot;,
+    &quot;EXP_INDIRECT_106&quot;,
+    &quot;EXP_INDIRECT_108&quot;,
+    &quot;EXP_SOC_EC_147&quot;,
+    &quot;EXP_SOC_EC_148&quot;,
+    &quot;EXP_SOC_EC_149&quot;,
+    &quot;EXP_SOC_EC_150&quot;,
+    &quot;EXP_SOC_EC_151&quot;,
+    &quot;EXP_SOC_EC_152&quot;,
+    &quot;EXP_SOC_EC_153&quot;,
+    &quot;EXP_SOC_EC_154&quot;,
+    &quot;EXP_SOC_EC_155&quot;,
+    &quot;FACT_EMISSION_03&quot;,
+    &quot;FACT_EMISSION_08&quot;,
+    &quot;FACT_MITIGATION_17&quot;,
+    &quot;IMPACT_04&quot;,
+    &quot;IMPACT_19&quot;,
+    &quot;MITIGATION_STORAGE&quot;,
+    &quot;R_ASSESS&quot;,
+    &quot;R_DIRECT&quot;,
+    &quot;R_FORWARD&quot;,
+    &quot;R_INDIRECT&quot;,
+    &quot;R_MITIGATION&quot;,
+    &quot;R_PRIORITY&quot;,
+    &quot;R_SOCIAL&quot;,
+    &quot;SOC_MIGRATION&quot;
+  ],
+  &quot;target&quot;: {
+    &quot;decision&quot;: &quot;mitigate&quot;,
+    &quot;direct_impacts&quot;: [
+      {
+        &quot;importance&quot;: 2.0,
+        &quot;magnitude&quot;: 5.0,
+        &quot;pollutant&quot;: &quot;Particulate&quot;,
+        &quot;receptor&quot;: &quot;Shrubs&quot;,
+        &quot;score&quot;: 10.0
+      },
+      {
+        &quot;importance&quot;: 6.0,
+        &quot;magnitude&quot;: 5.0,
+        &quot;pollutant&quot;: &quot;Particulate&quot;,
+        &quot;receptor&quot;: &quot;Gasses and Particulate&quot;,
+        &quot;score&quot;: 30.0
+      },
+      {
+        &quot;importance&quot;: 2.0,
+        &quot;magnitude&quot;: 5.0,
+        &quot;pollutant&quot;: &quot;Particulate&quot;,
+        &quot;receptor&quot;: &quot;Birds&quot;,
+        &quot;score&quot;: 10.0
+      }
+    ],
+    &quot;indirect_impacts&quot;: [
+      {
+        &quot;path&quot;: [
+          &quot;Gasses and Particulate&quot;,
+          &quot;Water Quality&quot;,
+          &quot;Shrubs&quot;
+        ],
+        &quot;receptor&quot;: &quot;Shrubs&quot;
+      },
+      {
+        &quot;path&quot;: [
+          &quot;Gasses and Particulate&quot;,
+          &quot;Water Quality&quot;,
+          &quot;Birds&quot;
+        ],
+        &quot;receptor&quot;: &quot;Birds&quot;
+      },
+      {
+        &quot;path&quot;: [
+          &quot;Gasses and Particulate&quot;,
+          &quot;Surface Water&quot;,
+          &quot;Shrubs&quot;
+        ],
+        &quot;receptor&quot;: &quot;Shrubs&quot;
+      },
+      {
+        &quot;path&quot;: [
+          &quot;Gasses and Particulate&quot;,
+          &quot;Surface Water&quot;,
+          &quot;Birds&quot;
+        ],
+        &quot;receptor&quot;: &quot;Birds&quot;
+      },
+      {
+        &quot;path&quot;: [
+          &quot;Gasses and Particulate&quot;,
+          &quot;Microfauna&quot;,
+          &quot;Birds&quot;
+        ],
+        &quot;receptor&quot;: &quot;Birds&quot;
+      },
+      {
+        &quot;path&quot;: [
+          &quot;Gasses and Particulate&quot;,
+          &quot;Shrubs&quot;
+        ],
+        &quot;receptor&quot;: &quot;Shrubs&quot;
+      },
+      {
+        &quot;path&quot;: [
+          &quot;Gasses and Particulate&quot;,
+          &quot;Birds&quot;
+        ],
+        &quot;receptor&quot;: &quot;Birds&quot;
+      },
+      {
+        &quot;path&quot;: [
+          &quot;Shrubs&quot;,
+          &quot;Microfauna&quot;,
+          &quot;Birds&quot;
+        ],
+        &quot;receptor&quot;: &quot;Birds&quot;
+      }
+    ],
+    &quot;maximum_score&quot;: 30.0,
+    &quot;mitigations&quot;: [
+      {
+        &quot;action&quot;: &quot;Mimimise rainfall allowed to percolate through piles of lime stone area and runoff in uncontrolled fashion&quot;,
+        &quot;process&quot;: &quot;Product Storage&quot;
+      },
+      {
+        &quot;action&quot;: &quot;Control particulate by fabric filter collectors, control kiln particulate emissions by electric precipitator dust collectors.&quot;,
+        &quot;process&quot;: &quot;Mineral Processing&quot;
+      }
+    ],
+    &quot;priority&quot;: &quot;mitigate&quot;,
+    &quot;social_impacts&quot;: [
+      {
+        &quot;consequences&quot;: [],
+        &quot;factor&quot;: &quot;Income Level&quot;,
+        &quot;importance&quot;: 1.0,
+        &quot;process&quot;: &quot;Product Storage&quot;
+      },
+      {
+        &quot;consequences&quot;: [],
+        &quot;factor&quot;: &quot;Health and Social Services&quot;,
+        &quot;importance&quot;: 0.5,
+        &quot;process&quot;: &quot;Product Storage&quot;
+      },
+      {
+        &quot;consequences&quot;: [],
+        &quot;factor&quot;: &quot;Transportation Systems&quot;,
+        &quot;importance&quot;: 5.0,
+        &quot;process&quot;: &quot;Product Storage&quot;
+      },
+      {
+        &quot;consequences&quot;: [],
+        &quot;factor&quot;: &quot;Land Values&quot;,
+        &quot;importance&quot;: 4.0,
+        &quot;process&quot;: &quot;Product Storage&quot;
+      },
+      {
+        &quot;consequences&quot;: [],
+        &quot;factor&quot;: &quot;Income Level&quot;,
+        &quot;importance&quot;: 6.0,
+        &quot;process&quot;: &quot;Mineral Processing&quot;
+      },
+      {
+        &quot;consequences&quot;: [],
+        &quot;factor&quot;: &quot;Distinct Settlements&quot;,
+        &quot;importance&quot;: 4.0,
+        &quot;process&quot;: &quot;Mineral Processing&quot;
+      },
+      {
+        &quot;consequences&quot;: [],
+        &quot;factor&quot;: &quot;Health and Social Services&quot;,
+        &quot;importance&quot;: 6.0,
+        &quot;process&quot;: &quot;Mineral Processing&quot;
+      },
+      {
+        &quot;consequences&quot;: [
+          &quot;changes in demand on educational resources&quot;,
+          &quot;changes in demand on health and social services&quot;,
+          &quot;changes in demand on transportation systems&quot;,
+          &quot;disruption of cohesion in community groups&quot;,
+          &quot;disruption of religious petterns and characteristics&quot;,
+          &quot;increase or decrease employment patterns&quot;,
+          &quot;increase or decrease income level&quot;,
+          &quot;increase or decrease population growth&quot;,
+          &quot;increase or decrease workforce&quot;,
+          &quot;varies in population characteristics&quot;
+        ],
+        &quot;factor&quot;: &quot;Migration&quot;,
+        &quot;importance&quot;: 6.0,
+        &quot;process&quot;: &quot;Mineral Processing&quot;
+      },
+      {
+        &quot;consequences&quot;: [],
+        &quot;factor&quot;: &quot;Transportation Systems&quot;,
+        &quot;importance&quot;: 6.0,
+        &quot;process&quot;: &quot;Mineral Processing&quot;
+      }
+    ],
+    &quot;sources&quot;: [
+      {
+        &quot;pollutant&quot;: &quot;Particulate&quot;,
+        &quot;process&quot;: &quot;Product Storage&quot;
+      },
+      {
+        &quot;pollutant&quot;: &quot;Particulate&quot;,
+        &quot;process&quot;: &quot;Mineral Processing&quot;
+      }
+    ],
+    &quot;unresolved_receptors&quot;: [],
+    &quot;unresolved_social_factors&quot;: [
+      &quot;Distinct Settlements&quot;,
+      &quot;Health and Social Services&quot;,
+      &quot;Income Level&quot;,
+      &quot;Land Values&quot;,
+      &quot;Transportation Systems&quot;
+    ]
+  }
+}</pre><p class="footer">Executed UTC: 2026-10-11T06:24:43.211307+00:00 · input SHA-256: b1885f9add78c7d509c701e6c390e3aaf168bd134ab42d63ac385f8f921f94f9</p></main></body></html>

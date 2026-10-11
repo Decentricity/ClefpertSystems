@@ -1,0 +1,606 @@
+{
+  "passed": true,
+  "accepted_consultations": 55,
+  "reports": 5,
+  "rejected_requests": 4,
+  "fresh_replay_matches": 55,
+  "check_count": 149,
+  "checks": [
+    {
+      "check": "day-01-instrument:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-01-dust:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-01-so2:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-01-water:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-01-gap:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-01-historical:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-01-backward:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-01-ambient:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-01-method:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-01-alternative:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-01-session:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-02-instrument:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-02-dust:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-02-so2:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-02-water:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-02-gap:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-02-historical:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-02-backward:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-02-ambient:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-02-method:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-02-alternative:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-02-session:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-03-instrument:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-03-dust:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-03-so2:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-03-water:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-03-gap:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-03-historical:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-03-backward:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-03-ambient:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-03-method:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-03-alternative:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-03-session:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-04-instrument:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-04-dust:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-04-so2:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-04-water:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-04-gap:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-04-historical:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-04-backward:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-04-ambient:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-04-method:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-04-alternative:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-04-session:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-05-instrument:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-05-dust:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-05-so2:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-05-water:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-05-gap:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-05-historical:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-05-backward:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-05-ambient:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-05-method:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-05-alternative:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "day-05-session:independent_expected_decision",
+      "passed": true
+    },
+    {
+      "check": "negative-magnitude:request_rejected",
+      "passed": true
+    },
+    {
+      "check": "boolean-magnitude:request_rejected",
+      "passed": true
+    },
+    {
+      "check": "unknown-process:request_rejected",
+      "passed": true
+    },
+    {
+      "check": "unexpected-field:request_rejected",
+      "passed": true
+    },
+    {
+      "check": "day-01-instrument:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-01-dust:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-01-so2:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-01-water:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-01-gap:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-01-historical:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-01-backward:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-01-ambient:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-01-method:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-01-alternative:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-01-session:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-02-instrument:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-02-dust:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-02-so2:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-02-water:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-02-gap:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-02-historical:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-02-backward:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-02-ambient:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-02-method:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-02-alternative:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-02-session:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-03-instrument:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-03-dust:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-03-so2:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-03-water:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-03-gap:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-03-historical:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-03-backward:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-03-ambient:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-03-method:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-03-alternative:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-03-session:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-04-instrument:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-04-dust:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-04-so2:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-04-water:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-04-gap:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-04-historical:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-04-backward:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-04-ambient:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-04-method:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-04-alternative:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-04-session:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-05-instrument:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-05-dust:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-05-so2:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-05-water:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-05-gap:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-05-historical:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-05-backward:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-05-ambient:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-05-method:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-05-alternative:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-05-session:fresh_oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "day-01:session_analysis_matches:day-01-dust",
+      "passed": true
+    },
+    {
+      "check": "day-01:session_analysis_matches:day-01-so2",
+      "passed": true
+    },
+    {
+      "check": "day-01:session_analysis_matches:day-01-water",
+      "passed": true
+    },
+    {
+      "check": "day-01:session_analysis_matches:day-01-gap",
+      "passed": true
+    },
+    {
+      "check": "day-01:session_analysis_matches:day-01-historical",
+      "passed": true
+    },
+    {
+      "check": "day-01:session_analysis_matches:day-01-alternative",
+      "passed": true
+    },
+    {
+      "check": "day-01:report_and_session_integrity",
+      "passed": true
+    },
+    {
+      "check": "day-02:session_analysis_matches:day-02-dust",
+      "passed": true
+    },
+    {
+      "check": "day-02:session_analysis_matches:day-02-so2",
+      "passed": true
+    },
+    {
+      "check": "day-02:session_analysis_matches:day-02-water",
+      "passed": true
+    },
+    {
+      "check": "day-02:session_analysis_matches:day-02-gap",
+      "passed": true
+    },
+    {
+      "check": "day-02:session_analysis_matches:day-02-historical",
+      "passed": true
+    },
+    {
+      "check": "day-02:session_analysis_matches:day-02-alternative",
+      "passed": true
+    },
+    {
+      "check": "day-02:report_and_session_integrity",
+      "passed": true
+    },
+    {
+      "check": "day-03:session_analysis_matches:day-03-dust",
+      "passed": true
+    },
+    {
+      "check": "day-03:session_analysis_matches:day-03-so2",
+      "passed": true
+    },
+    {
+      "check": "day-03:session_analysis_matches:day-03-water",
+      "passed": true
+    },
+    {
+      "check": "day-03:session_analysis_matches:day-03-gap",
+      "passed": true
+    },
+    {
+      "check": "day-03:session_analysis_matches:day-03-historical",
+      "passed": true
+    },
+    {
+      "check": "day-03:session_analysis_matches:day-03-alternative",
+      "passed": true
+    },
+    {
+      "check": "day-03:report_and_session_integrity",
+      "passed": true
+    },
+    {
+      "check": "day-04:session_analysis_matches:day-04-dust",
+      "passed": true
+    },
+    {
+      "check": "day-04:session_analysis_matches:day-04-so2",
+      "passed": true
+    },
+    {
+      "check": "day-04:session_analysis_matches:day-04-water",
+      "passed": true
+    },
+    {
+      "check": "day-04:session_analysis_matches:day-04-gap",
+      "passed": true
+    },
+    {
+      "check": "day-04:session_analysis_matches:day-04-historical",
+      "passed": true
+    },
+    {
+      "check": "day-04:session_analysis_matches:day-04-alternative",
+      "passed": true
+    },
+    {
+      "check": "day-04:report_and_session_integrity",
+      "passed": true
+    },
+    {
+      "check": "day-05:session_analysis_matches:day-05-dust",
+      "passed": true
+    },
+    {
+      "check": "day-05:session_analysis_matches:day-05-so2",
+      "passed": true
+    },
+    {
+      "check": "day-05:session_analysis_matches:day-05-water",
+      "passed": true
+    },
+    {
+      "check": "day-05:session_analysis_matches:day-05-gap",
+      "passed": true
+    },
+    {
+      "check": "day-05:session_analysis_matches:day-05-historical",
+      "passed": true
+    },
+    {
+      "check": "day-05:session_analysis_matches:day-05-water",
+      "passed": true
+    },
+    {
+      "check": "day-05:report_and_session_integrity",
+      "passed": true
+    }
+  ]
+}

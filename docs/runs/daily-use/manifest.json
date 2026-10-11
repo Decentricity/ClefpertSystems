@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "executed_at": "2026-10-11T06:24:46.908766+00:00",
+  "plan_sha256": "55873397a4ec82205e48f5a92963434b8d73ca6ff1fb1484411ab4e6d23eb550",
+  "runner_sha256": "f7369151d97d148f05da22d6bfc61386c47f07f99b7dbe1d8d31be63d9f2aa33",
+  "prolog_version": "SWI-Prolog version 9.2.9 for x86_64-linux",
+  "oracle_fingerprint": "347b2e37f18e62780c8afff7eb6326a28308222e041f6d240178fe87f4d86cc7",
+  "consultation_count": 55,
+  "report_count": 5,
+  "rejection_count": 4,
+  "query_kind_counts": {
+    "instrumentation": 5,
+    "assess": 25,
+    "assess_concentration": 5,
+    "trace_back": 5,
+    "screen_ambient": 5,
+    "method_assessment": 5,
+    "assess_session": 5
+  },
+  "decision_counts": {
+    "below_detection_limit": 2,
+    "mitigate": 8,
+    "monitor": 8,
+    "insufficient_data": 7,
+    "candidate_sources": 5,
+    "exceeds_reference": 2,
+    "method_assessed": 5,
+    "session_assessed": 5,
+    "measurable": 3,
+    "urgent_review": 4,
+    "within_reference": 2,
+    "no_detected_impact": 4
+  },
+  "verification_passed": true,
+  "check_count": 149,
+  "limitations": "Assessment-support reports, not statutory EIAs or legal attainment decisions. Ambient summaries retain their multi-year/statistical scope despite daily review.",
+  "human_use": "Scripted role/workflow simulation; no human participants"
+}

@@ -1,0 +1,78 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Actual execution log</title><style>
+:root{color-scheme:light}*{box-sizing:border-box}body{margin:0;background:#eef2f6;color:#182535;font:16px/1.55 Arial,sans-serif}
+main{max-width:1180px;margin:28px auto;padding:32px;background:white;border:1px solid #d7e0e8;border-radius:10px}
+h1{font-size:30px;line-height:1.25;margin:12px 0}h2{font-size:22px;border-top:1px solid #dde5ed;padding-top:24px;margin-top:32px}
+h3{font-size:18px}.eyebrow{font-size:13px;color:#275f86;text-transform:uppercase;letter-spacing:1px}.note{padding:16px;background:#f5f8fb;border-left:4px solid #6386a2}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{padding:18px;border:1px solid #dce5ec;border-radius:6px}.big{font-size:27px;font-weight:bold}.muted{color:#526779}
+pre{font:13px/1.5 monospace;white-space:pre-wrap;overflow-wrap:anywhere;padding:18px;background:#f4f7fa;border:1px solid #dce5ec;border-radius:6px}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:14px}th,td{text-align:left;vertical-align:top;border-bottom:1px solid #dde5ed;padding:10px}th{background:#f1f5f8}
+.badge{display:inline-block;padding:4px 9px;border-radius:4px;background:#e7eef5;font-size:13px;font-weight:bold}.urgent_review,.exceeds_reference{background:#ffe8dc;color:#8f330a}.insufficient_data,.below_detection_limit{background:#fff0c2;color:#795800}.within_reference,.no_detected_impact,.measurable{background:#deefe5;color:#185639}
+a{color:#245e92}li{margin:7px 0}code{font-family:monospace;overflow-wrap:anywhere}.footer{margin-top:28px;font-size:12px;color:#607486}.break{overflow-wrap:anywhere}
+</style></head><body><main><h1>Actual consultation execution log</h1><p>Captured from the simulator while invoking the SWI-Prolog oracle.</p><pre id="log">SWI-Prolog daily-use simulation | SWI-Prolog version 9.2.9 for x86_64-linux
+Synthetic scenario dates/roles; actual execution timestamps saved separately.
+Oracle fingerprint: 347b2e37f18e62780c8afff7eb6326a28308222e041f6d240178fe87f4d86cc7
+PASS day-01 08:00 instrumentation        below_detection_limit
+PASS day-01 08:30 assess                 mitigate
+PASS day-01 09:00 assess                 mitigate
+PASS day-01 10:00 assess                 monitor
+PASS day-01 10:30 assess                 insufficient_data
+PASS day-01 11:00 assess_concentration   monitor
+PASS day-01 11:30 trace_back             candidate_sources
+PASS day-01 13:00 screen_ambient         exceeds_reference
+PASS day-01 14:00 method_assessment      method_assessed
+PASS day-01 14:30 assess                 monitor
+PASS day-01 15:00 assess_session         session_assessed
+REPORT day-01 | human_review_required | highest baseline priority=mitigate
+PASS day-02 08:00 instrumentation        measurable
+PASS day-02 08:30 assess                 mitigate
+PASS day-02 09:00 assess                 mitigate
+PASS day-02 10:00 assess                 urgent_review
+PASS day-02 10:30 assess                 insufficient_data
+PASS day-02 11:00 assess_concentration   monitor
+PASS day-02 11:30 trace_back             candidate_sources
+PASS day-02 13:00 screen_ambient         insufficient_data
+PASS day-02 14:00 method_assessment      method_assessed
+PASS day-02 14:30 assess                 mitigate
+PASS day-02 15:00 assess_session         session_assessed
+REPORT day-02 | human_review_required | highest baseline priority=urgent_review
+PASS day-03 08:00 instrumentation        measurable
+PASS day-03 08:30 assess                 urgent_review
+PASS day-03 09:00 assess                 mitigate
+PASS day-03 10:00 assess                 urgent_review
+PASS day-03 10:30 assess                 insufficient_data
+PASS day-03 11:00 assess_concentration   monitor
+PASS day-03 11:30 trace_back             candidate_sources
+PASS day-03 13:00 screen_ambient         within_reference
+PASS day-03 14:00 method_assessment      method_assessed
+PASS day-03 14:30 assess                 urgent_review
+PASS day-03 15:00 assess_session         session_assessed
+REPORT day-03 | human_review_required | highest baseline priority=urgent_review
+PASS day-04 08:00 instrumentation        below_detection_limit
+PASS day-04 08:30 assess                 monitor
+PASS day-04 09:00 assess                 monitor
+PASS day-04 10:00 assess                 mitigate
+PASS day-04 10:30 assess                 insufficient_data
+PASS day-04 11:00 assess_concentration   mitigate
+PASS day-04 11:30 trace_back             candidate_sources
+PASS day-04 13:00 screen_ambient         exceeds_reference
+PASS day-04 14:00 method_assessment      method_assessed
+PASS day-04 14:30 assess                 monitor
+PASS day-04 15:00 assess_session         session_assessed
+REPORT day-04 | human_review_required | highest baseline priority=mitigate
+PASS day-05 08:00 instrumentation        measurable
+PASS day-05 08:30 assess                 no_detected_impact
+PASS day-05 09:00 assess                 no_detected_impact
+PASS day-05 10:00 assess                 no_detected_impact
+PASS day-05 10:30 assess                 insufficient_data
+PASS day-05 11:00 assess_concentration   insufficient_data
+PASS day-05 11:30 trace_back             candidate_sources
+PASS day-05 13:00 screen_ambient         within_reference
+PASS day-05 14:00 method_assessment      method_assessed
+PASS day-05 14:30 assess                 no_detected_impact
+PASS day-05 15:00 assess_session         session_assessed
+REPORT day-05 | human_review_required | highest baseline priority=no_detected_impact
+PASS rejection negative-magnitude
+PASS rejection boolean-magnitude
+PASS rejection unknown-process
+PASS rejection unexpected-field
+VERIFIED 55 fresh replay matches | 5 reports | 4 rejections | 149 checks</pre></main></body></html>

@@ -6,74 +6,117 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 from oracles import PrologOracle, load_provenance
 
 
+def scenario(magnitude=5, pollutant='SO2', receptors=None, processes=None):
+    return {'kind': 'assess', 'magnitude': magnitude, 'pollutant': pollutant,
+            'receptors': receptors or ['Shrubs'], 'processes': processes or ['Mineral Processing']}
+
+
 class KnowledgeBaseTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.oracle = PrologOracle()
-        cls.provenance = load_provenance()
 
-    def test_documented_truth_table(self):
-        for a, b, grade in [('yes', 'yes', 'L'), ('yes', 'no', 'S'),
-                            ('no', 'yes', 'S'), ('no', 'no', 'N')]:
-            answer = self.oracle.evaluate({'kind': 'score_pair', 'answer_1': a, 'answer_2': b})
-            self.assertEqual(answer['target'], {'status': 'documented', 'value': grade})
-            self.assertEqual(answer['rule_ids'], ['PAIR_' + a.upper() + '_' + b.upper()])
+    def test_runnable_forward_inference(self):
+        answer = self.oracle.evaluate(scenario())
+        self.assertEqual(answer['target']['decision'], 'mitigate')
+        self.assertEqual(answer['target']['direct_impacts'][0]['importance'], 4.0)
+        self.assertEqual(answer['target']['maximum_score'], 20.0)
+        self.assertTrue(answer['target']['mitigations'])
+        self.assertTrue({'R_FORWARD', 'R_DIRECT', 'R_PRIORITY', 'R_MITIGATION'} <= set(answer['rule_ids']))
 
-    def test_table_page_break_and_snippet(self):
-        cases = [('CO', 'Birds', 2.0), ('Particulate', 'Birds', 2.0),
-                 ('H2S', 'Birds', 1.0), ('Particulate', 'Land Animals Reptiles', 2.0),
-                 ('Water Temperature', 'Microflora', 4.0)]
-        for pollutant, environment, importance in cases:
-            answer = self.oracle.evaluate({'kind': 'impact', 'pollutant': pollutant,
-                                           'environment': environment})
-            self.assertEqual(answer['target'], {'status': 'documented', 'value': importance})
+    def test_priority_boundaries(self):
+        for magnitude, decision in [(0, 'no_detected_impact'), (2.499, 'monitor'),
+                                     (2.5, 'mitigate'), (9.999, 'mitigate'), (10, 'urgent_review')]:
+            self.assertEqual(self.oracle.evaluate(scenario(magnitude))['target']['decision'], decision)
 
-    def test_unknown_relation_is_not_negative(self):
-        answer = self.oracle.evaluate({'kind': 'impact', 'pollutant': 'CO', 'environment': 'Shrubs'})
-        self.assertEqual(answer, {'target': {'status': 'undocumented'}, 'rule_ids': []})
+    def test_two_hop_indirect_reasoning_and_cycle_avoidance(self):
+        target = self.oracle.evaluate(scenario(5, 'Suspended Solid',
+                                               ['Surface Water', 'Aquatic Plants', 'Birds']))['target']
+        self.assertEqual(target['decision'], 'urgent_review')
+        paths = [item['path'] for item in target['indirect_impacts']]
+        self.assertIn(['Surface Water', 'Aquatic Plants', 'Birds'], paths)
+        for path in paths:
+            self.assertEqual(len(path), len(set(path)))
+            self.assertLessEqual(len(path), 3)
 
-    def test_missing_threshold_and_no_automatic_grade(self):
-        unresolved = self.oracle.evaluate({'kind': 'criterion', 'criterion': 'comprehensiveness'})
-        self.assertEqual(unresolved['target'], {'status': 'undocumented'})
-        fixed = self.oracle.evaluate({'kind': 'criterion', 'criterion': 'uncertainty'})
-        self.assertEqual(fixed['target']['value'], {'answer': 'yes'})
-        self.assertEqual(self.oracle.evaluate({'kind': 'criterion', 'criterion': 'magnitude'})
-                         ['target']['value'], {'answer': 'yes', 'grade': 'L'})
+    def test_zero_exposure_does_not_trigger_indirect_or_mitigation(self):
+        target = self.oracle.evaluate(scenario(0, 'Suspended Solid',
+                                               ['Surface Water', 'Aquatic Plants', 'Birds']))['target']
+        self.assertEqual(target['decision'], 'no_detected_impact')
+        self.assertEqual(target['indirect_impacts'], [])
+        self.assertEqual(target['mitigations'], [])
 
-    def test_case_sensitive_snippet_and_unit_space(self):
-        self.assertEqual(self.oracle.evaluate({'kind': 'unit', 'pollutant': 'Suspended solid'})
-                         ['target']['value'], ' mg per liter')
-        self.assertEqual(self.oracle.evaluate({'kind': 'unit', 'pollutant': 'Suspended Solid'})
-                         ['target']['status'], 'undocumented')
+    def test_absent_relation_abstains(self):
+        target = self.oracle.evaluate(scenario(5, 'CO', ['Aquatic Plants']))['target']
+        self.assertEqual(target['decision'], 'insufficient_data')
+        self.assertEqual(target['unresolved_receptors'], ['Aquatic Plants'])
 
-    def test_no_interval_classification_or_inferred_edges(self):
-        self.assertEqual(self.oracle.evaluate({'kind': 'standard', 'pollutant': 'SO2'})['target']['value'],
-                         {'lower': 0, 'upper': 40.0, 'magnitude': 2.0})
-        self.assertEqual(self.oracle.evaluate({'kind': 'indirect_impact', 'from': 'Microflora',
-                                              'to': 'Water Temperature'})['target']['status'], 'undocumented')
+    def test_backward_candidates_join_emissions_and_impacts(self):
+        answer = self.oracle.evaluate({'kind': 'trace_back', 'receptor': 'Birds'})
+        self.assertEqual(answer['target']['decision'], 'candidate_sources')
+        source = next(x for x in answer['target']['direct_sources'] if x['pollutant'] == 'SO2')
+        self.assertIn('Mineral Processing', source['processes'])
+        self.assertTrue(answer['target']['indirect_sources'])
+        self.assertIn('R_BACKWARD', answer['rule_ids'])
 
-    def test_invalid_queries_rejected(self):
-        for inputs in [{}, {'kind': 'made_up'}, {'kind': 'criterion', 'criterion': 'made_up'},
-                       {'kind': 'score_pair', 'answer_1': 'maybe', 'answer_2': 'yes'},
-                       {'kind': 'score_pair', 'answer_1': True, 'answer_2': 'yes'},
-                       {'kind': 'standard', 'pollutant': 'SO2', 'concentration': 40}]:
-            with self.assertRaises(ValueError):
-                self.oracle.evaluate(inputs)
+    def test_standard_boundaries_and_no_extrapolation(self):
+        for concentration, expected in [(0, 2), (10.499, 2), (10.5, 4), (21, 7), (42, 10), (1000, 10)]:
+            inputs = scenario(pollutant='H2S')
+            inputs.pop('magnitude')
+            inputs.update(kind='assess_concentration', concentration=concentration)
+            self.assertEqual(self.oracle.evaluate(inputs)['target']['resolved_magnitude'], expected)
+        inputs['concentration'] = 1001
+        self.assertEqual(self.oracle.evaluate(inputs)['target']['decision'], 'insufficient_data')
 
-    def test_provenance_and_executable_inventory_align(self):
-        rules = self.provenance['rules']
-        self.assertEqual(len(rules), 44)
-        self.assertEqual(len({rule['id'] for rule in rules}), 44)
-        for rule in rules:
-            for sid in rule['source_ids']:
-                source = self.provenance['sources'][sid]
-                self.assertGreater(source['pdf_page'], 0)
-                self.assertTrue(source['section'])
+    def test_instrument_detection_boundary_preserves_variability(self):
+        case = {'kind': 'instrumentation', 'pollutant': 'Suspended solid',
+                'technique': 'Non-filterable residue by drying oven', 'observed_value': 3.999}
+        self.assertEqual(self.oracle.evaluate(case)['target']['decision'], 'below_detection_limit')
+        case['observed_value'] = 4
+        result = self.oracle.evaluate(case)['target']
+        self.assertEqual(result['decision'], 'measurable')
+        self.assertEqual(result['variability'], 5.8)
+        self.assertEqual(result['unit'], ' mg per liter')
+
+    def test_social_effects_are_inferred_even_when_consequence_is_unresolved(self):
+        target = self.oracle.evaluate(scenario(1, 'Particulate', ['Birds'], ['Blasting and Drilling']))['target']
+        migration = next(x for x in target['social_impacts'] if x['factor'] == 'Migration')
+        self.assertIn('changes in demand on health and social services', migration['consequences'])
+        self.assertIn('Transportation Systems', target['unresolved_social_factors'])
+
+    def test_full_twenty_criterion_wp_profile(self):
         domain = self.oracle.domain()
-        answers = self.oracle.evaluate_many(domain)
-        self.assertEqual({rid for answer in answers for rid in answer['rule_ids']},
-                         {rule['id'] for rule in rules})
+        inputs = {'kind': 'method_assessment', 'counts': {field: 2 for field in domain['wp_fields']},
+                  'answers': {'impact_isolation': 'yes', 'explicit_indicators': 'yes', 'significance': 'yes'}}
+        target = self.oracle.evaluate(inputs)['target']
+        self.assertEqual(len(target['criterion_grades']), 20)
+        self.assertEqual(set(target['aspect_grades']), {'identification', 'measurement', 'interpretation', 'communication'})
+        self.assertEqual(target['criterion_grades']['public_involvement'], 'N')
+        self.assertEqual(target['criterion_grades']['magnitude'], 'L')
+        inputs['counts'] = {field: 0 for field in domain['wp_fields']}
+        inputs['answers'] = {field: 'no' for field in inputs['answers']}
+        other = self.oracle.evaluate(inputs)['target']
+        self.assertEqual(other['criterion_grades']['comprehensiveness'], 'N')
+        self.assertNotEqual(other['aspect_grades'], target['aspect_grades'])
 
-    def test_direct_prolog_api_rejects_invalid_queries(self):
-        with self.assertRaises(RuntimeError):
-            self.oracle._request({'action': 'evaluate', 'inputs': [{'kind': 'made_up'}]})
+    def test_input_order_does_not_change_answers(self):
+        a = scenario(5, 'Particulate', ['Birds', 'Shrubs'], ['Mineral Processing', 'Product Storage'])
+        b = {**a, 'receptors': a['receptors'][::-1], 'processes': a['processes'][::-1]}
+        self.assertEqual(self.oracle.evaluate(a), self.oracle.evaluate(b))
+
+    def test_invalid_states_rejected(self):
+        for case in [{}, scenario(-1), scenario(float('nan')), scenario(True), scenario(11),
+                     scenario(processes=['not a process']), scenario(receptors=['unknown']),
+                     {**scenario(), 'chapter': 5}, scenario(receptors=['Shrubs', 'Shrubs']),
+                     scenario(pollutant='SO2', processes=['Product Storage'])]:
+            with self.assertRaises(ValueError):
+                self.oracle.evaluate(case)
+
+    def test_fact_and_rule_inventory_matches_executable(self):
+        provenance = load_provenance()
+        inventory = {row['id'] for row in provenance['facts'] + provenance['inference_rules']}
+        self.assertEqual(inventory, set(self.oracle.rule_ids()))
+        for fact in provenance['facts']:
+            for sid in fact['source_ids']:
+                self.assertGreater(provenance['sources'][sid]['pdf_page'], 0)
+        self.assertGreater(len(provenance['facts']), 200)

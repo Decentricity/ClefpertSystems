@@ -15,7 +15,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', type=Path, default=ROOT / '.source-cache')
     args = parser.parse_args()
-    manifest = json.loads((ROOT / 'dataset/raw/source-manifest.json').read_text())
+    manifest = json.loads((ROOT / 'docs/evidence/source-manifest.json').read_text())
     args.output.mkdir(parents=True, exist_ok=True)
     opener = urllib.request.build_opener(
         urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))

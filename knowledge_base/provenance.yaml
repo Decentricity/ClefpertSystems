@@ -1,6 +1,6 @@
 {
-  "schema_version": 1,
-  "scope": "documented subset of ESC-1/ESC-2; not recovered historical source",
+  "schema_version": 2,
+  "scope": "Runnable, deliberately approximate cement-impact POC; evidence and assumptions separated from training",
   "sources": {
     "ARCH": {
       "chapter": "bab4",
@@ -805,231 +805,2584 @@
       "section": "6.2",
       "claim": "Explicit code example",
       "transcription": "unit(\"Suspended solid\",\" mg per liter\")."
+    },
+    "SRC_FACT_EMISSION_01": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 6,
+      "printed_page": "V-6",
+      "section": "5.2 / Table 5.1 / SO2",
+      "transcription": {
+        "inputs": {
+          "process": "Mineral Processing",
+          "pollutant": "SO2"
+        },
+        "value": true
+      }
+    },
+    "SRC_FACT_EMISSION_02": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 6,
+      "printed_page": "V-6",
+      "section": "5.2 / Table 5.1 / CO",
+      "transcription": {
+        "inputs": {
+          "process": "Mineral Processing",
+          "pollutant": "CO"
+        },
+        "value": true
+      }
+    },
+    "SRC_FACT_EMISSION_03": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 6,
+      "printed_page": "V-6",
+      "section": "5.2 / Table 5.1 / Particulate",
+      "transcription": {
+        "inputs": {
+          "process": "Mineral Processing",
+          "pollutant": "Particulate"
+        },
+        "value": true
+      }
+    },
+    "SRC_FACT_EMISSION_04": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 6,
+      "printed_page": "V-6",
+      "section": "5.2 / Table 5.1 / H2S",
+      "transcription": {
+        "inputs": {
+          "process": "Mineral Processing",
+          "pollutant": "H2S"
+        },
+        "value": true
+      }
+    },
+    "SRC_FACT_EMISSION_05": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 7,
+      "printed_page": "V-7",
+      "section": "5.2 / Table 5.1 / Hydrocarbon",
+      "transcription": {
+        "inputs": {
+          "process": "Mineral Processing",
+          "pollutant": "Hydrocarbon"
+        },
+        "value": true
+      }
+    },
+    "SRC_FACT_EMISSION_06": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 7,
+      "printed_page": "V-7",
+      "section": "5.2 / Table 5.1 / Water Temperature",
+      "transcription": {
+        "inputs": {
+          "process": "Mineral Processing",
+          "pollutant": "Water Temperature"
+        },
+        "value": true
+      }
+    },
+    "SRC_FACT_EMISSION_07": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 7,
+      "printed_page": "V-7",
+      "section": "5.2 / Table 5.1 / Suspended Solid",
+      "transcription": {
+        "inputs": {
+          "process": "Mineral Processing",
+          "pollutant": "Suspended Solid"
+        },
+        "value": true
+      }
+    },
+    "SRC_FACT_EMISSION_08": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 6,
+      "printed_page": "V-6",
+      "section": "5.2 / Table 5.1 / Particulate",
+      "transcription": {
+        "inputs": {
+          "process": "Product Storage",
+          "pollutant": "Particulate"
+        },
+        "value": true
+      }
+    },
+    "SRC_FACT_EMISSION_09": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 7,
+      "printed_page": "V-7",
+      "section": "5.2 / Table 5.1 / Hydrocarbon",
+      "transcription": {
+        "inputs": {
+          "process": "Product Storage",
+          "pollutant": "Hydrocarbon"
+        },
+        "value": true
+      }
+    },
+    "SRC_FACT_EMISSION_10": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 7,
+      "printed_page": "V-7",
+      "section": "5.2 / Table 5.1 / Suspended Solid",
+      "transcription": {
+        "inputs": {
+          "process": "Product Storage",
+          "pollutant": "Suspended Solid"
+        },
+        "value": true
+      }
+    },
+    "SRC_FACT_EMISSION_11": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 6,
+      "printed_page": "V-6",
+      "section": "5.2 / Table 5.1 / Particulate",
+      "transcription": {
+        "inputs": {
+          "process": "Blasting and Drilling",
+          "pollutant": "Particulate"
+        },
+        "value": true
+      }
+    },
+    "SRC_FACT_EMISSION_12": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 7,
+      "printed_page": "V-7",
+      "section": "5.2 / Table 5.1 / Suspended Solid",
+      "transcription": {
+        "inputs": {
+          "process": "Blasting and Drilling",
+          "pollutant": "Suspended Solid"
+        },
+        "value": true
+      }
+    },
+    "SRC_FACT_EMISSION_13": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 7,
+      "printed_page": "V-7",
+      "section": "5.2 / Table 5.1 / Suspended Solid",
+      "transcription": {
+        "inputs": {
+          "process": "Cooling Water Discharge",
+          "pollutant": "Suspended Solid"
+        },
+        "value": true
+      }
+    },
+    "SRC_FACT_INDIRECT_14": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 8,
+      "printed_page": "V-8",
+      "section": "5.3 / Table 5.2 / row 1",
+      "transcription": {
+        "inputs": {
+          "from": "Surface Water",
+          "to": "Aquatic Plants"
+        },
+        "value": true
+      }
+    },
+    "SRC_FACT_INDIRECT_15": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 8,
+      "printed_page": "V-8",
+      "section": "5.3 / Table 5.2 / row 3",
+      "transcription": {
+        "inputs": {
+          "from": "Aquatic Plants",
+          "to": "Birds"
+        },
+        "value": true
+      }
+    },
+    "SRC_FACT_INDIRECT_16": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 9,
+      "printed_page": "V-9",
+      "section": "5.3 / Table 5.2 / row 6",
+      "transcription": {
+        "inputs": {
+          "from": "Shrubs",
+          "to": "Erosion"
+        },
+        "value": true
+      }
+    },
+    "SRC_FACT_MITIGATION_17": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 17,
+      "printed_page": "V-17",
+      "section": "5.5 / Table 5.4 / Mineral Processing",
+      "transcription": {
+        "inputs": {
+          "activity": "Mineral Processing"
+        },
+        "value": "Control particulate by fabric filter collectors, control kiln particulate emissions by electric precipitator dust collectors."
+      }
+    },
+    "SRC_FACT_MITIGATION_18": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 17,
+      "printed_page": "V-17",
+      "section": "5.5 / Table 5.4 / Blasting and Drilling",
+      "transcription": {
+        "inputs": {
+          "activity": "Blasting and Drilling"
+        },
+        "value": "Special transportation sector studies should be prepared during project feasibility to select best routes to reduced impacts ."
+      }
+    },
+    "SRC_FACT_MITIGATION_19": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 17,
+      "printed_page": "V-17",
+      "section": "5.5 / Table 5.4 / Cooling Water Discharge",
+      "transcription": {
+        "inputs": {
+          "activity": "Cooling Water Discharge"
+        },
+        "value": "If recycling is not feasible, discharge cooling water provided receiving water temperature does not rise 3 degree Celcious."
+      }
+    },
+    "SRC_EXP_IMPACT_001": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 2,
+      "printed_page": "V-2",
+      "section": "5.2 / Table 5.1 / Gasses and Particulate",
+      "transcription": {
+        "inputs": {
+          "pollutant": "SO2",
+          "environment": "Gasses and Particulate"
+        },
+        "value": 8.0
+      }
+    },
+    "SRC_EXP_IMPACT_002": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 2,
+      "printed_page": "V-2",
+      "section": "5.2 / Table 5.1 / Gasses and Particulate",
+      "transcription": {
+        "inputs": {
+          "pollutant": "CO",
+          "environment": "Gasses and Particulate"
+        },
+        "value": 6.0
+      }
+    },
+    "SRC_EXP_IMPACT_003": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 2,
+      "printed_page": "V-2",
+      "section": "5.2 / Table 5.1 / Gasses and Particulate",
+      "transcription": {
+        "inputs": {
+          "pollutant": "Particulate",
+          "environment": "Gasses and Particulate"
+        },
+        "value": 6.0
+      }
+    },
+    "SRC_EXP_IMPACT_004": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 2,
+      "printed_page": "V-2",
+      "section": "5.2 / Table 5.1 / Gasses and Particulate",
+      "transcription": {
+        "inputs": {
+          "pollutant": "H2S",
+          "environment": "Gasses and Particulate"
+        },
+        "value": 4.0
+      }
+    },
+    "SRC_EXP_IMPACT_005": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 2,
+      "printed_page": "V-2",
+      "section": "5.2 / Table 5.1 / Gasses and Particulate",
+      "transcription": {
+        "inputs": {
+          "pollutant": "Hydrocarbon",
+          "environment": "Gasses and Particulate"
+        },
+        "value": 2.0
+      }
+    },
+    "SRC_EXP_IMPACT_006": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 3,
+      "printed_page": "V-3",
+      "section": "5.2 / Table 5.1 / Microfauna",
+      "transcription": {
+        "inputs": {
+          "pollutant": "SO2",
+          "environment": "Microfauna"
+        },
+        "value": 6.0
+      }
+    },
+    "SRC_EXP_IMPACT_007": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 3,
+      "printed_page": "V-3",
+      "section": "5.2 / Table 5.1 / Microfauna",
+      "transcription": {
+        "inputs": {
+          "pollutant": "Particulate",
+          "environment": "Microfauna"
+        },
+        "value": 2.0
+      }
+    },
+    "SRC_EXP_IMPACT_008": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 3,
+      "printed_page": "V-3",
+      "section": "5.2 / Table 5.1 / Microfauna",
+      "transcription": {
+        "inputs": {
+          "pollutant": "H2S",
+          "environment": "Microfauna"
+        },
+        "value": 1.0
+      }
+    },
+    "SRC_EXP_IMPACT_009": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 3,
+      "printed_page": "V-3",
+      "section": "5.2 / Table 5.1 / Microfauna",
+      "transcription": {
+        "inputs": {
+          "pollutant": "Hydrocarbon",
+          "environment": "Microfauna"
+        },
+        "value": 1.0
+      }
+    },
+    "SRC_EXP_IMPACT_010": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 3,
+      "printed_page": "V-3",
+      "section": "5.2 / Table 5.1 / Microfauna",
+      "transcription": {
+        "inputs": {
+          "pollutant": "Water Temperature",
+          "environment": "Microfauna"
+        },
+        "value": 6.0
+      }
+    },
+    "SRC_EXP_IMPACT_011": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 3,
+      "printed_page": "V-3",
+      "section": "5.2 / Table 5.1 / Microfauna",
+      "transcription": {
+        "inputs": {
+          "pollutant": "Suspended Solid",
+          "environment": "Microfauna"
+        },
+        "value": 4.0
+      }
+    },
+    "SRC_EXP_IMPACT_012": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 3,
+      "printed_page": "V-3",
+      "section": "5.2 / Table 5.1 / Aquatic Plants",
+      "transcription": {
+        "inputs": {
+          "pollutant": "Water Temperature",
+          "environment": "Aquatic Plants"
+        },
+        "value": 4.0
+      }
+    },
+    "SRC_EXP_IMPACT_013": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 3,
+      "printed_page": "V-3",
+      "section": "5.2 / Table 5.1 / Endangered Species of Fauna",
+      "transcription": {
+        "inputs": {
+          "pollutant": "SO2",
+          "environment": "Endangered Species of Fauna"
+        },
+        "value": 8.0
+      }
+    },
+    "SRC_EXP_IMPACT_014": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 3,
+      "printed_page": "V-3",
+      "section": "5.2 / Table 5.1 / Endangered Species of Fauna",
+      "transcription": {
+        "inputs": {
+          "pollutant": "Particulate",
+          "environment": "Endangered Species of Fauna"
+        },
+        "value": 4.0
+      }
+    },
+    "SRC_EXP_IMPACT_015": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 3,
+      "printed_page": "V-3",
+      "section": "5.2 / Table 5.1 / Endangered Species of Fauna",
+      "transcription": {
+        "inputs": {
+          "pollutant": "H2S",
+          "environment": "Endangered Species of Fauna"
+        },
+        "value": 2.0
+      }
+    },
+    "SRC_EXP_IMPACT_016": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 3,
+      "printed_page": "V-3",
+      "section": "5.2 / Table 5.1 / Endangered Species of Fauna",
+      "transcription": {
+        "inputs": {
+          "pollutant": "Hydrocarbon",
+          "environment": "Endangered Species of Fauna"
+        },
+        "value": 1.0
+      }
+    },
+    "SRC_EXP_IMPACT_017": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 3,
+      "printed_page": "V-3",
+      "section": "5.2 / Table 5.1 / Endangered Species of Fauna",
+      "transcription": {
+        "inputs": {
+          "pollutant": "Water Temperature",
+          "environment": "Endangered Species of Fauna"
+        },
+        "value": 8.0
+      }
+    },
+    "SRC_EXP_IMPACT_018": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 3,
+      "printed_page": "V-3",
+      "section": "5.2 / Table 5.1 / Endangered Species of Fauna",
+      "transcription": {
+        "inputs": {
+          "pollutant": "Suspended Solid",
+          "environment": "Endangered Species of Fauna"
+        },
+        "value": 6.0
+      }
+    },
+    "SRC_EXP_EMISSION_019": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 6,
+      "printed_page": "V-6",
+      "section": "5.2 / Table 5.1 / SO2",
+      "transcription": {
+        "inputs": {
+          "process": "Energy Generation",
+          "pollutant": "SO2"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_EMISSION_020": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 6,
+      "printed_page": "V-6",
+      "section": "5.2 / Table 5.1 / SO2",
+      "transcription": {
+        "inputs": {
+          "process": "Trucking",
+          "pollutant": "SO2"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_EMISSION_021": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 6,
+      "printed_page": "V-6",
+      "section": "5.2 / Table 5.1 / SO2",
+      "transcription": {
+        "inputs": {
+          "process": "Junk Disposal",
+          "pollutant": "SO2"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_EMISSION_022": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 6,
+      "printed_page": "V-6",
+      "section": "5.2 / Table 5.1 / SO2",
+      "transcription": {
+        "inputs": {
+          "process": "Explosion",
+          "pollutant": "SO2"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_EMISSION_023": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 6,
+      "printed_page": "V-6",
+      "section": "5.2 / Table 5.1 / SO2",
+      "transcription": {
+        "inputs": {
+          "process": "Operation Failure",
+          "pollutant": "SO2"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_EMISSION_024": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 6,
+      "printed_page": "V-6",
+      "section": "5.2 / Table 5.1 / CO",
+      "transcription": {
+        "inputs": {
+          "process": "Alteration of Ground Cover",
+          "pollutant": "CO"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_EMISSION_025": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 6,
+      "printed_page": "V-6",
+      "section": "5.2 / Table 5.1 / CO",
+      "transcription": {
+        "inputs": {
+          "process": "Energy Generation",
+          "pollutant": "CO"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_EMISSION_026": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 6,
+      "printed_page": "V-6",
+      "section": "5.2 / Table 5.1 / CO",
+      "transcription": {
+        "inputs": {
+          "process": "Trucking",
+          "pollutant": "CO"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_EMISSION_027": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 6,
+      "printed_page": "V-6",
+      "section": "5.2 / Table 5.1 / CO",
+      "transcription": {
+        "inputs": {
+          "process": "Junk Disposal",
+          "pollutant": "CO"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_EMISSION_028": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 6,
+      "printed_page": "V-6",
+      "section": "5.2 / Table 5.1 / CO",
+      "transcription": {
+        "inputs": {
+          "process": "Explosion",
+          "pollutant": "CO"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_EMISSION_029": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 6,
+      "printed_page": "V-6",
+      "section": "5.2 / Table 5.1 / CO",
+      "transcription": {
+        "inputs": {
+          "process": "Operation Failure",
+          "pollutant": "CO"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_EMISSION_030": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 6,
+      "printed_page": "V-6",
+      "section": "5.2 / Table 5.1 / Particulate",
+      "transcription": {
+        "inputs": {
+          "process": "Alteration of Ground Cover",
+          "pollutant": "Particulate"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_EMISSION_031": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 6,
+      "printed_page": "V-6",
+      "section": "5.2 / Table 5.1 / Particulate",
+      "transcription": {
+        "inputs": {
+          "process": "Energy Generation",
+          "pollutant": "Particulate"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_EMISSION_032": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 6,
+      "printed_page": "V-6",
+      "section": "5.2 / Table 5.1 / Particulate",
+      "transcription": {
+        "inputs": {
+          "process": "Erosion and Terrasing",
+          "pollutant": "Particulate"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_EMISSION_033": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 6,
+      "printed_page": "V-6",
+      "section": "5.2 / Table 5.1 / Particulate",
+      "transcription": {
+        "inputs": {
+          "process": "Trucking",
+          "pollutant": "Particulate"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_EMISSION_034": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 6,
+      "printed_page": "V-6",
+      "section": "5.2 / Table 5.1 / Particulate",
+      "transcription": {
+        "inputs": {
+          "process": "Junk Disposal",
+          "pollutant": "Particulate"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_EMISSION_035": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 6,
+      "printed_page": "V-6",
+      "section": "5.2 / Table 5.1 / Particulate",
+      "transcription": {
+        "inputs": {
+          "process": "Explosion",
+          "pollutant": "Particulate"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_EMISSION_036": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 6,
+      "printed_page": "V-6",
+      "section": "5.2 / Table 5.1 / Particulate",
+      "transcription": {
+        "inputs": {
+          "process": "Operation Failure",
+          "pollutant": "Particulate"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_EMISSION_037": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 7,
+      "printed_page": "V-7",
+      "section": "5.2 / Table 5.1 / Hydrocarbon",
+      "transcription": {
+        "inputs": {
+          "process": "Explosion",
+          "pollutant": "Hydrocarbon"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_EMISSION_038": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 7,
+      "printed_page": "V-7",
+      "section": "5.2 / Table 5.1 / Hydrocarbon",
+      "transcription": {
+        "inputs": {
+          "process": "Operation Failure",
+          "pollutant": "Hydrocarbon"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_EMISSION_039": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 7,
+      "printed_page": "V-7",
+      "section": "5.2 / Table 5.1 / Suspended Solid",
+      "transcription": {
+        "inputs": {
+          "process": "Alteration of Ground Cover",
+          "pollutant": "Suspended Solid"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_EMISSION_040": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 7,
+      "printed_page": "V-7",
+      "section": "5.2 / Table 5.1 / Suspended Solid",
+      "transcription": {
+        "inputs": {
+          "process": "Energy Generation",
+          "pollutant": "Suspended Solid"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_EMISSION_041": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 7,
+      "printed_page": "V-7",
+      "section": "5.2 / Table 5.1 / Suspended Solid",
+      "transcription": {
+        "inputs": {
+          "process": "Erosion and Terrasing",
+          "pollutant": "Suspended Solid"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_EMISSION_042": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 7,
+      "printed_page": "V-7",
+      "section": "5.2 / Table 5.1 / Suspended Solid",
+      "transcription": {
+        "inputs": {
+          "process": "Waste Recycling",
+          "pollutant": "Suspended Solid"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_EMISSION_043": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 7,
+      "printed_page": "V-7",
+      "section": "5.2 / Table 5.1 / Suspended Solid",
+      "transcription": {
+        "inputs": {
+          "process": "Junk Disposal",
+          "pollutant": "Suspended Solid"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_EMISSION_044": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 7,
+      "printed_page": "V-7",
+      "section": "5.2 / Table 5.1 / Suspended Solid",
+      "transcription": {
+        "inputs": {
+          "process": "Liquid Effluent Discharge",
+          "pollutant": "Suspended Solid"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_EMISSION_045": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 7,
+      "printed_page": "V-7",
+      "section": "5.2 / Table 5.1 / Suspended Solid",
+      "transcription": {
+        "inputs": {
+          "process": "Operation Failure",
+          "pollutant": "Suspended Solid"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_046": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 8,
+      "printed_page": "V-8",
+      "section": "5.3 / Table 5.2 / Aquatic Plants",
+      "transcription": {
+        "inputs": {
+          "from": "Water Temperature",
+          "to": "Aquatic Plants"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_047": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 8,
+      "printed_page": "V-8",
+      "section": "5.3 / Table 5.2 / Archeological Sites",
+      "transcription": {
+        "inputs": {
+          "from": "Gasses and Particulate",
+          "to": "Archeological Sites"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_048": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 8,
+      "printed_page": "V-8",
+      "section": "5.3 / Table 5.2 / Birds",
+      "transcription": {
+        "inputs": {
+          "from": "Surface Water",
+          "to": "Birds"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_049": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 8,
+      "printed_page": "V-8",
+      "section": "5.3 / Table 5.2 / Birds",
+      "transcription": {
+        "inputs": {
+          "from": "Water Quality",
+          "to": "Birds"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_050": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 8,
+      "printed_page": "V-8",
+      "section": "5.3 / Table 5.2 / Birds",
+      "transcription": {
+        "inputs": {
+          "from": "Gasses and Particulate",
+          "to": "Birds"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_051": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 8,
+      "printed_page": "V-8",
+      "section": "5.3 / Table 5.2 / Birds",
+      "transcription": {
+        "inputs": {
+          "from": "Microfauna",
+          "to": "Birds"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_052": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 8,
+      "printed_page": "V-8",
+      "section": "5.3 / Table 5.2 / Endangered Species of Fauna",
+      "transcription": {
+        "inputs": {
+          "from": "Land Animals Reptiles",
+          "to": "Endangered Species of Fauna"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_053": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 8,
+      "printed_page": "V-8",
+      "section": "5.3 / Table 5.2 / Endangered Species of Fauna",
+      "transcription": {
+        "inputs": {
+          "from": "Surface Water",
+          "to": "Endangered Species of Fauna"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_054": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 8,
+      "printed_page": "V-8",
+      "section": "5.3 / Table 5.2 / Endangered Species of Fauna",
+      "transcription": {
+        "inputs": {
+          "from": "Water Quality",
+          "to": "Endangered Species of Fauna"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_055": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 8,
+      "printed_page": "V-8",
+      "section": "5.3 / Table 5.2 / Endangered Species of Fauna",
+      "transcription": {
+        "inputs": {
+          "from": "Water Temperature",
+          "to": "Endangered Species of Fauna"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_056": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 8,
+      "printed_page": "V-8",
+      "section": "5.3 / Table 5.2 / Endangered Species of Fauna",
+      "transcription": {
+        "inputs": {
+          "from": "Gasses and Particulate",
+          "to": "Endangered Species of Fauna"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_057": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 8,
+      "printed_page": "V-8",
+      "section": "5.3 / Table 5.2 / Endangered Species of Fauna",
+      "transcription": {
+        "inputs": {
+          "from": "Shrubs",
+          "to": "Endangered Species of Fauna"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_058": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 8,
+      "printed_page": "V-8",
+      "section": "5.3 / Table 5.2 / Endangered Species of Fauna",
+      "transcription": {
+        "inputs": {
+          "from": "Aquatic Plants",
+          "to": "Endangered Species of Fauna"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_059": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 8,
+      "printed_page": "V-8",
+      "section": "5.3 / Table 5.2 / Endangered Species of Fauna",
+      "transcription": {
+        "inputs": {
+          "from": "Microfauna",
+          "to": "Endangered Species of Fauna"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_060": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 9,
+      "printed_page": "V-9",
+      "section": "5.3 / Table 5.2 / Endangered Species of Flora",
+      "transcription": {
+        "inputs": {
+          "from": "Land Animals Reptiles",
+          "to": "Endangered Species of Flora"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_061": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 9,
+      "printed_page": "V-9",
+      "section": "5.3 / Table 5.2 / Endangered Species of Flora",
+      "transcription": {
+        "inputs": {
+          "from": "Surface Water",
+          "to": "Endangered Species of Flora"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_062": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 9,
+      "printed_page": "V-9",
+      "section": "5.3 / Table 5.2 / Endangered Species of Flora",
+      "transcription": {
+        "inputs": {
+          "from": "Water Quality",
+          "to": "Endangered Species of Flora"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_063": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 9,
+      "printed_page": "V-9",
+      "section": "5.3 / Table 5.2 / Endangered Species of Flora",
+      "transcription": {
+        "inputs": {
+          "from": "Water Temperature",
+          "to": "Endangered Species of Flora"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_064": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 9,
+      "printed_page": "V-9",
+      "section": "5.3 / Table 5.2 / Endangered Species of Flora",
+      "transcription": {
+        "inputs": {
+          "from": "Gasses and Particulate",
+          "to": "Endangered Species of Flora"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_065": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 9,
+      "printed_page": "V-9",
+      "section": "5.3 / Table 5.2 / Endangered Species of Flora",
+      "transcription": {
+        "inputs": {
+          "from": "Shrubs",
+          "to": "Endangered Species of Flora"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_066": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 9,
+      "printed_page": "V-9",
+      "section": "5.3 / Table 5.2 / Endangered Species of Flora",
+      "transcription": {
+        "inputs": {
+          "from": "Aquatic Plants",
+          "to": "Endangered Species of Flora"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_067": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 9,
+      "printed_page": "V-9",
+      "section": "5.3 / Table 5.2 / Endangered Species of Flora",
+      "transcription": {
+        "inputs": {
+          "from": "Birds",
+          "to": "Endangered Species of Flora"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_068": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 9,
+      "printed_page": "V-9",
+      "section": "5.3 / Table 5.2 / Flora Barriers",
+      "transcription": {
+        "inputs": {
+          "from": "MicroFlora",
+          "to": "Flora Barriers"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_069": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 9,
+      "printed_page": "V-9",
+      "section": "5.3 / Table 5.2 / Flora Barriers",
+      "transcription": {
+        "inputs": {
+          "from": "Endangered Species of Fauna",
+          "to": "Flora Barriers"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_070": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 9,
+      "printed_page": "V-9",
+      "section": "5.3 / Table 5.2 / Health and Safety",
+      "transcription": {
+        "inputs": {
+          "from": "Water Quality",
+          "to": "Health and Safety"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_071": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 9,
+      "printed_page": "V-9",
+      "section": "5.3 / Table 5.2 / Health and Safety",
+      "transcription": {
+        "inputs": {
+          "from": "Gasses and Particulate",
+          "to": "Health and Safety"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_072": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 9,
+      "printed_page": "V-9",
+      "section": "5.3 / Table 5.2 / Land Animals Reptiles",
+      "transcription": {
+        "inputs": {
+          "from": "Water Quality",
+          "to": "Land Animals Reptiles"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_073": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 9,
+      "printed_page": "V-9",
+      "section": "5.3 / Table 5.2 / Land Animals Reptiles",
+      "transcription": {
+        "inputs": {
+          "from": "Gasses and Particulate",
+          "to": "Land Animals Reptiles"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_074": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 9,
+      "printed_page": "V-9",
+      "section": "5.3 / Table 5.2 / Land Animals Reptiles",
+      "transcription": {
+        "inputs": {
+          "from": "Shrubs",
+          "to": "Land Animals Reptiles"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_075": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 9,
+      "printed_page": "V-9",
+      "section": "5.3 / Table 5.2 / Land Animals Reptiles",
+      "transcription": {
+        "inputs": {
+          "from": "Endangered Species of Fauna",
+          "to": "Land Animals Reptiles"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_076": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 9,
+      "printed_page": "V-9",
+      "section": "5.3 / Table 5.2 / Land Stability",
+      "transcription": {
+        "inputs": {
+          "from": "Shrubs",
+          "to": "Land Stability"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_077": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 9,
+      "printed_page": "V-9",
+      "section": "5.3 / Table 5.2 / Microfauna",
+      "transcription": {
+        "inputs": {
+          "from": "Surface Water",
+          "to": "Microfauna"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_078": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 9,
+      "printed_page": "V-9",
+      "section": "5.3 / Table 5.2 / Microfauna",
+      "transcription": {
+        "inputs": {
+          "from": "Water Quality",
+          "to": "Microfauna"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_079": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 9,
+      "printed_page": "V-9",
+      "section": "5.3 / Table 5.2 / Microfauna",
+      "transcription": {
+        "inputs": {
+          "from": "Water Temperature",
+          "to": "Microfauna"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_080": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 9,
+      "printed_page": "V-9",
+      "section": "5.3 / Table 5.2 / Microfauna",
+      "transcription": {
+        "inputs": {
+          "from": "Gasses and Particulate",
+          "to": "Microfauna"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_081": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 9,
+      "printed_page": "V-9",
+      "section": "5.3 / Table 5.2 / Microfauna",
+      "transcription": {
+        "inputs": {
+          "from": "Shrubs",
+          "to": "Microfauna"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_082": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 9,
+      "printed_page": "V-9",
+      "section": "5.3 / Table 5.2 / Microfauna",
+      "transcription": {
+        "inputs": {
+          "from": "Aquatic Plants",
+          "to": "Microfauna"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_083": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 9,
+      "printed_page": "V-9",
+      "section": "5.3 / Table 5.2 / Microfauna",
+      "transcription": {
+        "inputs": {
+          "from": "Birds",
+          "to": "Microfauna"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_084": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 9,
+      "printed_page": "V-9",
+      "section": "5.3 / Table 5.2 / Microflora",
+      "transcription": {
+        "inputs": {
+          "from": "Endangered Species of Flora",
+          "to": "Microflora"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_085": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 9,
+      "printed_page": "V-9",
+      "section": "5.3 / Table 5.2 / Microflora",
+      "transcription": {
+        "inputs": {
+          "from": "Water Quality",
+          "to": "Microflora"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_086": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 9,
+      "printed_page": "V-9",
+      "section": "5.3 / Table 5.2 / Microflora",
+      "transcription": {
+        "inputs": {
+          "from": "Water Temperature",
+          "to": "Microflora"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_087": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 9,
+      "printed_page": "V-9",
+      "section": "5.3 / Table 5.2 / Microflora",
+      "transcription": {
+        "inputs": {
+          "from": "Gasses and Particulate",
+          "to": "Microflora"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_088": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 9,
+      "printed_page": "V-9",
+      "section": "5.3 / Table 5.2 / Microflora",
+      "transcription": {
+        "inputs": {
+          "from": "Aquatic Plants",
+          "to": "Microflora"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_089": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 9,
+      "printed_page": "V-9",
+      "section": "5.3 / Table 5.2 / Picnicking",
+      "transcription": {
+        "inputs": {
+          "from": "Surface Water",
+          "to": "Picnicking"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_090": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 9,
+      "printed_page": "V-9",
+      "section": "5.3 / Table 5.2 / Picnicking",
+      "transcription": {
+        "inputs": {
+          "from": "Water Quality",
+          "to": "Picnicking"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_091": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 9,
+      "printed_page": "V-9",
+      "section": "5.3 / Table 5.2 / Picnicking",
+      "transcription": {
+        "inputs": {
+          "from": "Gasses and Particulate",
+          "to": "Picnicking"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_092": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 9,
+      "printed_page": "V-9",
+      "section": "5.3 / Table 5.2 / Picnicking",
+      "transcription": {
+        "inputs": {
+          "from": "Shrubs",
+          "to": "Picnicking"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_093": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 9,
+      "printed_page": "V-9",
+      "section": "5.3 / Table 5.2 / Rare Unique Species",
+      "transcription": {
+        "inputs": {
+          "from": "Surface Water",
+          "to": "Rare Unique Species"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_094": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 9,
+      "printed_page": "V-9",
+      "section": "5.3 / Table 5.2 / Rare Unique Species",
+      "transcription": {
+        "inputs": {
+          "from": "Water Quality",
+          "to": "Rare Unique Species"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_095": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 9,
+      "printed_page": "V-9",
+      "section": "5.3 / Table 5.2 / Rare Unique Species",
+      "transcription": {
+        "inputs": {
+          "from": "Water Temperature",
+          "to": "Rare Unique Species"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_096": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 9,
+      "printed_page": "V-9",
+      "section": "5.3 / Table 5.2 / Rare Unique Species",
+      "transcription": {
+        "inputs": {
+          "from": "Gasses and Particulate",
+          "to": "Rare Unique Species"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_097": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 9,
+      "printed_page": "V-9",
+      "section": "5.3 / Table 5.2 / Rare Unique Species",
+      "transcription": {
+        "inputs": {
+          "from": "Shrubs",
+          "to": "Rare Unique Species"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_098": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 10,
+      "printed_page": "V-10",
+      "section": "5.3 / Table 5.2 / Residential",
+      "transcription": {
+        "inputs": {
+          "from": "Surface Water",
+          "to": "Residential"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_099": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 10,
+      "printed_page": "V-10",
+      "section": "5.3 / Table 5.2 / Residential",
+      "transcription": {
+        "inputs": {
+          "from": "Water Quality",
+          "to": "Residential"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_100": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 10,
+      "printed_page": "V-10",
+      "section": "5.3 / Table 5.2 / Residential",
+      "transcription": {
+        "inputs": {
+          "from": "Gasses and Particulate",
+          "to": "Residential"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_101": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 10,
+      "printed_page": "V-10",
+      "section": "5.3 / Table 5.2 / Scenic Views and Vistas",
+      "transcription": {
+        "inputs": {
+          "from": "Gasses and Particulate",
+          "to": "Scenic Views and Vistas"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_102": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 10,
+      "printed_page": "V-10",
+      "section": "5.3 / Table 5.2 / Shrubs",
+      "transcription": {
+        "inputs": {
+          "from": "Surface Water",
+          "to": "Shrubs"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_103": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 10,
+      "printed_page": "V-10",
+      "section": "5.3 / Table 5.2 / Shrubs",
+      "transcription": {
+        "inputs": {
+          "from": "Water Quality",
+          "to": "Shrubs"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_104": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 10,
+      "printed_page": "V-10",
+      "section": "5.3 / Table 5.2 / Shrubs",
+      "transcription": {
+        "inputs": {
+          "from": "Gasses and Particulate",
+          "to": "Shrubs"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_105": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 10,
+      "printed_page": "V-10",
+      "section": "5.3 / Table 5.2 / Surface Water",
+      "transcription": {
+        "inputs": {
+          "from": "Water Quality",
+          "to": "Surface Water"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_106": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 10,
+      "printed_page": "V-10",
+      "section": "5.3 / Table 5.2 / Surface Water",
+      "transcription": {
+        "inputs": {
+          "from": "Gasses and Particulate",
+          "to": "Surface Water"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_107": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 10,
+      "printed_page": "V-10",
+      "section": "5.3 / Table 5.2 / Water Quality",
+      "transcription": {
+        "inputs": {
+          "from": "Surface Water",
+          "to": "Water Quality"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_108": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 10,
+      "printed_page": "V-10",
+      "section": "5.3 / Table 5.2 / Water Quality",
+      "transcription": {
+        "inputs": {
+          "from": "Gasses and Particulate",
+          "to": "Water Quality"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_INDIRECT_109": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 10,
+      "printed_page": "V-10",
+      "section": "5.3 / Table 5.2 / Water Quality",
+      "transcription": {
+        "inputs": {
+          "from": "Aquatic Plants",
+          "to": "Water Quality"
+        },
+        "value": true
+      }
+    },
+    "SRC_EXP_IMPACT_SE_110": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 4,
+      "printed_page": "V-4",
+      "section": "5.2 / Table 5.1 / Land Values",
+      "transcription": {
+        "inputs": {
+          "activity": "Alteration of Ground Cover",
+          "factor": "Land Values"
+        },
+        "value": 3.0
+      }
+    },
+    "SRC_EXP_IMPACT_SE_111": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 4,
+      "printed_page": "V-4",
+      "section": "5.2 / Table 5.1 / Land Values",
+      "transcription": {
+        "inputs": {
+          "activity": "Blasting and Drilling",
+          "factor": "Land Values"
+        },
+        "value": 4.0
+      }
+    },
+    "SRC_EXP_IMPACT_SE_112": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 4,
+      "printed_page": "V-4",
+      "section": "5.2 / Table 5.1 / Land Values",
+      "transcription": {
+        "inputs": {
+          "activity": "Product Storage",
+          "factor": "Land Values"
+        },
+        "value": 4.0
+      }
+    },
+    "SRC_EXP_IMPACT_SE_113": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 4,
+      "printed_page": "V-4",
+      "section": "5.2 / Table 5.1 / Land Values",
+      "transcription": {
+        "inputs": {
+          "activity": "Erosion and Terrasing",
+          "factor": "Land Values"
+        },
+        "value": 4.0
+      }
+    },
+    "SRC_EXP_IMPACT_SE_114": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 4,
+      "printed_page": "V-4",
+      "section": "5.2 / Table 5.1 / Land Values",
+      "transcription": {
+        "inputs": {
+          "activity": "Trucking",
+          "factor": "Land Values"
+        },
+        "value": 3.0
+      }
+    },
+    "SRC_EXP_IMPACT_SE_115": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 4,
+      "printed_page": "V-4",
+      "section": "5.2 / Table 5.1 / Land Values",
+      "transcription": {
+        "inputs": {
+          "activity": "Junk Disposal",
+          "factor": "Land Values"
+        },
+        "value": 4.0
+      }
+    },
+    "SRC_EXP_IMPACT_SE_116": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 4,
+      "printed_page": "V-4",
+      "section": "5.2 / Table 5.1 / Land Values",
+      "transcription": {
+        "inputs": {
+          "activity": "Cooling Water Discharge",
+          "factor": "Land Values"
+        },
+        "value": 0.5
+      }
+    },
+    "SRC_EXP_IMPACT_SE_117": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 4,
+      "printed_page": "V-4",
+      "section": "5.2 / Table 5.1 / Land Values",
+      "transcription": {
+        "inputs": {
+          "activity": "Liquid Effluent Discharge",
+          "factor": "Land Values"
+        },
+        "value": 4.0
+      }
+    },
+    "SRC_EXP_IMPACT_SE_118": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 4,
+      "printed_page": "V-4",
+      "section": "5.2 / Table 5.1 / Land Values",
+      "transcription": {
+        "inputs": {
+          "activity": "Explosion",
+          "factor": "Land Values"
+        },
+        "value": 1.0
+      }
+    },
+    "SRC_EXP_IMPACT_SE_119": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 4,
+      "printed_page": "V-4",
+      "section": "5.2 / Table 5.1 / Land Values",
+      "transcription": {
+        "inputs": {
+          "activity": "Operation Failure",
+          "factor": "Land Values"
+        },
+        "value": 2.0
+      }
+    },
+    "SRC_EXP_IMPACT_SE_120": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 4,
+      "printed_page": "V-4",
+      "section": "5.2 / Table 5.1 / Transportation Systems",
+      "transcription": {
+        "inputs": {
+          "activity": "Alteration of Ground Cover",
+          "factor": "Transportation Systems"
+        },
+        "value": 4.0
+      }
+    },
+    "SRC_EXP_IMPACT_SE_121": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 4,
+      "printed_page": "V-4",
+      "section": "5.2 / Table 5.1 / Transportation Systems",
+      "transcription": {
+        "inputs": {
+          "activity": "Blasting and Drilling",
+          "factor": "Transportation Systems"
+        },
+        "value": 1.0
+      }
+    },
+    "SRC_EXP_IMPACT_SE_122": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 4,
+      "printed_page": "V-4",
+      "section": "5.2 / Table 5.1 / Transportation Systems",
+      "transcription": {
+        "inputs": {
+          "activity": "Mineral Processing",
+          "factor": "Transportation Systems"
+        },
+        "value": 6.0
+      }
+    },
+    "SRC_EXP_IMPACT_SE_123": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 4,
+      "printed_page": "V-4",
+      "section": "5.2 / Table 5.1 / Transportation Systems",
+      "transcription": {
+        "inputs": {
+          "activity": "Product Storage",
+          "factor": "Transportation Systems"
+        },
+        "value": 5.0
+      }
+    },
+    "SRC_EXP_IMPACT_SE_124": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 4,
+      "printed_page": "V-4",
+      "section": "5.2 / Table 5.1 / Transportation Systems",
+      "transcription": {
+        "inputs": {
+          "activity": "Erosion and Terrasing",
+          "factor": "Transportation Systems"
+        },
+        "value": 1.0
+      }
+    },
+    "SRC_EXP_IMPACT_SE_125": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 4,
+      "printed_page": "V-4",
+      "section": "5.2 / Table 5.1 / Transportation Systems",
+      "transcription": {
+        "inputs": {
+          "activity": "Waste Recycling",
+          "factor": "Transportation Systems"
+        },
+        "value": 2.0
+      }
+    },
+    "SRC_EXP_IMPACT_SE_126": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 4,
+      "printed_page": "V-4",
+      "section": "5.2 / Table 5.1 / Transportation Systems",
+      "transcription": {
+        "inputs": {
+          "activity": "Trucking",
+          "factor": "Transportation Systems"
+        },
+        "value": 4.0
+      }
+    },
+    "SRC_EXP_IMPACT_SE_127": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 5,
+      "printed_page": "V-5",
+      "section": "5.2 / Table 5.1 / Migration",
+      "transcription": {
+        "inputs": {
+          "activity": "Mineral Processing",
+          "factor": "Migration"
+        },
+        "value": 6.0
+      }
+    },
+    "SRC_EXP_IMPACT_SE_128": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 5,
+      "printed_page": "V-5",
+      "section": "5.2 / Table 5.1 / Migration",
+      "transcription": {
+        "inputs": {
+          "activity": "Trucking",
+          "factor": "Migration"
+        },
+        "value": 4.0
+      }
+    },
+    "SRC_EXP_IMPACT_SE_129": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 5,
+      "printed_page": "V-5",
+      "section": "5.2 / Table 5.1 / Migration",
+      "transcription": {
+        "inputs": {
+          "activity": "Liquid Effluent Discharge",
+          "factor": "Migration"
+        },
+        "value": 2.0
+      }
+    },
+    "SRC_EXP_IMPACT_SE_130": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 5,
+      "printed_page": "V-5",
+      "section": "5.2 / Table 5.1 / Migration",
+      "transcription": {
+        "inputs": {
+          "activity": "Operation Failure",
+          "factor": "Migration"
+        },
+        "value": 1.0
+      }
+    },
+    "SRC_EXP_IMPACT_SE_131": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 5,
+      "printed_page": "V-5",
+      "section": "5.2 / Table 5.1 / Economic History",
+      "transcription": {
+        "inputs": {
+          "activity": "Erosion and Terrasing",
+          "factor": "Economic History"
+        },
+        "value": 5.0
+      }
+    },
+    "SRC_EXP_IMPACT_SE_132": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 5,
+      "printed_page": "V-5",
+      "section": "5.2 / Table 5.1 / Economic History",
+      "transcription": {
+        "inputs": {
+          "activity": "Liquid Effluent Discharge",
+          "factor": "Economic History"
+        },
+        "value": 6.0
+      }
+    },
+    "SRC_EXP_IMPACT_SE_133": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 5,
+      "printed_page": "V-5",
+      "section": "5.2 / Table 5.1 / Health and Social Services",
+      "transcription": {
+        "inputs": {
+          "activity": "Blasting and Drilling",
+          "factor": "Health and Social Services"
+        },
+        "value": 2.0
+      }
+    },
+    "SRC_EXP_IMPACT_SE_134": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 5,
+      "printed_page": "V-5",
+      "section": "5.2 / Table 5.1 / Health and Social Services",
+      "transcription": {
+        "inputs": {
+          "activity": "Mineral Processing",
+          "factor": "Health and Social Services"
+        },
+        "value": 6.0
+      }
+    },
+    "SRC_EXP_IMPACT_SE_135": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 5,
+      "printed_page": "V-5",
+      "section": "5.2 / Table 5.1 / Health and Social Services",
+      "transcription": {
+        "inputs": {
+          "activity": "Product Storage",
+          "factor": "Health and Social Services"
+        },
+        "value": 0.5
+      }
+    },
+    "SRC_EXP_IMPACT_SE_136": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 5,
+      "printed_page": "V-5",
+      "section": "5.2 / Table 5.1 / Health and Social Services",
+      "transcription": {
+        "inputs": {
+          "activity": "Waste Recycling",
+          "factor": "Health and Social Services"
+        },
+        "value": 2.0
+      }
+    },
+    "SRC_EXP_IMPACT_SE_137": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 5,
+      "printed_page": "V-5",
+      "section": "5.2 / Table 5.1 / Housing Characteristics",
+      "transcription": {
+        "inputs": {
+          "activity": "Junk Disposal",
+          "factor": "Housing Characteristics"
+        },
+        "value": 1.0
+      }
+    },
+    "SRC_EXP_IMPACT_SE_138": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 5,
+      "printed_page": "V-5",
+      "section": "5.2 / Table 5.1 / Distinct Settlements",
+      "transcription": {
+        "inputs": {
+          "activity": "Energy Generation",
+          "factor": "Distinct Settlements"
+        },
+        "value": 2.0
+      }
+    },
+    "SRC_EXP_IMPACT_SE_139": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 5,
+      "printed_page": "V-5",
+      "section": "5.2 / Table 5.1 / Distinct Settlements",
+      "transcription": {
+        "inputs": {
+          "activity": "Mineral Processing",
+          "factor": "Distinct Settlements"
+        },
+        "value": 4.0
+      }
+    },
+    "SRC_EXP_IMPACT_SE_140": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 5,
+      "printed_page": "V-5",
+      "section": "5.2 / Table 5.1 / Distinct Settlements",
+      "transcription": {
+        "inputs": {
+          "activity": "Junk Disposal",
+          "factor": "Distinct Settlements"
+        },
+        "value": 1.0
+      }
+    },
+    "SRC_EXP_IMPACT_SE_141": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 6,
+      "printed_page": "V-6",
+      "section": "5.2 / Table 5.1 / Income Level",
+      "transcription": {
+        "inputs": {
+          "activity": "Energy Generation",
+          "factor": "Income Level"
+        },
+        "value": 3.0
+      }
+    },
+    "SRC_EXP_IMPACT_SE_142": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 6,
+      "printed_page": "V-6",
+      "section": "5.2 / Table 5.1 / Income Level",
+      "transcription": {
+        "inputs": {
+          "activity": "Mineral Processing",
+          "factor": "Income Level"
+        },
+        "value": 6.0
+      }
+    },
+    "SRC_EXP_IMPACT_SE_143": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 6,
+      "printed_page": "V-6",
+      "section": "5.2 / Table 5.1 / Income Level",
+      "transcription": {
+        "inputs": {
+          "activity": "Product Storage",
+          "factor": "Income Level"
+        },
+        "value": 1.0
+      }
+    },
+    "SRC_EXP_IMPACT_SE_144": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 6,
+      "printed_page": "V-6",
+      "section": "5.2 / Table 5.1 / Income Level",
+      "transcription": {
+        "inputs": {
+          "activity": "Erosion and Terrasing",
+          "factor": "Income Level"
+        },
+        "value": 5.0
+      }
+    },
+    "SRC_EXP_IMPACT_SE_145": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 6,
+      "printed_page": "V-6",
+      "section": "5.2 / Table 5.1 / Income Level",
+      "transcription": {
+        "inputs": {
+          "activity": "Junk Disposal",
+          "factor": "Income Level"
+        },
+        "value": 1.0
+      }
+    },
+    "SRC_EXP_IMPACT_SE_146": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 6,
+      "printed_page": "V-6",
+      "section": "5.2 / Table 5.1 / Income Level",
+      "transcription": {
+        "inputs": {
+          "activity": "Liquid Effluent Discharge",
+          "factor": "Income Level"
+        },
+        "value": 4.0
+      }
+    },
+    "SRC_EXP_SOC_EC_147": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 10,
+      "printed_page": "V-10",
+      "section": "5.4 / Table 5.3 / Migration",
+      "transcription": {
+        "inputs": {
+          "activity": "Migration"
+        },
+        "value": "changes in demand on educational resources"
+      }
+    },
+    "SRC_EXP_SOC_EC_148": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 10,
+      "printed_page": "V-10",
+      "section": "5.4 / Table 5.3 / Migration",
+      "transcription": {
+        "inputs": {
+          "activity": "Migration"
+        },
+        "value": "changes in demand on transportation systems"
+      }
+    },
+    "SRC_EXP_SOC_EC_149": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 10,
+      "printed_page": "V-10",
+      "section": "5.4 / Table 5.3 / Migration",
+      "transcription": {
+        "inputs": {
+          "activity": "Migration"
+        },
+        "value": "disruption of cohesion in community groups"
+      }
+    },
+    "SRC_EXP_SOC_EC_150": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 10,
+      "printed_page": "V-10",
+      "section": "5.4 / Table 5.3 / Migration",
+      "transcription": {
+        "inputs": {
+          "activity": "Migration"
+        },
+        "value": "disruption of religious petterns and characteristics"
+      }
+    },
+    "SRC_EXP_SOC_EC_151": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 10,
+      "printed_page": "V-10",
+      "section": "5.4 / Table 5.3 / Migration",
+      "transcription": {
+        "inputs": {
+          "activity": "Migration"
+        },
+        "value": "increase or decrease employment patterns"
+      }
+    },
+    "SRC_EXP_SOC_EC_152": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 11,
+      "printed_page": "V-11",
+      "section": "5.4 / Table 5.3 / Migration",
+      "transcription": {
+        "inputs": {
+          "activity": "Migration"
+        },
+        "value": "increase or decrease income level"
+      }
+    },
+    "SRC_EXP_SOC_EC_153": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 11,
+      "printed_page": "V-11",
+      "section": "5.4 / Table 5.3 / Migration",
+      "transcription": {
+        "inputs": {
+          "activity": "Migration"
+        },
+        "value": "increase or decrease population growth"
+      }
+    },
+    "SRC_EXP_SOC_EC_154": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 11,
+      "printed_page": "V-11",
+      "section": "5.4 / Table 5.3 / Migration",
+      "transcription": {
+        "inputs": {
+          "activity": "Migration"
+        },
+        "value": "increase or decrease workforce"
+      }
+    },
+    "SRC_EXP_SOC_EC_155": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 11,
+      "printed_page": "V-11",
+      "section": "5.4 / Table 5.3 / Migration",
+      "transcription": {
+        "inputs": {
+          "activity": "Migration"
+        },
+        "value": "varies in population characteristics"
+      }
+    },
+    "SRC_EXP_MITIGATION_156": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 16,
+      "printed_page": "V-16",
+      "section": "5.5 / Table 5.4 / Alteration of Ground Cover",
+      "transcription": {
+        "inputs": {
+          "activity": "Alteration of Ground Cover"
+        },
+        "value": "Provide plan for limestone mine restoration. Plan for limestone resources usage to fit availability and imposed restrictions on manner of quarrying."
+      }
+    },
+    "SRC_EXP_MITIGATION_157": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 17,
+      "printed_page": "V-17",
+      "section": "5.5 / Table 5.4 / Energy Generation",
+      "transcription": {
+        "inputs": {
+          "activity": "Energy Generation"
+        },
+        "value": "Control by scubbing action of alkaline materials and enhenced by utilization of preheated kilns, and use of exhaust gases to dry raw materials in grinding."
+      }
+    },
+    "SRC_EXP_MITIGATION_158": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 17,
+      "printed_page": "V-17",
+      "section": "5.5 / Table 5.4 / Erosion and Terrasing",
+      "transcription": {
+        "inputs": {
+          "activity": "Erosion and Terrasing"
+        },
+        "value": "covering or containment to prevent percolation and runoff to ground and surface water."
+      }
+    },
+    "SRC_EXP_MITIGATION_159": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 17,
+      "printed_page": "V-17",
+      "section": "5.5 / Table 5.4 / Explosion",
+      "transcription": {
+        "inputs": {
+          "activity": "Explosion"
+        },
+        "value": "Protect surface water from additional suspended solid."
+      }
+    },
+    "SRC_EXP_MITIGATION_160": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 17,
+      "printed_page": "V-17",
+      "section": "5.5 / Table 5.4 / Junk Disposal",
+      "transcription": {
+        "inputs": {
+          "activity": "Junk Disposal"
+        },
+        "value": "Move to a proper site."
+      }
+    },
+    "SRC_EXP_MITIGATION_161": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 17,
+      "printed_page": "V-17",
+      "section": "5.5 / Table 5.4 / Liquid Effluent Discharge",
+      "transcription": {
+        "inputs": {
+          "activity": "Liquid Effluent Discharge"
+        },
+        "value": "Total Suspended Solid < 150 g/ton product during equipment cleaning operations or during periods of rainfall."
+      }
+    },
+    "SRC_EXP_MITIGATION_162": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 17,
+      "printed_page": "V-17",
+      "section": "5.5 / Table 5.4 / Operation Failure",
+      "transcription": {
+        "inputs": {
+          "activity": "Operation Failure"
+        },
+        "value": "Design precipitator with paralel chambers, enforce kiln shut down when precipitator is completely out of order."
+      }
+    },
+    "SRC_EXP_STANDARD_163": {
+      "chapter": "bab4",
+      "file_id": 27441,
+      "pdf_page": 7,
+      "printed_page": "IV-7",
+      "section": "4.4.1 / Figure 4.3",
+      "transcription": {
+        "inputs": {
+          "pollutant": "H2S",
+          "lower": 0.0,
+          "upper": 10.5
+        },
+        "value": 2.0
+      }
+    },
+    "SRC_EXP_STANDARD_164": {
+      "chapter": "bab4",
+      "file_id": 27441,
+      "pdf_page": 7,
+      "printed_page": "IV-7",
+      "section": "4.4.1 / Figure 4.3",
+      "transcription": {
+        "inputs": {
+          "pollutant": "H2S",
+          "lower": 10.5,
+          "upper": 21.0
+        },
+        "value": 4.0
+      }
+    },
+    "SRC_EXP_STANDARD_165": {
+      "chapter": "bab4",
+      "file_id": 27441,
+      "pdf_page": 7,
+      "printed_page": "IV-7",
+      "section": "4.4.1 / Figure 4.3",
+      "transcription": {
+        "inputs": {
+          "pollutant": "H2S",
+          "lower": 21.0,
+          "upper": 42.0
+        },
+        "value": 7.0
+      }
+    },
+    "SRC_EXP_STANDARD_166": {
+      "chapter": "bab4",
+      "file_id": 27441,
+      "pdf_page": 7,
+      "printed_page": "IV-7",
+      "section": "4.4.1 / Figure 4.3",
+      "transcription": {
+        "inputs": {
+          "pollutant": "H2S",
+          "lower": 42.0,
+          "upper": 1000.0
+        },
+        "value": 10.0
+      }
     }
   },
-  "criteria": [
-    {
-      "id": "comprehensiveness",
-      "aspect": "identification",
-      "label": "Komprehensivitas",
-      "question_summary": "all impacts considered",
-      "mechanism": "accumulated analyzed impacts",
-      "source_ids": [
-        "CR_COMPREHENSIVENESS",
-        "CR_COMPREHENSIVENESS_IMPL"
-      ]
-    },
-    {
-      "id": "specificity",
-      "aspect": "identification",
-      "label": "Spesifisitas",
-      "question_summary": "environmental parameters sufficiently specific",
-      "mechanism": "environmental-component/impact count comparison",
-      "source_ids": [
-        "CR_SPECIFICITY",
-        "CR_SPECIFICITY_IMPL"
-      ]
-    },
-    {
-      "id": "impact_isolation",
-      "aspect": "identification",
-      "label": "Isolasi dampak",
-      "question_summary": "techniques for identifying project impacts",
-      "mechanism": "explicit user question",
-      "source_ids": [
-        "CR_IMPACT_ISOLATION",
-        "CR_IMPACT_ISOLATION_IMPL"
-      ]
-    },
-    {
-      "id": "time_consideration",
-      "aspect": "identification",
-      "label": "Konsiderasi waktu",
-      "question_summary": "construction versus operational impacts distinguished",
-      "mechanism": "additional activity stage database and accumulated stage-defined activities",
-      "source_ids": [
-        "CR_TIME_CONSIDERATION",
-        "CR_TIME_CONSIDERATION_IMPL"
-      ]
-    },
-    {
-      "id": "data_sources",
-      "aspect": "identification",
-      "label": "Sumber data",
-      "question_summary": "identification of data sources required",
-      "mechanism": "fixed yes, explicitly L",
-      "source_ids": [
-        "CR_DATA_SOURCES",
-        "CR_DATA_SOURCES_IMPL"
-      ]
-    },
-    {
-      "id": "explicit_indicators",
-      "aspect": "measurement",
-      "label": "Indikator eksplisit",
-      "question_summary": "specific measurable quantification indicators suggested",
-      "mechanism": "explicit user question",
-      "source_ids": [
-        "CR_EXPLICIT_INDICATORS",
-        "CR_EXPLICIT_INDICATORS_IMPL"
-      ]
-    },
-    {
-      "id": "magnitude",
-      "aspect": "measurement",
-      "label": "Magnitudo",
-      "question_summary": "numerical impact magnitudes required",
-      "mechanism": "fixed yes, explicitly L in prose; Table 6.6 instead references instrumentation database",
-      "source_ids": [
-        "CR_MAGNITUDE",
-        "CR_MAGNITUDE_IMPL"
-      ]
-    },
-    {
-      "id": "objectivity",
-      "aspect": "measurement",
-      "label": "Objektivitas",
-      "question_summary": "objective rather than subjective measurements emphasized",
-      "mechanism": "additional observation/instrumentation accuracy database",
-      "source_ids": [
-        "CR_OBJECTIVITY",
-        "CR_OBJECTIVITY_IMPL"
-      ]
-    },
-    {
-      "id": "significance",
-      "aspect": "interpretation",
-      "label": "Signifikansi",
-      "question_summary": "local regional national importance assessment required",
-      "mechanism": "explicit user question",
-      "source_ids": [
-        "CR_SIGNIFICANCE",
-        "CR_SIGNIFICANCE_IMPL"
-      ]
-    },
-    {
-      "id": "explicit_criteria",
-      "aspect": "interpretation",
-      "label": "Kriteria eksplisit",
-      "question_summary": "criteria and assumptions stated explicitly",
-      "mechanism": "additional criteria/assumptions database connected to activities",
-      "source_ids": [
-        "CR_EXPLICIT_CRITERIA",
-        "CR_EXPLICIT_CRITERIA_IMPL"
-      ]
-    },
-    {
-      "id": "uncertainty",
-      "aspect": "interpretation",
-      "label": "Ketidakyakinan",
-      "question_summary": "projection uncertainty considered",
-      "mechanism": "fixed yes",
-      "source_ids": [
-        "CR_UNCERTAINTY",
-        "CR_UNCERTAINTY_IMPL"
-      ]
-    },
-    {
-      "id": "risk",
-      "aspect": "interpretation",
-      "label": "Resiko",
-      "question_summary": "low probability high damage impacts considered",
-      "mechanism": "accumulated impact magnitude",
-      "source_ids": [
-        "CR_RISK",
-        "CR_RISK_IMPL"
-      ]
-    },
-    {
-      "id": "alternatives",
-      "aspect": "interpretation",
-      "label": "Perbandingan alternatif",
-      "question_summary": "alternatives can be compared",
-      "mechanism": "count of alternatives offered",
-      "source_ids": [
-        "CR_ALTERNATIVES",
-        "CR_ALTERNATIVES_IMPL"
-      ]
-    },
-    {
-      "id": "aggregation",
-      "aspect": "interpretation",
-      "label": "Agregasi",
-      "question_summary": "measurement and interpretation information aggregated",
-      "mechanism": "fixed yes",
-      "source_ids": [
-        "CR_AGGREGATION",
-        "CR_AGGREGATION_IMPL"
-      ]
-    },
-    {
-      "id": "public_involvement",
-      "aspect": "interpretation",
-      "label": "Keterlibatan publik",
-      "question_summary": "public input into interpretation available",
-      "mechanism": "fixed no",
-      "source_ids": [
-        "CR_PUBLIC_INVOLVEMENT",
-        "CR_PUBLIC_INVOLVEMENT_IMPL"
-      ]
-    },
-    {
-      "id": "affected_groups",
-      "aspect": "communication",
-      "label": "Kelompok terkena dampak",
-      "question_summary": "impacts connected to most affected human groups",
-      "mechanism": "fixed no",
-      "source_ids": [
-        "CR_AFFECTED_GROUPS",
-        "CR_AFFECTED_GROUPS_IMPL"
-      ]
-    },
-    {
-      "id": "environmental_setting",
-      "aspect": "communication",
-      "label": "Deskripsi setting lingkungan",
-      "question_summary": "clear environmental setting description required",
-      "mechanism": "count of analyzed environmental components",
-      "source_ids": [
-        "CR_ENVIRONMENTAL_SETTING",
-        "CR_ENVIRONMENTAL_SETTING_IMPL"
-      ]
-    },
-    {
-      "id": "summary_format",
-      "aspect": "communication",
-      "label": "Format penyingkatan",
-      "question_summary": "recommended summary format included",
-      "mechanism": "fixed yes",
-      "source_ids": [
-        "CR_SUMMARY_FORMAT",
-        "CR_SUMMARY_FORMAT_IMPL"
-      ]
-    },
-    {
-      "id": "key_issues",
-      "aspect": "communication",
-      "label": "Isu-isu utama",
-      "question_summary": "main issues highlighted",
-      "mechanism": "most frequent analyzed impacts",
-      "source_ids": [
-        "CR_KEY_ISSUES",
-        "CR_KEY_ISSUES_IMPL"
-      ]
-    },
-    {
-      "id": "nepa_conformity",
-      "aspect": "communication",
-      "label": "Kesesuaian dengan NEPA",
-      "question_summary": "NEPA standards followed",
-      "mechanism": "fixed yes; thesis claim, not independent certification",
-      "source_ids": [
-        "CR_NEPA_CONFORMITY",
-        "CR_NEPA_CONFORMITY_IMPL"
-      ]
-    }
-  ],
-  "rules": [
+  "facts": [
     {
       "id": "IMPACT_01",
       "kind": "impact",
@@ -1343,22 +3696,6 @@
       "classification": "faithful_translation"
     },
     {
-      "id": "STANDARD_SO2",
-      "kind": "standard",
-      "inputs": {
-        "pollutant": "SO2"
-      },
-      "value": {
-        "lower": 0,
-        "upper": 40.0,
-        "magnitude": 2.0
-      },
-      "source_ids": [
-        "EX_STANDARD_SO2"
-      ],
-      "classification": "faithful_translation"
-    },
-    {
       "id": "SOCIAL_BLASTING",
       "kind": "impact_se",
       "inputs": {
@@ -1368,32 +3705,6 @@
       "value": 1.0,
       "source_ids": [
         "EX_SOCIAL_BLASTING"
-      ],
-      "classification": "faithful_translation"
-    },
-    {
-      "id": "INDIRECT_WATER",
-      "kind": "indirect_impact",
-      "inputs": {
-        "from": "Water Temperature",
-        "to": "Microflora"
-      },
-      "value": true,
-      "source_ids": [
-        "EX_INDIRECT_WATER"
-      ],
-      "classification": "faithful_translation"
-    },
-    {
-      "id": "INDIRECT_GASSES",
-      "kind": "indirect_impact",
-      "inputs": {
-        "from": "Gasses and Particulate",
-        "to": "Health and Safety"
-      },
-      "value": true,
-      "source_ids": [
-        "EX_INDIRECT_GASSES"
       ],
       "classification": "faithful_translation"
     },
@@ -1418,6 +3729,2356 @@
       "value": "Mimimise rainfall allowed to percolate through piles of lime stone area and runoff in uncontrolled fashion",
       "source_ids": [
         "EX_MITIGATION_STORAGE"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "FACT_EMISSION_01",
+      "kind": "emission",
+      "inputs": {
+        "process": "Mineral Processing",
+        "pollutant": "SO2"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_FACT_EMISSION_01"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "FACT_EMISSION_02",
+      "kind": "emission",
+      "inputs": {
+        "process": "Mineral Processing",
+        "pollutant": "CO"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_FACT_EMISSION_02"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "FACT_EMISSION_03",
+      "kind": "emission",
+      "inputs": {
+        "process": "Mineral Processing",
+        "pollutant": "Particulate"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_FACT_EMISSION_03"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "FACT_EMISSION_04",
+      "kind": "emission",
+      "inputs": {
+        "process": "Mineral Processing",
+        "pollutant": "H2S"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_FACT_EMISSION_04"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "FACT_EMISSION_05",
+      "kind": "emission",
+      "inputs": {
+        "process": "Mineral Processing",
+        "pollutant": "Hydrocarbon"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_FACT_EMISSION_05"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "FACT_EMISSION_06",
+      "kind": "emission",
+      "inputs": {
+        "process": "Mineral Processing",
+        "pollutant": "Water Temperature"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_FACT_EMISSION_06"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "FACT_EMISSION_07",
+      "kind": "emission",
+      "inputs": {
+        "process": "Mineral Processing",
+        "pollutant": "Suspended Solid"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_FACT_EMISSION_07"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "FACT_EMISSION_08",
+      "kind": "emission",
+      "inputs": {
+        "process": "Product Storage",
+        "pollutant": "Particulate"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_FACT_EMISSION_08"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "FACT_EMISSION_09",
+      "kind": "emission",
+      "inputs": {
+        "process": "Product Storage",
+        "pollutant": "Hydrocarbon"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_FACT_EMISSION_09"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "FACT_EMISSION_10",
+      "kind": "emission",
+      "inputs": {
+        "process": "Product Storage",
+        "pollutant": "Suspended Solid"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_FACT_EMISSION_10"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "FACT_EMISSION_11",
+      "kind": "emission",
+      "inputs": {
+        "process": "Blasting and Drilling",
+        "pollutant": "Particulate"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_FACT_EMISSION_11"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "FACT_EMISSION_12",
+      "kind": "emission",
+      "inputs": {
+        "process": "Blasting and Drilling",
+        "pollutant": "Suspended Solid"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_FACT_EMISSION_12"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "FACT_EMISSION_13",
+      "kind": "emission",
+      "inputs": {
+        "process": "Cooling Water Discharge",
+        "pollutant": "Suspended Solid"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_FACT_EMISSION_13"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "FACT_INDIRECT_14",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Surface Water",
+        "to": "Aquatic Plants"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_FACT_INDIRECT_14"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "FACT_INDIRECT_15",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Aquatic Plants",
+        "to": "Birds"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_FACT_INDIRECT_15"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "FACT_INDIRECT_16",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Shrubs",
+        "to": "Erosion"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_FACT_INDIRECT_16"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "FACT_MITIGATION_17",
+      "kind": "mitigation",
+      "inputs": {
+        "activity": "Mineral Processing"
+      },
+      "value": "Control particulate by fabric filter collectors, control kiln particulate emissions by electric precipitator dust collectors.",
+      "source_ids": [
+        "SRC_FACT_MITIGATION_17"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "FACT_MITIGATION_18",
+      "kind": "mitigation",
+      "inputs": {
+        "activity": "Blasting and Drilling"
+      },
+      "value": "Special transportation sector studies should be prepared during project feasibility to select best routes to reduced impacts .",
+      "source_ids": [
+        "SRC_FACT_MITIGATION_18"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "FACT_MITIGATION_19",
+      "kind": "mitigation",
+      "inputs": {
+        "activity": "Cooling Water Discharge"
+      },
+      "value": "If recycling is not feasible, discharge cooling water provided receiving water temperature does not rise 3 degree Celcious.",
+      "source_ids": [
+        "SRC_FACT_MITIGATION_19"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_001",
+      "kind": "impact",
+      "inputs": {
+        "pollutant": "SO2",
+        "environment": "Gasses and Particulate"
+      },
+      "value": 8.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_001"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_002",
+      "kind": "impact",
+      "inputs": {
+        "pollutant": "CO",
+        "environment": "Gasses and Particulate"
+      },
+      "value": 6.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_002"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_003",
+      "kind": "impact",
+      "inputs": {
+        "pollutant": "Particulate",
+        "environment": "Gasses and Particulate"
+      },
+      "value": 6.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_003"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_004",
+      "kind": "impact",
+      "inputs": {
+        "pollutant": "H2S",
+        "environment": "Gasses and Particulate"
+      },
+      "value": 4.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_004"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_005",
+      "kind": "impact",
+      "inputs": {
+        "pollutant": "Hydrocarbon",
+        "environment": "Gasses and Particulate"
+      },
+      "value": 2.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_005"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_006",
+      "kind": "impact",
+      "inputs": {
+        "pollutant": "SO2",
+        "environment": "Microfauna"
+      },
+      "value": 6.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_006"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_007",
+      "kind": "impact",
+      "inputs": {
+        "pollutant": "Particulate",
+        "environment": "Microfauna"
+      },
+      "value": 2.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_007"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_008",
+      "kind": "impact",
+      "inputs": {
+        "pollutant": "H2S",
+        "environment": "Microfauna"
+      },
+      "value": 1.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_008"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_009",
+      "kind": "impact",
+      "inputs": {
+        "pollutant": "Hydrocarbon",
+        "environment": "Microfauna"
+      },
+      "value": 1.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_009"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_010",
+      "kind": "impact",
+      "inputs": {
+        "pollutant": "Water Temperature",
+        "environment": "Microfauna"
+      },
+      "value": 6.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_010"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_011",
+      "kind": "impact",
+      "inputs": {
+        "pollutant": "Suspended Solid",
+        "environment": "Microfauna"
+      },
+      "value": 4.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_011"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_012",
+      "kind": "impact",
+      "inputs": {
+        "pollutant": "Water Temperature",
+        "environment": "Aquatic Plants"
+      },
+      "value": 4.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_012"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_013",
+      "kind": "impact",
+      "inputs": {
+        "pollutant": "SO2",
+        "environment": "Endangered Species of Fauna"
+      },
+      "value": 8.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_013"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_014",
+      "kind": "impact",
+      "inputs": {
+        "pollutant": "Particulate",
+        "environment": "Endangered Species of Fauna"
+      },
+      "value": 4.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_014"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_015",
+      "kind": "impact",
+      "inputs": {
+        "pollutant": "H2S",
+        "environment": "Endangered Species of Fauna"
+      },
+      "value": 2.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_015"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_016",
+      "kind": "impact",
+      "inputs": {
+        "pollutant": "Hydrocarbon",
+        "environment": "Endangered Species of Fauna"
+      },
+      "value": 1.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_016"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_017",
+      "kind": "impact",
+      "inputs": {
+        "pollutant": "Water Temperature",
+        "environment": "Endangered Species of Fauna"
+      },
+      "value": 8.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_017"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_018",
+      "kind": "impact",
+      "inputs": {
+        "pollutant": "Suspended Solid",
+        "environment": "Endangered Species of Fauna"
+      },
+      "value": 6.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_018"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_EMISSION_019",
+      "kind": "emission",
+      "inputs": {
+        "process": "Energy Generation",
+        "pollutant": "SO2"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_EMISSION_019"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_EMISSION_020",
+      "kind": "emission",
+      "inputs": {
+        "process": "Trucking",
+        "pollutant": "SO2"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_EMISSION_020"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_EMISSION_021",
+      "kind": "emission",
+      "inputs": {
+        "process": "Junk Disposal",
+        "pollutant": "SO2"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_EMISSION_021"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_EMISSION_022",
+      "kind": "emission",
+      "inputs": {
+        "process": "Explosion",
+        "pollutant": "SO2"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_EMISSION_022"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_EMISSION_023",
+      "kind": "emission",
+      "inputs": {
+        "process": "Operation Failure",
+        "pollutant": "SO2"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_EMISSION_023"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_EMISSION_024",
+      "kind": "emission",
+      "inputs": {
+        "process": "Alteration of Ground Cover",
+        "pollutant": "CO"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_EMISSION_024"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_EMISSION_025",
+      "kind": "emission",
+      "inputs": {
+        "process": "Energy Generation",
+        "pollutant": "CO"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_EMISSION_025"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_EMISSION_026",
+      "kind": "emission",
+      "inputs": {
+        "process": "Trucking",
+        "pollutant": "CO"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_EMISSION_026"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_EMISSION_027",
+      "kind": "emission",
+      "inputs": {
+        "process": "Junk Disposal",
+        "pollutant": "CO"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_EMISSION_027"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_EMISSION_028",
+      "kind": "emission",
+      "inputs": {
+        "process": "Explosion",
+        "pollutant": "CO"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_EMISSION_028"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_EMISSION_029",
+      "kind": "emission",
+      "inputs": {
+        "process": "Operation Failure",
+        "pollutant": "CO"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_EMISSION_029"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_EMISSION_030",
+      "kind": "emission",
+      "inputs": {
+        "process": "Alteration of Ground Cover",
+        "pollutant": "Particulate"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_EMISSION_030"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_EMISSION_031",
+      "kind": "emission",
+      "inputs": {
+        "process": "Energy Generation",
+        "pollutant": "Particulate"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_EMISSION_031"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_EMISSION_032",
+      "kind": "emission",
+      "inputs": {
+        "process": "Erosion and Terrasing",
+        "pollutant": "Particulate"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_EMISSION_032"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_EMISSION_033",
+      "kind": "emission",
+      "inputs": {
+        "process": "Trucking",
+        "pollutant": "Particulate"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_EMISSION_033"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_EMISSION_034",
+      "kind": "emission",
+      "inputs": {
+        "process": "Junk Disposal",
+        "pollutant": "Particulate"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_EMISSION_034"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_EMISSION_035",
+      "kind": "emission",
+      "inputs": {
+        "process": "Explosion",
+        "pollutant": "Particulate"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_EMISSION_035"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_EMISSION_036",
+      "kind": "emission",
+      "inputs": {
+        "process": "Operation Failure",
+        "pollutant": "Particulate"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_EMISSION_036"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_EMISSION_037",
+      "kind": "emission",
+      "inputs": {
+        "process": "Explosion",
+        "pollutant": "Hydrocarbon"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_EMISSION_037"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_EMISSION_038",
+      "kind": "emission",
+      "inputs": {
+        "process": "Operation Failure",
+        "pollutant": "Hydrocarbon"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_EMISSION_038"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_EMISSION_039",
+      "kind": "emission",
+      "inputs": {
+        "process": "Alteration of Ground Cover",
+        "pollutant": "Suspended Solid"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_EMISSION_039"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_EMISSION_040",
+      "kind": "emission",
+      "inputs": {
+        "process": "Energy Generation",
+        "pollutant": "Suspended Solid"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_EMISSION_040"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_EMISSION_041",
+      "kind": "emission",
+      "inputs": {
+        "process": "Erosion and Terrasing",
+        "pollutant": "Suspended Solid"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_EMISSION_041"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_EMISSION_042",
+      "kind": "emission",
+      "inputs": {
+        "process": "Waste Recycling",
+        "pollutant": "Suspended Solid"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_EMISSION_042"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_EMISSION_043",
+      "kind": "emission",
+      "inputs": {
+        "process": "Junk Disposal",
+        "pollutant": "Suspended Solid"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_EMISSION_043"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_EMISSION_044",
+      "kind": "emission",
+      "inputs": {
+        "process": "Liquid Effluent Discharge",
+        "pollutant": "Suspended Solid"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_EMISSION_044"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_EMISSION_045",
+      "kind": "emission",
+      "inputs": {
+        "process": "Operation Failure",
+        "pollutant": "Suspended Solid"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_EMISSION_045"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_046",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Water Temperature",
+        "to": "Aquatic Plants"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_046"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_047",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Gasses and Particulate",
+        "to": "Archeological Sites"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_047"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_048",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Surface Water",
+        "to": "Birds"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_048"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_049",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Water Quality",
+        "to": "Birds"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_049"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_050",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Gasses and Particulate",
+        "to": "Birds"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_050"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_051",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Microfauna",
+        "to": "Birds"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_051"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_052",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Land Animals Reptiles",
+        "to": "Endangered Species of Fauna"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_052"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_053",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Surface Water",
+        "to": "Endangered Species of Fauna"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_053"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_054",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Water Quality",
+        "to": "Endangered Species of Fauna"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_054"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_055",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Water Temperature",
+        "to": "Endangered Species of Fauna"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_055"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_056",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Gasses and Particulate",
+        "to": "Endangered Species of Fauna"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_056"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_057",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Shrubs",
+        "to": "Endangered Species of Fauna"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_057"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_058",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Aquatic Plants",
+        "to": "Endangered Species of Fauna"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_058"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_059",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Microfauna",
+        "to": "Endangered Species of Fauna"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_059"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_060",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Land Animals Reptiles",
+        "to": "Endangered Species of Flora"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_060"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_061",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Surface Water",
+        "to": "Endangered Species of Flora"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_061"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_062",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Water Quality",
+        "to": "Endangered Species of Flora"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_062"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_063",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Water Temperature",
+        "to": "Endangered Species of Flora"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_063"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_064",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Gasses and Particulate",
+        "to": "Endangered Species of Flora"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_064"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_065",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Shrubs",
+        "to": "Endangered Species of Flora"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_065"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_066",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Aquatic Plants",
+        "to": "Endangered Species of Flora"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_066"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_067",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Birds",
+        "to": "Endangered Species of Flora"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_067"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_068",
+      "kind": "indirect",
+      "inputs": {
+        "from": "MicroFlora",
+        "to": "Flora Barriers"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_068"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_069",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Endangered Species of Fauna",
+        "to": "Flora Barriers"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_069"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_070",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Water Quality",
+        "to": "Health and Safety"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_070"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_071",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Gasses and Particulate",
+        "to": "Health and Safety"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_071"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_072",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Water Quality",
+        "to": "Land Animals Reptiles"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_072"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_073",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Gasses and Particulate",
+        "to": "Land Animals Reptiles"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_073"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_074",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Shrubs",
+        "to": "Land Animals Reptiles"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_074"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_075",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Endangered Species of Fauna",
+        "to": "Land Animals Reptiles"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_075"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_076",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Shrubs",
+        "to": "Land Stability"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_076"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_077",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Surface Water",
+        "to": "Microfauna"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_077"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_078",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Water Quality",
+        "to": "Microfauna"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_078"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_079",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Water Temperature",
+        "to": "Microfauna"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_079"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_080",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Gasses and Particulate",
+        "to": "Microfauna"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_080"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_081",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Shrubs",
+        "to": "Microfauna"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_081"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_082",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Aquatic Plants",
+        "to": "Microfauna"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_082"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_083",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Birds",
+        "to": "Microfauna"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_083"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_084",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Endangered Species of Flora",
+        "to": "Microflora"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_084"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_085",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Water Quality",
+        "to": "Microflora"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_085"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_086",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Water Temperature",
+        "to": "Microflora"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_086"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_087",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Gasses and Particulate",
+        "to": "Microflora"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_087"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_088",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Aquatic Plants",
+        "to": "Microflora"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_088"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_089",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Surface Water",
+        "to": "Picnicking"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_089"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_090",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Water Quality",
+        "to": "Picnicking"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_090"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_091",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Gasses and Particulate",
+        "to": "Picnicking"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_091"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_092",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Shrubs",
+        "to": "Picnicking"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_092"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_093",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Surface Water",
+        "to": "Rare Unique Species"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_093"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_094",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Water Quality",
+        "to": "Rare Unique Species"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_094"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_095",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Water Temperature",
+        "to": "Rare Unique Species"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_095"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_096",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Gasses and Particulate",
+        "to": "Rare Unique Species"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_096"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_097",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Shrubs",
+        "to": "Rare Unique Species"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_097"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_098",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Surface Water",
+        "to": "Residential"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_098"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_099",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Water Quality",
+        "to": "Residential"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_099"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_100",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Gasses and Particulate",
+        "to": "Residential"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_100"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_101",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Gasses and Particulate",
+        "to": "Scenic Views and Vistas"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_101"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_102",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Surface Water",
+        "to": "Shrubs"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_102"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_103",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Water Quality",
+        "to": "Shrubs"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_103"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_104",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Gasses and Particulate",
+        "to": "Shrubs"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_104"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_105",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Water Quality",
+        "to": "Surface Water"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_105"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_106",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Gasses and Particulate",
+        "to": "Surface Water"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_106"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_107",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Surface Water",
+        "to": "Water Quality"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_107"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_108",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Gasses and Particulate",
+        "to": "Water Quality"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_108"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_INDIRECT_109",
+      "kind": "indirect",
+      "inputs": {
+        "from": "Aquatic Plants",
+        "to": "Water Quality"
+      },
+      "value": true,
+      "source_ids": [
+        "SRC_EXP_INDIRECT_109"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_SE_110",
+      "kind": "impact_se",
+      "inputs": {
+        "activity": "Alteration of Ground Cover",
+        "factor": "Land Values"
+      },
+      "value": 3.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_SE_110"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_SE_111",
+      "kind": "impact_se",
+      "inputs": {
+        "activity": "Blasting and Drilling",
+        "factor": "Land Values"
+      },
+      "value": 4.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_SE_111"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_SE_112",
+      "kind": "impact_se",
+      "inputs": {
+        "activity": "Product Storage",
+        "factor": "Land Values"
+      },
+      "value": 4.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_SE_112"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_SE_113",
+      "kind": "impact_se",
+      "inputs": {
+        "activity": "Erosion and Terrasing",
+        "factor": "Land Values"
+      },
+      "value": 4.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_SE_113"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_SE_114",
+      "kind": "impact_se",
+      "inputs": {
+        "activity": "Trucking",
+        "factor": "Land Values"
+      },
+      "value": 3.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_SE_114"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_SE_115",
+      "kind": "impact_se",
+      "inputs": {
+        "activity": "Junk Disposal",
+        "factor": "Land Values"
+      },
+      "value": 4.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_SE_115"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_SE_116",
+      "kind": "impact_se",
+      "inputs": {
+        "activity": "Cooling Water Discharge",
+        "factor": "Land Values"
+      },
+      "value": 0.5,
+      "source_ids": [
+        "SRC_EXP_IMPACT_SE_116"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_SE_117",
+      "kind": "impact_se",
+      "inputs": {
+        "activity": "Liquid Effluent Discharge",
+        "factor": "Land Values"
+      },
+      "value": 4.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_SE_117"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_SE_118",
+      "kind": "impact_se",
+      "inputs": {
+        "activity": "Explosion",
+        "factor": "Land Values"
+      },
+      "value": 1.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_SE_118"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_SE_119",
+      "kind": "impact_se",
+      "inputs": {
+        "activity": "Operation Failure",
+        "factor": "Land Values"
+      },
+      "value": 2.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_SE_119"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_SE_120",
+      "kind": "impact_se",
+      "inputs": {
+        "activity": "Alteration of Ground Cover",
+        "factor": "Transportation Systems"
+      },
+      "value": 4.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_SE_120"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_SE_121",
+      "kind": "impact_se",
+      "inputs": {
+        "activity": "Blasting and Drilling",
+        "factor": "Transportation Systems"
+      },
+      "value": 1.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_SE_121"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_SE_122",
+      "kind": "impact_se",
+      "inputs": {
+        "activity": "Mineral Processing",
+        "factor": "Transportation Systems"
+      },
+      "value": 6.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_SE_122"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_SE_123",
+      "kind": "impact_se",
+      "inputs": {
+        "activity": "Product Storage",
+        "factor": "Transportation Systems"
+      },
+      "value": 5.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_SE_123"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_SE_124",
+      "kind": "impact_se",
+      "inputs": {
+        "activity": "Erosion and Terrasing",
+        "factor": "Transportation Systems"
+      },
+      "value": 1.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_SE_124"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_SE_125",
+      "kind": "impact_se",
+      "inputs": {
+        "activity": "Waste Recycling",
+        "factor": "Transportation Systems"
+      },
+      "value": 2.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_SE_125"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_SE_126",
+      "kind": "impact_se",
+      "inputs": {
+        "activity": "Trucking",
+        "factor": "Transportation Systems"
+      },
+      "value": 4.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_SE_126"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_SE_127",
+      "kind": "impact_se",
+      "inputs": {
+        "activity": "Mineral Processing",
+        "factor": "Migration"
+      },
+      "value": 6.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_SE_127"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_SE_128",
+      "kind": "impact_se",
+      "inputs": {
+        "activity": "Trucking",
+        "factor": "Migration"
+      },
+      "value": 4.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_SE_128"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_SE_129",
+      "kind": "impact_se",
+      "inputs": {
+        "activity": "Liquid Effluent Discharge",
+        "factor": "Migration"
+      },
+      "value": 2.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_SE_129"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_SE_130",
+      "kind": "impact_se",
+      "inputs": {
+        "activity": "Operation Failure",
+        "factor": "Migration"
+      },
+      "value": 1.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_SE_130"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_SE_131",
+      "kind": "impact_se",
+      "inputs": {
+        "activity": "Erosion and Terrasing",
+        "factor": "Economic History"
+      },
+      "value": 5.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_SE_131"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_SE_132",
+      "kind": "impact_se",
+      "inputs": {
+        "activity": "Liquid Effluent Discharge",
+        "factor": "Economic History"
+      },
+      "value": 6.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_SE_132"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_SE_133",
+      "kind": "impact_se",
+      "inputs": {
+        "activity": "Blasting and Drilling",
+        "factor": "Health and Social Services"
+      },
+      "value": 2.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_SE_133"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_SE_134",
+      "kind": "impact_se",
+      "inputs": {
+        "activity": "Mineral Processing",
+        "factor": "Health and Social Services"
+      },
+      "value": 6.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_SE_134"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_SE_135",
+      "kind": "impact_se",
+      "inputs": {
+        "activity": "Product Storage",
+        "factor": "Health and Social Services"
+      },
+      "value": 0.5,
+      "source_ids": [
+        "SRC_EXP_IMPACT_SE_135"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_SE_136",
+      "kind": "impact_se",
+      "inputs": {
+        "activity": "Waste Recycling",
+        "factor": "Health and Social Services"
+      },
+      "value": 2.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_SE_136"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_SE_137",
+      "kind": "impact_se",
+      "inputs": {
+        "activity": "Junk Disposal",
+        "factor": "Housing Characteristics"
+      },
+      "value": 1.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_SE_137"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_SE_138",
+      "kind": "impact_se",
+      "inputs": {
+        "activity": "Energy Generation",
+        "factor": "Distinct Settlements"
+      },
+      "value": 2.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_SE_138"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_SE_139",
+      "kind": "impact_se",
+      "inputs": {
+        "activity": "Mineral Processing",
+        "factor": "Distinct Settlements"
+      },
+      "value": 4.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_SE_139"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_SE_140",
+      "kind": "impact_se",
+      "inputs": {
+        "activity": "Junk Disposal",
+        "factor": "Distinct Settlements"
+      },
+      "value": 1.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_SE_140"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_SE_141",
+      "kind": "impact_se",
+      "inputs": {
+        "activity": "Energy Generation",
+        "factor": "Income Level"
+      },
+      "value": 3.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_SE_141"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_SE_142",
+      "kind": "impact_se",
+      "inputs": {
+        "activity": "Mineral Processing",
+        "factor": "Income Level"
+      },
+      "value": 6.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_SE_142"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_SE_143",
+      "kind": "impact_se",
+      "inputs": {
+        "activity": "Product Storage",
+        "factor": "Income Level"
+      },
+      "value": 1.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_SE_143"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_SE_144",
+      "kind": "impact_se",
+      "inputs": {
+        "activity": "Erosion and Terrasing",
+        "factor": "Income Level"
+      },
+      "value": 5.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_SE_144"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_SE_145",
+      "kind": "impact_se",
+      "inputs": {
+        "activity": "Junk Disposal",
+        "factor": "Income Level"
+      },
+      "value": 1.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_SE_145"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_IMPACT_SE_146",
+      "kind": "impact_se",
+      "inputs": {
+        "activity": "Liquid Effluent Discharge",
+        "factor": "Income Level"
+      },
+      "value": 4.0,
+      "source_ids": [
+        "SRC_EXP_IMPACT_SE_146"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_SOC_EC_147",
+      "kind": "soc_ec",
+      "inputs": {
+        "activity": "Migration"
+      },
+      "value": "changes in demand on educational resources",
+      "source_ids": [
+        "SRC_EXP_SOC_EC_147"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_SOC_EC_148",
+      "kind": "soc_ec",
+      "inputs": {
+        "activity": "Migration"
+      },
+      "value": "changes in demand on transportation systems",
+      "source_ids": [
+        "SRC_EXP_SOC_EC_148"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_SOC_EC_149",
+      "kind": "soc_ec",
+      "inputs": {
+        "activity": "Migration"
+      },
+      "value": "disruption of cohesion in community groups",
+      "source_ids": [
+        "SRC_EXP_SOC_EC_149"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_SOC_EC_150",
+      "kind": "soc_ec",
+      "inputs": {
+        "activity": "Migration"
+      },
+      "value": "disruption of religious petterns and characteristics",
+      "source_ids": [
+        "SRC_EXP_SOC_EC_150"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_SOC_EC_151",
+      "kind": "soc_ec",
+      "inputs": {
+        "activity": "Migration"
+      },
+      "value": "increase or decrease employment patterns",
+      "source_ids": [
+        "SRC_EXP_SOC_EC_151"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_SOC_EC_152",
+      "kind": "soc_ec",
+      "inputs": {
+        "activity": "Migration"
+      },
+      "value": "increase or decrease income level",
+      "source_ids": [
+        "SRC_EXP_SOC_EC_152"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_SOC_EC_153",
+      "kind": "soc_ec",
+      "inputs": {
+        "activity": "Migration"
+      },
+      "value": "increase or decrease population growth",
+      "source_ids": [
+        "SRC_EXP_SOC_EC_153"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_SOC_EC_154",
+      "kind": "soc_ec",
+      "inputs": {
+        "activity": "Migration"
+      },
+      "value": "increase or decrease workforce",
+      "source_ids": [
+        "SRC_EXP_SOC_EC_154"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_SOC_EC_155",
+      "kind": "soc_ec",
+      "inputs": {
+        "activity": "Migration"
+      },
+      "value": "varies in population characteristics",
+      "source_ids": [
+        "SRC_EXP_SOC_EC_155"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_MITIGATION_156",
+      "kind": "mitigation",
+      "inputs": {
+        "activity": "Alteration of Ground Cover"
+      },
+      "value": "Provide plan for limestone mine restoration. Plan for limestone resources usage to fit availability and imposed restrictions on manner of quarrying.",
+      "source_ids": [
+        "SRC_EXP_MITIGATION_156"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_MITIGATION_157",
+      "kind": "mitigation",
+      "inputs": {
+        "activity": "Energy Generation"
+      },
+      "value": "Control by scubbing action of alkaline materials and enhenced by utilization of preheated kilns, and use of exhaust gases to dry raw materials in grinding.",
+      "source_ids": [
+        "SRC_EXP_MITIGATION_157"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_MITIGATION_158",
+      "kind": "mitigation",
+      "inputs": {
+        "activity": "Erosion and Terrasing"
+      },
+      "value": "covering or containment to prevent percolation and runoff to ground and surface water.",
+      "source_ids": [
+        "SRC_EXP_MITIGATION_158"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_MITIGATION_159",
+      "kind": "mitigation",
+      "inputs": {
+        "activity": "Explosion"
+      },
+      "value": "Protect surface water from additional suspended solid.",
+      "source_ids": [
+        "SRC_EXP_MITIGATION_159"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_MITIGATION_160",
+      "kind": "mitigation",
+      "inputs": {
+        "activity": "Junk Disposal"
+      },
+      "value": "Move to a proper site.",
+      "source_ids": [
+        "SRC_EXP_MITIGATION_160"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_MITIGATION_161",
+      "kind": "mitigation",
+      "inputs": {
+        "activity": "Liquid Effluent Discharge"
+      },
+      "value": "Total Suspended Solid < 150 g/ton product during equipment cleaning operations or during periods of rainfall.",
+      "source_ids": [
+        "SRC_EXP_MITIGATION_161"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "EXP_MITIGATION_162",
+      "kind": "mitigation",
+      "inputs": {
+        "activity": "Operation Failure"
+      },
+      "value": "Design precipitator with paralel chambers, enforce kiln shut down when precipitator is completely out of order.",
+      "source_ids": [
+        "SRC_EXP_MITIGATION_162"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "STANDARD_SO2",
+      "kind": "standard",
+      "inputs": {
+        "pollutant": "SO2"
+      },
+      "value": {
+        "lower": 0,
+        "upper": 40.0,
+        "magnitude": 2.0
+      },
+      "source_ids": [
+        "EX_STANDARD_SO2"
       ],
       "classification": "faithful_translation"
     },
@@ -1564,73 +6225,435 @@
       "classification": "faithful_translation"
     },
     {
-      "id": "PAIR_YES_YES",
-      "kind": "score_pair",
+      "id": "EXP_STANDARD_163",
+      "kind": "standard",
       "inputs": {
-        "answer_1": "yes",
-        "answer_2": "yes"
+        "pollutant": "H2S",
+        "lower": 0.0,
+        "upper": 10.5
       },
-      "value": "L",
+      "value": 2.0,
       "source_ids": [
-        "WP_PAIR"
+        "SRC_EXP_STANDARD_163"
       ],
       "classification": "faithful_translation"
     },
     {
-      "id": "PAIR_YES_NO",
-      "kind": "score_pair",
+      "id": "EXP_STANDARD_164",
+      "kind": "standard",
       "inputs": {
-        "answer_1": "yes",
-        "answer_2": "no"
+        "pollutant": "H2S",
+        "lower": 10.5,
+        "upper": 21.0
       },
-      "value": "S",
+      "value": 4.0,
       "source_ids": [
-        "WP_PAIR"
+        "SRC_EXP_STANDARD_164"
       ],
       "classification": "faithful_translation"
     },
     {
-      "id": "PAIR_NO_YES",
-      "kind": "score_pair",
+      "id": "EXP_STANDARD_165",
+      "kind": "standard",
       "inputs": {
-        "answer_1": "no",
-        "answer_2": "yes"
+        "pollutant": "H2S",
+        "lower": 21.0,
+        "upper": 42.0
       },
-      "value": "S",
+      "value": 7.0,
       "source_ids": [
-        "WP_PAIR"
+        "SRC_EXP_STANDARD_165"
       ],
       "classification": "faithful_translation"
     },
     {
-      "id": "PAIR_NO_NO",
-      "kind": "score_pair",
+      "id": "EXP_STANDARD_166",
+      "kind": "standard",
       "inputs": {
-        "answer_1": "no",
-        "answer_2": "no"
+        "pollutant": "H2S",
+        "lower": 42.0,
+        "upper": 1000.0
       },
-      "value": "N",
+      "value": 10.0,
       "source_ids": [
-        "WP_PAIR"
+        "SRC_EXP_STANDARD_166"
       ],
       "classification": "faithful_translation"
+    }
+  ],
+  "inference_rules": [
+    {
+      "id": "R_FORWARD",
+      "classification": "reconstructed_inference",
+      "assumption_ids": [
+        "A_CASE_SCOPE"
+      ]
+    },
+    {
+      "id": "R_DIRECT",
+      "classification": "reconstructed_inference",
+      "assumption_ids": [
+        "A_MAGNITUDE_INPUT",
+        "A_SCORE_PRODUCT"
+      ]
+    },
+    {
+      "id": "R_INDIRECT",
+      "classification": "reconstructed_inference",
+      "assumption_ids": [
+        "A_INDIRECT_CHAIN"
+      ]
+    },
+    {
+      "id": "R_SOCIAL",
+      "classification": "reconstructed_inference",
+      "assumption_ids": [
+        "A_SOCIAL_CONTEXT",
+        "A_SOCIAL_GAPS"
+      ]
+    },
+    {
+      "id": "R_MITIGATION",
+      "classification": "reconstructed_inference",
+      "assumption_ids": [
+        "A_CASE_SCOPE"
+      ]
+    },
+    {
+      "id": "R_PRIORITY",
+      "classification": "reconstructed_inference",
+      "assumption_ids": [
+        "A_PRIORITY_BANDS"
+      ]
+    },
+    {
+      "id": "R_GAPS",
+      "classification": "reconstructed_inference",
+      "assumption_ids": [
+        "A_DATA_GAPS"
+      ]
+    },
+    {
+      "id": "R_ASSESS",
+      "classification": "reconstructed_inference",
+      "assumption_ids": [
+        "A_CASE_SCOPE"
+      ]
+    },
+    {
+      "id": "R_STANDARD",
+      "classification": "reconstructed_inference",
+      "assumption_ids": [
+        "A_STANDARD_INTERVAL"
+      ]
+    },
+    {
+      "id": "R_INSTRUMENT",
+      "classification": "reconstructed_inference",
+      "assumption_ids": [
+        "A_DETECTION_LIMIT"
+      ]
+    },
+    {
+      "id": "R_BACKWARD",
+      "classification": "reconstructed_inference",
+      "assumption_ids": [
+        "A_BACKWARD_TRACE"
+      ]
+    },
+    {
+      "id": "R_WP",
+      "classification": "reconstructed_inference",
+      "assumption_ids": [
+        "A_WP_RECONSTRUCTION",
+        "A_WP_AGGREGATION"
+      ]
+    }
+  ],
+  "assumptions": [
+    {
+      "id": "A_MAGNITUDE_INPUT",
+      "description": "Accept a supplied semi-quantitative magnitude in [0,10]. Zero means no detected exposure for this case. These are synthetic scenario inputs, not reconstructed concentration units or thresholds."
+    },
+    {
+      "id": "A_SCORE_PRODUCT",
+      "description": "Direct impact score = supplied magnitude times documented importance. Product scoring is a POC choice, not a recovered ESC algorithm."
+    },
+    {
+      "id": "A_PRIORITY_BANDS",
+      "description": "Maximum direct score: 0=no_detected_impact; (0,10)=monitor; [10,40)=mitigate; [40,100]=urgent_review. These action categories and cutoffs are POC assumptions, not historical or regulatory outcomes."
+    },
+    {
+      "id": "A_INDIRECT_CHAIN",
+      "description": "Follow the selected directed environmental links for at most two hops, only to receptors supplied as present. Intermediate nodes may be outside the listed receptors; start from a documented direct impact to a listed receptor. Do not assign numerical scores to indirect effects."
+    },
+    {
+      "id": "A_CASE_SCOPE",
+      "description": "A case selects one pollutant, one or more source processes and the site receptors. Join emission and impact relations, use the maximum direct score, recommend known mitigations for the sources when magnitude is positive. Do not infer negative effects from absent facts."
+    },
+    {
+      "id": "A_DATA_GAPS",
+      "description": "A receptor with neither a direct relation nor a selected indirect path has insufficient evidence. Decision becomes insufficient_data, retaining known impacts and priority. No assessment of unlisted receptors is claimed."
+    },
+    {
+      "id": "A_SOCIAL_CONTEXT",
+      "description": "Report documented process-driven social pathways as contextual potential effects, independent of selected pollutant magnitude. They do not contribute to the numerical priority."
+    },
+    {
+      "id": "A_STANDARD_INTERVAL",
+      "description": "Historical units are unspecified. Interpret H2S bounds as lower-inclusive/upper-exclusive except final 1000 inclusive; SO2 snippet covers [0,40]. Do not extrapolate uncovered concentrations. Input uses source_scale, not a claimed physical concentration unit."
+    },
+    {
+      "id": "A_DETECTION_LIMIT",
+      "description": "Observed value >= documented minimum detection is measurable. The source provides instrument facts but no recovered classification algorithm."
+    },
+    {
+      "id": "A_WP_RECONSTRUCTION",
+      "description": "Create a complete 20-criterion POC: count bands use 0=N, 1=S, >=2=L; ratio bands use 0=N, (0,1)=S, >=1=L. Explicit yes/no and fixed yes/no map to L/N. Specificity assumes components/impacts. This is deliberately inferred, not recovered."
+    },
+    {
+      "id": "A_WP_AGGREGATION",
+      "description": "Map N,S,L to 0,1,2; aspect mean <0.5=N, <1.5=S, otherwise L. No historical aspect aggregation or overall approval is claimed."
+    },
+    {
+      "id": "A_BACKWARD_TRACE",
+      "description": "Reverse the executable directed paths to enumerate candidate pollutants and source processes, never conclude that an observed receptor proves a cause."
+    },
+    {
+      "id": "A_SOCIAL_GAPS",
+      "description": "Keep process/social effects even if no documented consequence text exists; return an empty consequences list, explicitly recorded as unresolved social factors."
     }
   ],
   "glue": [
     {
       "id": "GLUE_API",
-      "classification": "engineering_glue",
-      "description": "Structured JSON query dispatch and input validation."
+      "description": "JSON validation and deterministic canonicalization"
     },
     {
-      "id": "GLUE_ABSTAIN",
-      "classification": "engineering_glue",
-      "description": "Absent documented lookup or unresolved criterion yields undocumented, never false."
+      "id": "GLUE_SPLIT",
+      "description": "Keep each pollutant family, receptor variants and magnitude variants in a single split"
+    }
+  ],
+  "criteria": [
+    {
+      "id": "comprehensiveness",
+      "aspect": "identification",
+      "label": "Komprehensivitas",
+      "question_summary": "all impacts considered",
+      "mechanism": "accumulated analyzed impacts",
+      "source_ids": [
+        "CR_COMPREHENSIVENESS",
+        "CR_COMPREHENSIVENESS_IMPL"
+      ]
     },
     {
-      "id": "GLUE_NORMALIZE",
-      "classification": "engineering_glue",
-      "description": "SWI strings preserve exact labels; Table 5.1 numeric importance; snippet importance string 2.0 matches table numeric 2.0. No label aliasing."
+      "id": "specificity",
+      "aspect": "identification",
+      "label": "Spesifisitas",
+      "question_summary": "environmental parameters sufficiently specific",
+      "mechanism": "environmental-component/impact count comparison",
+      "source_ids": [
+        "CR_SPECIFICITY",
+        "CR_SPECIFICITY_IMPL"
+      ]
+    },
+    {
+      "id": "impact_isolation",
+      "aspect": "identification",
+      "label": "Isolasi dampak",
+      "question_summary": "techniques for identifying project impacts",
+      "mechanism": "explicit user question",
+      "source_ids": [
+        "CR_IMPACT_ISOLATION",
+        "CR_IMPACT_ISOLATION_IMPL"
+      ]
+    },
+    {
+      "id": "time_consideration",
+      "aspect": "identification",
+      "label": "Konsiderasi waktu",
+      "question_summary": "construction versus operational impacts distinguished",
+      "mechanism": "additional activity stage database and accumulated stage-defined activities",
+      "source_ids": [
+        "CR_TIME_CONSIDERATION",
+        "CR_TIME_CONSIDERATION_IMPL"
+      ]
+    },
+    {
+      "id": "data_sources",
+      "aspect": "identification",
+      "label": "Sumber data",
+      "question_summary": "identification of data sources required",
+      "mechanism": "fixed yes, explicitly L",
+      "source_ids": [
+        "CR_DATA_SOURCES",
+        "CR_DATA_SOURCES_IMPL"
+      ]
+    },
+    {
+      "id": "explicit_indicators",
+      "aspect": "measurement",
+      "label": "Indikator eksplisit",
+      "question_summary": "specific measurable quantification indicators suggested",
+      "mechanism": "explicit user question",
+      "source_ids": [
+        "CR_EXPLICIT_INDICATORS",
+        "CR_EXPLICIT_INDICATORS_IMPL"
+      ]
+    },
+    {
+      "id": "magnitude",
+      "aspect": "measurement",
+      "label": "Magnitudo",
+      "question_summary": "numerical impact magnitudes required",
+      "mechanism": "fixed yes, explicitly L in prose; Table 6.6 instead references instrumentation database",
+      "source_ids": [
+        "CR_MAGNITUDE",
+        "CR_MAGNITUDE_IMPL"
+      ]
+    },
+    {
+      "id": "objectivity",
+      "aspect": "measurement",
+      "label": "Objektivitas",
+      "question_summary": "objective rather than subjective measurements emphasized",
+      "mechanism": "additional observation/instrumentation accuracy database",
+      "source_ids": [
+        "CR_OBJECTIVITY",
+        "CR_OBJECTIVITY_IMPL"
+      ]
+    },
+    {
+      "id": "significance",
+      "aspect": "interpretation",
+      "label": "Signifikansi",
+      "question_summary": "local regional national importance assessment required",
+      "mechanism": "explicit user question",
+      "source_ids": [
+        "CR_SIGNIFICANCE",
+        "CR_SIGNIFICANCE_IMPL"
+      ]
+    },
+    {
+      "id": "explicit_criteria",
+      "aspect": "interpretation",
+      "label": "Kriteria eksplisit",
+      "question_summary": "criteria and assumptions stated explicitly",
+      "mechanism": "additional criteria/assumptions database connected to activities",
+      "source_ids": [
+        "CR_EXPLICIT_CRITERIA",
+        "CR_EXPLICIT_CRITERIA_IMPL"
+      ]
+    },
+    {
+      "id": "uncertainty",
+      "aspect": "interpretation",
+      "label": "Ketidakyakinan",
+      "question_summary": "projection uncertainty considered",
+      "mechanism": "fixed yes",
+      "source_ids": [
+        "CR_UNCERTAINTY",
+        "CR_UNCERTAINTY_IMPL"
+      ]
+    },
+    {
+      "id": "risk",
+      "aspect": "interpretation",
+      "label": "Resiko",
+      "question_summary": "low probability high damage impacts considered",
+      "mechanism": "accumulated impact magnitude",
+      "source_ids": [
+        "CR_RISK",
+        "CR_RISK_IMPL"
+      ]
+    },
+    {
+      "id": "alternatives",
+      "aspect": "interpretation",
+      "label": "Perbandingan alternatif",
+      "question_summary": "alternatives can be compared",
+      "mechanism": "count of alternatives offered",
+      "source_ids": [
+        "CR_ALTERNATIVES",
+        "CR_ALTERNATIVES_IMPL"
+      ]
+    },
+    {
+      "id": "aggregation",
+      "aspect": "interpretation",
+      "label": "Agregasi",
+      "question_summary": "measurement and interpretation information aggregated",
+      "mechanism": "fixed yes",
+      "source_ids": [
+        "CR_AGGREGATION",
+        "CR_AGGREGATION_IMPL"
+      ]
+    },
+    {
+      "id": "public_involvement",
+      "aspect": "interpretation",
+      "label": "Keterlibatan publik",
+      "question_summary": "public input into interpretation available",
+      "mechanism": "fixed no",
+      "source_ids": [
+        "CR_PUBLIC_INVOLVEMENT",
+        "CR_PUBLIC_INVOLVEMENT_IMPL"
+      ]
+    },
+    {
+      "id": "affected_groups",
+      "aspect": "communication",
+      "label": "Kelompok terkena dampak",
+      "question_summary": "impacts connected to most affected human groups",
+      "mechanism": "fixed no",
+      "source_ids": [
+        "CR_AFFECTED_GROUPS",
+        "CR_AFFECTED_GROUPS_IMPL"
+      ]
+    },
+    {
+      "id": "environmental_setting",
+      "aspect": "communication",
+      "label": "Deskripsi setting lingkungan",
+      "question_summary": "clear environmental setting description required",
+      "mechanism": "count of analyzed environmental components",
+      "source_ids": [
+        "CR_ENVIRONMENTAL_SETTING",
+        "CR_ENVIRONMENTAL_SETTING_IMPL"
+      ]
+    },
+    {
+      "id": "summary_format",
+      "aspect": "communication",
+      "label": "Format penyingkatan",
+      "question_summary": "recommended summary format included",
+      "mechanism": "fixed yes",
+      "source_ids": [
+        "CR_SUMMARY_FORMAT",
+        "CR_SUMMARY_FORMAT_IMPL"
+      ]
+    },
+    {
+      "id": "key_issues",
+      "aspect": "communication",
+      "label": "Isu-isu utama",
+      "question_summary": "main issues highlighted",
+      "mechanism": "most frequent analyzed impacts",
+      "source_ids": [
+        "CR_KEY_ISSUES",
+        "CR_KEY_ISSUES_IMPL"
+      ]
+    },
+    {
+      "id": "nepa_conformity",
+      "aspect": "communication",
+      "label": "Kesesuaian dengan NEPA",
+      "question_summary": "NEPA standards followed",
+      "mechanism": "fixed yes; thesis claim, not independent certification",
+      "source_ids": [
+        "CR_NEPA_CONFORMITY",
+        "CR_NEPA_CONFORMITY_IMPL"
+      ]
     }
   ]
 }

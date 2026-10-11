@@ -1,0 +1,1636 @@
+{
+  "schema_version": 1,
+  "scope": "documented subset of ESC-1/ESC-2; not recovered historical source",
+  "sources": {
+    "ARCH": {
+      "chapter": "bab4",
+      "file_id": 27441,
+      "pdf_page": 5,
+      "printed_page": "IV-5",
+      "section": "4.3",
+      "claim": "Forward and backward inspection share the same database; methodology questions follow each analysis."
+    },
+    "ESC2": {
+      "chapter": "bab8",
+      "file_id": 27445,
+      "pdf_page": 1,
+      "printed_page": "VIII-1",
+      "section": "Conclusion",
+      "claim": "The thesis calls its resulting program ESC-2, extending ESC-1 with Warner–Preston."
+    },
+    "WP_PAIR": {
+      "chapter": "bab6",
+      "file_id": 27443,
+      "pdf_page": 4,
+      "printed_page": "VI-4",
+      "section": "6.1",
+      "claim": "L for two yes answers, S for one yes, N for two no answers; exact question pairing is unresolved."
+    },
+    "WP_OUTPUT": {
+      "chapter": "bab6",
+      "file_id": 27443,
+      "pdf_page": 10,
+      "printed_page": "VI-10",
+      "section": "6.1.4",
+      "claim": "At the end of execution display aspect scores and underlying criteria."
+    },
+    "IMPORTANCE_SCALE": {
+      "chapter": "bab4",
+      "file_id": 27441,
+      "pdf_page": 10,
+      "printed_page": "IV-10",
+      "section": "4.4.2.1",
+      "claim": "Importance between 1.0 and 10.0; not an overall accept/reject threshold."
+    },
+    "CR_COMPREHENSIVENESS": {
+      "chapter": "bab6",
+      "file_id": 27443,
+      "pdf_page": 2,
+      "printed_page": "VI-2",
+      "section": "6.1 / Table 6.1",
+      "claim": "all impacts considered",
+      "transcription": {
+        "label": "Komprehensivitas"
+      }
+    },
+    "CR_COMPREHENSIVENESS_IMPL": {
+      "chapter": "bab6",
+      "file_id": 27443,
+      "pdf_page": 4,
+      "printed_page": "VI-4",
+      "section": "6.1.1",
+      "claim": "accumulated analyzed impacts"
+    },
+    "CR_SPECIFICITY": {
+      "chapter": "bab6",
+      "file_id": 27443,
+      "pdf_page": 2,
+      "printed_page": "VI-2",
+      "section": "6.1 / Table 6.1",
+      "claim": "environmental parameters sufficiently specific",
+      "transcription": {
+        "label": "Spesifisitas"
+      }
+    },
+    "CR_SPECIFICITY_IMPL": {
+      "chapter": "bab6",
+      "file_id": 27443,
+      "pdf_page": 4,
+      "printed_page": "VI-4",
+      "section": "6.1.1",
+      "claim": "environmental-component/impact count comparison"
+    },
+    "CR_IMPACT_ISOLATION": {
+      "chapter": "bab6",
+      "file_id": 27443,
+      "pdf_page": 2,
+      "printed_page": "VI-2",
+      "section": "6.1 / Table 6.1",
+      "claim": "techniques for identifying project impacts",
+      "transcription": {
+        "label": "Isolasi dampak"
+      }
+    },
+    "CR_IMPACT_ISOLATION_IMPL": {
+      "chapter": "bab6",
+      "file_id": 27443,
+      "pdf_page": 5,
+      "printed_page": "VI-5",
+      "section": "6.1.1",
+      "claim": "explicit user question"
+    },
+    "CR_TIME_CONSIDERATION": {
+      "chapter": "bab6",
+      "file_id": 27443,
+      "pdf_page": 2,
+      "printed_page": "VI-2",
+      "section": "6.1 / Table 6.1",
+      "claim": "construction versus operational impacts distinguished",
+      "transcription": {
+        "label": "Konsiderasi waktu"
+      }
+    },
+    "CR_TIME_CONSIDERATION_IMPL": {
+      "chapter": "bab6",
+      "file_id": 27443,
+      "pdf_page": 5,
+      "printed_page": "VI-5",
+      "section": "6.1.1",
+      "claim": "additional activity stage database and accumulated stage-defined activities"
+    },
+    "CR_DATA_SOURCES": {
+      "chapter": "bab6",
+      "file_id": 27443,
+      "pdf_page": 2,
+      "printed_page": "VI-2",
+      "section": "6.1 / Table 6.1",
+      "claim": "identification of data sources required",
+      "transcription": {
+        "label": "Sumber data"
+      }
+    },
+    "CR_DATA_SOURCES_IMPL": {
+      "chapter": "bab6",
+      "file_id": 27443,
+      "pdf_page": 5,
+      "printed_page": "VI-5",
+      "section": "6.1.1",
+      "claim": "fixed yes, explicitly L"
+    },
+    "CR_EXPLICIT_INDICATORS": {
+      "chapter": "bab6",
+      "file_id": 27443,
+      "pdf_page": 2,
+      "printed_page": "VI-2",
+      "section": "6.1 / Table 6.2",
+      "claim": "specific measurable quantification indicators suggested",
+      "transcription": {
+        "label": "Indikator eksplisit"
+      }
+    },
+    "CR_EXPLICIT_INDICATORS_IMPL": {
+      "chapter": "bab6",
+      "file_id": 27443,
+      "pdf_page": 6,
+      "printed_page": "VI-6",
+      "section": "6.1.2",
+      "claim": "explicit user question"
+    },
+    "CR_MAGNITUDE": {
+      "chapter": "bab6",
+      "file_id": 27443,
+      "pdf_page": 2,
+      "printed_page": "VI-2",
+      "section": "6.1 / Table 6.2",
+      "claim": "numerical impact magnitudes required",
+      "transcription": {
+        "label": "Magnitudo"
+      }
+    },
+    "CR_MAGNITUDE_IMPL": {
+      "chapter": "bab6",
+      "file_id": 27443,
+      "pdf_page": 6,
+      "printed_page": "VI-6",
+      "section": "6.1.2",
+      "claim": "fixed yes, explicitly L in prose; Table 6.6 instead references instrumentation database"
+    },
+    "CR_OBJECTIVITY": {
+      "chapter": "bab6",
+      "file_id": 27443,
+      "pdf_page": 2,
+      "printed_page": "VI-2",
+      "section": "6.1 / Table 6.2",
+      "claim": "objective rather than subjective measurements emphasized",
+      "transcription": {
+        "label": "Objektivitas"
+      }
+    },
+    "CR_OBJECTIVITY_IMPL": {
+      "chapter": "bab6",
+      "file_id": 27443,
+      "pdf_page": 6,
+      "printed_page": "VI-6",
+      "section": "6.1.2",
+      "claim": "additional observation/instrumentation accuracy database"
+    },
+    "CR_SIGNIFICANCE": {
+      "chapter": "bab6",
+      "file_id": 27443,
+      "pdf_page": 3,
+      "printed_page": "VI-3",
+      "section": "6.1 / Table 6.3",
+      "claim": "local regional national importance assessment required",
+      "transcription": {
+        "label": "Signifikansi"
+      }
+    },
+    "CR_SIGNIFICANCE_IMPL": {
+      "chapter": "bab6",
+      "file_id": 27443,
+      "pdf_page": 7,
+      "printed_page": "VI-7",
+      "section": "6.1.3",
+      "claim": "explicit user question"
+    },
+    "CR_EXPLICIT_CRITERIA": {
+      "chapter": "bab6",
+      "file_id": 27443,
+      "pdf_page": 3,
+      "printed_page": "VI-3",
+      "section": "6.1 / Table 6.3",
+      "claim": "criteria and assumptions stated explicitly",
+      "transcription": {
+        "label": "Kriteria eksplisit"
+      }
+    },
+    "CR_EXPLICIT_CRITERIA_IMPL": {
+      "chapter": "bab6",
+      "file_id": 27443,
+      "pdf_page": 7,
+      "printed_page": "VI-7",
+      "section": "6.1.3",
+      "claim": "additional criteria/assumptions database connected to activities"
+    },
+    "CR_UNCERTAINTY": {
+      "chapter": "bab6",
+      "file_id": 27443,
+      "pdf_page": 3,
+      "printed_page": "VI-3",
+      "section": "6.1 / Table 6.3",
+      "claim": "projection uncertainty considered",
+      "transcription": {
+        "label": "Ketidakyakinan"
+      }
+    },
+    "CR_UNCERTAINTY_IMPL": {
+      "chapter": "bab6",
+      "file_id": 27443,
+      "pdf_page": 7,
+      "printed_page": "VI-7",
+      "section": "6.1.3",
+      "claim": "fixed yes"
+    },
+    "CR_RISK": {
+      "chapter": "bab6",
+      "file_id": 27443,
+      "pdf_page": 3,
+      "printed_page": "VI-3",
+      "section": "6.1 / Table 6.3",
+      "claim": "low probability high damage impacts considered",
+      "transcription": {
+        "label": "Resiko"
+      }
+    },
+    "CR_RISK_IMPL": {
+      "chapter": "bab6",
+      "file_id": 27443,
+      "pdf_page": 7,
+      "printed_page": "VI-7",
+      "section": "6.1.3",
+      "claim": "accumulated impact magnitude"
+    },
+    "CR_ALTERNATIVES": {
+      "chapter": "bab6",
+      "file_id": 27443,
+      "pdf_page": 3,
+      "printed_page": "VI-3",
+      "section": "6.1 / Table 6.3",
+      "claim": "alternatives can be compared",
+      "transcription": {
+        "label": "Perbandingan alternatif"
+      }
+    },
+    "CR_ALTERNATIVES_IMPL": {
+      "chapter": "bab6",
+      "file_id": 27443,
+      "pdf_page": 8,
+      "printed_page": "VI-8",
+      "section": "Table 6.7",
+      "claim": "count of alternatives offered"
+    },
+    "CR_AGGREGATION": {
+      "chapter": "bab6",
+      "file_id": 27443,
+      "pdf_page": 3,
+      "printed_page": "VI-3",
+      "section": "6.1 / Table 6.3",
+      "claim": "measurement and interpretation information aggregated",
+      "transcription": {
+        "label": "Agregasi"
+      }
+    },
+    "CR_AGGREGATION_IMPL": {
+      "chapter": "bab6",
+      "file_id": 27443,
+      "pdf_page": 8,
+      "printed_page": "VI-8",
+      "section": "6.1.3 / Table 6.7",
+      "claim": "fixed yes"
+    },
+    "CR_PUBLIC_INVOLVEMENT": {
+      "chapter": "bab6",
+      "file_id": 27443,
+      "pdf_page": 3,
+      "printed_page": "VI-3",
+      "section": "6.1 / Table 6.3",
+      "claim": "public input into interpretation available",
+      "transcription": {
+        "label": "Keterlibatan publik"
+      }
+    },
+    "CR_PUBLIC_INVOLVEMENT_IMPL": {
+      "chapter": "bab6",
+      "file_id": 27443,
+      "pdf_page": 8,
+      "printed_page": "VI-8",
+      "section": "6.1.3 / Table 6.7",
+      "claim": "fixed no"
+    },
+    "CR_AFFECTED_GROUPS": {
+      "chapter": "bab6",
+      "file_id": 27443,
+      "pdf_page": 3,
+      "printed_page": "VI-3",
+      "section": "6.1 / Table 6.4",
+      "claim": "impacts connected to most affected human groups",
+      "transcription": {
+        "label": "Kelompok terkena dampak"
+      }
+    },
+    "CR_AFFECTED_GROUPS_IMPL": {
+      "chapter": "bab6",
+      "file_id": 27443,
+      "pdf_page": 9,
+      "printed_page": "VI-9",
+      "section": "6.1.4",
+      "claim": "fixed no"
+    },
+    "CR_ENVIRONMENTAL_SETTING": {
+      "chapter": "bab6",
+      "file_id": 27443,
+      "pdf_page": 3,
+      "printed_page": "VI-3",
+      "section": "6.1 / Table 6.4",
+      "claim": "clear environmental setting description required",
+      "transcription": {
+        "label": "Deskripsi setting lingkungan"
+      }
+    },
+    "CR_ENVIRONMENTAL_SETTING_IMPL": {
+      "chapter": "bab6",
+      "file_id": 27443,
+      "pdf_page": 9,
+      "printed_page": "VI-9",
+      "section": "6.1.4",
+      "claim": "count of analyzed environmental components"
+    },
+    "CR_SUMMARY_FORMAT": {
+      "chapter": "bab6",
+      "file_id": 27443,
+      "pdf_page": 3,
+      "printed_page": "VI-3",
+      "section": "6.1 / Table 6.4",
+      "claim": "recommended summary format included",
+      "transcription": {
+        "label": "Format penyingkatan"
+      }
+    },
+    "CR_SUMMARY_FORMAT_IMPL": {
+      "chapter": "bab6",
+      "file_id": 27443,
+      "pdf_page": 9,
+      "printed_page": "VI-9",
+      "section": "6.1.4",
+      "claim": "fixed yes"
+    },
+    "CR_KEY_ISSUES": {
+      "chapter": "bab6",
+      "file_id": 27443,
+      "pdf_page": 3,
+      "printed_page": "VI-3",
+      "section": "6.1 / Table 6.4",
+      "claim": "main issues highlighted",
+      "transcription": {
+        "label": "Isu-isu utama"
+      }
+    },
+    "CR_KEY_ISSUES_IMPL": {
+      "chapter": "bab6",
+      "file_id": 27443,
+      "pdf_page": 9,
+      "printed_page": "VI-9",
+      "section": "6.1.4",
+      "claim": "most frequent analyzed impacts"
+    },
+    "CR_NEPA_CONFORMITY": {
+      "chapter": "bab6",
+      "file_id": 27443,
+      "pdf_page": 3,
+      "printed_page": "VI-3",
+      "section": "6.1 / Table 6.4",
+      "claim": "NEPA standards followed",
+      "transcription": {
+        "label": "Kesesuaian dengan NEPA"
+      }
+    },
+    "CR_NEPA_CONFORMITY_IMPL": {
+      "chapter": "bab6",
+      "file_id": 27443,
+      "pdf_page": 9,
+      "printed_page": "VI-9",
+      "section": "6.1.4",
+      "claim": "fixed yes; thesis claim, not independent certification"
+    },
+    "T5_01": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 2,
+      "printed_page": "V-2",
+      "section": "5.2 / Table 5.1 / row 3",
+      "claim": "Documented direct impact importance",
+      "transcription": {
+        "pollutant": "Water Temperature",
+        "environment": "Surface Water",
+        "importance": 8.0
+      }
+    },
+    "T5_02": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 2,
+      "printed_page": "V-2",
+      "section": "5.2 / Table 5.1 / row 3",
+      "claim": "Documented direct impact importance",
+      "transcription": {
+        "pollutant": "Suspended Solid",
+        "environment": "Surface Water",
+        "importance": 8.0
+      }
+    },
+    "T5_03": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 2,
+      "printed_page": "V-2",
+      "section": "5.2 / Table 5.1 / row 4",
+      "claim": "Documented direct impact importance",
+      "transcription": {
+        "pollutant": "SO2",
+        "environment": "Shrubs",
+        "importance": 4.0
+      }
+    },
+    "T5_04": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 2,
+      "printed_page": "V-2",
+      "section": "5.2 / Table 5.1 / row 4",
+      "claim": "Documented direct impact importance",
+      "transcription": {
+        "pollutant": "Particulate",
+        "environment": "Shrubs",
+        "importance": 2.0
+      }
+    },
+    "T5_05": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 2,
+      "printed_page": "V-2",
+      "section": "5.2 / Table 5.1 / row 4",
+      "claim": "Documented direct impact importance",
+      "transcription": {
+        "pollutant": "H2S",
+        "environment": "Shrubs",
+        "importance": 1.0
+      }
+    },
+    "T5_06": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 2,
+      "printed_page": "V-2",
+      "section": "5.2 / Table 5.1 / row 5",
+      "claim": "Documented direct impact importance",
+      "transcription": {
+        "pollutant": "SO2",
+        "environment": "Microflora",
+        "importance": 6.0
+      }
+    },
+    "T5_07": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 2,
+      "printed_page": "V-2",
+      "section": "5.2 / Table 5.1 / row 5",
+      "claim": "Documented direct impact importance",
+      "transcription": {
+        "pollutant": "Particulate",
+        "environment": "Microflora",
+        "importance": 2.0
+      }
+    },
+    "T5_08": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 2,
+      "printed_page": "V-2",
+      "section": "5.2 / Table 5.1 / row 5",
+      "claim": "Documented direct impact importance",
+      "transcription": {
+        "pollutant": "H2S",
+        "environment": "Microflora",
+        "importance": 4.0
+      }
+    },
+    "T5_09": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 2,
+      "printed_page": "V-2",
+      "section": "5.2 / Table 5.1 / row 5",
+      "claim": "Documented direct impact importance",
+      "transcription": {
+        "pollutant": "Water Temperature",
+        "environment": "Microflora",
+        "importance": 4.0
+      }
+    },
+    "T5_10": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 2,
+      "printed_page": "V-2",
+      "section": "5.2 / Table 5.1 / row 5",
+      "claim": "Documented direct impact importance",
+      "transcription": {
+        "pollutant": "Suspended Solid",
+        "environment": "Microflora",
+        "importance": 2.0
+      }
+    },
+    "T5_11": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 2,
+      "printed_page": "V-2",
+      "section": "5.2 / Table 5.1 / row 6",
+      "claim": "Documented direct impact importance",
+      "transcription": {
+        "pollutant": "SO2",
+        "environment": "Endangered Species of Flora",
+        "importance": 8.0
+      }
+    },
+    "T5_12": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 2,
+      "printed_page": "V-2",
+      "section": "5.2 / Table 5.1 / row 6",
+      "claim": "Documented direct impact importance",
+      "transcription": {
+        "pollutant": "CO",
+        "environment": "Endangered Species of Flora",
+        "importance": 6.0
+      }
+    },
+    "T5_13": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 2,
+      "printed_page": "V-2",
+      "section": "5.2 / Table 5.1 / row 6",
+      "claim": "Documented direct impact importance",
+      "transcription": {
+        "pollutant": "Particulate",
+        "environment": "Endangered Species of Flora",
+        "importance": 4.0
+      }
+    },
+    "T5_14": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 2,
+      "printed_page": "V-2",
+      "section": "5.2 / Table 5.1 / row 6",
+      "claim": "Documented direct impact importance",
+      "transcription": {
+        "pollutant": "H2S",
+        "environment": "Endangered Species of Flora",
+        "importance": 1.0
+      }
+    },
+    "T5_15": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 2,
+      "printed_page": "V-2",
+      "section": "5.2 / Table 5.1 / row 6",
+      "claim": "Documented direct impact importance",
+      "transcription": {
+        "pollutant": "Water Temperature",
+        "environment": "Endangered Species of Flora",
+        "importance": 8.0
+      }
+    },
+    "T5_16": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 2,
+      "printed_page": "V-2",
+      "section": "5.2 / Table 5.1 / row 6",
+      "claim": "Documented direct impact importance",
+      "transcription": {
+        "pollutant": "Suspended Solid",
+        "environment": "Endangered Species of Flora",
+        "importance": 2.0
+      }
+    },
+    "T5_17": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 2,
+      "printed_page": "V-2",
+      "section": "5.2 / Table 5.1 / unnumbered Birds row",
+      "claim": "Documented direct impact importance",
+      "transcription": {
+        "pollutant": "SO2",
+        "environment": "Birds",
+        "importance": 4.0
+      }
+    },
+    "T5_18": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 2,
+      "printed_page": "V-2",
+      "section": "5.2 / Table 5.1 / unnumbered Birds row",
+      "claim": "Documented direct impact importance",
+      "transcription": {
+        "pollutant": "CO",
+        "environment": "Birds",
+        "importance": 2.0
+      }
+    },
+    "T5_19": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 3,
+      "printed_page": "V-3",
+      "section": "5.2 / Table 5.1 / continuation of Birds row",
+      "claim": "Documented direct impact importance",
+      "transcription": {
+        "pollutant": "Particulate",
+        "environment": "Birds",
+        "importance": 2.0
+      }
+    },
+    "T5_20": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 3,
+      "printed_page": "V-3",
+      "section": "5.2 / Table 5.1 / continuation of Birds row",
+      "claim": "Documented direct impact importance",
+      "transcription": {
+        "pollutant": "H2S",
+        "environment": "Birds",
+        "importance": 1.0
+      }
+    },
+    "T5_21": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 3,
+      "printed_page": "V-3",
+      "section": "5.2 / Table 5.1 / row 7",
+      "claim": "Documented direct impact importance",
+      "transcription": {
+        "pollutant": "SO2",
+        "environment": "Land Animals Reptiles",
+        "importance": 1.0
+      }
+    },
+    "T5_22": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 3,
+      "printed_page": "V-3",
+      "section": "5.2 / Table 5.1 / row 7",
+      "claim": "Documented direct impact importance",
+      "transcription": {
+        "pollutant": "Particulate",
+        "environment": "Land Animals Reptiles",
+        "importance": 2.0
+      }
+    },
+    "T5_23": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 3,
+      "printed_page": "V-3",
+      "section": "5.2 / Table 5.1 / row 7",
+      "claim": "Documented direct impact importance",
+      "transcription": {
+        "pollutant": "H2S",
+        "environment": "Land Animals Reptiles",
+        "importance": 1.0
+      }
+    },
+    "T5_24": {
+      "chapter": "bab5",
+      "file_id": 27442,
+      "pdf_page": 3,
+      "printed_page": "V-3",
+      "section": "5.2 / Table 5.1 / row 7",
+      "claim": "Documented direct impact importance",
+      "transcription": {
+        "pollutant": "Water Temperature",
+        "environment": "Land Animals Reptiles",
+        "importance": 1.0
+      }
+    },
+    "EX_STANDARD_SO2": {
+      "chapter": "bab4",
+      "file_id": 27441,
+      "pdf_page": 8,
+      "printed_page": "IV-8",
+      "section": "4.4.1",
+      "claim": "Explicit code example",
+      "transcription": "standard(\"SO2\",0,40.0,2.0)."
+    },
+    "EX_SOCIAL_BLASTING": {
+      "chapter": "bab4",
+      "file_id": 27441,
+      "pdf_page": 13,
+      "printed_page": "IV-13",
+      "section": "4.4.2.2",
+      "claim": "Explicit code example",
+      "transcription": "impact_se(\"Blasting and Drilling\",\"Migration\",1.0)."
+    },
+    "EX_INDIRECT_WATER": {
+      "chapter": "bab4",
+      "file_id": 27441,
+      "pdf_page": 15,
+      "printed_page": "IV-15",
+      "section": "4.5",
+      "claim": "Explicit code example",
+      "transcription": "indirect_impact(\"Water Temperature\",\"Microflora\")."
+    },
+    "EX_INDIRECT_GASSES": {
+      "chapter": "bab4",
+      "file_id": 27441,
+      "pdf_page": 15,
+      "printed_page": "IV-15",
+      "section": "4.5",
+      "claim": "Explicit code example",
+      "transcription": "indirect_impact(\"Gasses and Particulate\",\"Health and Safety\")."
+    },
+    "EX_SOC_MIGRATION": {
+      "chapter": "bab4",
+      "file_id": 27441,
+      "pdf_page": 18,
+      "printed_page": "IV-18",
+      "section": "4.6",
+      "claim": "Explicit code example",
+      "transcription": "soc_ec(\"Migration\",\"changes in demand on health and social services\")."
+    },
+    "EX_MITIGATION_STORAGE": {
+      "chapter": "bab4",
+      "file_id": 27441,
+      "pdf_page": 20,
+      "printed_page": "IV-20",
+      "section": "4.7",
+      "claim": "Explicit code example",
+      "transcription": "mitigation(\"Product Storage\",\"Mimimise rainfall allowed to percolate through piles of lime stone area and runoff in uncontrolled fashion\")."
+    },
+    "EX_METHOD_SOLID": {
+      "chapter": "bab6",
+      "file_id": 27443,
+      "pdf_page": 17,
+      "printed_page": "VI-17",
+      "section": "6.2",
+      "claim": "Explicit code example",
+      "transcription": "method(\"Suspended solid\",\"Non-filterable residue by drying oven\",4.0,5.8)."
+    },
+    "EX_UNIT_SOLID": {
+      "chapter": "bab6",
+      "file_id": 27443,
+      "pdf_page": 17,
+      "printed_page": "VI-17",
+      "section": "6.2",
+      "claim": "Explicit code example",
+      "transcription": "unit(\"Suspended solid\",\" mg per liter\")."
+    }
+  },
+  "criteria": [
+    {
+      "id": "comprehensiveness",
+      "aspect": "identification",
+      "label": "Komprehensivitas",
+      "question_summary": "all impacts considered",
+      "mechanism": "accumulated analyzed impacts",
+      "source_ids": [
+        "CR_COMPREHENSIVENESS",
+        "CR_COMPREHENSIVENESS_IMPL"
+      ]
+    },
+    {
+      "id": "specificity",
+      "aspect": "identification",
+      "label": "Spesifisitas",
+      "question_summary": "environmental parameters sufficiently specific",
+      "mechanism": "environmental-component/impact count comparison",
+      "source_ids": [
+        "CR_SPECIFICITY",
+        "CR_SPECIFICITY_IMPL"
+      ]
+    },
+    {
+      "id": "impact_isolation",
+      "aspect": "identification",
+      "label": "Isolasi dampak",
+      "question_summary": "techniques for identifying project impacts",
+      "mechanism": "explicit user question",
+      "source_ids": [
+        "CR_IMPACT_ISOLATION",
+        "CR_IMPACT_ISOLATION_IMPL"
+      ]
+    },
+    {
+      "id": "time_consideration",
+      "aspect": "identification",
+      "label": "Konsiderasi waktu",
+      "question_summary": "construction versus operational impacts distinguished",
+      "mechanism": "additional activity stage database and accumulated stage-defined activities",
+      "source_ids": [
+        "CR_TIME_CONSIDERATION",
+        "CR_TIME_CONSIDERATION_IMPL"
+      ]
+    },
+    {
+      "id": "data_sources",
+      "aspect": "identification",
+      "label": "Sumber data",
+      "question_summary": "identification of data sources required",
+      "mechanism": "fixed yes, explicitly L",
+      "source_ids": [
+        "CR_DATA_SOURCES",
+        "CR_DATA_SOURCES_IMPL"
+      ]
+    },
+    {
+      "id": "explicit_indicators",
+      "aspect": "measurement",
+      "label": "Indikator eksplisit",
+      "question_summary": "specific measurable quantification indicators suggested",
+      "mechanism": "explicit user question",
+      "source_ids": [
+        "CR_EXPLICIT_INDICATORS",
+        "CR_EXPLICIT_INDICATORS_IMPL"
+      ]
+    },
+    {
+      "id": "magnitude",
+      "aspect": "measurement",
+      "label": "Magnitudo",
+      "question_summary": "numerical impact magnitudes required",
+      "mechanism": "fixed yes, explicitly L in prose; Table 6.6 instead references instrumentation database",
+      "source_ids": [
+        "CR_MAGNITUDE",
+        "CR_MAGNITUDE_IMPL"
+      ]
+    },
+    {
+      "id": "objectivity",
+      "aspect": "measurement",
+      "label": "Objektivitas",
+      "question_summary": "objective rather than subjective measurements emphasized",
+      "mechanism": "additional observation/instrumentation accuracy database",
+      "source_ids": [
+        "CR_OBJECTIVITY",
+        "CR_OBJECTIVITY_IMPL"
+      ]
+    },
+    {
+      "id": "significance",
+      "aspect": "interpretation",
+      "label": "Signifikansi",
+      "question_summary": "local regional national importance assessment required",
+      "mechanism": "explicit user question",
+      "source_ids": [
+        "CR_SIGNIFICANCE",
+        "CR_SIGNIFICANCE_IMPL"
+      ]
+    },
+    {
+      "id": "explicit_criteria",
+      "aspect": "interpretation",
+      "label": "Kriteria eksplisit",
+      "question_summary": "criteria and assumptions stated explicitly",
+      "mechanism": "additional criteria/assumptions database connected to activities",
+      "source_ids": [
+        "CR_EXPLICIT_CRITERIA",
+        "CR_EXPLICIT_CRITERIA_IMPL"
+      ]
+    },
+    {
+      "id": "uncertainty",
+      "aspect": "interpretation",
+      "label": "Ketidakyakinan",
+      "question_summary": "projection uncertainty considered",
+      "mechanism": "fixed yes",
+      "source_ids": [
+        "CR_UNCERTAINTY",
+        "CR_UNCERTAINTY_IMPL"
+      ]
+    },
+    {
+      "id": "risk",
+      "aspect": "interpretation",
+      "label": "Resiko",
+      "question_summary": "low probability high damage impacts considered",
+      "mechanism": "accumulated impact magnitude",
+      "source_ids": [
+        "CR_RISK",
+        "CR_RISK_IMPL"
+      ]
+    },
+    {
+      "id": "alternatives",
+      "aspect": "interpretation",
+      "label": "Perbandingan alternatif",
+      "question_summary": "alternatives can be compared",
+      "mechanism": "count of alternatives offered",
+      "source_ids": [
+        "CR_ALTERNATIVES",
+        "CR_ALTERNATIVES_IMPL"
+      ]
+    },
+    {
+      "id": "aggregation",
+      "aspect": "interpretation",
+      "label": "Agregasi",
+      "question_summary": "measurement and interpretation information aggregated",
+      "mechanism": "fixed yes",
+      "source_ids": [
+        "CR_AGGREGATION",
+        "CR_AGGREGATION_IMPL"
+      ]
+    },
+    {
+      "id": "public_involvement",
+      "aspect": "interpretation",
+      "label": "Keterlibatan publik",
+      "question_summary": "public input into interpretation available",
+      "mechanism": "fixed no",
+      "source_ids": [
+        "CR_PUBLIC_INVOLVEMENT",
+        "CR_PUBLIC_INVOLVEMENT_IMPL"
+      ]
+    },
+    {
+      "id": "affected_groups",
+      "aspect": "communication",
+      "label": "Kelompok terkena dampak",
+      "question_summary": "impacts connected to most affected human groups",
+      "mechanism": "fixed no",
+      "source_ids": [
+        "CR_AFFECTED_GROUPS",
+        "CR_AFFECTED_GROUPS_IMPL"
+      ]
+    },
+    {
+      "id": "environmental_setting",
+      "aspect": "communication",
+      "label": "Deskripsi setting lingkungan",
+      "question_summary": "clear environmental setting description required",
+      "mechanism": "count of analyzed environmental components",
+      "source_ids": [
+        "CR_ENVIRONMENTAL_SETTING",
+        "CR_ENVIRONMENTAL_SETTING_IMPL"
+      ]
+    },
+    {
+      "id": "summary_format",
+      "aspect": "communication",
+      "label": "Format penyingkatan",
+      "question_summary": "recommended summary format included",
+      "mechanism": "fixed yes",
+      "source_ids": [
+        "CR_SUMMARY_FORMAT",
+        "CR_SUMMARY_FORMAT_IMPL"
+      ]
+    },
+    {
+      "id": "key_issues",
+      "aspect": "communication",
+      "label": "Isu-isu utama",
+      "question_summary": "main issues highlighted",
+      "mechanism": "most frequent analyzed impacts",
+      "source_ids": [
+        "CR_KEY_ISSUES",
+        "CR_KEY_ISSUES_IMPL"
+      ]
+    },
+    {
+      "id": "nepa_conformity",
+      "aspect": "communication",
+      "label": "Kesesuaian dengan NEPA",
+      "question_summary": "NEPA standards followed",
+      "mechanism": "fixed yes; thesis claim, not independent certification",
+      "source_ids": [
+        "CR_NEPA_CONFORMITY",
+        "CR_NEPA_CONFORMITY_IMPL"
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "id": "IMPACT_01",
+      "kind": "impact",
+      "inputs": {
+        "pollutant": "Water Temperature",
+        "environment": "Surface Water"
+      },
+      "value": 8.0,
+      "source_ids": [
+        "T5_01"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "IMPACT_02",
+      "kind": "impact",
+      "inputs": {
+        "pollutant": "Suspended Solid",
+        "environment": "Surface Water"
+      },
+      "value": 8.0,
+      "source_ids": [
+        "T5_02"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "IMPACT_03",
+      "kind": "impact",
+      "inputs": {
+        "pollutant": "SO2",
+        "environment": "Shrubs"
+      },
+      "value": 4.0,
+      "source_ids": [
+        "T5_03"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "IMPACT_04",
+      "kind": "impact",
+      "inputs": {
+        "pollutant": "Particulate",
+        "environment": "Shrubs"
+      },
+      "value": 2.0,
+      "source_ids": [
+        "T5_04"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "IMPACT_05",
+      "kind": "impact",
+      "inputs": {
+        "pollutant": "H2S",
+        "environment": "Shrubs"
+      },
+      "value": 1.0,
+      "source_ids": [
+        "T5_05"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "IMPACT_06",
+      "kind": "impact",
+      "inputs": {
+        "pollutant": "SO2",
+        "environment": "Microflora"
+      },
+      "value": 6.0,
+      "source_ids": [
+        "T5_06"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "IMPACT_07",
+      "kind": "impact",
+      "inputs": {
+        "pollutant": "Particulate",
+        "environment": "Microflora"
+      },
+      "value": 2.0,
+      "source_ids": [
+        "T5_07"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "IMPACT_08",
+      "kind": "impact",
+      "inputs": {
+        "pollutant": "H2S",
+        "environment": "Microflora"
+      },
+      "value": 4.0,
+      "source_ids": [
+        "T5_08"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "IMPACT_09",
+      "kind": "impact",
+      "inputs": {
+        "pollutant": "Water Temperature",
+        "environment": "Microflora"
+      },
+      "value": 4.0,
+      "source_ids": [
+        "T5_09"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "IMPACT_10",
+      "kind": "impact",
+      "inputs": {
+        "pollutant": "Suspended Solid",
+        "environment": "Microflora"
+      },
+      "value": 2.0,
+      "source_ids": [
+        "T5_10"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "IMPACT_11",
+      "kind": "impact",
+      "inputs": {
+        "pollutant": "SO2",
+        "environment": "Endangered Species of Flora"
+      },
+      "value": 8.0,
+      "source_ids": [
+        "T5_11"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "IMPACT_12",
+      "kind": "impact",
+      "inputs": {
+        "pollutant": "CO",
+        "environment": "Endangered Species of Flora"
+      },
+      "value": 6.0,
+      "source_ids": [
+        "T5_12"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "IMPACT_13",
+      "kind": "impact",
+      "inputs": {
+        "pollutant": "Particulate",
+        "environment": "Endangered Species of Flora"
+      },
+      "value": 4.0,
+      "source_ids": [
+        "T5_13"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "IMPACT_14",
+      "kind": "impact",
+      "inputs": {
+        "pollutant": "H2S",
+        "environment": "Endangered Species of Flora"
+      },
+      "value": 1.0,
+      "source_ids": [
+        "T5_14"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "IMPACT_15",
+      "kind": "impact",
+      "inputs": {
+        "pollutant": "Water Temperature",
+        "environment": "Endangered Species of Flora"
+      },
+      "value": 8.0,
+      "source_ids": [
+        "T5_15"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "IMPACT_16",
+      "kind": "impact",
+      "inputs": {
+        "pollutant": "Suspended Solid",
+        "environment": "Endangered Species of Flora"
+      },
+      "value": 2.0,
+      "source_ids": [
+        "T5_16"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "IMPACT_17",
+      "kind": "impact",
+      "inputs": {
+        "pollutant": "SO2",
+        "environment": "Birds"
+      },
+      "value": 4.0,
+      "source_ids": [
+        "T5_17"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "IMPACT_18",
+      "kind": "impact",
+      "inputs": {
+        "pollutant": "CO",
+        "environment": "Birds"
+      },
+      "value": 2.0,
+      "source_ids": [
+        "T5_18"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "IMPACT_19",
+      "kind": "impact",
+      "inputs": {
+        "pollutant": "Particulate",
+        "environment": "Birds"
+      },
+      "value": 2.0,
+      "source_ids": [
+        "T5_19"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "IMPACT_20",
+      "kind": "impact",
+      "inputs": {
+        "pollutant": "H2S",
+        "environment": "Birds"
+      },
+      "value": 1.0,
+      "source_ids": [
+        "T5_20"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "IMPACT_21",
+      "kind": "impact",
+      "inputs": {
+        "pollutant": "SO2",
+        "environment": "Land Animals Reptiles"
+      },
+      "value": 1.0,
+      "source_ids": [
+        "T5_21"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "IMPACT_22",
+      "kind": "impact",
+      "inputs": {
+        "pollutant": "Particulate",
+        "environment": "Land Animals Reptiles"
+      },
+      "value": 2.0,
+      "source_ids": [
+        "T5_22"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "IMPACT_23",
+      "kind": "impact",
+      "inputs": {
+        "pollutant": "H2S",
+        "environment": "Land Animals Reptiles"
+      },
+      "value": 1.0,
+      "source_ids": [
+        "T5_23"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "IMPACT_24",
+      "kind": "impact",
+      "inputs": {
+        "pollutant": "Water Temperature",
+        "environment": "Land Animals Reptiles"
+      },
+      "value": 1.0,
+      "source_ids": [
+        "T5_24"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "STANDARD_SO2",
+      "kind": "standard",
+      "inputs": {
+        "pollutant": "SO2"
+      },
+      "value": {
+        "lower": 0,
+        "upper": 40.0,
+        "magnitude": 2.0
+      },
+      "source_ids": [
+        "EX_STANDARD_SO2"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "SOCIAL_BLASTING",
+      "kind": "impact_se",
+      "inputs": {
+        "activity": "Blasting and Drilling",
+        "factor": "Migration"
+      },
+      "value": 1.0,
+      "source_ids": [
+        "EX_SOCIAL_BLASTING"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "INDIRECT_WATER",
+      "kind": "indirect_impact",
+      "inputs": {
+        "from": "Water Temperature",
+        "to": "Microflora"
+      },
+      "value": true,
+      "source_ids": [
+        "EX_INDIRECT_WATER"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "INDIRECT_GASSES",
+      "kind": "indirect_impact",
+      "inputs": {
+        "from": "Gasses and Particulate",
+        "to": "Health and Safety"
+      },
+      "value": true,
+      "source_ids": [
+        "EX_INDIRECT_GASSES"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "SOC_MIGRATION",
+      "kind": "soc_ec",
+      "inputs": {
+        "activity": "Migration"
+      },
+      "value": "changes in demand on health and social services",
+      "source_ids": [
+        "EX_SOC_MIGRATION"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "MITIGATION_STORAGE",
+      "kind": "mitigation",
+      "inputs": {
+        "activity": "Product Storage"
+      },
+      "value": "Mimimise rainfall allowed to percolate through piles of lime stone area and runoff in uncontrolled fashion",
+      "source_ids": [
+        "EX_MITIGATION_STORAGE"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "METHOD_SOLID",
+      "kind": "method",
+      "inputs": {
+        "pollutant": "Suspended solid",
+        "technique": "Non-filterable residue by drying oven"
+      },
+      "value": {
+        "minimum_detectable": 4.0,
+        "variability": 5.8
+      },
+      "source_ids": [
+        "EX_METHOD_SOLID"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "UNIT_SOLID",
+      "kind": "unit",
+      "inputs": {
+        "pollutant": "Suspended solid"
+      },
+      "value": " mg per liter",
+      "source_ids": [
+        "EX_UNIT_SOLID"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "FIXED_DATA_SOURCES",
+      "kind": "criterion",
+      "inputs": {
+        "criterion": "data_sources"
+      },
+      "value": {
+        "answer": "yes",
+        "grade": "L"
+      },
+      "source_ids": [
+        "CR_DATA_SOURCES_IMPL"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "FIXED_MAGNITUDE",
+      "kind": "criterion",
+      "inputs": {
+        "criterion": "magnitude"
+      },
+      "value": {
+        "answer": "yes",
+        "grade": "L"
+      },
+      "source_ids": [
+        "CR_MAGNITUDE_IMPL"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "FIXED_UNCERTAINTY",
+      "kind": "criterion",
+      "inputs": {
+        "criterion": "uncertainty"
+      },
+      "value": {
+        "answer": "yes"
+      },
+      "source_ids": [
+        "CR_UNCERTAINTY_IMPL"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "FIXED_AGGREGATION",
+      "kind": "criterion",
+      "inputs": {
+        "criterion": "aggregation"
+      },
+      "value": {
+        "answer": "yes"
+      },
+      "source_ids": [
+        "CR_AGGREGATION_IMPL"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "FIXED_PUBLIC_INVOLVEMENT",
+      "kind": "criterion",
+      "inputs": {
+        "criterion": "public_involvement"
+      },
+      "value": {
+        "answer": "no"
+      },
+      "source_ids": [
+        "CR_PUBLIC_INVOLVEMENT_IMPL"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "FIXED_AFFECTED_GROUPS",
+      "kind": "criterion",
+      "inputs": {
+        "criterion": "affected_groups"
+      },
+      "value": {
+        "answer": "no"
+      },
+      "source_ids": [
+        "CR_AFFECTED_GROUPS_IMPL"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "FIXED_SUMMARY_FORMAT",
+      "kind": "criterion",
+      "inputs": {
+        "criterion": "summary_format"
+      },
+      "value": {
+        "answer": "yes"
+      },
+      "source_ids": [
+        "CR_SUMMARY_FORMAT_IMPL"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "FIXED_NEPA_CONFORMITY",
+      "kind": "criterion",
+      "inputs": {
+        "criterion": "nepa_conformity"
+      },
+      "value": {
+        "answer": "yes"
+      },
+      "source_ids": [
+        "CR_NEPA_CONFORMITY_IMPL"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "PAIR_YES_YES",
+      "kind": "score_pair",
+      "inputs": {
+        "answer_1": "yes",
+        "answer_2": "yes"
+      },
+      "value": "L",
+      "source_ids": [
+        "WP_PAIR"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "PAIR_YES_NO",
+      "kind": "score_pair",
+      "inputs": {
+        "answer_1": "yes",
+        "answer_2": "no"
+      },
+      "value": "S",
+      "source_ids": [
+        "WP_PAIR"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "PAIR_NO_YES",
+      "kind": "score_pair",
+      "inputs": {
+        "answer_1": "no",
+        "answer_2": "yes"
+      },
+      "value": "S",
+      "source_ids": [
+        "WP_PAIR"
+      ],
+      "classification": "faithful_translation"
+    },
+    {
+      "id": "PAIR_NO_NO",
+      "kind": "score_pair",
+      "inputs": {
+        "answer_1": "no",
+        "answer_2": "no"
+      },
+      "value": "N",
+      "source_ids": [
+        "WP_PAIR"
+      ],
+      "classification": "faithful_translation"
+    }
+  ],
+  "glue": [
+    {
+      "id": "GLUE_API",
+      "classification": "engineering_glue",
+      "description": "Structured JSON query dispatch and input validation."
+    },
+    {
+      "id": "GLUE_ABSTAIN",
+      "classification": "engineering_glue",
+      "description": "Absent documented lookup or unresolved criterion yields undocumented, never false."
+    },
+    {
+      "id": "GLUE_NORMALIZE",
+      "classification": "engineering_glue",
+      "description": "SWI strings preserve exact labels; Table 5.1 numeric importance; snippet importance string 2.0 matches table numeric 2.0. No label aliasing."
+    }
+  ]
+}

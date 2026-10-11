@@ -1,179 +1,255 @@
-% Reconstructed documented subset, NOT lost ESC-1 source.
-% See provenance.yaml for translation status and exact chapter/page references.
-:- module(esc1, [evaluate/3, domain_case/1, rule_id/1]).
-:- use_module(library(http/json)).
+% Runnable reconstructed expert system, not the lost original ESC source.
+% Documented facts: documented_facts.pl. POC assumptions: provenance.yaml A_*.
+:- module(esc1, [evaluate/3, domain/1, rule_id/1, demo/0]).
+:- use_module(documented_facts).
 :- use_module(library(apply)).
 :- use_module(library(lists)).
+:- use_module(library(pairs)).
+:- use_module(library(http/json)).
 
-% DOCUMENTED FACTS AND FAITHFUL TRANSLATIONS
-% datum(Kind, Inputs, Value, RuleId). Strings remain case-sensitive.
-% IMPACT_01: bab5 PDF p.2 (V-2), 5.2 / Table 5.1 / row 3; T5_01
-datum("impact", _{pollutant:"Water Temperature", environment:"Surface Water"}, 8.0, "IMPACT_01").
-% IMPACT_02: bab5 PDF p.2 (V-2), 5.2 / Table 5.1 / row 3; T5_02
-datum("impact", _{pollutant:"Suspended Solid", environment:"Surface Water"}, 8.0, "IMPACT_02").
-% IMPACT_03: bab5 PDF p.2 (V-2), 5.2 / Table 5.1 / row 4; T5_03
-datum("impact", _{pollutant:"SO2", environment:"Shrubs"}, 4.0, "IMPACT_03").
-% IMPACT_04: bab5 PDF p.2 (V-2), 5.2 / Table 5.1 / row 4; T5_04
-datum("impact", _{pollutant:"Particulate", environment:"Shrubs"}, 2.0, "IMPACT_04").
-% IMPACT_05: bab5 PDF p.2 (V-2), 5.2 / Table 5.1 / row 4; T5_05
-datum("impact", _{pollutant:"H2S", environment:"Shrubs"}, 1.0, "IMPACT_05").
-% IMPACT_06: bab5 PDF p.2 (V-2), 5.2 / Table 5.1 / row 5; T5_06
-datum("impact", _{pollutant:"SO2", environment:"Microflora"}, 6.0, "IMPACT_06").
-% IMPACT_07: bab5 PDF p.2 (V-2), 5.2 / Table 5.1 / row 5; T5_07
-datum("impact", _{pollutant:"Particulate", environment:"Microflora"}, 2.0, "IMPACT_07").
-% IMPACT_08: bab5 PDF p.2 (V-2), 5.2 / Table 5.1 / row 5; T5_08
-datum("impact", _{pollutant:"H2S", environment:"Microflora"}, 4.0, "IMPACT_08").
-% IMPACT_09: bab5 PDF p.2 (V-2), 5.2 / Table 5.1 / row 5; T5_09
-datum("impact", _{pollutant:"Water Temperature", environment:"Microflora"}, 4.0, "IMPACT_09").
-% IMPACT_10: bab5 PDF p.2 (V-2), 5.2 / Table 5.1 / row 5; T5_10
-datum("impact", _{pollutant:"Suspended Solid", environment:"Microflora"}, 2.0, "IMPACT_10").
-% IMPACT_11: bab5 PDF p.2 (V-2), 5.2 / Table 5.1 / row 6; T5_11
-datum("impact", _{pollutant:"SO2", environment:"Endangered Species of Flora"}, 8.0, "IMPACT_11").
-% IMPACT_12: bab5 PDF p.2 (V-2), 5.2 / Table 5.1 / row 6; T5_12
-datum("impact", _{pollutant:"CO", environment:"Endangered Species of Flora"}, 6.0, "IMPACT_12").
-% IMPACT_13: bab5 PDF p.2 (V-2), 5.2 / Table 5.1 / row 6; T5_13
-datum("impact", _{pollutant:"Particulate", environment:"Endangered Species of Flora"}, 4.0, "IMPACT_13").
-% IMPACT_14: bab5 PDF p.2 (V-2), 5.2 / Table 5.1 / row 6; T5_14
-datum("impact", _{pollutant:"H2S", environment:"Endangered Species of Flora"}, 1.0, "IMPACT_14").
-% IMPACT_15: bab5 PDF p.2 (V-2), 5.2 / Table 5.1 / row 6; T5_15
-datum("impact", _{pollutant:"Water Temperature", environment:"Endangered Species of Flora"}, 8.0, "IMPACT_15").
-% IMPACT_16: bab5 PDF p.2 (V-2), 5.2 / Table 5.1 / row 6; T5_16
-datum("impact", _{pollutant:"Suspended Solid", environment:"Endangered Species of Flora"}, 2.0, "IMPACT_16").
-% IMPACT_17: bab5 PDF p.2 (V-2), 5.2 / Table 5.1 / unnumbered Birds row; T5_17
-datum("impact", _{pollutant:"SO2", environment:"Birds"}, 4.0, "IMPACT_17").
-% IMPACT_18: bab5 PDF p.2 (V-2), 5.2 / Table 5.1 / unnumbered Birds row; T5_18
-datum("impact", _{pollutant:"CO", environment:"Birds"}, 2.0, "IMPACT_18").
-% IMPACT_19: bab5 PDF p.3 (V-3), 5.2 / Table 5.1 / continuation of Birds row; T5_19
-datum("impact", _{pollutant:"Particulate", environment:"Birds"}, 2.0, "IMPACT_19").
-% IMPACT_20: bab5 PDF p.3 (V-3), 5.2 / Table 5.1 / continuation of Birds row; T5_20
-datum("impact", _{pollutant:"H2S", environment:"Birds"}, 1.0, "IMPACT_20").
-% IMPACT_21: bab5 PDF p.3 (V-3), 5.2 / Table 5.1 / row 7; T5_21
-datum("impact", _{pollutant:"SO2", environment:"Land Animals Reptiles"}, 1.0, "IMPACT_21").
-% IMPACT_22: bab5 PDF p.3 (V-3), 5.2 / Table 5.1 / row 7; T5_22
-datum("impact", _{pollutant:"Particulate", environment:"Land Animals Reptiles"}, 2.0, "IMPACT_22").
-% IMPACT_23: bab5 PDF p.3 (V-3), 5.2 / Table 5.1 / row 7; T5_23
-datum("impact", _{pollutant:"H2S", environment:"Land Animals Reptiles"}, 1.0, "IMPACT_23").
-% IMPACT_24: bab5 PDF p.3 (V-3), 5.2 / Table 5.1 / row 7; T5_24
-datum("impact", _{pollutant:"Water Temperature", environment:"Land Animals Reptiles"}, 1.0, "IMPACT_24").
-% STANDARD_SO2: bab4 PDF p.8 (IV-8), 4.4.1; EX_STANDARD_SO2
-datum("standard", _{pollutant:"SO2"}, _{lower:0, upper:40.0, magnitude:2.0}, "STANDARD_SO2").
-% SOCIAL_BLASTING: bab4 PDF p.13 (IV-13), 4.4.2.2; EX_SOCIAL_BLASTING
-datum("impact_se", _{activity:"Blasting and Drilling", factor:"Migration"}, 1.0, "SOCIAL_BLASTING").
-% INDIRECT_WATER: bab4 PDF p.15 (IV-15), 4.5; EX_INDIRECT_WATER
-datum("indirect_impact", _{from:"Water Temperature", to:"Microflora"}, true, "INDIRECT_WATER").
-% INDIRECT_GASSES: bab4 PDF p.15 (IV-15), 4.5; EX_INDIRECT_GASSES
-datum("indirect_impact", _{from:"Gasses and Particulate", to:"Health and Safety"}, true, "INDIRECT_GASSES").
-% SOC_MIGRATION: bab4 PDF p.18 (IV-18), 4.6; EX_SOC_MIGRATION
-datum("soc_ec", _{activity:"Migration"}, "changes in demand on health and social services", "SOC_MIGRATION").
-% MITIGATION_STORAGE: bab4 PDF p.20 (IV-20), 4.7; EX_MITIGATION_STORAGE
-datum("mitigation", _{activity:"Product Storage"}, "Mimimise rainfall allowed to percolate through piles of lime stone area and runoff in uncontrolled fashion", "MITIGATION_STORAGE").
-% METHOD_SOLID: bab6 PDF p.17 (VI-17), 6.2; EX_METHOD_SOLID
-datum("method", _{pollutant:"Suspended solid", technique:"Non-filterable residue by drying oven"}, _{minimum_detectable:4.0, variability:5.8}, "METHOD_SOLID").
-% UNIT_SOLID: bab6 PDF p.17 (VI-17), 6.2; EX_UNIT_SOLID
-datum("unit", _{pollutant:"Suspended solid"}, " mg per liter", "UNIT_SOLID").
-% FIXED_DATA_SOURCES: bab6 PDF p.5 (VI-5), 6.1.1; CR_DATA_SOURCES_IMPL
-datum("criterion", _{criterion:"data_sources"}, _{answer:"yes", grade:"L"}, "FIXED_DATA_SOURCES").
-% FIXED_MAGNITUDE: bab6 PDF p.6 (VI-6), 6.1.2; CR_MAGNITUDE_IMPL
-datum("criterion", _{criterion:"magnitude"}, _{answer:"yes", grade:"L"}, "FIXED_MAGNITUDE").
-% FIXED_UNCERTAINTY: bab6 PDF p.7 (VI-7), 6.1.3; CR_UNCERTAINTY_IMPL
-datum("criterion", _{criterion:"uncertainty"}, _{answer:"yes"}, "FIXED_UNCERTAINTY").
-% FIXED_AGGREGATION: bab6 PDF p.8 (VI-8), 6.1.3 / Table 6.7; CR_AGGREGATION_IMPL
-datum("criterion", _{criterion:"aggregation"}, _{answer:"yes"}, "FIXED_AGGREGATION").
-% FIXED_PUBLIC_INVOLVEMENT: bab6 PDF p.8 (VI-8), 6.1.3 / Table 6.7; CR_PUBLIC_INVOLVEMENT_IMPL
-datum("criterion", _{criterion:"public_involvement"}, _{answer:"no"}, "FIXED_PUBLIC_INVOLVEMENT").
-% FIXED_AFFECTED_GROUPS: bab6 PDF p.9 (VI-9), 6.1.4; CR_AFFECTED_GROUPS_IMPL
-datum("criterion", _{criterion:"affected_groups"}, _{answer:"no"}, "FIXED_AFFECTED_GROUPS").
-% FIXED_SUMMARY_FORMAT: bab6 PDF p.9 (VI-9), 6.1.4; CR_SUMMARY_FORMAT_IMPL
-datum("criterion", _{criterion:"summary_format"}, _{answer:"yes"}, "FIXED_SUMMARY_FORMAT").
-% FIXED_NEPA_CONFORMITY: bab6 PDF p.9 (VI-9), 6.1.4; CR_NEPA_CONFORMITY_IMPL
-datum("criterion", _{criterion:"nepa_conformity"}, _{answer:"yes"}, "FIXED_NEPA_CONFORMITY").
-% PAIR_YES_YES: bab6 PDF p.4 (VI-4), 6.1; WP_PAIR
-datum("score_pair", _{answer_1:"yes", answer_2:"yes"}, "L", "PAIR_YES_YES").
-% PAIR_YES_NO: bab6 PDF p.4 (VI-4), 6.1; WP_PAIR
-datum("score_pair", _{answer_1:"yes", answer_2:"no"}, "S", "PAIR_YES_NO").
-% PAIR_NO_YES: bab6 PDF p.4 (VI-4), 6.1; WP_PAIR
-datum("score_pair", _{answer_1:"no", answer_2:"yes"}, "S", "PAIR_NO_YES").
-% PAIR_NO_NO: bab6 PDF p.4 (VI-4), 6.1; WP_PAIR
-datum("score_pair", _{answer_1:"no", answer_2:"no"}, "N", "PAIR_NO_NO").
+rule_id(Id) :- fact(_, _, _, Id).
+rule_id(Id) :- member(Id, ["R_FORWARD", "R_DIRECT", "R_INDIRECT", "R_SOCIAL",
+                           "R_MITIGATION", "R_PRIORITY", "R_GAPS", "R_ASSESS",
+                           "R_STANDARD", "R_INSTRUMENT", "R_BACKWARD", "R_WP"]).
 
-% Documented criterion inventory; not additional decision rules.
-% CR_COMPREHENSIVENESS, CR_COMPREHENSIVENESS_IMPL
-criterion("comprehensiveness").
-% CR_SPECIFICITY, CR_SPECIFICITY_IMPL
-criterion("specificity").
-% CR_IMPACT_ISOLATION, CR_IMPACT_ISOLATION_IMPL
-criterion("impact_isolation").
-% CR_TIME_CONSIDERATION, CR_TIME_CONSIDERATION_IMPL
-criterion("time_consideration").
-% CR_DATA_SOURCES, CR_DATA_SOURCES_IMPL
-criterion("data_sources").
-% CR_EXPLICIT_INDICATORS, CR_EXPLICIT_INDICATORS_IMPL
-criterion("explicit_indicators").
-% CR_MAGNITUDE, CR_MAGNITUDE_IMPL
-criterion("magnitude").
-% CR_OBJECTIVITY, CR_OBJECTIVITY_IMPL
-criterion("objectivity").
-% CR_SIGNIFICANCE, CR_SIGNIFICANCE_IMPL
-criterion("significance").
-% CR_EXPLICIT_CRITERIA, CR_EXPLICIT_CRITERIA_IMPL
-criterion("explicit_criteria").
-% CR_UNCERTAINTY, CR_UNCERTAINTY_IMPL
-criterion("uncertainty").
-% CR_RISK, CR_RISK_IMPL
-criterion("risk").
-% CR_ALTERNATIVES, CR_ALTERNATIVES_IMPL
-criterion("alternatives").
-% CR_AGGREGATION, CR_AGGREGATION_IMPL
-criterion("aggregation").
-% CR_PUBLIC_INVOLVEMENT, CR_PUBLIC_INVOLVEMENT_IMPL
-criterion("public_involvement").
-% CR_AFFECTED_GROUPS, CR_AFFECTED_GROUPS_IMPL
-criterion("affected_groups").
-% CR_ENVIRONMENTAL_SETTING, CR_ENVIRONMENTAL_SETTING_IMPL
-criterion("environmental_setting").
-% CR_SUMMARY_FORMAT, CR_SUMMARY_FORMAT_IMPL
-criterion("summary_format").
-% CR_KEY_ISSUES, CR_KEY_ISSUES_IMPL
-criterion("key_issues").
-% CR_NEPA_CONFORMITY, CR_NEPA_CONFORMITY_IMPL
-criterion("nepa_conformity").
+% Domain introspection lets a generator enumerate inputs without reading the paper.
+domain(_{processes:Processes, pollutants:Pollutants, receptors:Receptors,
+         process_pollutant_pairs:Pairs, direct_pairs:Direct, indirect_pairs:Indirect,
+         magnitude_range:[0,10], standards:Standards, instruments:Instruments,
+         wp_fields:WPFields, query_kinds:["assess","assess_concentration","trace_back","instrumentation","method_assessment"],
+         profile:"cement_poc_v2"}) :-
+    findall(P, fact("emission", _{process:P,pollutant:_}, _, _), Ps), sort(Ps, Processes),
+    findall(P, fact("emission", _{process:_,pollutant:P}, _, _), Pols), sort(Pols, Pollutants),
+    findall(E, (fact("impact", _{pollutant:_,environment:E}, _, _);
+                fact("indirect", _{from:_,to:E}, _, _)), Es), sort(Es, Receptors),
+    findall(Fields, fact("emission", Fields, _, _), Pairs),
+    findall(Fields, fact("impact", Fields, _, _), Direct),
+    findall(Fields, fact("indirect", Fields, _, _), Indirect),
+    findall(_{pollutant:P,lower:Lo,upper:Hi,magnitude:M}, standard_range(P,Lo,Hi,M,_), Standards),
+    findall(_{pollutant:P,technique:T},
+            (fact("method",F,_,_),P=F.pollutant,T=F.technique), Instruments),
+    findall(Field, wp_field(Field), WPFields).
 
-% ENGINEERING GLUE (GLUE_API / GLUE_ABSTAIN): finite dispatch, abstention,
-% enumeration. No thresholds, interval comparisons, inferred edges or L/N mapping.
-rule_id(Id) :- datum(_, _, _, Id).
-domain_case(Input) :- datum(Kind, Fields, _, _), put_dict(kind, Fields, Kind, Input).
-domain_case(_{kind:"criterion", criterion:C}) :- criterion(C).
-
+% Executable workflows. No output is generated from document prose.
 evaluate(Input, Target, RuleIds) :-
-    ( valid_input(Input) -> true
-    ; throw(error(domain_error(oracle_input, Input), _)) ),
-    get_dict(kind, Input, Kind), del_dict(kind, Input, _, Fields),
-    ( datum(Kind, Fields, Value, Id) ->
-        Target = _{status:"documented", value:Value}, RuleIds = [Id]
-    ; Target = _{status:"undocumented"}, RuleIds = []
-    ).
+    Input.kind == "assess_concentration", !,
+    require_valid(Input),
+    ( concentration_magnitude(Input.pollutant, Input.concentration, Magnitude, StandardId) ->
+        del_dict(concentration, Input, _, Base),
+        put_dict(_{kind:"assess",magnitude:Magnitude}, Base, Case),
+        evaluate(Case, Decision, Ids),
+        put_dict(_{concentration:Input.concentration,source_units:"unspecified",resolved_magnitude:Magnitude}, Decision, Target),
+        sort([StandardId,"R_STANDARD"|Ids], RuleIds)
+    ; Target=_{decision:"insufficient_data",reason:"concentration_outside_documented_ranges"},
+      RuleIds=["R_STANDARD"] ).
+evaluate(Input, Target, RuleIds) :-
+    Input.kind == "trace_back", !, require_valid(Input), backward(Input.receptor, Target, RuleIds).
+evaluate(Input, Target, RuleIds) :-
+    Input.kind == "instrumentation", !, require_valid(Input), instrument(Input, Target, RuleIds).
+evaluate(Input, Target, RuleIds) :-
+    Input.kind == "method_assessment", !, require_valid(Input), warner_preston(Input, Target, RuleIds).
 
-% GLUE_API: reject unsupported or malformed requests even when called directly.
-query_shape("impact", [environment, pollutant]).
-query_shape("standard", [pollutant]).
-query_shape("impact_se", [activity, factor]).
-query_shape("indirect_impact", [from, to]).
-query_shape("soc_ec", [activity]).
-query_shape("mitigation", [activity]).
-query_shape("method", [pollutant, technique]).
-query_shape("unit", [pollutant]).
-query_shape("criterion", [criterion]).
-query_shape("score_pair", [answer_1, answer_2]).
+% A_CASE_SCOPE: selected process -> selected pollutant -> present receptors.
+evaluate(Input, Target, RuleIds) :-
+    (valid_input(Input), Input.kind == "assess" -> true; throw(error(domain_error(oracle_input, Input), _))),
+    findall(_{process:P,pollutant:Input.pollutant}-Id,
+            (member(P, Input.processes), fact("emission", _{process:P,pollutant:Input.pollutant}, _, Id)), Sources0),
+    pairs(Sources0, Sources, SourceIds),
+    findall(D-Id, direct(Input, D, Id), Direct0), pairs(Direct0, Direct, DirectIds),
+    findall(I-Ids, indirect(Input, Direct, I, Ids), Indirect0),
+    pairs(Indirect0, Indirect, EdgeLists), append(EdgeLists, EdgeIds),
+    findall(S-Ids, social(Input, S, Ids), Social0),
+    pairs(Social0, Social, SocialLists), append(SocialLists, SocialIds),
+    findall(F,(member(S,Social),S.consequences==[],F=S.factor),UnknownSocial0),sort(UnknownSocial0,UnknownSocial),
+    findall(M-Id, mitigation(Input, M, Id), Mitigation0), pairs(Mitigation0, Mitigations, MitigationIds),
+    findall(E, (member(E, Input.receptors), \+ covered_receptor(E, Direct, Indirect)), Gaps),
+    findall(Score, (member(D, Direct), Score=D.score), Scores), max_list([0.0|Scores], Max),
+    priority(Max, Priority), (Gaps=[] -> Decision=Priority; Decision="insufficient_data"),
+    Target=_{decision:Decision, priority:Priority, maximum_score:Max,
+             sources:Sources, direct_impacts:Direct, indirect_impacts:Indirect,
+             social_impacts:Social, unresolved_social_factors:UnknownSocial,
+             mitigations:Mitigations, unresolved_receptors:Gaps},
+    branch_ids(Direct, Indirect, Social, Mitigations, Gaps, BranchIds),
+    append([SourceIds, DirectIds, EdgeIds, SocialIds, MitigationIds,
+            ["R_ASSESS","R_FORWARD","R_PRIORITY"], BranchIds], AllIds), sort(AllIds, RuleIds).
+
+% A_MAGNITUDE_INPUT / A_SCORE_PRODUCT: scored direct effects include score zero.
+% Zero-valued effects preserve supported paths but never trigger indirect effects.
+direct(Input, _{pollutant:Input.pollutant,receptor:E,importance:Importance,
+                magnitude:Input.magnitude,score:Score}, Id) :-
+    member(E, Input.receptors),
+    fact("impact", _{pollutant:Input.pollutant,environment:E}, Importance, Id),
+    Score is float(Importance * Input.magnitude).
+
+% A_INDIRECT_CHAIN: retain actual paths, bounded to two hops; no inferred weights.
+indirect(Input, Direct, _{receptor:End,path:Path}, Ids) :-
+    member(D, Direct), D.score > 0, Root=D.receptor,
+    indirect_path(Root, End, [Root], Path, Ids, 2), member(End, Input.receptors).
+indirect_path(Start, End, Visited, Path, [Id], _) :-
+    fact("indirect", _{from:Start,to:End}, _, Id), \+ memberchk(End, Visited),
+    reverse([End|Visited], Path).
+indirect_path(Start, End, Visited, Path, [Id|Ids], Remaining) :-
+    Remaining > 1, fact("indirect", _{from:Start,to:Next}, _, Id),
+    \+ memberchk(Next, Visited), NextRemaining is Remaining-1,
+    indirect_path(Next, End, [Next|Visited], Path, Ids, NextRemaining).
+
+% A_SOCIAL_CONTEXT: activity-driven effects are contextual, not pollutant scores.
+social(Input, _{process:P,factor:Factor,importance:Importance,consequences:Consequences}, Ids) :-
+    member(P, Input.processes),
+    fact("impact_se", _{activity:P,factor:Factor}, Importance, ImpactId),
+    findall(Text-Id, fact("soc_ec", _{activity:Factor}, Text, Id), Changes),
+    pairs(Changes, Consequences, ChangeIds), Ids=[ImpactId|ChangeIds].
+
+% A_CASE_SCOPE: return documented process recommendations for detected exposure.
+mitigation(Input, _{process:P,action:Text}, Id) :-
+    Input.magnitude > 0, member(P, Input.processes),
+    fact("mitigation", _{activity:P}, Text, Id).
+
+% A_PRIORITY_BANDS: these categories/cutoffs are POC choices, not thesis rules.
+priority(Score, "no_detected_impact") :- Score =:= 0, !.
+priority(Score, "monitor") :- Score < 10, !.
+priority(Score, "mitigate") :- Score < 40, !.
+priority(_, "urgent_review").
+
+covered_receptor(E, Direct, _) :- member(D, Direct), D.receptor == E, !.
+covered_receptor(E, _, Indirect) :- member(I, Indirect), I.receptor == E, !.
+covered_receptor(E, Direct, _) :-
+    member(D, Direct), Root=D.receptor, indirect_path(Root, E, [Root], _, _, 2).
+branch_ids(Direct, Indirect, Social, Mitigations, Gaps, Ids) :-
+    findall(Id, ((Direct\=[] , Id="R_DIRECT"); (Indirect\=[], Id="R_INDIRECT");
+                 (Social\=[], Id="R_SOCIAL"); (Mitigations\=[], Id="R_MITIGATION");
+                 (Gaps\=[], Id="R_GAPS")), Ids).
+pairs(Pairs, Values, Ids) :-
+    findall(Value, member(Value-_, Pairs), Raw), sort(Raw, Values),
+    findall(Id, member(_-Id, Pairs), Ids).
+
+% Engineering input contract, separate from the historical menu implementation.
+require_valid(Input) :-
+    (valid_input(Input) -> true; throw(error(domain_error(oracle_input,Input),_))).
 valid_input(Input) :-
-    is_dict(Input), get_dict(kind, Input, Kind), string(Kind),
-    query_shape(Kind, Fields),
-    dict_pairs(Input, _, Pairs), pairs_keys_local(Pairs, Keys),
-    sort([kind|Fields], Keys), maplist(nonempty_field(Input), Fields),
-    valid_values(Kind, Input).
-pairs_keys_local([], []).
-pairs_keys_local([Key-_|Tail], [Key|Keys]) :- pairs_keys_local(Tail, Keys).
-nonempty_field(Input, Field) :- get_dict(Field, Input, Value), string(Value), Value \== "".
-valid_values("criterion", Input) :- !, criterion(Input.criterion).
-valid_values("score_pair", Input) :- !,
-    memberchk(Input.answer_1, ["yes", "no"]), memberchk(Input.answer_2, ["yes", "no"]).
-valid_values(_, _).
+    is_dict(Input), get_dict(kind,Input,Kind),
+    request_keys(Kind, Expected), dict_pairs(Input,_,Fields), pairs_keys(Fields,Expected),
+    valid_request(Kind,Input).
+request_keys("assess", [kind,magnitude,pollutant,processes,receptors]).
+request_keys("assess_concentration", [concentration,kind,pollutant,processes,receptors]).
+request_keys("trace_back", [kind,receptor]).
+request_keys("instrumentation", [kind,observed_value,pollutant,technique]).
+request_keys("method_assessment", [answers,counts,kind]).
+valid_request("assess",Input) :-
+    number(Input.magnitude), Input.magnitude>=0, Input.magnitude=<10, valid_scope(Input).
+valid_request("assess_concentration",Input) :-
+    number(Input.concentration), Input.concentration>=0, Input.concentration<1.0e12, valid_scope(Input).
+valid_request("trace_back",Input) :- domain(D), string(Input.receptor), memberchk(Input.receptor,D.receptors).
+valid_request("instrumentation",Input) :-
+    string(Input.pollutant), string(Input.technique), Input.pollutant\=="", Input.technique\=="",
+    number(Input.observed_value), Input.observed_value>=0, Input.observed_value<1.0e12.
+valid_request("method_assessment",Input) :-
+    is_dict(Input.counts), dict_pairs(Input.counts,_,Pairs), pairs_keys(Pairs,Keys),
+    findall(Field,wp_field(Field),Fields), sort(Fields,Keys),
+    forall(member(_-Count,Pairs),(integer(Count),Count>=0,Count=<1000000)),
+    Input.counts.staged_activities =< Input.counts.activities,
+    Input.counts.objective_measurements =< Input.counts.measurements,
+    is_dict(Input.answers), dict_pairs(Input.answers,_,Ans),
+    pairs_keys(Ans,[explicit_indicators,impact_isolation,significance]),
+    forall(member(_-A,Ans),memberchk(A,["yes","no"])).
+valid_scope(Input) :-
+    domain(Domain), string(Input.pollutant),
+    valid_names(Input.processes,Domain.processes),valid_names(Input.receptors,Domain.receptors),
+    forall(member(P, Input.processes), fact("emission", _{process:P,pollutant:Input.pollutant}, _, _)).
+
+valid_names(Names, Allowed) :-
+    is_list(Names), Names\=[], sort(Names, Unique), same_length(Names, Unique),
+    forall(member(Name, Names), (string(Name), memberchk(Name, Allowed))).
+
+% Run directly: swipl -q -s knowledge_base/esc1.pl -g esc1:demo -t halt
+% This case infers two-hop Surface Water -> Aquatic Plants -> Birds effects.
+demo :-
+    Input=_{kind:"assess",processes:["Mineral Processing"],pollutant:"Suspended Solid",
+            magnitude:5.0,receptors:["Surface Water","Aquatic Plants","Birds"]},
+    evaluate(Input, Target, RuleIds),
+    json_write_dict(current_output, _{inputs:Input,target:Target,rule_ids:RuleIds}, [width(100)]), nl.
+
+% A_STANDARD_INTERVAL: ranges are documented, boundary convention is inferred.
+standard_range(P, Lo, Hi, M, Id) :-
+    fact("standard", _{pollutant:P}, _{lower:Lo,upper:Hi,magnitude:M}, Id).
+standard_range(P, Lo, Hi, M, Id) :-
+    fact("standard", _{pollutant:P,lower:Lo,upper:Hi}, M, Id).
+concentration_magnitude(P,C,M,Id) :-
+    standard_range(P,Lo,Hi,M,Id), C>=Lo,
+    (C<Hi; C=:=Hi, \+ (standard_range(P,NextLo,_,_,_),NextLo=:=Hi)), !.
+
+% A_BACKWARD_TRACE: candidates explain possible causes, not proven causation.
+backward(Receptor, _{decision:"candidate_sources",direct_sources:Direct,indirect_sources:Indirect}, Ids) :-
+    findall(_{pollutant:P,importance:I,processes:Processes}-[ImpactId|EmissionIds],
+        (fact("impact",_{pollutant:P,environment:Receptor},I,ImpactId),
+         source_processes(P,Processes,EmissionIds)), D0), pairs(D0,Direct,DIds0), append(DIds0,DIds),
+    findall(_{pollutant:P,source_receptor:Root,path:Path,processes:Processes}-AllIds,
+        (fact("impact",_{pollutant:P,environment:Root},_,ImpactId),
+         indirect_path(Root,Receptor,[Root],Path,EdgeIds,2),
+         source_processes(P,Processes,EmissionIds), append([[ImpactId],EdgeIds,EmissionIds],AllIds)),
+        I0), pairs(I0,Indirect,IIds0),append(IIds0,IIds),
+    append([DIds,IIds,["R_BACKWARD"]],All),sort(All,Ids).
+source_processes(P,Processes,Ids) :-
+    findall(Proc-Id,fact("emission",_{process:Proc,pollutant:P},_,Id),Pairs),pairs(Pairs,Processes,Ids).
+
+% A_DETECTION_LIMIT: classify supplied observation against documented instrument.
+instrument(Input, Target, Ids) :-
+    (fact("method",_{pollutant:Input.pollutant,technique:Input.technique},Spec,MethodId),
+     fact("unit",_{pollutant:Input.pollutant},Unit,UnitId) ->
+        (Input.observed_value<Spec.minimum_detectable -> Decision="below_detection_limit"; Decision="measurable"),
+        Target=_{decision:Decision,minimum_detectable:Spec.minimum_detectable,
+                 variability:Spec.variability,unit:Unit},sort([MethodId,UnitId,"R_INSTRUMENT"],Ids)
+    ; Target=_{decision:"insufficient_data",reason:"observation_method_not_in_kb"},Ids=["R_INSTRUMENT"] ).
+
+% A_WP_RECONSTRUCTION / A_WP_AGGREGATION: complete synthetic assessment profile.
+% Count/ratio thresholds and aspect aggregation are NOT recovered historical code.
+wp_field(activities).
+wp_field(alternatives).
+wp_field(components).
+wp_field(declared_assumptions).
+wp_field(highlighted_impacts).
+wp_field(impacts).
+wp_field(measurements).
+wp_field(objective_measurements).
+wp_field(rare_severe_impacts).
+wp_field(staged_activities).
+count_grade(0,"N") :- !.
+count_grade(1,"S") :- !.
+count_grade(_,"L").
+ratio_grade(_,0,"N") :- !.
+ratio_grade(0,_,"N") :- !.
+ratio_grade(A,B,"L") :- A>=B, !.
+ratio_grade(_,_,"S").
+answer_grade("yes","L").
+answer_grade("no","N").
+wp_grade(Input,"comprehensiveness",G,[]) :- count_grade(Input.counts.impacts,G).
+wp_grade(Input,"specificity",G,[]) :- ratio_grade(Input.counts.components,Input.counts.impacts,G).
+wp_grade(Input,"impact_isolation",G,[]) :- answer_grade(Input.answers.impact_isolation,G).
+wp_grade(Input,"time_consideration",G,[]) :- ratio_grade(Input.counts.staged_activities,Input.counts.activities,G).
+wp_grade(Input,"explicit_indicators",G,[]) :- answer_grade(Input.answers.explicit_indicators,G).
+wp_grade(Input,"objectivity",G,[]) :- ratio_grade(Input.counts.objective_measurements,Input.counts.measurements,G).
+wp_grade(Input,"significance",G,[]) :- answer_grade(Input.answers.significance,G).
+wp_grade(Input,"explicit_criteria",G,[]) :- count_grade(Input.counts.declared_assumptions,G).
+wp_grade(Input,"risk",G,[]) :- count_grade(Input.counts.rare_severe_impacts,G).
+wp_grade(Input,"alternatives",G,[]) :- count_grade(Input.counts.alternatives,G).
+wp_grade(Input,"environmental_setting",G,[]) :- count_grade(Input.counts.components,G).
+wp_grade(Input,"key_issues",G,[]) :- count_grade(Input.counts.highlighted_impacts,G).
+wp_grade(_,Criterion,G,[Id]) :- fact("criterion",_{criterion:Criterion},Value,Id),answer_grade(Value.answer,G).
+wp_aspect("identification",["comprehensiveness","specificity","impact_isolation","time_consideration","data_sources"]).
+wp_aspect("measurement",["explicit_indicators","magnitude","objectivity"]).
+wp_aspect("interpretation",["significance","explicit_criteria","uncertainty","risk","alternatives","aggregation","public_involvement"]).
+wp_aspect("communication",["affected_groups","environmental_setting","summary_format","key_issues","nepa_conformity"]).
+grade_number("N",0).
+grade_number("S",1).
+grade_number("L",2).
+aspect_grade(Grades,Names,Grade) :-
+    findall(N,(member(Name,Names),atom_string(Key,Name),get_dict(Key,Grades,G),grade_number(G,N)),Numbers),
+    sum_list(Numbers,Sum),length(Numbers,Count),Mean is Sum/Count,
+    (Mean<0.5 -> Grade="N"; Mean<1.5 -> Grade="S"; Grade="L").
+warner_preston(Input, _{decision:"method_assessed",criterion_grades:Grades,aspect_grades:Aspects}, Ids) :-
+    findall(C-G,wp_grade(Input,C,G,_),Pairs),
+    maplist(criterion_atom_pair,Pairs,AtomPairs),dict_create(Grades,_,AtomPairs),
+    findall(A-G,(wp_aspect(A,Names),aspect_grade(Grades,Names,G)),AspectPairs),
+    maplist(criterion_atom_pair,AspectPairs,Atoms),dict_create(Aspects,_,Atoms),
+    findall(SourceIds,wp_grade(Input,_,_,SourceIds),Lists),append(Lists,SourceIds),sort(["R_WP"|SourceIds],Ids).
+criterion_atom_pair(S-V,A-V) :- atom_string(A,S).
